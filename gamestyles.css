@@ -40,6 +40,14 @@ hr {
     border-color: #0f0;
 }
 
+a {
+    color: #0f0;
+    text-decoration: none;
+}
+a:hover {
+    color: #0f0;
+    text-decoration: underline;
+}
 
 #game-container {
   max-width: 700px;
