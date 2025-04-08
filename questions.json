@@ -1,11 +1,21 @@
 {
     "questions": [
         {
-            "key" : "Q1001",
+            "key" : 101000,  
             "question": "Do you like Employment Trail?",
             "options": [
-                "Hell Yeah",
-                "No"
+                {
+                    "option": "Yes",
+                    "key": 101001,
+                    "effects": 
+                        {"academic":1}
+                },
+                {
+                    "option": "No",
+                    "key": 101002,
+                    "effects": 
+                        {"academic": -1}
+                }
             ]
         }
     ]
