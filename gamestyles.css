@@ -25,16 +25,40 @@ code {
     font-size: 14px;
 }
 
-a {
+h1{
+    text-align: center;
     color: #0f0;
-    text-decoration: none;
+    text-shadow: 0 0 5px #0f0;
+    font-size: 64px;
+}
+h2, h3, h4, h5, h6 {
+    text-align: center;
+    color: #0f0;
 }
 
-a:hover {
-    text-decoration: underline;
+hr {
+    border-color: #0f0;
 }
 
-.play-button {
+
+#game-container {
+  max-width: 700px;
+  margin: 5vh auto;
+  padding: 2rem;
+  text-align: center;
+  border: 1px solid #0f0;
+}
+
+.slide {
+  display: none;
+  transition: all 0.5s ease-in-out;
+}
+
+.slide:not(.hidden) {
+  display: block;
+}
+
+.button {
     display: inline-block;
     background-color: #0f0;
     color: #000;
@@ -46,24 +70,8 @@ a:hover {
     margin-top: 20px;
 }
 
-.play-button:hover {
-    background-color: #000;
-    color: #0f0;
-    border: 1px solid #0f0;
-}
-
-h1{
-    text-align: center;
-    color: #0f0;
-    text-shadow: 0 0 5px #0f0;
-}
-h2, h3, h4, h5, h6 {
-    text-align: center;
-    color: #0f0;
-}
-
-hr {
-    border-color: #0f0;
+.button:hover {
+  background: #292929;
 }
 
 ::-webkit-scrollbar {

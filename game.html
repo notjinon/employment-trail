@@ -1,6 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+<head>
+    <link rel="stylesheet" href="gamestyles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Lexend+Deca:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<title>The Employment Trail</title>
+<header><h1>THE EMPLOYMENT TRAIL</header>
     <body>
-        this will be the employment trail game page
-    </body>
-</html>
+        <div id="game-container">
+          <!-- Slides -->
+          <div class="slide" id="slide-0">
+            <h2>SCENARIO</h2>
+            <h3>The year is 2024.</h3>
+            <p><b>YOU</b>, a so-called “STEMLord,” have been put through the wringer in the years since the post-COVID layoffs and the flood of underqualified applicants gutted the job market. Long gone is the promise of an “<i>easy path to generational wealth.</i>”</p>
+            <p>Instead of the typical experience afforded to real students, you have spent your senior year of High School haunted by a dismal GPA while trying and failing to project an oxymoronic image based on "alcoholic" "academia" to your increasingly concerned friends and family.</p>
+            <p>With your work ethic in retreat and the laziness of the COVID era still in vogue, it's looking like you won't be in college any longer than your dropout friends. To have any hope of survival, you must persevere through endless struggles and mental crises and a looming crisis of confidence as your peers get interviews and climb the LinkedIn social ladder.</p>
+            <p>You must also contend with an interpersonal scene that still seems trapped in prepubescence, potentially ceding the blank canvas that is your romantic presence to your naïve best friend and your sleazy roommate.</p>
+            <button onclick="nextSlide()" class = "button">Continue</button>
+          </div>
+      
+          <div class="slide hidden" id="slide-1">
+            <h2>DISCLAIMER</h2>
+            <p>This game is a satirical depiction of post-COVID college life, career anxiety, and the evolving nature/grind of STEM careers in this day and age. I decide to explore this from the lens of a narcissistic and self-absorbed student saddled with a deep sense of dread.</p>
+            <p>While the tone is biting, nihilistic, and cynical, this is only for artistic flavor. The writing and events depicted within are entirely fictional and do not reflect my personal views of any company, industry, or educational system.</p>
+            <button onclick="nextSlide()" class = "button" >Start Game</button>
+          </div>
+      
+          <div class="slide hidden" id="question-slide">
+            <h2 id="question-text">Loading...</h2>
+            <div id="options-container"></div>
+          </div>
+      
+          <div class="slide hidden" id="feedback-slide">
+            <p id="feedback-text">Feedback goes here...</p>
+            <button onclick="nextQuestion()" class = "button" >Next</button>
+          </div>
+      
+          <!-- Add more slides (like endings) here if needed -->
+        </div>
+      
+        <script src="gamelogic.js"></script>
+      </body>
+      </html>
