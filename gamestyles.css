@@ -6,6 +6,8 @@ body {
     line-height: 1.4;
     text-align: center;
     width: 100%;
+    max-width: 800px; /* Added max-width property */
+    margin: 0 auto; /* Added margin property to center the content */
     padding-left: 5%;
 }
 
