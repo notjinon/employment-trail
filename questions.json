@@ -34,7 +34,7 @@
         "question": "Four years, a pandemic, 10 AP Courses, and a hell of a lot of stress later, it’s your last year as a student. With the phantom of your own persona haunting you, you know taking a gap year or going to a Community College isn’t an option. Thus, to broaden your horizons, you accept your parent’s offer to go on a set of campus visits.\n\nThe question is, where?",
         "options": [
           {
-            "option": "Let’s hit the Midwest. (Purdue)",
+            "option": "Let’s hit the Midwest.",
             "key": 102001,
             "effects": {
               "manufacturing": 2,
@@ -42,7 +42,7 @@
             }
           },
           {
-            "option": "The nexus of American intellectual might is the Northeast. (Cornell)",
+            "option": "The nexus of American intellectual might is the Northeast.",
             "key": 102002,
             "effects": {
               "finance": 2,
@@ -50,7 +50,7 @@
             }
           },
           {
-            "option": "There’s no other option than the West. (Washington)",
+            "option": "There’s no other option than the West.",
             "key": 102003,
             "effects": {
               "technology": 2,
@@ -58,7 +58,7 @@
             }
           },
           {
-            "option": "An underrated region for American universities is in the South. (Georgia Tech)",
+            "option": "An underrated region for American universities is in the South.",
             "key": 102004,
             "effects": {
               "defense": 2,
