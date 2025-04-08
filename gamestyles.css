@@ -1,13 +1,77 @@
-/**
- * Boilerplate CSS
- *
- * This is a basic CSS template that can be used as a starting point for web development.
- * It includes common styles and resets to provide a consistent foundation for styling web pages.
- *
- * Usage:
- * 1. Copy and paste this code into your CSS file.
- * 2. Modify the styles as needed to match your design.
- *
- * @version 1.0.0
- * @author Your Name
- */
+body {
+    background-color: #000;
+    color: #0f0;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 14px;
+    line-height: 1.4;
+    text-align: center;
+    width: 100%;
+    padding-left: 5%;
+}
+
+pre {
+    padding: 10px;
+    border: 1px solid #0f0;
+    border-radius: 5px;
+    background-color: #000;
+    overflow: auto;
+}
+
+code {
+    color: #0f0;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 14px;
+}
+
+a {
+    color: #0f0;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.play-button {
+    display: inline-block;
+    background-color: #0f0;
+    color: #000;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+.play-button:hover {
+    background-color: #000;
+    color: #0f0;
+    border: 1px solid #0f0;
+}
+
+h1{
+    text-align: center;
+    color: #0f0;
+    text-shadow: 0 0 5px #0f0;
+}
+h2, h3, h4, h5, h6 {
+    text-align: center;
+    color: #0f0;
+}
+
+hr {
+    border-color: #0f0;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #000;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #0f0;
+}
