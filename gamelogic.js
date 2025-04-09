@@ -1,7 +1,8 @@
 let currentSlide = 0;
 let currentEnding = null;
 let nextQuestionKey = null;
-let currentQuestionIndex = 0;
+let currentQuestionKey = 101000;
+let currentResponseId = null;
 let questions = [];
 let responses = {};
 let gameState = {
@@ -26,30 +27,38 @@ function nextSlide() {
   slides[currentSlide].classList.remove("hidden");
 }
 
-async function loadGameData() {
-  const qRes = await fetch("questions.json");
-  const rRes = await fetch("responses.json");
-  const qData = await qRes.json();
-  const rData = await rRes.json();
-
-  questions = qData.questions;
-  responses = {};
-
-  // Index responses by key for quick lookup
-  rData.responses.forEach(res => {
-    responses[res.id] = res; // Store the whole response object, not just the response text.
-  });
-
+function switchSlide(id) {
+  slides.forEach(slide => slide.classList.add("hidden"));
+  document.getElementById(id).classList.remove("hidden");
 }
+
 function startGame() {
   // Advance from slide 1 to question slide
   nextSlide(); // This should hide slide-1 and show slide-2 ("question-slide")
   showQuestion();
 }
 
+async function loadGameData() {
+  const qRes = await fetch("questions.json");
+  const rRes = await fetch("responses.json");
+  const qData = await qRes.json();
+  const rData = await rRes.json();
+
+  questions = Object.fromEntries(
+    qData.questions.map(q => [q.key, q])
+);
+responses = Object.fromEntries(
+    rData.responses.map(r => [r.id, r])
+);
+
+}
+
 function showQuestion() {
-  const question = questions[currentQuestionIndex];
-  const qText = document.getElementById("question-text");
+  const question = questions[currentQuestionKey];
+  if (!question) {
+      console.error(`Question ${currentQuestionKey} not found`);
+      return;
+  }  const qText = document.getElementById("question-text");
   const optionsContainer = document.getElementById("options-container");
 
   // Set the question text.
@@ -92,6 +101,8 @@ function showQuestion() {
   optionsContainer.appendChild(form);
 
   // Switch to the question slide.
+  document.getElementById("question-text").textContent = question.question;
+  renderOptions(question.options);
   switchSlide("question-slide");
 }
 
@@ -104,19 +115,22 @@ function submitOption() {
     return;
   }
 
-  // Get the current question.
-  const question = questions[currentQuestionIndex];
+  // Get current question and selected option
+  const question = questions[currentQuestionKey];
+  const selectedOpt = question.options.find(opt => opt.key == selected.value);
 
   // Retrieve the full response object using the option key.
-  const responseObj = responses[selected.value];
+    // Get and store response ID for use in nextQuestion()
+  currentResponseId = selectedOpt.key;
+  const response = responses[currentResponseId];
   if (!responseObj) {
-    alert("No response available for the selected option.");
-    return;
+  alert("No response available for the selected option.");
+  return;
   }
 
   // Apply the status effects from the response object.
   if (responseObj.effects) {
-    for (let stat in responseObj.effects) {
+    for (let stat in response.effects) {
       if (gameState.hasOwnProperty(stat)) {
         gameState[stat] += responseObj.effects[stat];
       }
@@ -124,7 +138,7 @@ function submitOption() {
   }
 
   // Set the feedback text from the response.
-  document.getElementById("feedback-text").innerText = responseObj.response;
+  document.getElementById("feedback-text").innerText = response.response;
 
   // Build a debug string from the current gameState object.
   const gameStateDebug = Object.keys(gameState)
@@ -139,34 +153,65 @@ function submitOption() {
 }
 
 function nextQuestion() {
-  // First: Check if an ending condition has been met.
+  // FIRST PRIORITY: Check for ending condition
   if (gameState.ending !== 0) {
-    // An ending condition is active—run the end game routine.
-    endGame(gameState.ending);
-    return;
+      endGame(gameState.ending);
+      return;
   }
-  
-  // Next: Check for an explicit next question ID provided in the response.
-  if (nextQuestionKey !== null) {
-    // Find the index of the question that has the matching key.
-    const nextIndex = questions.findIndex(q => q.key === nextQuestionKey);
-    if (nextIndex !== -1) {
-      currentQuestionIndex = nextIndex;
-    } else {
-      console.warn("Next question key not found; defaulting to the next sequential index.");
-      currentQuestionIndex++;
-    }
-    // Reset the explicit jump after processing.
-    nextQuestionKey = null;
+
+  // Get the next question key from the current response
+  const currentResponse = responses[currentResponseId];
+  let nextKey;
+
+  if (currentResponse.nextQuestion) {
+      // Use explicit next question from response
+      nextKey = currentResponse.nextQuestion;
   } else {
-    // No explicit jump: Proceed sequentially.
-    currentQuestionIndex++;
+      // Default to next sequential key
+      nextKey = getNextSequentialKey(currentQuestionKey);
   }
-  
-  // Finally, display the new question.
+
+  // Get the question object
+  const nextQuestion = questions[nextKey];
+  if (!nextQuestion) {
+      console.error(`Question with key ${nextKey} not found`);
+      return;
+  }
+
+  // Check if this question has state-based variations
+  if (nextQuestion.stateCheck) {
+      // Evaluate condition and get appropriate version
+      const condition = evaluateCondition(nextQuestion.stateCheck.condition, gameState);
+      nextKey = condition ? 
+          nextKey.slice(0,4) + "100" :  // True path
+          nextKey.slice(0,4) + "200";   // False path
+  }
+
+  // Update current question key and display
+  currentQuestionKey = nextKey;
   showQuestion();
 }
 
+function evaluateCondition(condition, gameState) {
+  // Handle condition evaluation
+  // Could be simple comparison or more complex logic
+  const [stat1, operator, stat2] = condition.split(' ');
+  switch(operator) {
+      case '>':
+          return gameState[stat1] > gameState[stat2];
+      case '<':
+          return gameState[stat1] < gameState[stat2];
+      // Add other operators as needed
+  }
+}
+
+function evaluateStateCheck(stateCheck) {
+  // Evaluate conditions and return appropriate question key
+  if (evaluateCondition(stateCheck.condition, gameState)) {
+      return stateCheck.truePath;
+  }
+  return stateCheck.falsePath;
+}
 
 function endGame(endingCode) {
   fetch("endings.json")
@@ -204,9 +249,5 @@ function restartGame() {
   window.location.href = "index.html";
 }
 
-function switchSlide(id) {
-  slides.forEach(slide => slide.classList.add("hidden"));
-  document.getElementById(id).classList.remove("hidden");
-}
 
 window.onload = loadGameData;
