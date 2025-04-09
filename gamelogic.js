@@ -1,4 +1,6 @@
 let currentSlide = 0;
+let currentEnding = null;
+let nextQuestionKey = null;
 let currentQuestionIndex = 0;
 let questions = [];
 let responses = {};
@@ -101,6 +103,7 @@ function showQuestion() {
   switchSlide("question-slide");
 }
 
+
 function submitOption() {
   // Find the checked radio option.
   const selected = document.querySelector('input[name="question"]:checked');
@@ -112,7 +115,7 @@ function submitOption() {
   // Get the current question.
   const question = questions[currentQuestionIndex];
 
-  // Retrieve the full response object from our responses lookup using the selected option key.
+  // Retrieve the full response object using the option key.
   const responseObj = responses[selected.value];
   if (!responseObj) {
     alert("No response available for the selected option.");
@@ -122,7 +125,6 @@ function submitOption() {
   // Apply the status effects from the response object.
   if (responseObj.effects) {
     for (let stat in responseObj.effects) {
-      // Check if the gameState has this stat before applying.
       if (gameState.hasOwnProperty(stat)) {
         gameState[stat] += responseObj.effects[stat];
       }
@@ -132,22 +134,10 @@ function submitOption() {
   // Set the feedback text from the response.
   document.getElementById("feedback-text").innerText = responseObj.response;
 
-  // Example conditional check for branching based on stats on a specific question.
-  // Here, we check if the current question is the Job Fair question (key 105000)
-  // and adjust the feedback based on the burnout level.
-  // if (question.key === 105000) {
-  //   if (gameState.burnout > 5) {
-  //     document.getElementById("feedback-text").innerText += 
-  //       "\nDue to high burnout, you start to question whether this path is sustainable...";
-  //   } else {
-  //     document.getElementById("feedback-text").innerText += 
-  //       "\nFeeling energized and optimistic, you confidently approach the fair.";
-  //   }
-  // }
   // Build a debug string from the current gameState object.
   const gameStateDebug = Object.keys(gameState)
-  .map(stat => `${stat}: ${gameState[stat]}`)
-  .join(", ");
+    .map(stat => `${stat}: ${gameState[stat]}`)
+    .join(", ");
 
   // Append the debug information to the feedback text.
   document.getElementById("feedback-text").innerText += "\n\nDEBUG: " + gameStateDebug;
@@ -157,9 +147,69 @@ function submitOption() {
 }
 
 function nextQuestion() {
-  currentQuestionIndex++;
+  // First: Check if an ending condition has been met.
+  if (gameState.ending !== 0) {
+    // An ending condition is active—run the end game routine.
+    endGame(gameState.ending);
+    return;
+  }
+  
+  // Next: Check for an explicit next question ID provided in the response.
+  if (nextQuestionKey !== null) {
+    // Find the index of the question that has the matching key.
+    const nextIndex = questions.findIndex(q => q.key === nextQuestionKey);
+    if (nextIndex !== -1) {
+      currentQuestionIndex = nextIndex;
+    } else {
+      console.warn("Next question key not found; defaulting to the next sequential index.");
+      currentQuestionIndex++;
+    }
+    // Reset the explicit jump after processing.
+    nextQuestionKey = null;
+  } else {
+    // No explicit jump: Proceed sequentially.
+    currentQuestionIndex++;
+  }
+  
+  // Finally, display the new question.
   showQuestion();
-  switchSlide("question-slide");
+}
+
+
+function endGame(endingCode) {
+  fetch("endings.json")
+    .then(response => response.json())
+    .then(data => {
+      const ending = data.endings.find(e => e.code === endingCode);
+      if (ending) {
+        // Store the current ending globally for use by the next ending slide.
+        currentEnding = ending;
+        document.getElementById("ending-title").innerText = ending.title;
+        // Populate the ending text on the first ending slide with S1.
+        document.getElementById("ending-text").innerText = ending.s1;
+        switchSlide("ending-slide-1");
+      } else {
+        console.warn("Ending not found in endings.json");
+        alert("Game Over.");
+      }
+    })
+    .catch(error => {
+      console.error("Error fetching endings.json:", error);
+      alert("Game Over.");
+    });
+}
+
+
+function nextEndingSlide() {
+  if (currentEnding) {
+    document.getElementById("final-text").innerText = currentEnding.s2;
+    switchSlide("ending-slide-2");
+  }
+}
+
+
+function restartGame() {
+  window.location.href = "index.html";
 }
 
 function switchSlide(id) {

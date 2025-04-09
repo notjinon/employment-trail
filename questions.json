@@ -1,95 +1,104 @@
 {
-    "questions": [
-      {
-        "key": 101000,
-        "question": "Throwback. A sunny day in August 2019. Your first day of High School. Middle School was a tumultuous place, but transferring to a new district gives you the capital necessary to start on a clean slate. Time and time again, you’ve heard from your parents, older relatives, and teachers that this is the time to find out who you really are.\n\nWho are you?",
-        "options": [
-          {
-            "option": "I’ve been an academic weapon all my life. It’s time to keep going.",
-            "key": 101001
-          },
-          {
-            "option": "I’ve been an academic weapon all my life. Let’s try to make more connections.",
-            "key": 101002
-          },
-          {
-            "option": "I’ve been an academic weapon all my life. Let’s try to have fun.",
-            "key": 101003
-          }
-        ]
-      },
-      {
-        "key": 102000,
-        "question": "Four years, a pandemic, 10 AP Courses, and a hell of a lot of stress later, it’s your last year as a student. With the phantom of your own persona haunting you, you know taking a gap year or going to a Community College isn’t an option. Thus, to broaden your horizons, you accept your parent’s offer to go on a set of campus visits.\n\nThe question is, where?",
-        "options": [
-          {
-            "option": "Let’s hit the Midwest. There’s lots of knowledge at the original Land-Grant campuses, especially for working in an industrial firm there.",
-            "key": 102001
-          },
-          {
-            "option": "The nexus of American intellectual might is the Northeast. Let’s go through the Ivies. Who knows? I might just run into a Quant to connect with on LinkedIn.",
-            "key": 102002
-          },
-          {
-            "option": "There’s no other option than the West. The Pacific coast is the new focus point of American innovation. It’s an absolute no-brainer to swing by Silicon Valley.",
-            "key": 102003
-          },
-          {
-            "option": "An underrated region for American universities is in the South. North Carolina and Texas have top-ranked schools with deep ties to the Defense and Aerospace industries.",
-            "key": 102004
-          }
-        ]
-      },
-      {
-        "key": 103000,
-        "question": "Owing to your popularity, smarts, and kind nature, you’ve been elected to give the graduation speech for your high school class. The principal, student president, and superintendent sit behind you as you deliver your address.",
-        "options": [
-          {
-            "option": "“I am profoundly honored to have the privilege to talk to you one last time…”",
-            "key": 103001
-          }
-        ]
-      },
-      {
-        "key": 104000,
-        "question": "It’s time for your first week at school! As you proudly stride onto your home for the next four years, you think about what to do first.\n\nWhat do you decide to do?",
-        "options": [
-          {
-            "option": "I can’t afford to fall behind early. I’ll walk my classes and start getting ready for the 6-hour daily homework grinds. Maybe I’ll meet someone on the way…",
-            "key": 104001
-          },
-          {
-            "option": "College is another place to make a fresh start. I wanna be proactive in making friends, let’s go out this week!",
-            "key": 104002
-          },
-          {
-            "option": "This whole move-in process is exhausting. I wanna take a nice break and get used to living here.",
-            "key": 104003
-          }
-        ]
-      },
-      {
-        "key": 105000,
-        "question": "The first job fair is coming around. Considering that an internship is your first shot to get ahead of the heap of idiots that saturate Computer Science, it’s time to lock in.\n\nWhat do you do?",
-        "options": [
-          {
-            "option": "I’m not going. Honestly, most companies won’t even look at freshmen, so there’s no point wasting my time.",
-            "key": 105001
-          },
-          {
-            "option": "I think I should be rational. My resume isn’t worth shit, so I’d better go target the smaller companies that come to these fairs.",
-            "key": 105002
-          },
-          {
-            "option": "I’ve been someone who’s thought big and dreamt bigger all my life. I’ll target Defense and Manufacturing for this fair.",
-            "key": 105003
-          },
-          {
-            "option": "I’ve been someone who’s thought big and dreamt bigger all my life. I’ll target FAANG and FinTech for this fair.",
-            "key": 105004
-          }
-        ]
-      }
-    ]
-  }
-  
+  "questions": [
+    {
+      "key": 101000,
+      "question": "Throwback. A sunny day in August 2019. Your first day of High School. Middle School was a tumultuous place, but transferring to a new district gives you the capital necessary to start on a clean slate. Time and time again, you’ve heard from your parents, older relatives, and teachers that this is the time to find out who you really are.\n\nWho are you?",
+      "options": [
+        {
+          "option": "I’ve been an academic weapon all my life. It’s time to keep going.",
+          "key": 101001
+        },
+        {
+          "option": "I’ve been an academic weapon all my life. Let’s try to make more connections.",
+          "key": 101002
+        },
+        {
+          "option": "I’ve been an academic weapon all my life. Let’s try to have fun.",
+          "key": 101003
+        }
+      ]
+    },
+    {
+      "key": 102000,
+      "question": "Four years, a pandemic, 10 AP Courses, and a hell of a lot of stress later, it’s your last year as a student. With the phantom of your own persona haunting you, you know taking a gap year or going to a Community College isn’t an option. Thus, to broaden your horizons, you accept your parent’s offer to go on a set of campus visits.\n\nThe question is, where?",
+      "options": [
+        {
+          "option": "Let’s hit the Midwest. There’s lots of knowledge at the original Land-Grant campuses, especially for working in an industrial firm there.",
+          "key": 102001
+        },
+        {
+          "option": "The nexus of American intellectual might is the Northeast. Let’s go through the Ivies. Who knows? I might just run into a Quant to connect with on LinkedIn.",
+          "key": 102002
+        },
+        {
+          "option": "There’s no other option than the West. The Pacific coast is the new focus point of American innovation. It’s an absolute no-brainer to swing by Silicon Valley.",
+          "key": 102003
+        },
+        {
+          "option": "An underrated region for American universities is in the South. North Carolina and Texas have top-ranked schools with deep ties to the Defense and Aerospace industries.",
+          "key": 102004
+        }
+      ]
+    },
+    {
+      "key": 103000,
+      "question": "Owing to your popularity, smarts, and kind nature, you’ve been elected to give the graduation speech for your high school class. The principal, student president, and superintendent sit behind you as you deliver your address.",
+      "options": [
+        {
+          "option": "“I am profoundly honored to have the privilege to talk to you one last time…”",
+          "key": 103001
+        }
+      ]
+    },
+    {
+      "key": 104000,
+      "question": "It’s time for your first week at school! As you proudly stride onto your home for the next four years, you think about what to do first.\n\nWhat do you decide to do?",
+      "options": [
+        {
+          "option": "I can’t afford to fall behind early. I’ll walk my classes and start getting ready for the 6-hour daily homework grinds. Maybe I’ll meet someone on the way…",
+          "key": 104001
+        },
+        {
+          "option": "College is another place to make a fresh start. I wanna be proactive in making friends, let’s go out this week!",
+          "key": 104002
+        },
+        {
+          "option": "This whole move-in process is exhausting. I wanna take a nice break and get used to living here.",
+          "key": 104003
+        }
+      ]
+    },
+    {
+      "key": 105000,
+      "question": "The first job fair is coming around. Considering that an internship is your first shot to get ahead of the heap of idiots that saturate Computer Science, it’s time to lock in.\n\nWhat do you do?",
+      "options": [
+        {
+          "option": "I’m not going. Honestly, most companies won’t even look at freshmen, so there’s no point wasting my time.",
+          "key": 105001
+        },
+        {
+          "option": "I think I should be rational. My resume isn’t worth shit, so I’d better go target the smaller companies that come to these fairs.",
+          "key": 105002
+        },
+        {
+          "option": "I’ve been someone who’s thought big and dreamt bigger all my life. I’ll target Defense and Manufacturing for this fair.",
+          "key": 105003
+        },
+        {
+          "option": "I’ve been someone who’s thought big and dreamt bigger all my life. I’ll target FAANG and FinTech for this fair.",
+          "key": 105004
+        }
+      ]
+    },
+    {
+      "key": 106000,
+      "question":"Fuck, that was bad. An absolute embarrassment. But you’re only down for now, and not yet out. \n Where to go now?",
+      "options": [
+        {
+          "option": "Give up. 2025’s recruiting season is not for me.",
+          "key": 106001
+        }
+      ]
+    }
+  ]
+}

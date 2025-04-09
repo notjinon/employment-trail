@@ -76,15 +76,23 @@ footer{
   /* Style each option block */
   .option {
     display: flex;
-    align-items: center;
+    align-items: center;  /* or flex-start if your label is tall */
+    justify-content: flex-start;
+    margin-bottom: 0.5rem;
+    text-align: left;
   }
   
   .option input[type="radio"] {
-    text-align: left;
-    white-space: normal; /* allows text wrapping */
-    word-wrap: break-word; /* ensures long words wrap */
-    max-width: 500px; /* adjust as needed*/
+    margin-right: 0.5rem;
   }
+  
+  .option label {
+    text-align: left;
+    white-space: normal;
+    word-wrap: break-word;
+    max-width: 700px;
+  }
+  
 
 .slide {
   display: none;

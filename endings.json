@@ -1,3 +1,23 @@
 {
-    "ending": "heh! you fail"
-}
+    "endings": [
+      {
+        "code": 97,
+        "title": "??? LAB GF ???",
+        "s1": "The lab smells like ethanol and burnt silicon. You run tests, rerun tests, fix broken scripts, and spend hours pretending to understand a grad student's methodology notes. She walks you to campus sometimes. Brings you coffee when the experiments drag past midnight. There’s no funding. No recognition. But there’s something here. Something real.",
+        "s2": "MC: just spent 4 hours figuring out a bug caused by a loose USB cable\nRoommate: bro… unpaid???\nBest Friend: that’s kind of sick though\nMC: we got a result today. pi actually said “huh.” that’s the win\nRoommate: you need hazard pay\nBest Friend: you’ll remember this summer more than any of us\nMC: yeah. probably"
+      },
+      {
+        "code": 87,
+        "title": "??? LAB NO GF ???",
+        "s1": "You show up before the PI. You leave after the grad students. Your name’s misspelled on a poster that might be presented in Belgium. You don’t get paid. You don’t get credit. But for the first time, you feel like you’re part of something that might outlast you. Even if no one else notices.",
+        "s2": "MC: fixed a major data issue and the PI just called me “intern”\nRoommate: nah that’s insane\nBest Friend: i know it’s thankless, but i’m proud of you\nMC: my code’s probably going into a paper. that’s kinda cool, right?\nRoommate: as long as it’s not just the acknowledgements section\nBest Friend: it’s cool. even if they forget you, you’ll remember\nMC: yeah. i think i will"
+      },
+      {
+        "code": 99,
+        "title": "GAME OVER: Questionable Return of Investment",
+        "s1":"You’re in business school now. There’s a bitter convenience to it — a preordained pipeline for the kids who were once gifted and tired. No one asks why you gave up. You just kind of... stopped. Now you spend your days in case studies and coffee shops, talking about leverage like it's a religion. Quite simply, you let the fire go out. \n\nAnd sometimes, when the professor calls on you, you swear you can still feel the ghost of who you used to be.",
+        "s2": "You: forgot my AirPods and had to raw dog a Harvard case discussion\n Roommate: you’ve changed. you used to build stuff\n Best Friend: now you just build debt \nYou: stfu i’m networking\nRoommate: business casual arc\nBest Friend: business tragedy\nYou: i hate all of you\nRoommate: dw u hate yourself more for selling out"
+      }
+    ]
+  }
+  

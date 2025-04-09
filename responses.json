@@ -1,132 +1,138 @@
 {
-    "responses": [
-      {
-        "id": 101001,
-        "response": "It’s four years of studying and all-nighters. Your classmates go out and enjoy their last years at home. You don’t care. You have dreams to build.",
-        "effects": {
-          "academic": 3,
-          "burnout": 1
-        }
-      },
-      {
-        "id": 101002,
-        "response": "It’s all so tedious. Performative. Fake smiles, handshakes, student clubs. You win HS DECA awards for being a visionary. Does that even matter?",
-        "effects": {
-          "social": 3,
-          "burnout": 1
-        }
-      },
-      {
-        "id": 101003,
-        "response": "It’s a sharp pivot. You alternate between long stretches of laziness, chaotic underage parties, and frenetic bouts of catching up to schoolwork. The American Dream.",
-        "effects": {
-          "burnout": -2
-        }
-      },
-      {
-        "id": 102001,
-        "response": "Driving by the barren fields that surround the campuses of UW-Madison, UIUC, and Michigan, you can’t help but wonder if you made a bad choice. Nevertheless, you’re accepted into Purdue and decide to commit.",
-        "effects": {
-          "manufacturing": 2,
-          "defense": 1,
-          "school": 1
-        }
-      },
-      {
-        "id": 102002,
-        "response": " Ivy day rolls around, and you’re rejected from seven of them. You can picture them laughing at your pitiful essays. The only one with good news? Cornell. Sure, it’s not MIT, but at least you’re not at Rutgers or UMass Amherst.",
-        "effects": {
-          "finance": 2,
-          "technology": 1,
-          "school": 2
-        }
-      },
-      {
-        "id": 102003,
-        "response": "The sun-kissed valleys of the Bay and the picturesque beaches of SoCal are to die for. You’re rejected from all 8 of the UCs and CSUs you applied to. Stanford probably didn’t even open your folder. Your saving grace is the rainy University of Washington in Seattle.",
-        "effects": {
-          "technology": 2,
-          "finance": 1,
-          "school": 3
-        }
-      },
-      {
-        "id": 102004,
-        "response": "You quickly realize that for every Vanderbilt and Duke, there’s a dozen more LSUs academically. You’re puzzled by the presence of Confederate statues in the same town that hosts NASA Marshall. In the end, you end up committing to Georgia Tech.",
-        "effects": {
-          "defense": 2,
-          "manufacturing": 1,
-          "school": 4
-        }
-      },
-      {
-        "id": 103001,
-        "response": "When the applause finally dies down, you look down at the people clapping and wonder how many of them will peak here. Either way, there’s no time to care about dead weight. It’s time for a new chapter in your life.",
-        "effects": {}
-      },
-      {
-        "id": 104001,
-        "response": "While everyone’s out there enjoying new friends and exploring campus, you look like a maniac measuring the time it takes to walk between academic halls. But hey, maybe the 4.0 GPA will make it worthwhile.",
-        "effects": {
-          "academic": 2,
-          "burnout": 2,
-          "social": -1
-        }
-      },
-      {
-        "id": 104002,
-        "response": "Sips turn into shots, which turn into swigs. Your stomach hates you and your brain is in revolt. You can’t help but wonder how much you’ve changed from High School, and what people would think about you now.",
-        "effects": {
-          "social": 2,
-          "burnout": 1,
-          "academic": -1
-        }
-      },
-      {
-        "id": 104003,
-        "response": "What was supposed to be a productive session of organization and unpacking quickly devolved into an afternoon of bedrotting. Every time you scroll to another TikTok, you can picture more synapses withering and dying.",
-        "effects": {
-          "burnout": -2,
-          "academic": -1,
-          "social": -1
-        }
-      },
-      {
-        "id": 105001,
-        "response": "Your optimistic best friend decides to go alone. She comes back with an interview scheduled at UPS for a Data Analytics role. You stare at your empty inbox in silence.",
-        "effects": {
-          "academic": 1,
-          "social": -1
-        }
-      },
-      {
-        "id": 105002,
-        "response": "You think it’s an avenue to explore, but you quickly realize it’s just mailing list fluff. The same day, your charismatic roommate connects with an AMD recruiter online.",
-        "effects": {
-          "burnout": 1,
-          "social": 1
-        }
-      },
-      {
-        "id": 105003,
-        "response": "You could feel the pity. Quite frankly, you should’ve known better, but they silently respect the balls you had to go up to Lockheed Martin and Stratasys as a freshman.",
-        "effects": {
-          "burnout": 2,
-          "defense": 1,
-          "manufacturing": 1,
-          "social": 1
-        }
-      },
-      {
-        "id": 105004,
-        "response": "You could feel the pity. Quite frankly, you should’ve known better, but they silently respect the balls you had to go up to Apple and Jane Street as a freshman.",
-        "effects": {
-          "burnout": 2,
-          "technology": 1,
-          "finance": 1,
-          "social": 1
-        }
+  "responses": [
+    {
+      "id": 101001,
+      "response": "It’s four years of studying and all-nighters. Your classmates go out and enjoy their last years at home. You don’t care. You have dreams to build.",
+      "effects": {
+        "academic": 3,
+        "burnout": 1
       }
-    ]
-  }
-  
+    },
+    {
+      "id": 101002,
+      "response": "It’s all so tedious. Performative. Fake smiles, handshakes, student clubs. You win HS DECA awards for being a visionary. Does that even matter?",
+      "effects": {
+        "social": 3,
+        "burnout": 1
+      }
+    },
+    {
+      "id": 101003,
+      "response": "It’s a sharp pivot. You alternate between long stretches of laziness, chaotic underage parties, and frenetic bouts of catching up to schoolwork. The American Dream.",
+      "effects": {
+        "burnout": -2
+      }
+    },
+    {
+      "id": 102001,
+      "response": "Driving by the barren fields that surround the campuses of UW-Madison, UIUC, and Michigan, you can’t help but wonder if you made a bad choice. Nevertheless, you’re accepted into Purdue and decide to commit.",
+      "effects": {
+        "manufacturing": 2,
+        "defense": 1,
+        "school": 1
+      }
+    },
+    {
+      "id": 102002,
+      "response": " Ivy day rolls around, and you’re rejected from seven of them. You can picture them laughing at your pitiful essays. The only one with good news? Cornell. Sure, it’s not MIT, but at least you’re not at Rutgers or UMass Amherst.",
+      "effects": {
+        "finance": 2,
+        "technology": 1,
+        "school": 2
+      }
+    },
+    {
+      "id": 102003,
+      "response": "The sun-kissed valleys of the Bay and the picturesque beaches of SoCal are to die for. You’re rejected from all 8 of the UCs and CSUs you applied to. Stanford probably didn’t even open your folder. Your saving grace is the rainy University of Washington in Seattle.",
+      "effects": {
+        "technology": 2,
+        "finance": 1,
+        "school": 3
+      }
+    },
+    {
+      "id": 102004,
+      "response": "You quickly realize that for every Vanderbilt and Duke, there’s a dozen more LSUs academically. You’re puzzled by the presence of Confederate statues in the same town that hosts NASA Marshall. In the end, you end up committing to Georgia Tech.",
+      "effects": {
+        "defense": 2,
+        "manufacturing": 1,
+        "school": 4
+      }
+    },
+    {
+      "id": 103001,
+      "response": "When the applause finally dies down, you look down at the people clapping and wonder how many of them will peak here. Either way, there’s no time to care about dead weight. It’s time for a new chapter in your life.",
+      "effects": {}
+    },
+    {
+      "id": 104001,
+      "response": "While everyone’s out there enjoying new friends and exploring campus, you look like a maniac measuring the time it takes to walk between academic halls. But hey, maybe the 4.0 GPA will make it worthwhile.",
+      "effects": {
+        "academic": 2,
+        "burnout": 2,
+        "social": -1
+      }
+    },
+    {
+      "id": 104002,
+      "response": "Sips turn into shots, which turn into swigs. Your stomach hates you and your brain is in revolt. You can’t help but wonder how much you’ve changed from High School, and what people would think about you now.",
+      "effects": {
+        "social": 2,
+        "burnout": 1,
+        "academic": -1
+      }
+    },
+    {
+      "id": 104003,
+      "response": "What was supposed to be a productive session of organization and unpacking quickly devolved into an afternoon of bedrotting. Every time you scroll to another TikTok, you can picture more synapses withering and dying.",
+      "effects": {
+        "burnout": -2,
+        "academic": -1,
+        "social": -1
+      }
+    },
+    {
+      "id": 105001,
+      "response": "Your optimistic best friend decides to go alone. She comes back with an interview scheduled at UPS for a Data Analytics role. You stare at your empty inbox in silence.",
+      "effects": {
+        "academic": 1,
+        "social": -1
+      }
+    },
+    {
+      "id": 105002,
+      "response": "You think it’s an avenue to explore, but you quickly realize it’s just mailing list fluff. The same day, your charismatic roommate connects with an AMD recruiter online.",
+      "effects": {
+        "burnout": 1,
+        "social": 1
+      }
+    },
+    {
+      "id": 105003,
+      "response": "You could feel the pity. Quite frankly, you should’ve known better, but they silently respect the balls you had to go up to Lockheed Martin and Stratasys as a freshman.",
+      "effects": {
+        "burnout": 2,
+        "defense": 1,
+        "manufacturing": 1,
+        "social": 1
+      }
+    },
+    {
+      "id": 105004,
+      "response": "You could feel the pity. Quite frankly, you should’ve known better, but they silently respect the balls you had to go up to Apple and Jane Street as a freshman.",
+      "effects": {
+        "burnout": 2,
+        "technology": 1,
+        "finance": 1,
+        "social": 1
+      }
+    },
+    {
+      "id": 106001,
+      "response":"Gave up this quick? \n\nYou drop out of engineering school and join the School of Business. Even your parents say they know you could've done better. \n\nWhat a sick fucking joke.",
+      "effects": {
+        "ending": 99
+      }
+    }
+  ]
+}
