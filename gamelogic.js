@@ -35,7 +35,7 @@ async function loadGameData() {
 
   // Index responses by key for quick lookup
   rData.responses.forEach(res => {
-    responses[res.id] = res.response;
+    responses[res.id] = res; // Store the whole response object, not just the response text.
   });
 
 }
@@ -111,17 +111,18 @@ function submitOption() {
 
   // Get the current question.
   const question = questions[currentQuestionIndex];
-  
-  // Retrieve the response object from our responses lookup using the selected option key.
+
+  // Retrieve the full response object from our responses lookup using the selected option key.
   const responseObj = responses[selected.value];
   if (!responseObj) {
     alert("No response available for the selected option.");
     return;
   }
 
-  // Apply the status effects from the response.
+  // Apply the status effects from the response object.
   if (responseObj.effects) {
     for (let stat in responseObj.effects) {
+      // Check if the gameState has this stat before applying.
       if (gameState.hasOwnProperty(stat)) {
         gameState[stat] += responseObj.effects[stat];
       }
@@ -134,15 +135,22 @@ function submitOption() {
   // Example conditional check for branching based on stats on a specific question.
   // Here, we check if the current question is the Job Fair question (key 105000)
   // and adjust the feedback based on the burnout level.
-  if (question.key === 105000) {
-    if (gameState.burnout > 5) {
-      document.getElementById("feedback-text").innerText += 
-        "\nDue to high burnout, you start to question whether this path is sustainable...";
-    } else {
-      document.getElementById("feedback-text").innerText += 
-        "\nFeeling energized and optimistic, you confidently approach the fair.";
-    }
-  }
+  // if (question.key === 105000) {
+  //   if (gameState.burnout > 5) {
+  //     document.getElementById("feedback-text").innerText += 
+  //       "\nDue to high burnout, you start to question whether this path is sustainable...";
+  //   } else {
+  //     document.getElementById("feedback-text").innerText += 
+  //       "\nFeeling energized and optimistic, you confidently approach the fair.";
+  //   }
+  // }
+  // Build a debug string from the current gameState object.
+  const gameStateDebug = Object.keys(gameState)
+  .map(stat => `${stat}: ${gameState[stat]}`)
+  .join(", ");
+
+  // Append the debug information to the feedback text.
+  document.getElementById("feedback-text").innerText += "\n\nDEBUG: " + gameStateDebug;
 
   // Move to the feedback slide.
   switchSlide("feedback-slide");
