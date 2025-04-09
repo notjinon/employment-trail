@@ -91,14 +91,6 @@ function showQuestion() {
   // Append the form to the options container.
   optionsContainer.appendChild(form);
 
-  // Create a "Submit" button to confirm selection.
-  const submitBtn = document.createElement("button");
-  submitBtn.type = "button"; // Prevents form submission refresh.
-  submitBtn.innerText = "Submit";
-  submitBtn.className = "button";
-  submitBtn.onclick = submitOption;
-  optionsContainer.appendChild(submitBtn);
-
   // Switch to the question slide.
   switchSlide("question-slide");
 }

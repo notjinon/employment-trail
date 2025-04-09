@@ -97,8 +97,57 @@
         {
           "option": "Give up. 2025’s recruiting season is not for me.",
           "key": 106001
+        },
+        {
+          "option": "It’s clear that I need to start standing out more. I’ll join an engineering club.",
+          "key": 106002
+        },
+        {
+          "option": "It’s clear that I need to start networking more. I’ll try to rush a professional frat.",
+          "key": 106003
+        },
+        {
+          "option": "It’s clear that I need to just get better. No need to do anything else than increase my own value by studying and getting on LeetCode.",
+          "key": 106004
+        }
+      ]
+    },
+    {
+      "key": 107000,
+      "question":"The morning after, you’re hit with a sober reality. You’re balls deep in a group project, and nobody’s helping you out. \nHow do you get back on track?",
+      "options": [
+        {
+          "option": "I need to whip them back into line.",
+          "key": 107001
+        },
+        {
+          "option": "I need to call for a team meeting.",
+          "key": 107002
+        },
+        {
+          "option": "I need to put these idiots on my back.",
+          "key": 107003
+        },
+        {
+          "option": "Screw this. Let it ride, I’ll tank it.",
+          "key": 107004
+        }
+      ]
+    },
+    {
+      "key": 108000,
+      "question":"Your group’s final presentation is in 45 minutes. They’ve got the deck, the script, the outfits. They don’t need you to speak. But they did say you’d be useful for any technical questions. They did say, “just be there.” Your alarm keeps ringing. Your body’s not listening.  \nDo you go?",
+      "options": [
+        {
+          "option": "Yeah. I said I’d be there. I’ll go.",
+          "key": 107001
+        },
+        {
+          "option": "I can’t. They’ll survive without me...",
+          "key": 107002
         }
       ]
     }
+
   ]
 }
