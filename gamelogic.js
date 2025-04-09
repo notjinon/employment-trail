@@ -108,21 +108,41 @@ function submitOption() {
     return;
   }
 
-  // Find the corresponding option in our current question.
+  // Get the current question.
   const question = questions[currentQuestionIndex];
-  const selectedOpt = question.options.find(opt => opt.key == selected.value);
+  
+  // Retrieve the response object from our responses lookup using the selected option key.
+  const responseObj = responses[selected.value];
+  if (!responseObj) {
+    alert("No response available for the selected option.");
+    return;
+  }
 
-  // Apply the stat effects.
-  for (let stat in selectedOpt.effects) {
-    if (gameState.hasOwnProperty(stat)) {
-      gameState[stat] += selectedOpt.effects[stat];
+  // Apply the status effects from the response.
+  if (responseObj.effects) {
+    for (let stat in responseObj.effects) {
+      if (gameState.hasOwnProperty(stat)) {
+        gameState[stat] += responseObj.effects[stat];
+      }
     }
   }
 
-  // Retrieve and display the feedback.
-  const feedbackText = responses[selectedOpt.key] || "No response available.";
-  document.getElementById("feedback-text").innerText = feedbackText;
-  
+  // Set the feedback text from the response.
+  document.getElementById("feedback-text").innerText = responseObj.response;
+
+  // Example conditional check for branching based on stats on a specific question.
+  // Here, we check if the current question is the Job Fair question (key 105000)
+  // and adjust the feedback based on the burnout level.
+  // if (question.key === 105000) {
+  //   if (gameState.burnout > 5) {
+  //     document.getElementById("feedback-text").innerText += 
+  //       "\nDue to high burnout, you start to question whether this path is sustainable...";
+  //   } else {
+  //     document.getElementById("feedback-text").innerText += 
+  //       "\nFeeling energized and optimistic, you confidently approach the fair.";
+  //   }
+  // }
+
   // Move to the feedback slide.
   switchSlide("feedback-slide");
 }

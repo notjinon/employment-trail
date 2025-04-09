@@ -80,7 +80,10 @@ footer{
   }
   
   .option input[type="radio"] {
-    margin-right: 0.5rem;
+    text-align: left;
+    white-space: normal; /* allows text wrapping */
+    word-wrap: break-word; /* ensures long words wrap */
+    max-width: 500px; /* adjust as needed*/
   }
 
 .slide {
