@@ -3,6 +3,7 @@ let currentQuestionIndex = 0;
 let questions = [];
 let responses = {};
 let gameState = {
+  school: 0,
   academic: 0,
   burnout: 0,
   social: 0,
@@ -133,15 +134,15 @@ function submitOption() {
   // Example conditional check for branching based on stats on a specific question.
   // Here, we check if the current question is the Job Fair question (key 105000)
   // and adjust the feedback based on the burnout level.
-  // if (question.key === 105000) {
-  //   if (gameState.burnout > 5) {
-  //     document.getElementById("feedback-text").innerText += 
-  //       "\nDue to high burnout, you start to question whether this path is sustainable...";
-  //   } else {
-  //     document.getElementById("feedback-text").innerText += 
-  //       "\nFeeling energized and optimistic, you confidently approach the fair.";
-  //   }
-  // }
+  if (question.key === 105000) {
+    if (gameState.burnout > 5) {
+      document.getElementById("feedback-text").innerText += 
+        "\nDue to high burnout, you start to question whether this path is sustainable...";
+    } else {
+      document.getElementById("feedback-text").innerText += 
+        "\nFeeling energized and optimistic, you confidently approach the fair.";
+    }
+  }
 
   // Move to the feedback slide.
   switchSlide("feedback-slide");
