@@ -60,9 +60,6 @@ function showQuestion() {
       return;
   }  const qText = document.getElementById("question-text");
   const optionsContainer = document.getElementById("options-container");
-
-  // Set the question text.
-  qText.innerText = question.question;
   
   // Clear any previous options.
   optionsContainer.innerHTML = "";
@@ -101,8 +98,9 @@ function showQuestion() {
   optionsContainer.appendChild(form);
 
   // Switch to the question slide.
-  document.getElementById("question-text").textContent = question.question;
-  renderOptions(question.options);
+  // UNCOMMENT ON PROD
+  // document.getElementById("question-text").textContent = question.question;
+  document.getElementById("question-text").textContent = question.question + "\n\n DEBUG: " + currentQuestionKey;
   switchSlide("question-slide");
 }
 
@@ -123,20 +121,19 @@ function submitOption() {
     // Get and store response ID for use in nextQuestion()
   currentResponseId = selectedOpt.key;
   const response = responses[currentResponseId];
-  if (!responseObj) {
+  if (!response) {
   alert("No response available for the selected option.");
   return;
   }
 
   // Apply the status effects from the response object.
-  if (responseObj.effects) {
+  if (response.effects) {
     for (let stat in response.effects) {
       if (gameState.hasOwnProperty(stat)) {
-        gameState[stat] += responseObj.effects[stat];
+        gameState[stat] += response.effects[stat];
       }
     }
   }
-
   // Set the feedback text from the response.
   document.getElementById("feedback-text").innerText = response.response;
 
@@ -160,16 +157,33 @@ function nextQuestion() {
   }
 
   // Get the next question key from the current response
-  const currentResponse = responses[currentResponseId];
+  const response = responses[currentResponseId];
   let nextKey;
 
-  if (currentResponse.nextQuestion) {
-      // Use explicit next question from response
-      nextKey = currentResponse.nextQuestion;
+  if (response.nextQuestion) {
+    // Use explicit next question from response
+    nextKey = response.nextQuestion;
   } else {
-      // Default to next sequential key
-      nextKey = getNextSequentialKey(currentQuestionKey);
+    // Default to next sequential key
+    nextKey = currentQuestionKey += 1000;
   }
+
+  // Check if you're on a branching question
+  let branchingQuestionKey = [108000, 110000, 114000, 115000, 116000, 117000, 120000];
+  if (branchingQuestionKey.includes(nextKey)) {
+    switch (nextKey) {
+      case 108000:
+        // Check if Burnout < 4, if so, go to 108100 else 108200
+        nextKey = gameState.burnout < 4 ? 108100 : 108200;
+        break;
+      case 110000:
+        //Check if Academic Skill > 3, if so, go to 110100 else 110200
+        nextKey = gameState.academic > 3 ? 110100 : 110200;
+        break;
+      case 114000:
+        // this is a placeholder. Q14 is a special question with complex checks and i'll need to make a special function for it.
+      }
+    }
 
   // Get the question object
   const nextQuestion = questions[nextKey];
@@ -178,40 +192,12 @@ function nextQuestion() {
       return;
   }
 
-  // Check if this question has state-based variations
-  if (nextQuestion.stateCheck) {
-      // Evaluate condition and get appropriate version
-      const condition = evaluateCondition(nextQuestion.stateCheck.condition, gameState);
-      nextKey = condition ? 
-          nextKey.slice(0,4) + "100" :  // True path
-          nextKey.slice(0,4) + "200";   // False path
-  }
-
   // Update current question key and display
   currentQuestionKey = nextKey;
   showQuestion();
 }
 
-function evaluateCondition(condition, gameState) {
-  // Handle condition evaluation
-  // Could be simple comparison or more complex logic
-  const [stat1, operator, stat2] = condition.split(' ');
-  switch(operator) {
-      case '>':
-          return gameState[stat1] > gameState[stat2];
-      case '<':
-          return gameState[stat1] < gameState[stat2];
-      // Add other operators as needed
-  }
-}
 
-function evaluateStateCheck(stateCheck) {
-  // Evaluate conditions and return appropriate question key
-  if (evaluateCondition(stateCheck.condition, gameState)) {
-      return stateCheck.truePath;
-  }
-  return stateCheck.falsePath;
-}
 
 function endGame(endingCode) {
   fetch("endings.json")

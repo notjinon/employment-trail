@@ -137,7 +137,6 @@
     {
         "id": 106002,
         "question": 6,
-        "prompt": "It’s clear that I need to start standing out more. I’ll join an engineering club.",
         "response": "After the fair, there’s lots of new faces looking to “make an impact.” But the rest of the club rightfully sees you all as carpetbaggers desperate for a ladder out of the pit. Either way, you have work to do.",
         "effects": {
             "defense": 1,
@@ -149,7 +148,6 @@
     {
         "id": 106003,
         "question": 6,
-        "prompt": "It’s clear that I need to start networking more. I’ll try to rush a professional frat.",
         "response": "A case and behavioral interview later, you’re officially in the frat. It’s a nice couple of days before you realize that it (like any business-adjacent club) is a nothingburger. At least you’ll learn Excel.",
         "effects": {
             "finance": 1,
@@ -160,7 +158,6 @@
     {
         "id": 106004,
         "question": 6,
-        "prompt": "It’s clear that I need to just get better. No need to do anything else than increase my own value by studying and getting on LeetCode.",
         "response": "It’s 3 AM. You’ve been staring at a LeetCode Hard for the past 90 minutes. Your roommate kicked you out of the room to bring a girl over. You fight back the soreness in your eyes.",
         "effects": {
             "burnout": 1,
@@ -170,7 +167,6 @@
     {
         "id": 107001,
         "question": 7,
-        "prompt": "I need to whip them back into line.",
         "response": "You fire off a strongly worded group chat message at 10:00 AM. They all read it. No one replies. You notice their commits being pushed to the repo later that evening.",
         "effects": {
             "burnout": 1,
@@ -181,7 +177,6 @@
     {
         "id": 107002,
         "question": 7,
-        "prompt": "I need to call for a team meeting.",
         "response": "Two people cancel, one shows up late. After a lengthy discussion about accountability and norms, no concrete agreement is made. Still, it’s progress, and they appreciate you trying.",
         "effects": {
             "burnout": 1,
@@ -192,7 +187,6 @@
     {
         "id": 107003,
         "question": 7,
-        "prompt": "I need to put these idiots on my back.",
         "response": "Your TA checks the group repo and notes that 80% of the codebase has been written by you alone. You notice the same thing while buying another case of Red Bull.",
         "effects": {
             "burnout": 2,
@@ -210,150 +204,120 @@
         }
     },
     {
-        "id": 108001,
+        "id": 108101,
         "question": 8,
-        "prompt": "Yeah. I said I’d be there.",
         "response": "You show up in the nick of time. Plug in the laptop. When the questions come, you’re sharp. Relaxed. In control. Well-rested. Your team daps you up after. Pure and deserved bliss.",
         "effects": {
             "academic": 2,
             "burnout": -1
         },
-        "comment": "IF Burnout < 4"
+        "nextQuestion": 109000
     },
     {
-        "id": 108101,
+        "id": 108102,
         "question": 8,
-        "prompt": "Yeah. I said I’d be there.",
-        "response": "Everyone can tell you’re not okay. Your clothes are wrinkled. Your eyes are dead. But when the TA throws a curveball about your code, you knock it out of the park. Your headache crescendos as your classmates applaud the presentation.",
+        "response": "You send a text: “Sorry, something came up.” They reply, “Ok.” Nothing more. You sleep through the morning. It helps for a bit. But when you wake up, the shame’s already waiting for you.",
         "effects": {
             "academic": 1
         },
-        "comment": "ELSE"
+        "nextQuestion": 109000
     },
     {
-        "id": 108002,
+        "id": 108201,
         "question": 8,
-        "prompt": "I can’t. They’ll survive without me.",
-        "response": "You send a text: “Sorry, something came up.” They reply, “Ok.” Nothing more. You sleep through the morning. It helps for a bit. But when you wake up, the shame’s already waiting for you.",
+        "response": "Everyone can tell you’re not okay. Your clothes are wrinkled. Your eyes are dead. But when the TA throws a curveball about your code, you knock it out of the park. Your headache crescendos as your classmates applaud the presentation.",
         "effects": {
             "burnout": -2,
             "academic": -1,
             "social": -1
-        }
-    },
-    {
-        "id": 109001,
-        "question": 9,
-        "prompt": "President Roosevelt once declared that ultimate triumph is won from bitter toil. I think it’s time to get back into the gym.",
-        "response": "You were once a varsity athlete in high school. After months of lethargy, your muscles are sore and your head is throbbing after a punishing HIIT set. But you’ve never felt more alive.",
-        "effects": {
-            "burnout": -2,
-            "fondness": 1
-        }
-    },
-    {
-        "id": 109002,
-        "question": 9,
-        "prompt": "I think it’s time to be frank about my shitty mental health. What’s the number for the campus CAPS services?",
-        "response": "You stare the therapist in the eyes for 90 minutes. Does she even understand what pressure you’re under? Does she really believe in you? Isn’t she just paid to keep you happy? Either way, it works.",
-        "effects": {
-            "burnout": -1,
-            "social": 1,
-            "fondness": 1
-        }
-    },
-    {
-        "id": 109003,
-        "question": 9,
-        "prompt": "This isn’t worth my time. Just pay them lip service and move on.",
-        "response": "Your next battery of midterms yields dramatically better results. At the same time, your daily dosage of caffeine creeps upward while your average length of sleep steadily declines.",
-        "effects": {
-            "burnout": 1,
-            "academic": 3
-        }
-    },
-    {
-        "id": 110001,
-        "question": 10,
-        "prompt": "Let’s go out to party again. Fuck it, it’s still early in the year.",
-        "response": "You’re now considered a regular among the party scene. The night swiftly turns into a blur, but all you know is that it was a needed reprieve. Your roommate spots you drinking with the same girl all night long.",
-        "effects": {
-            "burnout": -2,
-            "fondness": 2
         },
-        "comment": "IF Academic Skill >= 3"
+        "nextQuestion": 109000
     },
     {
-        "id": 110002,
-        "question": 10,
-        "prompt": "How about I have a nice kickback with my friends in their apartment?",
-        "response": "You bond with classmates over copious amounts of beer while playing MarioKart. A cute girl is there and you exchange Instagrams. Your best friend sees it and silently immortalizes the blackmail in her mind.",
+        "id": 108202,
+        "question": 8,
+        "response": "You send a text: “Sorry, something came up.” They reply, “Ok.” Nothing more. You sleep through the morning. It helps for a bit. But when you wake up, the shame’s already waiting for you.",
         "effects": {
-            "burnout": -2,
-            "social": 1,
-            "fondness": 1
+            "academic": 1
         },
-        "comment": "IF Academic Skill >= 3"
+        "nextQuestion": 109000
     },
     {
-        "id": 110003,
-        "question": 10,
-        "prompt": "It’s Friday. No better thing to do than watch a college football game!",
-        "response": "Your home team gets routed off the field 52-21. The commentators call it an absolute disgrace, but you pay no mind. It’s a blast getting to make new friends there.",
-        "effects": {
-            "burnout": -2,
-            "social": 2
-        },
-        "comment": "IF Academic Skill >= 3"
+      "id": 109001,
+      "question": 9,
+      "response": "You were once a varsity athlete in high school. After months of lethargy, your muscles are sore and your head is throbbing after a punishing HIIT set. But you’ve never felt more alive.",
+      "effects": {
+          "burnout": -2,
+          "fondness": 1
+      }
     },
     {
-        "id": 110101,
-        "question": 10,
-        "prompt": "“Hey mom, I haven’t called you in a while…”",
-        "response": "She asks if you’re okay. You fight back the welling tears. You’re stronger than this. You’re meant to be here. It’s just another setback, you say.",
-        "effects": {
-            "burnout": -2
-        },
-        "comment": "IF Academic Skill < 3"
+      "id": 109002,
+      "question": 9,
+      "response": "You stare the therapist in the eyes for 90 minutes.  Does she even understand what pressure you’re under? Does she really believe in you? Isn’t she just paid to keep you happy? Either way, it works.",
+      "effects": {
+          "burnout": -1,
+          "social": 1,
+          "fondness": 1
+      }
     },
     {
-        "id": 111001,
-        "question": 11,
-        "prompt": "Let’s just go home and rest.",
-        "response": "Despite your own protests, your friends force you to go home for the break. You sit at the end of the dinner table, listening to your Woke mom and MAGA uncle scream their heads off. There’s no place like home.",
-        "effects": {
-            "burnout": -1
-        }
+      "id": 109003,
+      "question": 9,
+      "response": "Your next battery of midterms yields dramatically better results. At the same time, your daily dosage of caffeine creeps upward while your average length of sleep steadily declines.",
+      "effects": {
+          "burnout": 1,
+          "academic": 3
+      }
     },
     {
-        "id": 112001,
-        "question": 12,
-        "prompt": "I’m thinking that the results will speak for themselves...",
-        "response": "This conservative approach saves you lots of energy and mental fortitude leading up to the fair. If you had wanted to continue coasting on upward momentum, it worked. Otherwise, expect a tougher climb socially and academically.",
-        "effects": {
-            "burnout": -2,
-            "fondness": 1
-        }
+      "id": 110101,
+      "question": 10,
+      "response": "You’re now considered a regular among the party scene. The night swiftly turns into a blur, but all you know is that it was a needed reprieve. Your roommate spots you drinking with the same girl all night long.",
+      "effects": {
+          "burnout": -2,
+          "fondness": 2
+      },
+      "nextQuestion": 111000
     },
     {
-        "id": 112002,
-        "question": 12,
-        "prompt": "What really screwed me last time was our lack of social skills...",
-        "response": "Going to the career center over time helps you nail down the mock interview questions they give you. By the end of your grueling “interview bootcamp” sessions, you’re confident in your ability to sell yourself, while you feel more tiresome than ever.",
-        "effects": {
-            "social": 2,
-            "burnout": 1
-        }
+      "id": 110102,
+      "question": 10,
+      "response": "You bond with classmates over copious amounts of beer while playing MarioKart. A cute girl is there and you exchange Instagrams. Your best friend sees it and silently immortalizes the blackmail in her mind.",
+      "effects": {
+          "burnout": -2,
+          "social": 2,
+          "fondness": 1
+      },
+      "nextQuestion": 111000
     },
     {
-        "id": 112003,
-        "question": 12,
-        "prompt": "I can’t sell a person that’s not worth anything, can I?...",
-        "response": "You’re right. Learning how to approach technical and casing questions is an invaluable skill. From the sheer amount of time and effort you put into this, you feel very well prepared on this end, while fatigue creeps in.",
-        "effects": {
-            "academic": 2,
-            "burnout": 1
-        }
+      "id": 110103,
+      "question": 10,
+      "response": "Your home team gets routed off the field 52-21. The commentators call it an absolute disgrace, but you pay no mind. It’s a blast getting to make new friends there.",
+      "effects": {
+          "burnout": -2,
+          "social": 2
+      },
+      "nextQuestion": 111000
+    },
+    {
+      "id": 110201,
+      "question": 10,
+      "response": "She asks if you’re okay. You fight back the welling tears. You’re stronger than this. You’re meant to be here. It’s just another setback, you say.",
+      "effects": {
+          "burnout": -2
+      },
+      "nextQuestion": 111000
+    },
+    {
+      "id": 111001,
+      "question": 11,
+      "response": "Despite your own protests, your friends force you to go home for the break. You sit at the end of the dinner table, listening to your Woke mom and MAGA uncle scream their heads off. There’s no place like home.",
+      "effects": {
+          "burnout": -1,
+          "ending": 1
+      }
     }
-]
+  ]
 }

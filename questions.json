@@ -135,19 +135,88 @@
       ]
     },
     {
-      "key": 108000,
+      "key": 108100,
       "question":"Your group’s final presentation is in 45 minutes. They’ve got the deck, the script, the outfits. They don’t need you to speak. But they did say you’d be useful for any technical questions. They did say, “just be there.” Your alarm keeps ringing. Your body’s not listening.  \nDo you go?",
       "options": [
         {
           "option": "Yeah. I said I’d be there. I’ll go.",
-          "key": 107001
+          "key": 108101
         },
         {
           "option": "I can’t. They’ll survive without me...",
-          "key": 107002
+          "key": 108102
+        }
+      ]
+    },
+    {
+      "key": 108200,
+      "question":"Your group’s final presentation is in 45 minutes. They’ve got the deck, the script, the outfits. They don’t need you to speak. But they did say you’d be useful for any technical questions. They did say, “just be there.” Your alarm keeps ringing. Your body’s not listening.  \nDo you go?",
+      "options": [
+        {
+          "option": "Yeah. I said I’d be there. I’ll go.",
+          "key": 108201
+        },
+        {
+          "option": "I can’t. They’ll survive without me...",
+          "key": 108202
+        }
+      ]
+    },
+    {
+      "key": 109000,
+      "question":"An email arrives in your inbox. It’s the Office of the Dean of Undergraduate Students.  \n“Dear Student, We are reaching out to inform you that your peers have requested a wellness check…” \n\n You file it away. You’ll deal with the bleeding hearts later, but what do you do now?",
+      "options": [
+        {
+          "option": "Teddy Roosevelt once said that ultimate triumph is won from bitter toil. I think it’s time to get back into the gym.",
+          "key": 109001
+        },
+        {
+          "option": "I think it’s time to be frank about my shitty mental health. What’s the number for the campus CAPS services?",
+          "key": 109002
+        },
+        {
+          "option": "This isn’t worth my time. Just pay them lip service and move on.",
+          "key": 109003
+        }
+      ]
+    },
+    {
+      "key": 110100,
+      "question":"Post-midterm celebration. By the grace of God, you scored an 85% on your first CS midterm. Your brain won’t let you study at all.  \nWhat's the plan?",
+      "options": [
+        {
+          "option": "Let’s go out to party again. Fuck it, it’s still early in the year.",
+          "key": 110101
+        },
+        {
+          "option": "How about I have a nice kickback with my friends in their apartment?",
+          "key": 110102 
+        },
+        {
+          "option": "It’s Friday. No better thing to do than watch a college football game!",
+          "key": 110103 
+        }
+      ]
+    },
+    {
+      "key": 110200,
+      "question":"You get your first CS midterm back. The average is 79, and you got a 52. You failed. After going home from a raucous night of drinking, you call your parents.",
+      "options": [
+        {
+          "option": "“Hey mom, I haven’t called you in a while…”",
+          "key": 110201
+        }
+      ]
+    },
+    {
+      "key": 111000,
+      "question": "Thanksgiving Break. A patriotic, red-blooded monument to American consumerism and revisionist history. Whatever the case, it’s the first week in a LONG while where you're free from the grip of your everyday obligations. \n\nWhat do you do?",
+      "options": [
+        {
+          "option": "Let's just go home and rest.",
+          "key": 111001
         }
       ]
     }
-
   ]
 }
