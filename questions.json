@@ -1,22 +1,222 @@
 {
-    "questions": [
+  "questions": [
+    {
+      "key": 101000,
+      "question": "Throwback. A sunny day in August 2019. Your first day of High School. Middle School was a tumultuous place, but transferring to a new district gives you the capital necessary to start on a clean slate. Time and time again, you’ve heard from your parents, older relatives, and teachers that this is the time to find out who you really are.\n\nWho are you?",
+      "options": [
         {
-            "key" : 101000,  
-            "question": "Do you like Employment Trail?",
-            "options": [
-                {
-                    "option": "Yes",
-                    "key": 101001,
-                    "effects": 
-                        {"academic":1}
-                },
-                {
-                    "option": "No",
-                    "key": 101002,
-                    "effects": 
-                        {"academic": -1}
-                }
-            ]
+          "option": "I’ve been an academic weapon all my life. It’s time to keep going.",
+          "key": 101001
+        },
+        {
+          "option": "I’ve been an academic weapon all my life. Let’s try to make more connections.",
+          "key": 101002
+        },
+        {
+          "option": "I’ve been an academic weapon all my life. Let’s try to have fun.",
+          "key": 101003
         }
-    ]
+      ]
+    },
+    {
+      "key": 102000,
+      "question": "Four years, a pandemic, 10 AP Courses, and a hell of a lot of stress later, it’s your last year as a student. With the phantom of your own persona haunting you, you know taking a gap year or going to a Community College isn’t an option. Thus, to broaden your horizons, you accept your parent’s offer to go on a set of campus visits.\n\nThe question is, where?",
+      "options": [
+        {
+          "option": "Let’s hit the Midwest. There’s lots of knowledge at the original Land-Grant campuses, especially for working in an industrial firm there.",
+          "key": 102001
+        },
+        {
+          "option": "The nexus of American intellectual might is the Northeast. Let’s go through the Ivies. Who knows? I might just run into a Quant to connect with on LinkedIn.",
+          "key": 102002
+        },
+        {
+          "option": "There’s no other option than the West. The Pacific coast is the new focus point of American innovation. It’s an absolute no-brainer to swing by Silicon Valley.",
+          "key": 102003
+        },
+        {
+          "option": "An underrated region for American universities is in the South. North Carolina and Texas have top-ranked schools with deep ties to the Defense and Aerospace industries.",
+          "key": 102004
+        }
+      ]
+    },
+    {
+      "key": 103000,
+      "question": "Owing to your popularity, smarts, and kind nature, you’ve been elected to give the graduation speech for your high school class. The principal, student president, and superintendent sit behind you as you deliver your address.",
+      "options": [
+        {
+          "option": "“I am profoundly honored to have the privilege to talk to you one last time…”",
+          "key": 103001
+        }
+      ]
+    },
+    {
+      "key": 104000,
+      "question": "It’s time for your first week at school! As you proudly stride onto your home for the next four years, you think about what to do first.\n\nWhat do you decide to do?",
+      "options": [
+        {
+          "option": "I can’t afford to fall behind early. I’ll walk my classes and start getting ready for the 6-hour daily homework grinds. Maybe I’ll meet someone on the way…",
+          "key": 104001
+        },
+        {
+          "option": "College is another place to make a fresh start. I wanna be proactive in making friends, let’s go out this week!",
+          "key": 104002
+        },
+        {
+          "option": "This whole move-in process is exhausting. I wanna take a nice break and get used to living here.",
+          "key": 104003
+        }
+      ]
+    },
+    {
+      "key": 105000,
+      "question": "The first job fair is coming around. Considering that an internship is your first shot to get ahead of the heap of idiots that saturate Computer Science, it’s time to lock in.\n\nWhat do you do?",
+      "options": [
+        {
+          "option": "I’m not going. Honestly, most companies won’t even look at freshmen, so there’s no point wasting my time.",
+          "key": 105001
+        },
+        {
+          "option": "I think I should be rational. My resume isn’t worth shit, so I’d better go target the smaller companies that come to these fairs.",
+          "key": 105002
+        },
+        {
+          "option": "I’ve been someone who’s thought big and dreamt bigger all my life. I’ll target Defense and Manufacturing for this fair.",
+          "key": 105003
+        },
+        {
+          "option": "I’ve been someone who’s thought big and dreamt bigger all my life. I’ll target FAANG and FinTech for this fair.",
+          "key": 105004
+        }
+      ]
+    },
+    {
+      "key": 106000,
+      "question":"Fuck, that was bad. An absolute embarrassment. But you’re only down for now, and not yet out. \n Where to go now?",
+      "options": [
+        {
+          "option": "Give up. 2025’s recruiting season is not for me.",
+          "key": 106001
+        },
+        {
+          "option": "It’s clear that I need to start standing out more. I’ll join an engineering club.",
+          "key": 106002
+        },
+        {
+          "option": "It’s clear that I need to start networking more. I’ll try to rush a professional frat.",
+          "key": 106003
+        },
+        {
+          "option": "It’s clear that I need to just get better. No need to do anything else than increase my own value by studying and getting on LeetCode.",
+          "key": 106004
+        }
+      ]
+    },
+    {
+      "key": 107000,
+      "question":"The morning after, you’re hit with a sober reality. You’re balls deep in a group project, and nobody’s helping you out. \nHow do you get back on track?",
+      "options": [
+        {
+          "option": "I need to whip them back into line.",
+          "key": 107001
+        },
+        {
+          "option": "I need to call for a team meeting.",
+          "key": 107002
+        },
+        {
+          "option": "I need to put these idiots on my back.",
+          "key": 107003
+        },
+        {
+          "option": "Screw this. Let it ride, I’ll tank it.",
+          "key": 107004
+        }
+      ]
+    },
+    {
+      "key": 108100,
+      "question":"Your group’s final presentation is in 45 minutes. They’ve got the deck, the script, the outfits. They don’t need you to speak. But they did say you’d be useful for any technical questions. They did say, “just be there.” Your alarm keeps ringing. Your body’s not listening.  \nDo you go?",
+      "options": [
+        {
+          "option": "Yeah. I said I’d be there. I’ll go.",
+          "key": 108101
+        },
+        {
+          "option": "I can’t. They’ll survive without me...",
+          "key": 108102
+        }
+      ]
+    },
+    {
+      "key": 108200,
+      "question":"Your group’s final presentation is in 45 minutes. They’ve got the deck, the script, the outfits. They don’t need you to speak. But they did say you’d be useful for any technical questions. They did say, “just be there.” Your alarm keeps ringing. Your body’s not listening.  \nDo you go?",
+      "options": [
+        {
+          "option": "Yeah. I said I’d be there. I’ll go.",
+          "key": 108201
+        },
+        {
+          "option": "I can’t. They’ll survive without me...",
+          "key": 108202
+        }
+      ]
+    },
+    {
+      "key": 109000,
+      "question":"An email arrives in your inbox. It’s the Office of the Dean of Undergraduate Students.  \n“Dear Student, We are reaching out to inform you that your peers have requested a wellness check…” \n\n You file it away. You’ll deal with the bleeding hearts later, but what do you do now?",
+      "options": [
+        {
+          "option": "Teddy Roosevelt once said that ultimate triumph is won from bitter toil. I think it’s time to get back into the gym.",
+          "key": 109001
+        },
+        {
+          "option": "I think it’s time to be frank about my shitty mental health. What’s the number for the campus CAPS services?",
+          "key": 109002
+        },
+        {
+          "option": "This isn’t worth my time. Just pay them lip service and move on.",
+          "key": 109003
+        }
+      ]
+    },
+    {
+      "key": 110100,
+      "question":"Post-midterm celebration. By the grace of God, you scored an 85% on your first CS midterm. Your brain won’t let you study at all.  \nWhat's the plan?",
+      "options": [
+        {
+          "option": "Let’s go out to party again. Fuck it, it’s still early in the year.",
+          "key": 110101
+        },
+        {
+          "option": "How about I have a nice kickback with my friends in their apartment?",
+          "key": 110102 
+        },
+        {
+          "option": "It’s Friday. No better thing to do than watch a college football game!",
+          "key": 110103 
+        }
+      ]
+    },
+    {
+      "key": 110200,
+      "question":"You get your first CS midterm back. The average is 79, and you got a 52. You failed. After going home from a raucous night of drinking, you call your parents.",
+      "options": [
+        {
+          "option": "“Hey mom, I haven’t called you in a while…”",
+          "key": 110201
+        }
+      ]
+    },
+    {
+      "key": 111000,
+      "question": "Thanksgiving Break. A patriotic, red-blooded monument to American consumerism and revisionist history. Whatever the case, it’s the first week in a LONG while where you're free from the grip of your everyday obligations. \n\nWhat do you do?",
+      "options": [
+        {
+          "option": "Let's just go home and rest.",
+          "key": 111001
+        }
+      ]
+    }
+  ]
 }
