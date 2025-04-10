@@ -99,8 +99,8 @@ function showQuestion() {
 
   // Switch to the question slide.
   // UNCOMMENT ON PROD
-  // document.getElementById("question-text").textContent = question.question;
-  document.getElementById("question-text").textContent = question.question + "\n\n DEBUG: " + currentQuestionKey;
+  document.getElementById("question-text").textContent = question.question;
+  // document.getElementById("question-text").textContent = question.question + "\n\n DEBUG: " + currentQuestionKey;
   switchSlide("question-slide");
 }
 
@@ -143,7 +143,7 @@ function submitOption() {
     .join(", ");
 
   // Append the debug information to the feedback text.
-  document.getElementById("feedback-text").innerText += "\n\nDEBUG: " + gameStateDebug;
+  // document.getElementById("feedback-text").innerText += "\n\nDEBUG: " + gameStateDebug;
 
   // Move to the feedback slide.
   switchSlide("feedback-slide");
