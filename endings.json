@@ -1,3 +1,165 @@
 {
+<<<<<<< Updated upstream
     "ending": "heh! you fail"
 }
+=======
+  "endings": [
+    {
+      "code": 98,
+      "title": "??? LAB ???",
+      "s1": "Placeholder ending for code 98",
+      "s2": "Placeholder dialogue for code 98"
+    },
+    {
+      "code": 97,
+      "title": "??? LAB ???",
+      "s1": "Placeholder ending for code 97",
+      "s2": "Placeholder dialogue for code 97"
+    },
+    {
+      "code": 96,
+      "title": "??? LAB ???",
+      "s1": "Placeholder ending for code 96",
+      "s2": "Placeholder dialogue for code 96"
+    },
+    {
+      "code": 95,
+      "title": "??? LAB ???",
+      "s1": "Placeholder ending for code 95",
+      "s2": "Placeholder dialogue for code 95"
+    },
+    {
+      "code": 94,
+      "title": "??? LAB ???",
+      "s1": "Placeholder ending for code 94",
+      "s2": "Placeholder dialogue for code 94"
+    },
+    {
+      "code": 93,
+      "title": "??? LAB ???",
+      "s1": "Placeholder ending for code 93",
+      "s2": "Placeholder dialogue for code 93"
+    },
+    {
+      "code": 92,
+      "title": "??? LAB ???",
+      "s1": "Placeholder ending for code 92",
+      "s2": "Placeholder dialogue for code 92"
+    },
+    {
+      "code": 91,
+      "title": "??? LAB ???",
+      "s1": "Placeholder ending for code 91",
+      "s2": "Placeholder dialogue for code 91"
+    },
+    {
+      "code": 90,
+      "title": "??? LAB ???",
+      "s1": "Placeholder ending for code 90",
+      "s2": "Placeholder dialogue for code 90"
+    },
+    {
+      "code": 89,
+      "title": "??? LAB ???",
+      "s1": "Placeholder ending for code 89",
+      "s2": "Placeholder dialogue for code 89"
+    },
+    {
+      "code": 88,
+      "title": "??? LAB ???",
+      "s1": "Placeholder ending for code 88",
+      "s2": "Placeholder dialogue for code 88"
+    },
+    {
+      "code": 87,
+      "title": "??? LAB ???",
+      "s1": "Placeholder ending for code 87",
+      "s2": "Placeholder dialogue for code 87"
+    },
+    {
+      "code": 19,
+      "title": "GAME OVER: QUESTIONABLE RETURN ON INVESTMENT",
+      "s1": "You’re in business school now. There’s a bitter convenience to it; a preordained pipeline for the kids who were once gifted and tired. No one asks why you gave up. You just kind of... stopped. Now you spend your days in case studies and coffee shops, talking about leverage like it's a religion. Quite simply, you let the fire go out. \n\nAnd sometimes, when the professor calls on you, you swear you can still feel the ghost of who you used to be.",
+      "s2": "You: forgot my AirPods and had to raw dog a Harvard case discussion\nRoommate: you’ve changed. you used to build stuff\nBest Friend: now you just build debt \nYou: stfu i’m networking\nRoommate: business casual arc\nBest Friend: business tragedy\nYou: i hate all of you\nRoommate: dw u hate yourself more for selling out"
+    },
+    {
+      "code": 18,
+      "title": "??? LAB ???",
+      "s1": "Placeholder ending for code 18",
+      "s2": "Placeholder dialogue for code 18"
+    },
+    {
+      "code": 17,
+      "title": "??? LAB NO GF ???",
+      "s1": "You show up before the PI. You leave after the grad students. Your name’s misspelled on a poster that might be presented in Belgium. You don’t get paid. You don’t get credit. But for the first time, you feel like you’re part of something that might outlast you. Even if no one else notices.",
+      "s2": "MC: fixed a major data issue and the PI just called me “intern”\nRoommate: nah that’s insane\nBest Friend: i know it’s thankless, but i’m proud of you\nMC: my code’s probably going into a paper. that’s kinda cool, right?\nRoommate: as long as it’s not just the acknowledgements section\nBest Friend: it’s cool. even if they forget you, you’ll remember\nMC: yeah. i think i will"
+    },
+    {
+      "code": 16,
+      "title": "??? LAB ???",
+      "s1": "Placeholder ending for code 16",
+      "s2": "Placeholder dialogue for code 16"
+    },
+    {
+      "code": 15,
+      "title": "??? LAB ???",
+      "s1": "Placeholder ending for code 15",
+      "s2": "Placeholder dialogue for code 15"
+    },
+    {
+      "code": 14,
+      "title": "??? LAB ???",
+      "s1": "Placeholder ending for code 14",
+      "s2": "Placeholder dialogue for code 14"
+    },
+    {
+      "code": 13,
+      "title": "??? LAB ???",
+      "s1": "Placeholder ending for code 13",
+      "s2": "Placeholder dialogue for code 13"
+    },
+    {
+      "code": 12,
+      "title": "??? LAB ???",
+      "s1": "Placeholder ending for code 12",
+      "s2": "Placeholder dialogue for code 12"
+    },
+    {
+      "code": 11,
+      "title": "??? LAB ???",
+      "s1": "Placeholder ending for code 11",
+      "s2": "Placeholder dialogue for code 11"
+    },
+    {
+      "code": 10,
+      "title": "??? LAB ???",
+      "s1": "Placeholder ending for code 10",
+      "s2": "Placeholder dialogue for code 10"
+    },
+    {
+      "code": 9,
+      "title": "??? LAB ???",
+      "s1": "Placeholder ending for code 9",
+      "s2": "Placeholder dialogue for code 9"
+    },
+    {
+      "code": 8,
+      "title": "??? LAB ???",
+      "s1": "Placeholder ending for code 8",
+      "s2": "Placeholder dialogue for code 8"
+    },
+    {
+      "code": 7,
+      "title": "??? LAB ???",
+      "s1": "Placeholder ending for code 7",
+      "s2": "Placeholder dialogue for code 7"
+    },
+    {
+      "code": 1,
+      "title": "GAME OVER: DEMO ENDING",
+      "s1": "Thanks for playing the Demo! \n\nThis is a placeholder ending for the demo version of the game. The full version will have 25 endings and double the questions as this demo.\n\nIf you enjoyed this demo, please hire me.\n\nThank you for your support!",
+      "s2": "You: so that’s it? demo’s over?\nBest Friend: yeah… kinda hit too close to home, huh?\nRoommate: dude it’s literally our lives. no internships, rejection emails...\nYou: why’d they make a game about our suffering?\nBest Friend: because it’s *relatable*\nYou: tragic.\nRoommate: at least in the game we got a support system\nYou: true. wish that counted for more"
+    }
+  ]
+}
+>>>>>>> Stashed changes
