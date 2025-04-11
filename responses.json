@@ -471,8 +471,7 @@
         "question": 15,
         "response": "You hole up in the library, fueled by iced coffee and trauma. The hours blur. By sunrise, your code compiles, your deck looks decent, and your notes are color-coded. Caffeine, a color-coded Notion, and adrenaline pushes you past the finish line this one last time. \n\nAnd it’s just enough to punch your ticket on the Dean’s List.",
         "effects": {
-          "burnout": 1,
-          "social": 2
+          "academic": 4
         },
         "nextQuestion": 116000
     },
@@ -481,8 +480,8 @@
         "question": 15,
         "response": "You text the group chat. Soon, laptops are open, snacks are everywhere, and Spotify is arguing with your attention span. The work gets done… to a point. You know you could be more productive alone, but this avoids a crash. \n\nMost importantly, no one feels alone, and no one fails outright.",
         "effects": {
-          "burnout": 1,
-          "social": 2
+          "academic": 1,
+          "social": 3
         },
         "nextQuestion": 116000
     },
@@ -491,8 +490,8 @@
         "question": 15,
         "response": "You try. God, you try. But sometime around 3 AM, your body says no. You fall asleep in the library, miss the group chat call, and turn in a half-working repo. You feel numb as you receive your failing grades back and isolate yourself from your friends. \n\nIt’s a crash, but you’re too tired to care.",
         "effects": {
-          "burnout": 1,
-          "social": 2
+          "academic": -3,
+          "social": -3
         },
         "nextQuestion": 116000
     },
@@ -501,8 +500,8 @@
         "question": 15,
         "response": "You text the group chat. Soon, laptops are open, snacks are everywhere, and Spotify is arguing with your attention span. The work gets done… to a point. You know you could be more productive alone, but this avoids a crash. \n\nMost importantly, no one feels alone, and no one fails outright.",
         "effects": {
-          "burnout": 1,
-          "social": 2
+          "academic": 1,
+          "social": 3
         },
         "nextQuestion": 116000
     },

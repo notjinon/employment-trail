@@ -100,8 +100,8 @@ function showQuestion() {
 
   // Switch to the question slide.
   // UNCOMMENT ON PROD
-  // document.getElementById("question-text").textContent = question.question;
-  document.getElementById("question-text").textContent = question.question + "\n\n DEBUG: " + currentQuestionKey;
+  document.getElementById("question-text").textContent = question.question;
+  // document.getElementById("question-text").textContent = question.question + "\n\n DEBUG: " + currentQuestionKey;
   switchSlide("question-slide");
 }
 
@@ -151,28 +151,28 @@ function submitOption() {
         currentResponseId = 114202; // Set response ID to 114202
       }
     } 
-    else if (selectedOpt.key == 114300) {// IBM
+    else if (selectedOpt.key == 114400) {// IBM
       if(gameState.technology >= 2)
       {
         gameState.company = 6; // Set company to 6
-        currentResponseId = 114301; // Set response ID to 114301
-      } else {
-        gameState.company = 9; // Set company to 9 
-        currentResponseId = 114302; // Set response ID to 114302
-      } 
-    } 
-    else if (selectedOpt.key == 114400) { // L3Harris
-      if(gameState.technology >= 2)
-      {
-        gameState.company = 7; // Set company to 7
         currentResponseId = 114401; // Set response ID to 114401
       } else {
-        gameState.company = 9; // Set company to 9
+        gameState.company = 9; // Set company to 9 
         currentResponseId = 114402; // Set response ID to 114402
+      } 
+    } 
+    else if (selectedOpt.key == 114300) { // L3Harris
+      if(gameState.defense >= 2)
+      {
+        gameState.company = 7; // Set company to 7
+        currentResponseId = 114301; // Set response ID to 114301
+      } else {
+        gameState.company = 9; // Set company to 9
+        currentResponseId = 114302; // Set response ID to 114302
       }
     } 
     else if (selectedOpt.key == 114500) { // GM
-      if (gameState.technology >= 2)
+      if (gameState.manufacturing >= 2)
       {
         gameState.company = 8; // Set company to 8
         currentResponseId = 114501; // Set response ID to 114501
@@ -260,12 +260,15 @@ function submitOption() {
         gameState.ending = 0;      // No ending condition is met
         currentResponseId = 120102; // Use alternate response
     }
-  } if ([121100, 121200, 121300, 121400].includes(currentQuestionKey)) {
+  } else if ([121100, 121200, 121300, 121400].includes(currentQuestionKey)) {
     if (selectedOpt.key == 121101 || selectedOpt.key == 121201) {
+      currentResponseId == 121101
       gameState.fondness >= 10 ? gameState.ending = 96 : gameState.ending = 16;
     } else if (selectedOpt.key == 121102 || selectedOpt.key == 121301) {
+      currentResponseId == 121102
       gameState.fondness >= 10 ? gameState.ending = 97 : gameState.ending = 17;
     } else {
+      currentResponseId == 121103
       gameState.fondness >= 10 ? gameState.ending = 98 : gameState.ending = 18;
     }
   } else {
@@ -291,12 +294,12 @@ function submitOption() {
   document.getElementById("feedback-text").innerText = response.response;
 
   // Build a debug string from the current gameState object.
-  const gameStateDebug = Object.keys(gameState)
-    .map(stat => `${stat}: ${gameState[stat]}`)
-    .join(", ");
+  // const gameStateDebug = Object.keys(gameState)
+  //   .map(stat => `${stat}: ${gameState[stat]}`)
+  //   .join(", ");
 
-  // Append the debug information to the feedback text.
-  document.getElementById("feedback-text").innerText += "\n\nDEBUG: " + gameStateDebug;
+  // // Append the debug information to the feedback text.
+  // document.getElementById("feedback-text").innerText += "\n\nDEBUG: " + gameStateDebug;
 
   // Move to the feedback slide.
   switchSlide("feedback-slide");
