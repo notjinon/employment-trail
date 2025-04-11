@@ -217,6 +217,293 @@
           "key": 111001
         }
       ]
+    },
+    {
+      "key": 112000,
+      "question": "It’s November. With the failure from the September career fair lingering in your mind, it’s time to prepare for your school’s next corporate welfare convention. \n\nHow do you do it?",
+      "options": [
+        {
+          "option": "I’m thinking that the results will speak for themselves. The past couple of months have seen a new, renewed work ethic, and I think I’ll be able to project that mastery if we execute the basics.",
+          "key": 112001
+        },
+        {
+          "option": "What really screwed me last time was our lack of social skills. I’ll hit up the career center and practice mock interviews, to hopefully get better at selling myself to people.",
+          "key": 112002
+        },
+        {
+          "option": "I can’t sell a person that’s not worth anything, can I? There’s lots of online coding assessments, even past LeetCode, to try and cut my teeth on.",
+          "key": 112003
+        }
+      ]
+    },
+    {
+      "key": 113100,
+      "question":"It’s dinner. Over slices of pizza, your group of friends talk about their experiences this semester. Hiking. Road trips. Movie nights. When they ask you about what you’ve done, you stammer out a half-response about going to house parties. It’s pathetic.  \n\nIn a drunken stupor, you ask your friends for advice, and respond best…?",
+      "options": [
+        {
+          "option": "…to your best friend. She thinks you’ve just got to continue the trajectory you’re on. Self-care, self-worth, and steady progress. Grow your own garden to attract the butterflies.",
+          "key": 113101
+        },
+        {
+          "option": "…to your roommate. He takes one look at you and realizes that you’re a nice enough person– just awful at projecting yourself. He suggests you go out and try to make yourself known to more people.",
+          "key": 113102
+        }
+      ]
+    },
+    {
+      "key": 113200,
+      "question":"It’s dinner. Over slices of pizza, your group of friends talk about their experiences this semester. Hiking. Road trips. Movie nights. When they ask you about what you’ve done, you stammer out a half-response about going to house parties. It’s pathetic.  \n\nIn a drunken stupor, you ask your friends for advice, and respond best…?",
+      "options": [
+        {
+          "option": "…to your best friend. She thinks you’ve just got to continue the trajectory you’re on. Self-care, self-worth, and steady progress. Grow your own garden to attract the butterflies.",
+          "key": 113201
+        },
+        {
+          "option": "…to your roommate. He takes one look at you and realizes that you’re a nice enough person– just awful at projecting yourself. He suggests you go out and try to make yourself known to more people.",
+          "key": 113202
+        }
+      ]
+    },
+    {
+      "key": 114100,
+      "question":"Gameday. \n\n It’s time for the second job fair. A sea of tents dot the grassy mall in the center of your campus’ quad. After getting the nerves out from talking to smaller companies, it’s time to make a big move. \n\n Who do you talk to?",
+      "options": [
+        {
+          "option": "CapitalOne. A “tech-forward” financial firm that definitely wants me to know they’re more than just credit cards. It’s the only shot I’ve really got at proving my tenuous interest in Finance is more than just a Reddit phase.",
+          "key": 114200
+        },
+        {
+          "option": "L3Harris. They’re not flashy, but they know their way around embedded systems. I figure if I can fake enough passion for “defending America,” I might just sneak into a defense role no one else applied for.",
+          "key": 114300
+        },
+        {
+          "option": "IBM. The ghost of tech's past, now rebranded as the “future of hybrid cloud.” I don’t even know what that means—and I don’t think they do either. But they still show up with a table, and I still need a win.",
+          "key": 114400
+        },
+        {
+          "option": "GM. They’ve been building real things longer than most tech firms have existed. Between EVs, robotics, and controls work, it actually feels like something meaningful. I could see myself here.",
+          "key": 114500
+        },
+        {
+          "option": "Deloitte is a safe pick for us Computer Science majors. They’re practically always in need for eggheads like me to sell overpriced SaaS packages to middle managers who know no better.",
+          "key": 114600
+        },
+        {
+          "option": "This school gives me many more… “boutique” options. I wanna try finding an experience I’d be hard-pressed to gain anywhere else. Sure, they don’t bother with amateurs. But what’s stopping me?",
+          "key": 114900
+        }
+      ]
+    },
+    {
+      "key": 115100,
+      "question":"You’ve hit the final stretch. A sprawling CS project, a dead-week final, and a half-baked case comp are all due within 48 hours. This is the kind of week that breaks people. You can feel it in your bones. You’re almost out of fuel. But you need to win. \n\nWhat's the move?",
+      "options": [
+        {
+          "option": "Pull the all-nighters. Sleep be damned, we need this. Just one last push.",
+          "key": 115101
+        },
+        {
+          "option": "Bring friends. I'm too fatigued to do this alone. Let’s suffer together.",
+          "key": 115102
+        }
+      ]
+    },
+    {
+      "key": 115200,
+      "question":"You’ve hit the final stretch. A sprawling CS project, a dead-week final, and a half-baked case comp are all due within 48 hours. This is the kind of week that breaks people. You can feel it in your bones. You’re almost out of fuel. But you need to win. \n\nWhat's the move?",
+      "options": [
+        {
+          "option": "Pull the all-nighters. Sleep be damned, we need this. Just one last push.",
+          "key": 115201
+        },
+        {
+          "option": "Bring friends. I'm too fatigued to do this alone. Let’s suffer together.",
+          "key": 115202
+        }
+      ]
+    },
+    {
+      "key": 116100,
+      "question":"It’s been a chaotic semester, but somehow, you got a “Hey, want to hang out?” text. You know what this is. You know who she is. You’ve known for a while. You stare at the message for a long time. \n\nTwo hours later, you’re standing outside a Parisian-style bistro not too far from campus. You see her inside.",
+      "options": [
+        {
+          "option": "I’ll go.",
+          "key": 116101
+        },
+        {
+          "option": "I’ll pass.",
+          "key": 116102
+        }
+      ]
+    },
+    {
+      "key": 116200,
+      "question":"It’s been a chaotic semester, but somehow, you got a “Hey, want to hang out?” text. You know what this is. You know who she is. You’ve known for a while. You stare at the message for a long time. \n\nTwo hours later, you’re standing outside a Parisian-style bistro not too far from campus. You see her inside.",
+      "options": [
+        {
+          "option": "I’ll go in.",
+          "key": 116201
+        },
+        {
+          "option": "I’ll pass.",
+          "key": 116202
+        }
+      ]
+    },
+    {
+      "key": 117100,
+      "question":"The sun is long gone. The day’s over. You sit at your desk, staring at a blank Google Doc, blinking cursor pulsing like a metronome. Tomorrow is your final round. Just one more day. One more chance. One more version of yourself to present.\n\nSo… what do you do tonight?",      "options": [
+        {
+          "option": "Go see her. You said you’d come over.",
+          "key": 117101
+        },
+        {
+          "option": "Hit up your TA’s office hours. One extra review can’t hurt.",
+          "key": 117102
+        },
+        {
+          "option": "I’ll pass.",
+          "key": 117103
+        }
+      ]
+    },
+    {
+      "key": 117200,
+      "question":"The sun is long gone. The day’s over. You sit at your desk, staring at a blank Google Doc, blinking cursor pulsing like a metronome. Tomorrow is your final round. Just one more day. One more chance. One more version of yourself to present.\n\nSo… what do you do tonight?",      "options": [
+        {
+          "option": "Go see her. You said you’d come over.",
+          "key": 117201
+        },
+        {
+          "option": "Just sit here. Think. Worry. Hope.",
+          "key": 117202
+        }
+      ]
+    },
+    {
+      "key": 117300,
+      "question":"The sun is long gone. The day’s over. You sit at your desk, staring at a blank Google Doc, blinking cursor pulsing like a metronome. Tomorrow is your final round. Just one more day. One more chance. One more version of yourself to present.\n\nSo… what do you do tonight?",      "options": [
+        {
+          "option": "Hit up your TA’s office hours. One extra review can’t hurt.",
+          "key": 117301
+        },
+        {
+          "option": "Just sit here. Think. Worry. Hope.",
+          "key": 117302
+        }
+      ]
+    },
+    {
+      "key": 117400,
+      "question":"The sun is long gone. The day’s over. You sit at your desk, staring at a blank Google Doc, blinking cursor pulsing like a metronome. Tomorrow is your final round. Just one more day. One more chance. One more version of yourself to present.\n\nSo… what do you do tonight?",
+      "options": [
+        {
+          "option": "Just sit here. Think. Worry. Hope.",
+          "key": 117401
+        }
+      ]
+    },
+    {
+      "key": 118000,
+      "question":"This is it. The final round.\nAfter all the LeetCode grinds, mock interviews, group presentations, and résumé rewrites, you're finally here. One last shot to make it count.\n\nWhat do you lead off with?",
+      "options": [
+        {
+          "option": "I wanna focus on my behavioral skills...",
+          "key": 118001
+        },
+        {
+          "option": "Let’s establish a strong technical background…",
+          "key": 118002
+        }
+      ]
+    },
+    {
+      "key": 119000,
+      "question":"The interview is over. You step out of the building. The campus is quiet in that strange, in-between way. Your earbuds are dead. There’s nothing left to distract you. You start walking. The sky is pale. The wind is soft. You think about everything that got you here. And then, like an old photo pulled from the back of a drawer, something comes back to you.\n\nWhat is it?",
+      "options": [
+        {
+          "option": "Where I started.",
+          "key": 119001
+        },
+        {
+          "option": "Everything I gave up.",
+          "key": 119002
+        },
+        {
+          "option": "The little wins.",
+          "key": 119003
+        },
+        {
+          "option": "The moments no one saw.",
+          "key": 119004
+        }
+      ]
+    },
+    {
+      "key": 120100,
+      "question":"The email hits your inbox at 8:46 AM. Subject line: “Offer Decision – Thank you for interviewing with us.”  You hover over it. Your hands are shaking.",
+      "options": [
+        {
+          "option": "You click.",
+          "key": 120109
+        }
+      ]
+    },
+    {
+      "key": 121100,
+      "question":"You stare at the screen. Not angry. Not even surprised. Just tired. You scroll back through your sent folder. Dozens of applications. Dozens of versions of yourself. None of them was enough. Now what?",
+      "options": [
+        {
+          "option": "…Maybe I can still get something... anything. I’ll ask around, find a local internship.",
+          "key": 121101
+        },
+        {
+          "option": "…Maybe I can do research. Something to keep my resume from dying.",
+          "key": 121102
+        },
+        {
+          "option": "…I think I just need to stop. For a while.",
+          "key": 121103
+        }
+      ]
+    },
+    {
+      "key": 121200,
+      "question":"You stare at the screen. Not angry. Not even surprised. Just tired. You scroll back through your sent folder. Dozens of applications. Dozens of versions of yourself. None of them was enough. Now what?",
+      "options": [
+        {
+          "option": "…Maybe I can still get something... anything. I’ll ask around, find a local internship.",
+          "key": 121201
+        },
+        {
+          "option": "…I think I just need to stop. For a while.",
+          "key": 121202
+        }
+      ]
+    },
+    {
+      "key": 121300,
+      "question":"You stare at the screen. Not angry. Not even surprised. Just tired. You scroll back through your sent folder. Dozens of applications. Dozens of versions of yourself. None of them was enough. Now what?",
+      "options": [
+        {
+          "option": "…Maybe I can do research. Something to keep my resume from dying.",
+          "key": 121301
+        },
+        {
+          "option": "…I think I just need to stop. For a while.",
+          "key": 121302
+        }
+      ]
+    },
+    {
+      "key": 121400,
+      "question":"You stare at the screen. Not angry. Not even surprised. Just tired. You scroll back through your sent folder. Dozens of applications. Dozens of versions of yourself. None of them was enough. Now what?",
+      "options": [
+        {
+          "option": "…I think I just need to stop. For a while.",
+          "key": 121401
+        }
+      ]
     }
   ]
 }

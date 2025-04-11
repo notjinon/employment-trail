@@ -2,157 +2,183 @@
   "endings": [
     {
       "code": 98,
-      "title": "??? LAB ???",
-      "s1": "Placeholder ending for code 98",
-      "s2": "Placeholder dialogue for code 98"
+      "title": "GAME OVER: FRESH BREATHS",
+      "subtitle": "Ending 01/25",
+      "s1": "The inbox stayed quiet. The calendar stayed empty. But the world didn’t end. You help her cook. You go on walks. You finally read that book you kept pretending to finish. It still stings, yeah. But you’re breathing. You’re still here. \n\nAnd for now, that’s enough.",
+      "s2": "You: no luck this cycle. i think i’m just gonna take the L\nBest Friend: rest. rebuild. you’ve earned both\nRoommate: yeah. fr. we all hit walls\nYou: she said she’s proud of me anyway. idk why that made me cry\nBest Friend: because it matters\noommate: she’s a real one\nYou: yeah. i think she is."
     },
     {
       "code": 97,
-      "title": "??? LAB ???",
-      "s1": "Placeholder ending for code 97",
-      "s2": "Placeholder dialogue for code 97"
+      "title": "GAME OVER: BURNT ACID",
+      "subtitle": "Ending 02/25",
+      "s1": "The lab smells like ethanol and burnt silicon. You run tests, rerun tests, fix broken scripts, and spend hours pretending to understand a grad student's methodology notes. She walks you to campus sometimes. Brings you coffee when the experiments drag past midnight. There’s no funding. No recognition. But there’s something here. \n\nSomething real.",
+      "s2": "You: just spent 4 hours figuring out a bug caused by a loose USB cable\nRoommate: bro… unpaid???\nBest Friend: that’s kind of sick though\nYou: we got a result today. pi actually said “huh.” that’s the win\nRoommate: you need hazard pay\nBest Friend: you’ll remember this summer more than any of us\nYou: yeah. probably"
     },
     {
       "code": 96,
-      "title": "??? LAB ???",
-      "s1": "Placeholder ending for code 96",
-      "s2": "Placeholder dialogue for code 96"
+      "title": "GAME OVER: STEADY GOES THE SHIP",
+      "subtitle": "Ending 03/25",
+      "s1": "You work in a fluorescent-lit IT office two blocks from a courthouse. You fixed a printer jam, set up a Zoom call for someone named “Councilman Dickerson,” and spent your afternoon pretending to understand the city’s Wi-Fi contract. She still brings you lunch. Says she’s proud of how far you’ve come. You believe her. \n\nEven if no one else does.",
+      "s2": "You: i just got thanked for resetting a password\nRoommate: my man is the backbone of bureaucracy\nBest Friend: that sounds… oddly heroic?\nYou: they told me i’m “one of the sharper ones”\nRoommate: govtech legend\nBest Friend: honestly i respect the grind\nYou: lol thanks. i’m surviving"
     },
     {
       "code": 95,
-      "title": "??? LAB ???",
-      "s1": "Placeholder ending for code 95",
-      "s2": "Placeholder dialogue for code 95"
+      "title": "GAME OVER: STRATEGIC REALIGNMENT",
+      "subtitle": "Ending 04/25",
+      "s1": "You’re not really sure what your job title means. Half your day is in Google Sheets, the other half is listening to people say “synergy” without flinching. She says she’s proud of you. Says it’s a way up. You believe her. Even if you don’t believe in the work.\n\nAnd maybe that’s enough.",
+      "s2": "You: client just asked if we could make the SaaS tool “more agile”\nRoommate: bro’s in the fake tech mines\nBest Friend: i’m glad you have stability though\nYou: i’m doing like 20% tech and 80% smiling\nRoommate: consultants zzz\nBest Friend: i’d still hire you before most of LinkedIn"
     },
     {
       "code": 94,
-      "title": "??? LAB ???",
-      "s1": "Placeholder ending for code 94",
-      "s2": "Placeholder dialogue for code 94"
+      "title": "GAME OVER: FUNCTIONAL INTEGRATION",
+      "subtitle": "Ending 05/25",
+      "s1": "You spend the summer tuning embedded systems in a windowless lab next to a factory line. It smells like oil and ozone. She visits once. Brings you iced coffee and calls the shop “kinda cool, actually.” You don’t talk about impact or changing the world. But the cars move. \n\nThat’s all you need.",
+      "s2": "You: spent the morning on EV battery diagnostics. it’s kinda fun\nBest Friend: you sound like you’re thriving\nRoommate: bro’s literally driving the future\nYou: she brought me lunch again lol\nBest Friend: SHE’S A KEEPER\nRoommate: stfu and just get me a free car you fucking simp"
     },
     {
       "code": 93,
-      "title": "??? LAB ???",
-      "s1": "Placeholder ending for code 93",
-      "s2": "Placeholder dialogue for code 93"
+      "title": "GAME OVER: LEGACY MAINTAINED",
+      "subtitle": "Ending 06/25",
+      "s1": " It’s beige walls, old ThinkPads, and meetings where people still say “synergy.” You spend most of your time rewriting COBOL wrappers for cloud services. She teases you about being a “tech historian,” but she’s the one who made you breakfast before your first day. It’s not cool. But it’s stable. \n\nAnd right now, stable feels like grace.",
+      "s2": "You: first thing i did today was update a system older than me\nRoommate: you’re in the trenches\nBest Friend: proud of you for making legacy feel legendary\nYou: she says my badge pic looks like i just got drafted\nRoommate: she’s not wrong\nYou: i kinda like it here though\nBest Friend: then that’s all that matters"
     },
     {
       "code": 92,
-      "title": "??? LAB ???",
-      "s1": "Placeholder ending for code 92",
-      "s2": "Placeholder dialogue for code 92"
+      "title": "GAME OVER: OPTIMIZED TRADEOFFS",
+      "subtitle": "Ending 07/25",
+      "s1": "You’re mostly optimizing credit flows for people who will never know your name. The tech’s modern, the meetings are constant, and your deliverables have deliverables. But she listens when you rant about APIs and vaguely predatory interest models. She gets it. Or at least, she’s trying. And honestly? \n\nThat means more than any promotion ever could.",
+      "s2": "You: i built a dashboard today that got 12 stakeholders to shut up\nBest Friend: oh so you’ve joined the middle-manager appeasement arc\nRoommate: welcome to the spreadsheet-industrial complex\nYou: she bought me new blue light glasses. said it was “combat gear”\nBest Friend: i love her\nRoommate: bro’s cuffed and optimized"
     },
     {
       "code": 91,
-      "title": "??? LAB ???",
-      "s1": "Placeholder ending for code 91",
-      "s2": "Placeholder dialogue for code 91"
+      "title": "GAME OVER: LOW PROFILE, HIGH FUNCTION",
+      "subtitle": "Ending 08/25",
+      "s1": "Your badge doesn’t open the cool doors, but it opens enough. You write code for embedded systems no one talks about in the news. She meets you for lunch sometimes. She says it’s cute how serious you get about antenna calibration. It’s not flashy. It’s not glamorous. \n\nBut for once, that doesn’t matter.",
+      "s2": "You: spent 6 hours debugging an EOTS today. feel like i aged 10 years\nBest Friend: you’ll be fine. my model just told the execs to kill a whole product line\nRoommate: lmao try watching a chip fail post-silicon\nYou: i’d rather not\nBest Friend: how’s she doing btw\nYou: she packed me lunch. i almost proposed\nRoommate: simp"
     },
     {
       "code": 90,
-      "title": "??? LAB ???",
-      "s1": "Placeholder ending for code 90",
-      "s2": "Placeholder dialogue for code 90"
+      "title": "GAME OVER: CUTTING EDGES, NOT CORNERS",
+      "subtitle": "Ending 09/25",
+      "s1": "You work in a windowless building with badge scanners at every turn. The things you’re helping build will never have your name on them. And still—she calls. She asks how your day was. You lie, a little. But she gets it. \n\nSomehow, you don’t feel alone in this.",
+      "s2": "You: can’t say what i’m doing. but it’s… heavy\nBest Friend: emotionally? morally??\nRoommate: physically??\nYou: yes\nRoommate: she still dating you or did you get replaced by a drone\nYou: she made me lasagna last night\nBest Friend: yeah he’s locked in fr\nRoommate: fine. i support militarized love"
     },
     {
       "code": 89,
-      "title": "??? LAB ???",
-      "s1": "Placeholder ending for code 89",
-      "s2": "Placeholder dialogue for code 89"
+      "title": "GAME OVER: ADDITIVE ASCENSION",
+      "subtitle": "Ending 10/25",
+      "s1": "You spend your days prototyping parts no one’s ever built before. Industrial resin. Topology optimization. 200-micron tolerances. She sends playlists while you work. You send her videos of prints failing in spectacular fashion. It’s not glamorous. But it feels real. \n\nLike something worth building.",
+      "s2": "You: got my first part approved for flight cert\nBest Friend: THIS IS HUGE\nRoommate: bro’s dating and innovating\nYou: she brought me coffee this morning. almost cried\nBest Friend: wholesome king\nRoommate: cringe\nYou: cope"
     },
     {
       "code": 88,
-      "title": "??? LAB ???",
-      "s1": "Placeholder ending for code 88",
-      "s2": "Placeholder dialogue for code 88"
+      "title": "GAME OVER: THE WOLF OF WALL STREET",
+      "subtitle": "Ending 11/25",
+      "s1": "The office feels like a spaceship. You spend your days speaking in acronyms and numbers, making decisions faster than thought. But at night, the pace slows. She calls. You talk. You laugh. \n\nSomehow, you’ve found someone who grounds you—even while you're helping move markets.",
+      "s2": "You: my desk has six monitors. they gave me a keyboard with no letters\nBest Friend: she’s gonna dump you if you turn into a quant bro\nRoommate: bro ALREADY IS A quant\nYou: not true. i still have a soul\nBest Friend: only bc she’s holding it for you\nRoommate: enjoy your blood money\nYou: lmk when you start getting paid in anything"
     },
     {
       "code": 87,
-      "title": "??? LAB ???",
-      "s1": "Placeholder ending for code 87",
-      "s2": "Placeholder dialogue for code 87"
+      "title": "GAME OVER: SILICON VALLEY DREAMS",
+      "subtitle": "Ending 12/25",
+      "s1": "You board your flight to Cupertino with one carry-on and a DM from your now-girlfriend reading, “Call me when you land.” The office is sleek. The badge feels heavy. The workload is absurd. But you made it. You split fries over FaceTime that night. \n\nYou’re both smiling.",
+      "s2": "You: got the badge today.\nBest Friend: oh my god. u better not become a silicon valley ghoul\nRoommate: pics or she’s not real\nBest Friend: no fr i wanna see her\nYou: you guys are insufferable\nRoommate: she is too if she’s dating you lmao\nBest Friend: LMAOOOOO\nYou: [sent a photo]"
     },
     {
       "code": 19,
       "title": "GAME OVER: QUESTIONABLE RETURN ON INVESTMENT",
+      "subtitle": "Ending 13/25",
       "s1": "You’re in business school now. There’s a bitter convenience to it; a preordained pipeline for the kids who were once gifted and tired. No one asks why you gave up. You just kind of... stopped. Now you spend your days in case studies and coffee shops, talking about leverage like it's a religion. Quite simply, you let the fire go out. \n\nAnd sometimes, when the professor calls on you, you swear you can still feel the ghost of who you used to be.",
-      "s2": "You: forgot my AirPods and had to raw dog a Harvard case discussion\nRoommate: you’ve changed. you used to build stuff\nBest Friend: now you just build debt \nYou: stfu i’m networking\nRoommate: business casual arc\nBest Friend: business tragedy\nYou: i hate all of you\nRoommate: dw u hate yourself more for selling out"
+      "s2": "You: forgot my AirPods and had to raw dog a dumbass case discussion\nRoommate: you’ve changed. you used to build stuff\nBest Friend: now you just build debt \nYou: stfu i’m networking\nRoommate: business casual arc\nBest Friend: business tragedy\nYou: i hate all of you\nRoommate: dw u hate yourself more for selling out"
     },
     {
       "code": 18,
-      "title": "??? LAB ???",
-      "s1": "Placeholder ending for code 18",
+      "title": "GAME OVER: DREAMS DEFERRED",
+      "subtitle": "Ending 25/25 (Canon Ending)",
+      "s1": "You sleep in. Scroll past sunrise. Apply to jobs that don’t reply. The semester's over. The groupchats are quieter now. You tell yourself it’s temporary. That the market’s broken. That you'll be able to find someone to call yours. \n\nBut you don’t believe it. Not really. You just close the tab. \n\nAnd lie back down in tears.",
       "s2": "Placeholder dialogue for code 18"
     },
     {
       "code": 17,
-      "title": "??? LAB NO GF ???",
+      "title": "GAME OVER: INTERN, INTERRUPTED",
+      "subtitle": "Ending 15/25",
       "s1": "You show up before the PI. You leave after the grad students. Your name’s misspelled on a poster that might be presented in Belgium. You don’t get paid. You don’t get credit. But for the first time, you feel like you’re part of something that might outlast you. Even if no one else notices.",
-      "s2": "MC: fixed a major data issue and the PI just called me “intern”\nRoommate: nah that’s insane\nBest Friend: i know it’s thankless, but i’m proud of you\nMC: my code’s probably going into a paper. that’s kinda cool, right?\nRoommate: as long as it’s not just the acknowledgements section\nBest Friend: it’s cool. even if they forget you, you’ll remember\nMC: yeah. i think i will"
+      "s2": "You: fixed a major data issue and the PI just called me “intern”\nRoommate: nah that’s insane\nBest Friend: i know it’s thankless, but i’m proud of you\nYou: my code’s probably going into a paper. that’s kinda cool, right?\nRoommate: as long as it’s not just the acknowledgements section\nBest Friend: it’s cool. even if they forget you, you’ll remember\nYou: yeah. i think i will"
     },
     {
       "code": 16,
-      "title": "??? LAB ???",
-      "s1": "Placeholder ending for code 16",
-      "s2": "Placeholder dialogue for code 16"
+      "title": "GAME OVER: THE WOLF OF GOOGLE WORKSPACE",
+      "subtitle": "Ending 16/25",
+      "s1": "It’s beige walls, clunky software, and coworkers who call you “the computer guy.” Your most exciting moment this week was deleting 700 rows of duplicated budget data. Nobody asks about your internship. You don’t bring it up. But the checks clear. You’re not unemployed. That’s enough. \n\nRight?",
+      "s2": "You: just watched a guy print a 42-page doc to the wrong building\nRoommate: lol. you gonna be okay man\nBest Friend: you’re doing what you have to. i respect that\nYou: it’s quiet. i’m not gonna die here or anything\nRoommate: “not gonna die here” is a wild benchmark\nBest Friend: hey, still better than nothing\nYou: yeah. trying not to forget that"
     },
     {
       "code": 15,
-      "title": "??? LAB ???",
-      "s1": "Placeholder ending for code 15",
-      "s2": "Placeholder dialogue for code 15"
+      "title": "GAME OVER: DEATH BY POWERPOINT",
+      "subtitle": "Ending 17/25",
+      "s1": "You’re technically in tech. But your projects involve Excel macros and billing hours to middle managers who can’t open PDFs. You look polished in your ID photo. You feel... unfinished. But hey, your parents brag about you at dinner parties. That’s got to count for something. \n\nRight?",
+      "s2": "You: built a dashboard that tells managers to open their email\nRoommate: elite SaaS engineering\nBest Friend: you doing okay? for real\nYou: yeah. just kind of feel like i’m LARPing\nRoommate: corporate cosplay\nBest Friend: still. you made it. that matters\nYou: yeah. maybe it does"
     },
     {
       "code": 14,
-      "title": "??? LAB ???",
-      "s1": "Placeholder ending for code 14",
-      "s2": "Placeholder dialogue for code 14"
+      "title": "GAME OVER: COGS IN THE MACHINE",
+      "subtitle": "Ending 18/25",
+      "s1": "The work is routine. CAN buses. Firmware. Testing protocols. You end most days sweaty and underappreciated, but satisfied. You’ve built something you can point to. Something real. \n\nNot many people get to say that.",
+      "s2": "You: debugged a sensor issue today. car wouldn’t stop accelerating lol\nRoommate: hell yeah. hardware supremacy\nBest Friend: are YOU okay??\nYou: i got it working eventually. unfortunately, i don’t get to keep the car.\nBest Friend: silent wins hit different\nRoommate: yea but what’s life without a little flair?"
     },
     {
       "code": 13,
-      "title": "??? LAB ???",
-      "s1": "Placeholder ending for code 13",
-      "s2": "Placeholder dialogue for code 13"
+      "title": "GAME OVER: LEGACY CODE, FORGOTTEN NAMES",
+      "subtitle": "Ending 19/25",
+      "s1": "You’re not pushing the envelope. To be honest, you’re duct-taping it. But you show up. You keep things running. You quietly become indispensable among the grizzled ranks of engineers at Big Blue. No fanfare. No algorithmic glory. \n\nJust a paycheck, a title, and peace.",
+      "s2": "You: taught myself how to use Lotus Notes. please pray for me\nRoommate: ancient tech unlock\nBest Friend: that’s actually kind of impressive\nYou: i think they’d hire me full-time just for knowing where the backups are\nRoommate: that’s job security\nBest Friend: low-key power move"
     },
     {
       "code": 12,
-      "title": "??? LAB ???",
-      "s1": "Placeholder ending for code 12",
-      "s2": "Placeholder dialogue for code 12"
+      "title": "GAME OVER: OPTIMALLY EMPTY",
+      "subtitle": "Ending 20/25",
+      "s1": "You spend half your time debugging internal tooling and the other half trying to explain to your manager what you’re actually building. It’s not the dream. But you’re on the board. And in a year like this? \n\nThat counts.",
+      "s2": "You: just watched a 14-slide deck about “the cloud” that said nothing\nRoommate: classic fintech. jump ship lil bro\nBest Friend: you okay though?\nYou: i mean yeah. it’s fine.\nBest Friend: “fine” as in “soul dead”?\nYou: as in “i have dental now”\nRoommate: reagan wins again"
     },
     {
       "code": 11,
-      "title": "??? LAB ???",
-      "s1": "Placeholder ending for code 11",
-      "s2": "Placeholder dialogue for code 11"
+      "title": "GAME OVER: EMBEDDED IN OBSCURITY",
+      "subtitle": "Ending 21/25",
+      "s1": "You clock in. You write drivers. You get home before 6. No all-nighters. No LinkedIn hustle. Just clean code and quiet wins. It’s not where you thought you’d be. But it’s solid. \n\nAnd it’s yours.",
+      "s2": "You: l3’s been chill. not glamorous, but solid\nRoommate: “not glamorous but solid” describes 90% of working in hardware\nBest Friend: honestly that’s rare. hold onto it\nYou: i even get to touch the RF stuff sometimes\nRoommate: okay now i’m jealous\nBest Friend: we’re getting old aren’t we\nYou: terrifying"
     },
     {
       "code": 10,
-      "title": "??? LAB ???",
-      "s1": "Placeholder ending for code 10",
-      "s2": "Placeholder dialogue for code 10"
+      "title": "GAME OVER: CLASSIFIED AND CONTENT",
+      "subtitle": "Ending 22/25",
+      "s1": "Your badge gets you into rooms that don’t officially exist. You sign NDAs you don’t fully understand. The work is precise. The impact is… hard to think about. You don’t talk about your job at parties. \n\nBut you sleep better than you used to.",
+      "s2": "You: can’t tell if i’m building a missile system or just debugging hell\nRoommate: if you disappear we’ll assume it was a drone strike\nBest Friend: are you okay tho? fr\nYou: idk. but i’m good at it\nBest Friend: that counts\nRoommate: better than being broke tbh\nYou: that too"
     },
     {
       "code": 9,
-      "title": "??? LAB ???",
-      "s1": "Placeholder ending for code 9",
-      "s2": "Placeholder dialogue for code 9"
+      "title": "GAME OVER: METICULOUS OVER MILLIMETERS",
+      "subtitle": "Ending 23/25",
+      "s1": "The lab smells like melted filament and caffeine. You run tests. You fail prints. You iterate. The work is slow—but honest. You’re making something permanent. You don’t have someone to celebrate with. \n\nBut you’re proud anyway.",
+      "s2": "You: i just watched a 28-hour print collapse in the last 10 minutes\nBest Friend: oh my god\nRoommate: industrial L\nYou: don’t care. final design passed anyway\nBest Friend: you’re lowkey thriving out there\nYou: weirdly yeah\nRoommate: blue collar rizz"
     },
     {
       "code": 8,
-      "title": "??? LAB ???",
-      "s1": "Placeholder ending for code 8",
-      "s2": "Placeholder dialogue for code 8"
+      "title": "GAME OVER: WALL STREET BLUES",
+      "subtitle": "Ending 24/25",
+      "s1": "You live by the terminal now. You see the big boys, the fat cats of Wall Street, every day on your commute. 7:00 AM? Futures. 12:00 PM? Lunch + ML models. 6:00 PM? Yoga. Technically. There’s no one waiting for you at home. But that’s okay. You’re not just surviving anymore. You’re playing the game. \n\nAnd winning.",
+      "s2": "You: cleared $10k in comp so far and haven’t spent a dollar\nRoommate: fucking psychopath\nBest Friend: don’t forget to be a person sometimes\nYou: already did\nRoommate: bro is finance pilled\nBest Friend: fr tho congrats. you made it\nYou: thanks. i’ll come visit when the boss lets me"
     },
     {
       "code": 7,
-      "title": "??? LAB ???",
-      "s1": "Placeholder ending for code 7",
-      "s2": "Placeholder dialogue for code 7"
+      "title": "GAME OVER: SILICON VALLEY SOLILOQUY",
+      "subtitle": "Ending 14/25",
+      "s1": "The badge says Apple. The desk is sleek. The code compiles. You eat dinner alone most nights, but you’re not lonely. You’ve got your footing now. You’re making things that matter. The validation didn’t come from someone else this time. It came from you.",
+      "s2": "You: first intern standup went fine. didn’t stutter once\nBest Friend: he’s GROWING\nRoommate: did they assign you a work wife yet\nYou: just me and this SwiftUI bug i’ve been dating for 3 days\nBest Friend: proud of you fr\nYou: thanks. i kinda am too."
     },
     {
       "code": 1,
-      "title": "DEMO ENDING",
+      "title": "GAME OVER: DEMO ENDING",
+      "subtitle": "Ending 26/25",
       "s1": "Thanks for playing the Demo! \n\nThis is a placeholder ending for the demo version of the game. The full version will have more content (25 endings and 20+ questions) and features. Stay tuned for updates!\n\nIf you enjoyed this demo, please hire me.\n\nThank you for your support!",
       "s2": "You: so that’s it? demo’s over?\nBest Friend: yeah… kinda hit too close to home, huh?\nRoommate: dude it’s literally our lives. no internships, rejection emails...\nYou: why’d they make a game about our suffering?\nBest Friend: because it’s *relatable*\nYou: tragic.\nRoommate: at least in the game we got a support system\nYou: true. wish that counted for more"
     }
