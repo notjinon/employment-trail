@@ -188,13 +188,87 @@ function submitOption() {
     } // Deloitte
 
   } else if (currentQuestionKey == 120100) {
-    // there will be logic for question 20.
-    // basically: if an ending condition is met, then set gameState.ending to the ending code.
-    // there will be separate ending codes for each ending, but all the feedbacks will be the same. 
-    // else, set gameState.ending to 0, and move to question 21 via explicit declaration.
-    // question 21 only has 4 permutations, so we can use nextkey logic for that perhaps?
-  } 
-  else{
+    // Evaluate ending conditions for question 120100, including fondness variants.
+    if (gameState.social >= 10 && gameState.academic >= 10 &&
+        (gameState.company === 1 || gameState.company === 2 || gameState.company === 3 || gameState.company === 4)) {
+        
+        // For companies 1-4: check for fondness variants
+        if (gameState.company === 1) {
+            if (gameState.fondness >= 10) {
+                gameState.ending = 87;  // Variant ending for company 1 when fondness is high
+            } else {
+                gameState.ending = 7;          // Base ending for company 1
+            }
+        } else if (gameState.company === 2) {
+            if (gameState.fondness >= 10) {
+                gameState.ending = 88;  // Variant ending for company 2 when fondness is high
+            } else {
+                gameState.ending = 8;          // Base ending for company 2
+            }
+        } else if (gameState.company === 3) {
+            if (gameState.fondness >= 10) {
+                gameState.ending = 89;  // Variant ending for company 3 when fondness is high
+            } else {
+                gameState.ending = 9;          // Base ending for company 3
+            }
+        } else if (gameState.company === 4) {
+            if (gameState.fondness >= 10) {
+                gameState.ending = 90;  // Variant ending for company 4 when fondness is high
+            } else {
+                gameState.ending = 10;          // Base ending for company 4
+            }
+        }
+        currentResponseId = 120101; // Use generic "pass" feedback
+    } else if (gameState.social >= 7 && gameState.academic >= 7 &&
+               (gameState.company === 5 || gameState.company === 6 || gameState.company === 7 || gameState.company === 8 || gameState.company === 9)) {
+        
+        // For companies 5-9: check for fondness variants
+        if (gameState.company === 5) {
+            if (gameState.fondness >= 10) {
+                gameState.ending = 92;  // Variant ending for company 5 when fondness is high
+            } else {
+                gameState.ending = 12;          // Base ending for company 5
+            }
+        } else if (gameState.company === 6) {
+            if (gameState.fondness >= 10) {
+                gameState.ending = 93;  // Variant ending for company 6 when fondness is high
+            } else {
+                gameState.ending = 13;          // Base ending for company 6
+            }
+        } else if (gameState.company === 7) {
+            if (gameState.fondness >= 10) {
+                gameState.ending = 94;  // Variant ending for company 7 when fondness is high
+            } else {
+                gameState.ending = 14;          // Base ending for company 7
+            }
+        } else if (gameState.company === 8) {
+            if (gameState.fondness >= 10) {
+                gameState.ending = 91;  // Variant ending for company 8 when fondness is high
+            } else {
+                gameState.ending = 11;          // Base ending for company 8
+            }
+        } else if (gameState.company === 9) {
+            if (gameState.fondness >= 10) {
+                gameState.ending = 95;  // Variant ending for company 9 when fondness is high
+            } else {
+                gameState.ending = 15;          // Base ending for company 9
+            }
+        }
+        currentResponseId = 120101; // Use generic "pass" feedback
+    } 
+    else {
+        gameState.ending = 0;      // No ending condition is met
+        currentResponseId = 120102; // Use alternate response
+    }
+  } if ([121100, 121200, 121300, 121400].includes(currentQuestionKey)) {
+    if (selectedOpt.key == 121101 || selectedOpt.key == 121201) {
+      gameState.fondness >= 10 ? gameState.ending = 96 : gameState.ending = 16;
+    } else if (selectedOpt.key == 121102 || selectedOpt.key == 121301) {
+      gameState.fondness >= 10 ? gameState.ending = 97 : gameState.ending = 17;
+    } else {
+      gameState.fondness >= 10 ? gameState.ending = 98 : gameState.ending = 18;
+    }
+  } else {
   // Retrieve the full response object using the option key.
   // Get and store response ID for use in nextQuestion()
   currentResponseId = selectedOpt.key;
@@ -293,6 +367,20 @@ function nextQuestion() {
         nextKey = 120100;
         break;
       }
+      case 121000:
+        if (gameState.burnout < 4 && gameState.social >= 5 && gameState.academic >= 5) {
+          nextKey = 121100;
+          break;
+        } else if (gameState.burnout < 4 && gameState.social >= 5) {
+          nextKey = 121200;
+          break;
+        } else if (gameState.burnout < 4 && gameState.academic >= 5) {
+          nextKey = 121300;
+          break;
+        } else {
+          nextKey = 121400;
+          break;
+        }
       }
     }
 

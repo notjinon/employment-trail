@@ -438,6 +438,72 @@
           "key": 119004
         }
       ]
+    },
+    {
+      "key": 120100,
+      "question":"The email hits your inbox at 8:46 AM. Subject line: “Offer Decision – Thank you for interviewing with us.”  You hover over it. Your hands are shaking.",
+      "options": [
+        {
+          "option": "You click.",
+          "key": 120109
+        }
+      ]
+    },
+    {
+      "key": 121100,
+      "question":"You stare at the screen. Not angry. Not even surprised. Just tired. You scroll back through your sent folder. Dozens of applications. Dozens of versions of yourself. None of them was enough. Now what?",
+      "options": [
+        {
+          "option": "…Maybe I can still get something... anything. I’ll ask around, find a local internship.",
+          "key": 121101
+        },
+        {
+          "option": "…Maybe I can do research. Something to keep my resume from dying.",
+          "key": 121102
+        },
+        {
+          "option": "…I think I just need to stop. For a while.",
+          "key": 121103
+        }
+      ]
+    },
+    {
+      "key": 121200,
+      "question":"You stare at the screen. Not angry. Not even surprised. Just tired. You scroll back through your sent folder. Dozens of applications. Dozens of versions of yourself. None of them was enough. Now what?",
+      "options": [
+        {
+          "option": "…Maybe I can still get something... anything. I’ll ask around, find a local internship.",
+          "key": 121201
+        },
+        {
+          "option": "…I think I just need to stop. For a while.",
+          "key": 121202
+        }
+      ]
+    },
+    {
+      "key": 121300,
+      "question":"You stare at the screen. Not angry. Not even surprised. Just tired. You scroll back through your sent folder. Dozens of applications. Dozens of versions of yourself. None of them was enough. Now what?",
+      "options": [
+        {
+          "option": "…Maybe I can do research. Something to keep my resume from dying.",
+          "key": 121301
+        },
+        {
+          "option": "…I think I just need to stop. For a while.",
+          "key": 121302
+        }
+      ]
+    },
+    {
+      "key": 121400,
+      "question":"You stare at the screen. Not angry. Not even surprised. Just tired. You scroll back through your sent folder. Dozens of applications. Dozens of versions of yourself. None of them was enough. Now what?",
+      "options": [
+        {
+          "option": "…I think I just need to stop. For a while.",
+          "key": 121401
+        }
+      ]
     }
   ]
 }
