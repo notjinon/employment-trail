@@ -218,8 +218,10 @@
         "question": 8,
         "response": "You send a text: “Sorry, something came up.” They reply, “Ok.” Nothing more. You sleep through the morning. It helps for a bit. But when you wake up, the shame’s already waiting for you.",
         "effects": {
-            "academic": 1
-        },
+          "burnout": -2,
+          "academic": -1,
+          "social": -1
+      },
         "nextQuestion": 109000
     },
     {
@@ -227,9 +229,7 @@
         "question": 8,
         "response": "Everyone can tell you’re not okay. Your clothes are wrinkled. Your eyes are dead. But when the TA throws a curveball about your code, you knock it out of the park. Your headache crescendos as your classmates applaud the presentation.",
         "effects": {
-            "burnout": -2,
-            "academic": -1,
-            "social": -1
+            "academic": 1
         },
         "nextQuestion": 109000
     },
@@ -238,8 +238,10 @@
         "question": 8,
         "response": "You send a text: “Sorry, something came up.” They reply, “Ok.” Nothing more. You sleep through the morning. It helps for a bit. But when you wake up, the shame’s already waiting for you.",
         "effects": {
-            "academic": 1
-        },
+          "burnout": -2,
+          "academic": -1,
+          "social": -1
+      },
         "nextQuestion": 109000
     },
     {
