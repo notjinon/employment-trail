@@ -295,16 +295,147 @@
       ]
     },
     {
-      "key": 115000,
-      "question":"You made it. Debug",
+      "key": 115100,
+      "question":"You’ve hit the final stretch. A sprawling CS project, a dead-week final, and a half-baked case comp are all due within 48 hours. This is the kind of week that breaks people. You can feel it in your bones. You’re almost out of fuel. But you need to win. \n\nWhat's the move?",
       "options": [
         {
-          "option": "YESSSSIR",
-          "key": 113201
+          "option": "Pull the all-nighters. Sleep be damned, we need this. Just one last push.",
+          "key": 115101
         },
         {
-          "option": "GO STUDY",
-          "key": 113202
+          "option": "Bring friends. I'm too fatigued to do this alone. Let’s suffer together.",
+          "key": 115102
+        }
+      ]
+    },
+    {
+      "key": 115200,
+      "question":"You’ve hit the final stretch. A sprawling CS project, a dead-week final, and a half-baked case comp are all due within 48 hours. This is the kind of week that breaks people. You can feel it in your bones. You’re almost out of fuel. But you need to win. \n\nWhat's the move?",
+      "options": [
+        {
+          "option": "Pull the all-nighters. Sleep be damned, we need this. Just one last push.",
+          "key": 115201
+        },
+        {
+          "option": "Bring friends. I'm too fatigued to do this alone. Let’s suffer together.",
+          "key": 115202
+        }
+      ]
+    },
+    {
+      "key": 116100,
+      "question":"It’s been a chaotic semester, but somehow, you got a “Hey, want to hang out?” text. You know what this is. You know who she is. You’ve known for a while. You stare at the message for a long time. \n\nTwo hours later, you’re standing outside a Parisian-style bistro not too far from campus. You see her inside.",
+      "options": [
+        {
+          "option": "I’ll go.",
+          "key": 116101
+        },
+        {
+          "option": "I’ll pass.",
+          "key": 116102
+        }
+      ]
+    },
+    {
+      "key": 116200,
+      "question":"It’s been a chaotic semester, but somehow, you got a “Hey, want to hang out?” text. You know what this is. You know who she is. You’ve known for a while. You stare at the message for a long time. \n\nTwo hours later, you’re standing outside a Parisian-style bistro not too far from campus. You see her inside.",
+      "options": [
+        {
+          "option": "I’ll go in.",
+          "key": 116201
+        },
+        {
+          "option": "I’ll pass.",
+          "key": 116202
+        }
+      ]
+    },
+    {
+      "key": 117100,
+      "question":"The sun is long gone. The day’s over. You sit at your desk, staring at a blank Google Doc, blinking cursor pulsing like a metronome. Tomorrow is your final round. Just one more day. One more chance. One more version of yourself to present.\n\nSo… what do you do tonight?",      "options": [
+        {
+          "option": "Go see her. You said you’d come over.",
+          "key": 117101
+        },
+        {
+          "option": "Hit up your TA’s office hours. One extra review can’t hurt.",
+          "key": 117102
+        },
+        {
+          "option": "I’ll pass.",
+          "key": 117103
+        }
+      ]
+    },
+    {
+      "key": 117200,
+      "question":"The sun is long gone. The day’s over. You sit at your desk, staring at a blank Google Doc, blinking cursor pulsing like a metronome. Tomorrow is your final round. Just one more day. One more chance. One more version of yourself to present.\n\nSo… what do you do tonight?",      "options": [
+        {
+          "option": "Go see her. You said you’d come over.",
+          "key": 117201
+        },
+        {
+          "option": "Just sit here. Think. Worry. Hope.",
+          "key": 117202
+        }
+      ]
+    },
+    {
+      "key": 117300,
+      "question":"The sun is long gone. The day’s over. You sit at your desk, staring at a blank Google Doc, blinking cursor pulsing like a metronome. Tomorrow is your final round. Just one more day. One more chance. One more version of yourself to present.\n\nSo… what do you do tonight?",      "options": [
+        {
+          "option": "Hit up your TA’s office hours. One extra review can’t hurt.",
+          "key": 117301
+        },
+        {
+          "option": "Just sit here. Think. Worry. Hope.",
+          "key": 117302
+        }
+      ]
+    },
+    {
+      "key": 117400,
+      "question":"The sun is long gone. The day’s over. You sit at your desk, staring at a blank Google Doc, blinking cursor pulsing like a metronome. Tomorrow is your final round. Just one more day. One more chance. One more version of yourself to present.\n\nSo… what do you do tonight?",
+      "options": [
+        {
+          "option": "Just sit here. Think. Worry. Hope.",
+          "key": 117401
+        }
+      ]
+    },
+    {
+      "key": 118000,
+      "question":"This is it. The final round.\nAfter all the LeetCode grinds, mock interviews, group presentations, and résumé rewrites, you're finally here. One last shot to make it count.\n\nWhat do you lead off with?",
+      "options": [
+        {
+          "option": "I wanna focus on my behavioral skills...",
+          "key": 118001
+        },
+        {
+          "option": "Let’s establish a strong technical background…",
+          "key": 118002
+        }
+      ]
+    },
+    {
+      "key": 119000,
+      "question":"The interview is over. You step out of the building. The campus is quiet in that strange, in-between way. Your earbuds are dead. There’s nothing left to distract you. You start walking. The sky is pale. The wind is soft. You think about everything that got you here. And then, like an old photo pulled from the back of a drawer, something comes back to you.\n\nWhat is it?",
+      "options": [
+        {
+          "option": "Where I started.",
+          "key": 119001
+        },
+        {
+          "option": "Everything I gave up.",
+          "key": 119002
+        },
+        {
+          "option": "The little wins.",
+          "key": 119003
+        },
+        {
+          "option": "The moments no one saw.",
+          "key": 119004
         }
       ]
     }

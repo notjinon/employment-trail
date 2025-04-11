@@ -465,6 +465,182 @@
         "question": 14,
         "response": "You gambled little and gained even less. While your friends are locking in offers at Northrop Grumman and Meta, you’re able to beat a bunch of Econ and Finance majors for a Technology Consulting final round.",
         "nextQuestion": 115000
+    },
+    {
+        "id": 115101,
+        "question": 15,
+        "response": "You hole up in the library, fueled by iced coffee and trauma. The hours blur. By sunrise, your code compiles, your deck looks decent, and your notes are color-coded. Caffeine, a color-coded Notion, and adrenaline pushes you past the finish line this one last time. \n\nAnd it’s just enough to punch your ticket on the Dean’s List.",
+        "effects": {
+          "burnout": 1,
+          "social": 2
+        },
+        "nextQuestion": 116000
+    },
+    {
+        "id": 115102,
+        "question": 15,
+        "response": "You text the group chat. Soon, laptops are open, snacks are everywhere, and Spotify is arguing with your attention span. The work gets done… to a point. You know you could be more productive alone, but this avoids a crash. \n\nMost importantly, no one feels alone, and no one fails outright.",
+        "effects": {
+          "burnout": 1,
+          "social": 2
+        },
+        "nextQuestion": 116000
+    },
+    {
+        "id": 115201,
+        "question": 15,
+        "response": "You try. God, you try. But sometime around 3 AM, your body says no. You fall asleep in the library, miss the group chat call, and turn in a half-working repo. You feel numb as you receive your failing grades back and isolate yourself from your friends. \n\nIt’s a crash, but you’re too tired to care.",
+        "effects": {
+          "burnout": 1,
+          "social": 2
+        },
+        "nextQuestion": 116000
+    },
+    {
+        "id": 115202,
+        "question": 15,
+        "response": "You text the group chat. Soon, laptops are open, snacks are everywhere, and Spotify is arguing with your attention span. The work gets done… to a point. You know you could be more productive alone, but this avoids a crash. \n\nMost importantly, no one feels alone, and no one fails outright.",
+        "effects": {
+          "burnout": 1,
+          "social": 2
+        },
+        "nextQuestion": 116000
+    },
+    {
+        "id": 116101,
+        "question": 16,
+        "response": "It starts quiet. Fries split, hands almost brushing, soft laughter between long silences. But the way she looks at you tonight? It’s different. Real. You talk about dreams, failures, the future. By the time you make it back to her place, there’s no need for small talk. \n\nYou stay the night.",
+        "effects": {
+          "social": 3,
+          "fondness": 15
+        },
+        "nextQuestion": 117000
+    },
+    {
+        "id": 116102,
+        "question": 16,
+        "response": "As you walk away, you tell yourself it’s not the right time. That you need to focus. That it wouldn’t have worked anyway. The text thread goes cold. \n\nYou lose more than you expected.",
+        "effects": {
+          "social": -1,
+          "fondness": -15
+        },
+        "nextQuestion": 117000
+    },
+    {
+        "id": 116201,
+        "question": 16,
+        "response": "The night starts fine. But the silences stretch. You fumble for words that don’t come. It ends with an awkward hug and an unspoken understanding. You check your phone later. No new messages. It was a valuable experience, you say, consoling yourself late that night.\n\nBut the sun rises on two solitary beds.",
+        "effects": {
+          "social": 1,
+          "fondness": -15
+        },
+        "nextQuestion": 117000
+    },
+    {
+        "id": 116202,
+        "question": 16,
+        "response": "As you walk away, you tell yourself it’s not the right time. That you need to focus. That it wouldn’t have worked anyway. The text thread goes cold. \n\nYou lose more than you expected.",
+        "effects": {
+          "social": -1,
+          "fondness": -15
+        },
+        "nextQuestion": 117000
+    },
+    {
+        "id": 117101,
+        "question": 17,
+        "response": "The lights are low. Her Spotify playlist is on shuffle. The two of you talk softly—about nothing, about everything. She holds your hand and reminds you you’re more than a résumé. \n\nFor the first time in weeks, you feel like a human being.",
+        "effects": {
+          "social": 1
+        },
+        "nextQuestion": 118000
+    },
+    {
+        "id": 117102,
+        "question": 17,
+        "response": "It’s just you and one other student. Your TA makes dumb jokes about recursion and explains fluid dynamics like a bedtime story. For once, you’re smiling at a whiteboard instead of crying at one. They say, “You’re gonna kill it.” \n\nYou believe them.",
+        "effects": {
+          "academic": 1
+        },
+        "nextQuestion": 118000
+    },
+    {
+        "id": 117103,
+        "question": 17,
+        "response": "You open old Notion pages. Re-read half-written cover letters. Scroll through texts you never sent. You picture the recruiter’s face tomorrow, unreadable and cold. You close your eyes. Try to sleep. \n\nYou dream about fire alarms, whiteboards, and your best friend saying “you got this.”",
+        "nextQuestion": 118000
+    },
+    {
+        "id": 117201,
+        "question": 17,
+        "response": "The lights are low. Her Spotify playlist is on shuffle. The two of you talk softly—about nothing, about everything. She holds your hand and reminds you you’re more than a résumé. \n\nFor the first time in weeks, you feel like a human being.",
+        "effects": {
+          "social": 1
+        },
+        "nextQuestion": 118000
+    },
+    {
+        "id": 117202,
+        "question": 17,
+        "response": "You open old Notion pages. Re-read half-written cover letters. Scroll through texts you never sent. You picture the recruiter’s face tomorrow, unreadable and cold. You close your eyes. Try to sleep. \n\nYou dream about fire alarms, whiteboards, and your best friend saying “you got this.”",
+        "nextQuestion": 118000
+    },
+    {
+        "id": 117301,
+        "question": 17,
+        "response": "It’s just you and one other student. Your TA makes dumb jokes about recursion and explains fluid dynamics like a bedtime story. For once, you’re smiling at a whiteboard instead of crying at one. They say, “You’re gonna kill it.” \n\nYou believe them.",
+        "effects": {
+          "academic": 1
+        },
+        "nextQuestion": 118000
+    },
+    {
+        "id": 117302,
+        "question": 17,
+        "response": "You open old Notion pages. Re-read half-written cover letters. Scroll through texts you never sent. You picture the recruiter’s face tomorrow, unreadable and cold. You close your eyes. Try to sleep. \n\nYou dream about fire alarms, whiteboards, and your best friend saying “you got this.”",
+        "nextQuestion": 118000
+    },
+    {
+        "id": 117401,
+        "question": 17,
+        "response": "You open old Notion pages. Re-read half-written cover letters. Scroll through texts you never sent. You picture the recruiter’s face tomorrow, unreadable and cold. You close your eyes. Try to sleep. \n\nYou dream about fire alarms, whiteboards, and your best friend saying “you got this.”",
+        "nextQuestion": 118000
+    },
+    {
+        "id": 118001,
+        "question": 18,
+        "response": "You rehearse your story: adversity, resilience, teamwork. You force a smile as you walk in and pray they don’t ask about that semester you bombed. Somehow, it feels more real this time. \n\nLike you're not just reading a script anymore…",
+        "effects": {
+          "social": 1
+        }
+      },
+    {
+        "id": 118002,
+        "question": 18,
+        "response": "You whiteboard until your hand cramps, polish your GitHub one last time, and reread every system design note you’ve ever taken. You enter the call tired, but focused. \n\nWhen they say “walk us through your approach,” you actually feel confident…",
+        "effects": {
+          "academic": 1
+        }
+    },
+    {
+        "id": 119001,
+        "question": 19,
+        "response": "It feels like a lifetime ago. A hallway. A club meeting. Quiet promises to yourself you didn’t know you’d have to break. \n\nYou wonder what that version of you would think now."
+      },
+    {
+        "id": 119002,
+        "question": 19,
+        "response": "Late nights. Missed calls. Friendships that slowly faded into the background noise of the grind. You can’t decide if it was worth it. \n\nMaybe that’s the point."
+    },
+    {
+        "id": 119003,
+        "question": 19,
+        "response": "The project that finally ran. The smile you got across the room. The one friend who said, “Hey, I believe in you.” \n\nYou hold onto those tighter than anything else."
+      },
+    {
+        "id": 119004,
+        "question": 19,
+        "response": "Quiet breakdowns. Arguments with your roommate. Growing pains living alone. Inbox rejections. Doomscrolling until sunrise. You survived every one of them. \n\nThat counts, doesn’t it?"
     }
   ]
 }

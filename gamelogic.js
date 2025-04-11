@@ -248,7 +248,7 @@ function nextQuestion() {
   }
 
   // Check if you're on a branching question
-  let branchingQuestionKey = [108000, 110000, 113000, 114000, 116000, 117000, 120000];
+  let branchingQuestionKey = [108000, 110000, 113000, 114000, 115000, 116000, 117000, 120000, 121000];
   if (branchingQuestionKey.includes(nextKey)) {
     switch (nextKey) {
       case 108000:
@@ -265,6 +265,34 @@ function nextQuestion() {
         break;
       case 114000:
         nextKey = 114100;
+        break;
+      case 115000:
+        nextKey = gameState.burnout < 4 ? 115100 : 115200;
+        break;
+      case 116000:
+        nextKey = gameState.fondness >= 4 ? 116100 : 116200;
+        break;
+      case 117000:
+        if (gameState.fondness >= 10 && gameState.burnout < 4) {
+          nextKey = 117100;
+          break;
+        } else if (gameState.fondness >= 10)
+        {
+          nextKey = 117200;
+          break;
+        } else if (gameState.burnout < 4)
+        {
+          nextKey = 117300;
+          break;
+        } else 
+        {
+          nextKey = 117400;
+          break;
+        }
+      case 120000:{
+        nextKey = 120100;
+        break;
+      }
       }
     }
 
