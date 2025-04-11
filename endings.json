@@ -75,12 +75,14 @@
     {
       "code": 19,
       "title": "GAME OVER: QUESTIONABLE RETURN ON INVESTMENT",
+      "subtitle": "Ending 13/25",
       "s1": "You’re in business school now. There’s a bitter convenience to it; a preordained pipeline for the kids who were once gifted and tired. No one asks why you gave up. You just kind of... stopped. Now you spend your days in case studies and coffee shops, talking about leverage like it's a religion. Quite simply, you let the fire go out. \n\nAnd sometimes, when the professor calls on you, you swear you can still feel the ghost of who you used to be.",
-      "s2": "You: forgot my AirPods and had to raw dog a Harvard case discussion\nRoommate: you’ve changed. you used to build stuff\nBest Friend: now you just build debt \nYou: stfu i’m networking\nRoommate: business casual arc\nBest Friend: business tragedy\nYou: i hate all of you\nRoommate: dw u hate yourself more for selling out"
+      "s2": "You: forgot my AirPods and had to raw dog a dumbass case discussion\nRoommate: you’ve changed. you used to build stuff\nBest Friend: now you just build debt \nYou: stfu i’m networking\nRoommate: business casual arc\nBest Friend: business tragedy\nYou: i hate all of you\nRoommate: dw u hate yourself more for selling out"
     },
     {
       "code": 18,
-      "title": "??? LAB ???",
+      "title": "CODE 18 ending idk",
+      "subtitle": "Ending 14/25",
       "s1": "Placeholder ending for code 18",
       "s2": "Placeholder dialogue for code 18"
     },
@@ -146,13 +148,14 @@
     },
     {
       "code": 7,
-      "title": "??? LAB ???",
-      "s1": "Placeholder ending for code 7",
-      "s2": "Placeholder dialogue for code 7"
+      "title": "GAME OVER: SILICON VALLEY SOLILOQUY",
+      "s1": "The badge says Apple. The desk is sleek. The code compiles. You eat dinner alone most nights, but you’re not lonely. You’ve got your footing now. You’re making things that matter. The validation didn’t come from someone else this time. It came from you.",
+      "s2": "You: first intern standup went fine. didn’t stutter once\nBest Friend: he’s GROWING\nRoommate: did they assign you a work wife yet\nYou: just me and this SwiftUI bug i’ve been dating for 3 days\nBest Friend: proud of you fr\nYou: thanks. i kinda am too."
     },
     {
       "code": 1,
-      "title": "DEMO ENDING",
+      "title": "GAME OVER: DEMO ENDING",
+      "subtitle": "Ending 26/25",
       "s1": "Thanks for playing the Demo! \n\nThis is a placeholder ending for the demo version of the game. The full version will have more content (25 endings and 20+ questions) and features. Stay tuned for updates!\n\nIf you enjoyed this demo, please hire me.\n\nThank you for your support!",
       "s2": "You: so that’s it? demo’s over?\nBest Friend: yeah… kinda hit too close to home, huh?\nRoommate: dude it’s literally our lives. no internships, rejection emails...\nYou: why’d they make a game about our suffering?\nBest Friend: because it’s *relatable*\nYou: tragic.\nRoommate: at least in the game we got a support system\nYou: true. wish that counted for more"
     }

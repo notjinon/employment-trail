@@ -315,9 +315,156 @@
       "question": 11,
       "response": "Despite your own protests, your friends force you to go home for the break. You sit at the end of the dinner table, listening to your Woke mom and MAGA uncle scream their heads off. There’s no place like home.",
       "effects": {
-          "burnout": -1,
-          "ending": 1
+          "burnout": -1
       }
+    },
+    {
+      "id": 112001,
+      "question": 12,
+      "response": "This conservative approach saves you lots of energy and mental fortitude leading up to the fair. If you had wanted to continue coasting on upward momentum, it worked. Otherwise, expect a tougher climb socially and academically.",
+      "effects": {
+          "burnout": -2
+      }
+    },
+    {
+      "id": 112002,
+      "question": 12,
+      "response": "Going to the career center over time helps you nail down the mock interview questions they give you. By the end of your grueling “interview bootcamp” sessions, you’re confident in your ability to sell yourself, while you feel more tiresome than ever.",
+      "effects": {
+          "burnout": 1,
+          "social": 2
+      }
+    },
+    {
+      "id": 112003,
+      "question": 12,
+      "response": "You’re right. Learning how to approach technical and casing questions is an invaluable skill. From the sheer amount of time and effort you put into this, you feel very well prepared on this end, while fatigue creeps in.",
+      "effects": {
+          "burnout": 1,
+          "academic": 2
+      }
+    },
+    {
+      "id": 113101,
+      "question": 13,
+      "response": "It’s not flashy. It’s not going to get you anywhere quick. Your Instagram feed turns into a curated, aesthetic feed. Nobody says it outright, but you gain quiet admiration from others on campus about your turnaround.",
+      "effects": {
+          "academic": 2,
+          "social": 1
+      },
+      "nextQuestion": 114000
+    },
+    {
+        "id": 113102,
+        "question": 13,
+        "response": "The transformation is instant. Gone is the uncoordinated Instagram feed, replaced by a unified, coordinated, and bold set of posts. Heads are turned and people start looking at you in a new light.",
+        "effects": {
+            "fondness": 4
+        },
+        "nextQuestion": 114000
+    },
+    {
+        "id": 113201,
+        "question": 13,
+        "response": "It’s not flashy. It’s not going to get you anywhere quick. Your Instagram feed turns into a curated, aesthetic feed. Nobody says it outright, but you gain quiet admiration from others on campus about your turnaround.",
+        "effects": {
+          "academic": 2,
+          "social": 1
+      },
+        "nextQuestion": 114000
+    },
+    {
+        "id": 113202,
+        "question": 13,
+        "response": "It’s a disaster. Your thirst traps are met with silence and empty DM’s. You can feel the eyes digging into your soul, mentally dressing down your appearance, your mannerisms, every ounce of your personality. You set your Instagram profile to private.",
+        "effects": {
+            "fondness": -1
+        },
+        "nextQuestion": 114000
+    },
+    {
+        "id": 114901,
+        "question": 14,
+        "response": "You preach about user privacy, design systems, and your hatred of Material UI to the Apple booth. The recruiter listens quietly, then asks if you’d be willing to relocate to Cupertino.\n\nYou nod so hard your iPhone drops. The offer to interview comes before you’ve even opened LinkedIn.\n\nYou walk away in a daze, convinced you just won the lottery.",
+        "nextQuestion": 115000
+    },
+    {
+        "id": 114902,
+        "question": 14,
+        "response": "You speak in fluent acronyms—MMFs, HFT, QE. You talk about rates with the detached violence of someone who actually reads central bank PDFs.\n\nThe Jane Street recruiter doesn’t smile. She just scribbles your name down and tells you to be ready by Tuesday.\n\nYou feel like you passed a test no one told you existed.",
+        "nextQuestion": 115000
+    },
+    {
+        "id": 114904,
+        "question": 14,
+        "response": "You speak with reverence about aerospace telemetry and fifth-gen RAM coatings. The Lockheed Martin recruiter hits you with acronyms that sound like classified documents. You respond in kind.\n\nThere’s a brief pause. Then she nods. “You’ll do.”\n\nYou don’t remember the rest of the fair—you were too busy mentally rehearsing your Top Secret clearance interview.",
+        "nextQuestion": 115000
+    },
+    {
+        "id": 114903,
+        "question": 14,
+        "response": "You mention topology optimization and polymer blends in the same sentence. The Stratasys recruiter doesn’t blink. She asks if you’ve ever worked with a Markforged.\n\nYou say yes, even though you haven't. Doesn’t matter—you’re invited to the next round.\n\nYou pretend not to notice your hands shaking with excitement.",
+        "nextQuestion": 115000
+    },
+    {
+        "id": 114905,
+        "question": 14,
+        "response": "The Amazon recruiter gives you a thin smile. Hands you a QR code. “Apply online,” she says. She turns around and greets your roommate behind you with their name. \n\nYou stand there, blinking. At least Deloitte still wants you.",
+        "nextQuestion": 115000
+    },
+    {
+        "id": 114201,
+        "question": 14,
+        "response": "You launch into a pitch about economic resilience, embedded payments, and your fascination with policy-driven FinTech innovation. The recruiter blinks once, nods twice, and pulls you aside for a talk. You don’t even remember what you said, but you sail past first round either way.",
+        "nextQuestion": 115000
+    },
+    {
+        "id": 114202,
+        "question": 14,
+        "response": "You say “machine learning” and “financial accessibility” like you just read it off a slide. She asks you a question about the Fed’s role in stimulus. You blink. “Apply online,” she says, turning to complement your best friend’s blazer.\n\nYou stare at your resume, unsure what it even says. Deloitte it is.",
+        "nextQuestion": 115000
+    },
+    {
+        "id": 114301,
+        "question": 14,
+        "response": "You shamble up to their booth and ramble on and on about their work on the F-35’s avionics suite. They’re just university recruiters. Neither you nor they actually understand the conversation that takes place, but it’s enough to get you to finals.",
+        "nextQuestion": 115000
+    },
+    {
+        "id": 114302,
+        "question": 14,
+        "response": "You say “defense” with the enthusiasm of someone who just Googled what L3Harris does. You mumble something about “military-adjacent tech.” She replies, “we’ll be in touch.” The Deloitte recruiter catches your eye from across the room. You know what’s coming.",
+        "nextQuestion": 115000
+    },
+    {
+        "id": 114401,
+        "question": 14,
+        "response": "You drop a line about AI ethics and quantum computing, and their ears perk up. A recruiter asks about your thoughts on hybrid cloud strategies, and you rattle off something about Red Hat you vaguely remember from Hacker News. They nod, impressed.",
+        "nextQuestion": 115000
+    },
+    {
+        "id": 114402,
+        "question": 14,
+        "response": " You say “cloud computing” like it’s a spell. The recruiter’s smile doesn’t quite reach her eyes. She hands you a flyer and says you’ll “find plenty of great resources online.” You nod, defeated, as the Deloitte recruiter waves you over with a lanyard.",
+        "nextQuestion": 115000
+    },
+    {
+        "id": 114501,
+        "question": 14,
+        "response": "You talk about embedded systems and supply chain resilience. The recruiter looks like they’ve finally found someone who doesn’t flinch at the word 'MES.' You're ushered into a follow-up round almost immediately.",
+        "nextQuestion": 115000
+    },
+    {
+        "id": 114502,
+        "question": 14,
+        "response": "You try to spin your summer of Python tutorials into “strong embedded systems experience.” She thanks you for stopping by and gestures toward the QR code taped to the table. You notice the Deloitte recruiter waving at you.",
+        "nextQuestion": 115000
+    },
+    {
+        "id": 114601,
+        "question": 14,
+        "response": "You gambled little and gained even less. While your friends are locking in offers at Northrop Grumman and Meta, you’re able to beat a bunch of Econ and Finance majors for a Technology Consulting final round.",
+        "nextQuestion": 115000
     }
   ]
 }
