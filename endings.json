@@ -2,73 +2,85 @@
   "endings": [
     {
       "code": 98,
-      "title": "??? LAB ???",
-      "s1": "Placeholder ending for code 98",
-      "s2": "Placeholder dialogue for code 98"
+      "title": "GAME OVER: FRESH BREATHS",
+      "subtitle": "Ending 01/25",
+      "s1": "The inbox stayed quiet. The calendar stayed empty. But the world didn’t end. You help her cook. You go on walks. You finally read that book you kept pretending to finish. It still stings, yeah. But you’re breathing. You’re still here. \n\nAnd for now, that’s enough.",
+      "s2": "You: no luck this cycle. i think i’m just gonna take the L\nBest Friend: rest. rebuild. you’ve earned both\nRoommate: yeah. fr. we all hit walls\nYou: she said she’s proud of me anyway. idk why that made me cry\nBest Friend: because it matters\noommate: she’s a real one\nYou: yeah. i think she is."
     },
     {
       "code": 97,
-      "title": "??? LAB ???",
+      "title": "GAME OVER: BURNT ACID",
+      "subtitle": "Ending 02/25",
       "s1": "Placeholder ending for code 97",
       "s2": "Placeholder dialogue for code 97"
     },
     {
       "code": 96,
       "title": "??? LAB ???",
+      "subtitle": "Ending 03/25",
       "s1": "Placeholder ending for code 96",
       "s2": "Placeholder dialogue for code 96"
     },
     {
       "code": 95,
       "title": "??? LAB ???",
+      "subtitle": "Ending 04/25",
       "s1": "Placeholder ending for code 95",
       "s2": "Placeholder dialogue for code 95"
     },
     {
       "code": 94,
       "title": "??? LAB ???",
+      "subtitle": "Ending 05/25",
       "s1": "Placeholder ending for code 94",
       "s2": "Placeholder dialogue for code 94"
     },
     {
       "code": 93,
       "title": "??? LAB ???",
+      "subtitle": "Ending 06/25",
       "s1": "Placeholder ending for code 93",
       "s2": "Placeholder dialogue for code 93"
     },
     {
       "code": 92,
       "title": "??? LAB ???",
+      "subtitle": "Ending 07/25",
       "s1": "Placeholder ending for code 92",
       "s2": "Placeholder dialogue for code 92"
     },
     {
       "code": 91,
       "title": "??? LAB ???",
+      "subtitle": "Ending 08/25",
       "s1": "Placeholder ending for code 91",
       "s2": "Placeholder dialogue for code 91"
     },
     {
       "code": 90,
       "title": "??? LAB ???",
+      "subtitle": "Ending 09/25",
       "s1": "Placeholder ending for code 90",
       "s2": "Placeholder dialogue for code 90"
     },
     {
       "code": 89,
-      "title": "??? LAB ???",
+      "title": "GAME OVER: ADDITIVE ASCENSION",
+      "subtitle": "Ending 10/25",
       "s1": "Placeholder ending for code 89",
       "s2": "Placeholder dialogue for code 89"
     },
     {
       "code": 88,
-      "title": "??? LAB ???",
+      "title": "GAME OVER: THE WOLF OF WALL STREET",
+      "subtitle": "Ending 11/25",
       "s1": "Placeholder ending for code 88",
       "s2": "Placeholder dialogue for code 88"
     },
     {
       "code": 87,
       "title": "??? LAB ???",
+      "subtitle": "Ending 12/25",
       "s1": "Placeholder ending for code 87",
       "s2": "Placeholder dialogue for code 87"
     },
@@ -81,74 +93,85 @@
     },
     {
       "code": 18,
-      "title": "CODE 18 ending idk",
-      "subtitle": "Ending 14/25",
-      "s1": "Placeholder ending for code 18",
+      "title": "GAME OVER: DREAMS DEFERRED",
+      "subtitle": "Ending 25/25 (Canon Ending)",
+      "s1": "You sleep in. Scroll past sunrise. Apply to jobs that don’t reply. The semester's over. The groupchats are quieter now. You tell yourself it’s temporary. That the market’s broken. That you'll be able to find someone to call yours. \n\nBut you don’t believe it. Not really. You just close the tab. \n\nAnd lie back down in tears.",
       "s2": "Placeholder dialogue for code 18"
     },
     {
       "code": 17,
-      "title": "??? LAB NO GF ???",
+      "title": "GAME OVER: INTERN, INTERRUPTED",
+      "subtitle": "Ending 15/25",
       "s1": "You show up before the PI. You leave after the grad students. Your name’s misspelled on a poster that might be presented in Belgium. You don’t get paid. You don’t get credit. But for the first time, you feel like you’re part of something that might outlast you. Even if no one else notices.",
       "s2": "MC: fixed a major data issue and the PI just called me “intern”\nRoommate: nah that’s insane\nBest Friend: i know it’s thankless, but i’m proud of you\nMC: my code’s probably going into a paper. that’s kinda cool, right?\nRoommate: as long as it’s not just the acknowledgements section\nBest Friend: it’s cool. even if they forget you, you’ll remember\nMC: yeah. i think i will"
     },
     {
       "code": 16,
-      "title": "??? LAB ???",
+      "title": "GAME OVER: THE WOLF OF GOOGLE WORKSPACE",
+      "subtitle": "Ending 16/25",
       "s1": "Placeholder ending for code 16",
       "s2": "Placeholder dialogue for code 16"
     },
     {
       "code": 15,
-      "title": "??? LAB ???",
+      "title": "GAME OVER: DEATH BY POWERPOINT",
+      "subtitle": "Ending 17/25",
       "s1": "Placeholder ending for code 15",
       "s2": "Placeholder dialogue for code 15"
     },
     {
       "code": 14,
-      "title": "??? LAB ???",
+      "title": "GAME OVER: COGS IN THE MACHINE",
+      "subtitle": "Ending 18/25",
       "s1": "Placeholder ending for code 14",
       "s2": "Placeholder dialogue for code 14"
     },
     {
       "code": 13,
       "title": "??? LAB ???",
+      "subtitle": "Ending 19/25",
       "s1": "Placeholder ending for code 13",
       "s2": "Placeholder dialogue for code 13"
     },
     {
       "code": 12,
       "title": "??? LAB ???",
+      "subtitle": "Ending 20/25",
       "s1": "Placeholder ending for code 12",
       "s2": "Placeholder dialogue for code 12"
     },
     {
       "code": 11,
-      "title": "??? LAB ???",
+      "title": "GAME OVER: EMBEDDED IN OBSCURITY",
+      "subtitle": "Ending 21/25",
       "s1": "Placeholder ending for code 11",
       "s2": "Placeholder dialogue for code 11"
     },
     {
       "code": 10,
-      "title": "??? LAB ???",
+      "title": "GAME OVER: REDACTED AND RESIGNED",
+      "subtitle": "Ending 22/25",
       "s1": "Placeholder ending for code 10",
       "s2": "Placeholder dialogue for code 10"
     },
     {
       "code": 9,
       "title": "??? LAB ???",
+      "subtitle": "Ending 23/25",
       "s1": "Placeholder ending for code 9",
       "s2": "Placeholder dialogue for code 9"
     },
     {
       "code": 8,
-      "title": "??? LAB ???",
+      "title": "GAME OVER: WALL STREET BLUES",
+      "subtitle": "Ending 24/25",
       "s1": "Placeholder ending for code 8",
       "s2": "Placeholder dialogue for code 8"
     },
     {
       "code": 7,
       "title": "GAME OVER: SILICON VALLEY SOLILOQUY",
+      "subtitle": "Ending 14/25",
       "s1": "The badge says Apple. The desk is sleek. The code compiles. You eat dinner alone most nights, but you’re not lonely. You’ve got your footing now. You’re making things that matter. The validation didn’t come from someone else this time. It came from you.",
       "s2": "You: first intern standup went fine. didn’t stutter once\nBest Friend: he’s GROWING\nRoommate: did they assign you a work wife yet\nYou: just me and this SwiftUI bug i’ve been dating for 3 days\nBest Friend: proud of you fr\nYou: thanks. i kinda am too."
     },
