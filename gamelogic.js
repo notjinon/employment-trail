@@ -262,13 +262,13 @@ function submitOption() {
     }
   } else if ([121100, 121200, 121300, 121400].includes(currentQuestionKey)) {
     if (selectedOpt.key == 121101 || selectedOpt.key == 121201) {
-      currentResponseId == 121101
+      currentResponseId = 121101
       gameState.fondness >= 10 ? gameState.ending = 96 : gameState.ending = 16;
     } else if (selectedOpt.key == 121102 || selectedOpt.key == 121301) {
-      currentResponseId == 121102
+      currentResponseId = 121102
       gameState.fondness >= 10 ? gameState.ending = 97 : gameState.ending = 17;
     } else {
-      currentResponseId == 121103
+      currentResponseId = 121103
       gameState.fondness >= 10 ? gameState.ending = 98 : gameState.ending = 18;
     }
   } else {
