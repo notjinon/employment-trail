@@ -191,7 +191,7 @@ function submitOption() {
     // there will be logic for question 20.
     // basically: if an ending condition is met, then set gameState.ending to the ending code.
     // there will be separate ending codes for each ending, but all the feedbacks will be the same. 
-    // else, set gameState.ending to 0, and move to question 21.
+    // else, set gameState.ending to 0, and move to question 21 via explicit declaration.
     // question 21 only has 4 permutations, so we can use nextkey logic for that perhaps?
   } 
   else{
