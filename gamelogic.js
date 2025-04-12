@@ -227,25 +227,25 @@ function submitOption() {
             if (gameState.fondness >= 10) {
                 gameState.ending = 92;  // Variant ending for company 5 when fondness is high
             } else {
-                gameState.ending = 12;          // Base ending for company 5
+                gameState.ending = 12;          // Base ending for company 5 (CapitalOne)
             }
         } else if (gameState.company === 6) {
             if (gameState.fondness >= 10) {
                 gameState.ending = 93;  // Variant ending for company 6 when fondness is high
             } else {
-                gameState.ending = 13;          // Base ending for company 6
+                gameState.ending = 13;          // Base ending for company 6 (IBM)
             }
         } else if (gameState.company === 7) {
             if (gameState.fondness >= 10) {
-                gameState.ending = 94;  // Variant ending for company 7 when fondness is high
+                gameState.ending = 91;  // Variant ending for company 7 when fondness is high
             } else {
-                gameState.ending = 14;          // Base ending for company 7
+                gameState.ending = 11;          // Base ending for company 7 (L3Harris)
             }
         } else if (gameState.company === 8) {
             if (gameState.fondness >= 10) {
-                gameState.ending = 91;  // Variant ending for company 8 when fondness is high
+                gameState.ending = 94;  // Variant ending for company 8 when fondness is high
             } else {
-                gameState.ending = 11;          // Base ending for company 8
+                gameState.ending = 14;          // Base ending for company 8 (GM)
             }
         } else if (gameState.company === 9) {
             if (gameState.fondness >= 10) {
