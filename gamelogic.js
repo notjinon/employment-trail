@@ -350,14 +350,14 @@ function nextQuestion() {
         nextKey = gameState.fondness >= 4 ? 116100 : 116200;
         break;
       case 117000:
-        if (gameState.fondness >= 10 && gameState.burnout < 4) {
+        if (gameState.fondness >= 10 && gameState.burnout < 2) {
           nextKey = 117100;
           break;
         } else if (gameState.fondness >= 10)
         {
           nextKey = 117200;
           break;
-        } else if (gameState.burnout < 4)
+        } else if (gameState.burnout < 2)
         {
           nextKey = 117300;
           break;
