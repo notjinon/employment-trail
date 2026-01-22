@@ -399,6 +399,19 @@ function nextQuestion() {
   showQuestion();
 }
 
+// Show a quick readout of the current stats for debugging / status view.
+function showStatus() {
+  const lines = Object.keys(gameState)
+    .map(stat => `${stat.toUpperCase()}: ${gameState[stat]}`)
+    .join("\n");
+  alert("Current Status:\n\n" + lines);
+}
+
+// Placeholder for a "social" panel – currently just surfaces the social score.
+function showSocial() {
+  alert("girlfriend / roommate / homegirl");
+}
+
 
 
 function endGame(endingCode) {
