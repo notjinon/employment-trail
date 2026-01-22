@@ -155,7 +155,7 @@ footer{
     padding: 10px 24px;
     margin-top: 20px;
     border-radius: 0;
-    border: 2px solid #0f0;
+  border: 1px solid #0f0;
     background-color: #000;
     color: #0f0;
     text-decoration: none;
@@ -165,18 +165,15 @@ footer{
     text-transform: uppercase;
     letter-spacing: 0.08em;
     cursor: pointer;
-    box-shadow: 2px 2px 0 #0f0;
 }
 
 .button:hover {
   background-color: #003300;
   color: #b8ff5c;
-  box-shadow: 2px 2px 0 #b8ff5c;
 }
 
 .button:active {
   background-color: #001900;
-  box-shadow: 1px 1px 0 #0f0;
 }
 
 ::-webkit-scrollbar {
