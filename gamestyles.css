@@ -150,36 +150,33 @@ footer{
 }
 
 .button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    min-width: 150px;
-    padding: 12px 28px;
-    border-radius: 999px;
-    background-color: #b8ff5c;
-    color: #000;
+    display: inline-block;
+    min-width: 140px;
+    padding: 10px 24px;
+    margin-top: 20px;
+    border-radius: 0;
+    border: 2px solid #0f0;
+    background-color: #000;
+    color: #0f0;
     text-decoration: none;
     font-family: "IBM Plex Mono", monospace;
-    font-size: 16px;
-    font-weight: 700;
-    letter-spacing: 0.08em;
+    font-size: 14px;
+    font-weight: 600;
     text-transform: uppercase;
-    margin-top: 20px;
-    border: none;
+    letter-spacing: 0.08em;
     cursor: pointer;
-    box-shadow: 0 6px 0 #204120;
+    box-shadow: 2px 2px 0 #0f0;
 }
 
 .button:hover {
-  background-color: #a4ff3f;
-  box-shadow: 0 4px 0 #204120;
-  transform: translateY(2px);
+  background-color: #003300;
+  color: #b8ff5c;
+  box-shadow: 2px 2px 0 #b8ff5c;
 }
 
 .button:active {
-  background-color: #8edf33;
-  box-shadow: 0 2px 0 #204120;
-  transform: translateY(4px);
+  background-color: #001900;
+  box-shadow: 1px 1px 0 #0f0;
 }
 
 ::-webkit-scrollbar {
