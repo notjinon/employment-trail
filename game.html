@@ -59,36 +59,65 @@
     <!-- Status Report Screen -->
     <div class="slide hidden" id="status-screen">
       <h2>YOUR STATUS</h2>
-      <div class="status-content">
-        <div class="status-item">
-          <label>You Are A:</label>
-          <span id="status-school">Loading...</span>
+
+      <!-- Three-column header grid -->
+      <div class="status-header-grid">
+        <div class="status-col">
+          <span class="status-label">YOU ARE A:</span>
+          <span class="status-value" id="status-school">Loading...</span>
         </div>
-        <div class="status-item">
-          <label>It is:</label>
-          <span id="status-term">Loading...</span>
+        <div class="status-col">
+          <span class="status-label">IT IS:</span>
+          <span class="status-value" id="status-term">Loading...</span>
         </div>
-        <div class="status-item">
-          <label>Company Focus:</label>
-          <span id="status-company">Loading...</span>
-        </div>
-        <div class="status-item">
-          <label>Burnout:</label>
-          <span id="status-burnout">Loading...</span>
-        </div>
-        <div class="status-item">
-          <label>Academics:</label>
-          <span id="status-academics">Loading...</span>
-        </div>
-        <div class="status-item">
-          <label>Social:</label>
-          <span id="status-social">Loading...</span>
-        </div>
-        <div class="status-item">
-          <label>Romance:</label>
-          <span id="status-fondness">Loading...</span>
+        <div class="status-col">
+          <span class="status-label">COMPANY FOCUS:</span>
+          <span class="status-value" id="status-company">Loading...</span>
         </div>
       </div>
+
+      <!-- Stat bars -->
+      <div class="stat-bars">
+        <!-- Social Status -->
+        <div class="stat-row">
+          <span class="stat-name">SOCIAL STATUS:</span>
+          <span class="stat-tier" id="status-social">Loading...</span>
+        </div>
+        <div class="bar-row">
+          <div class="art-placeholder">art</div>
+          <div class="bar-container">
+            <div class="bar-fill" id="bar-social"></div>
+          </div>
+          <div class="art-placeholder">art</div>
+        </div>
+
+        <!-- Academic Skill -->
+        <div class="stat-row">
+          <span class="stat-name">ACADEMIC SKILL:</span>
+          <span class="stat-tier" id="status-academics">Loading...</span>
+        </div>
+        <div class="bar-row">
+          <div class="art-placeholder">art</div>
+          <div class="bar-container">
+            <div class="bar-fill" id="bar-academics"></div>
+          </div>
+          <div class="art-placeholder">art</div>
+        </div>
+
+        <!-- Mental Health (Burnout inverted) -->
+        <div class="stat-row">
+          <span class="stat-name">MENTAL HEALTH:</span>
+          <span class="stat-tier" id="status-burnout">Loading...</span>
+        </div>
+        <div class="bar-row">
+          <div class="art-placeholder">art</div>
+          <div class="bar-container">
+            <div class="bar-fill" id="bar-burnout"></div>
+          </div>
+          <div class="art-placeholder">art</div>
+        </div>
+      </div>
+
       <button onclick="backToQuestion()" class="button">Back</button>
     </div>
 

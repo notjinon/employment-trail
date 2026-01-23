@@ -478,22 +478,22 @@ function backToQuestion() {
 }
 
 function populateStatus() {
-  // TODO: Map stat values to qualitative labels
+  // School name & color
   const schoolElement = document.getElementById("status-school");
   const schoolCode = gameState.school;
   const schoolName = SCHOOL_MAP[schoolCode] || "High School Student";
   const schoolNames = ["default", "purdue", "cornell", "washington", "georgia-tech"];
   const schoolColor = `school-${schoolNames[schoolCode]}`;
   
-  schoolElement.textContent =  schoolName;
-  schoolElement.className = schoolColor;
+  schoolElement.textContent = schoolName;
+  schoolElement.className = "status-value " + schoolColor;
   
+  // Time period
   document.getElementById("status-term").textContent = getTimePeriod(currentQuestionKey);
   
   // Company focus logic
   let companyFocus;
   if (gameState.company === 0) {
-    // No company selected yet - show progression
     if (currentQuestionKey < 106000) {
       companyFocus = "Khan Academy";
     } else if (currentQuestionKey < 114000) {
@@ -505,10 +505,21 @@ function populateStatus() {
     companyFocus = COMPANY_MAP[gameState.company] || "Unknown";
   }
   document.getElementById("status-company").textContent = companyFocus;
+
+  // Tier labels
   document.getElementById("status-burnout").textContent = getBurnoutTier(gameState.burnout);
   document.getElementById("status-academics").textContent = getAcademicsTier(gameState.academic);
   document.getElementById("status-social").textContent = getSocialTier(gameState.social);
-  document.getElementById("status-fondness").textContent = getFondnessTier(gameState.fondness);
+
+  // Update bar widths (values cap at 10 for 100%)
+  const maxStat = 10;
+  document.getElementById("bar-social").style.width =
+    Math.min(gameState.social / maxStat, 1) * 100 + "%";
+  document.getElementById("bar-academics").style.width =
+    Math.min(gameState.academic / maxStat, 1) * 100 + "%";
+  // Burnout is inverted: high burnout = low mental health bar
+  document.getElementById("bar-burnout").style.width =
+    Math.max(1 - gameState.burnout / maxStat, 0) * 100 + "%";
 }
 
 function populateSocial() {

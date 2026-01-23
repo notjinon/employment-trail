@@ -187,27 +187,118 @@ footer{
 ::-webkit-scrollbar-thumb {
     background-color: #0f0;
 }
-/* School color classes */
+/* School color classes – only override color */
 .school-default {
-    color: #0f0;
+    color: #b8ff5c !important;
 }
 
 .school-purdue {
-    color: #FFD700;
-    text-shadow: 0 0 5px #FFD700;
+    color: #FFD700 !important;
 }
 
 .school-cornell {
-    color: #DC143C;
-    text-shadow: 0 0 5px #DC143C;
+    color: #DC143C !important;
 }
 
 .school-washington {
-    color: #9400D3;
-    text-shadow: 0 0 5px #9400D3;
+    color: #9400D3 !important;
 }
 
 .school-georgia-tech {
-    color: #0066FF;
-    text-shadow: 0 0 5px #0066FF;
+    color: #0066FF !important;
+}
+
+/* ===== Status Screen Layout ===== */
+
+/* Three-column header grid */
+.status-header-grid {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid #0f0;
+  margin-bottom: 2rem;
+}
+
+.status-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 0.5rem;
+  text-align: left;
+}
+
+.status-col:not(:last-child) {
+  border-right: 1px solid #0f0;
+}
+
+.status-label {
+  font-size: 12px;
+  color: #0f0;
+  text-transform: uppercase;
+  margin-bottom: 0.25rem;
+}
+
+.status-value {
+  font-size: 16px;
+  font-weight: 600;
+  color: #b8ff5c;
+  text-transform: uppercase;
+}
+
+/* Stat bars section */
+.stat-bars {
+  text-align: left;
+  margin-bottom: 1.5rem;
+}
+
+.stat-row {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 0.25rem;
+}
+
+.stat-name {
+  font-size: 14px;
+  color: #0f0;
+  text-transform: uppercase;
+}
+
+.stat-tier {
+  font-size: 14px;
+  font-style: italic;
+  color: #b8ff5c;
+}
+
+.bar-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.art-placeholder {
+  width: 48px;
+  height: 48px;
+  border: 1px solid #0f0;
+  background-color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  color: #0f0;
+  text-transform: lowercase;
+  flex-shrink: 0;
+}
+
+.bar-container {
+  flex: 1;
+  height: 28px;
+  border: 1px solid #0f0;
+  background-color: #000;
+}
+
+.bar-fill {
+  height: 100%;
+  background-color: #b8ff5c;
+  transition: width 0.3s ease;
 }
