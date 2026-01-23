@@ -322,7 +322,6 @@ function submitOption() {
         currentResponseId = 120101; // Use generic "pass" feedback
     } 
     else {
-        gameState.ending = 0;      // No ending condition is met
         currentResponseId = 120102; // Use alternate response
     }
   } else if ([121100, 121200, 121300, 121400].includes(currentQuestionKey)) {
