@@ -525,13 +525,32 @@ function populateStatus() {
 }
 
 function populateSocial() {
-  // TODO: Fetch character data and stat-driven reactions
-  document.getElementById("partner-name").textContent = "Partner";
-  document.getElementById("homegirl-name").textContent = "Homegirl";
-  document.getElementById("roommate-name").textContent = "Roommate";
-  document.getElementById("partner-reaction").textContent = "...";
-  document.getElementById("homegirl-reaction").textContent = "...";
-  document.getElementById("roommate-reaction").textContent = "...";
+  // Romance section: show "nobody" until fondness >= 4 (met a girl)
+  const romanceNobody = document.getElementById("romance-nobody");
+  const romanceActive = document.getElementById("romance-active");
+
+  if (gameState.fondness >= 4) {
+    // Girl unlocked - show active romance panel
+    romanceNobody.classList.add("hidden");
+    romanceActive.classList.remove("hidden");
+
+    // Placeholder: Tiffany (can be swapped based on which girl you meet)
+    document.getElementById("girlfriend-name").textContent = "TIFFANY";
+    document.getElementById("girlfriend-subtitle").textContent = "CS - Incoming @ Google";
+    document.getElementById("girlfriend-bio").textContent =
+      "From growing up in the Bay Area to individual research at CMU, she's worked harder than anyone she knows to succeed.";
+    document.getElementById("girlfriend-challenge").innerHTML =
+      "<em>Can you prove that you're worth it?</em>";
+  } else {
+    // No girl yet - show "nobody" state
+    romanceNobody.classList.remove("hidden");
+    romanceActive.classList.add("hidden");
+  }
+
+  // Leaning Towards bar: starts empty, will be driven by gameState later
+  const leaningBar = document.getElementById("bar-leaning");
+  leaningBar.style.width = "0%";
+  document.getElementById("leaning-text").textContent = "(Best Friend/Roommate)";
 }
 
 

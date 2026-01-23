@@ -302,3 +302,233 @@ footer{
   background-color: #b8ff5c;
   transition: width 0.3s ease;
 }
+
+/* ===== Social / Your Friends Screen ===== */
+
+.social-layout {
+  display: flex;
+  gap: 1.5rem;
+  text-align: left;
+}
+
+.column-header {
+  font-size: 18px;
+  font-weight: 600;
+  color: #0f0;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+/* Romance Column (left, larger) */
+.romance-column {
+  flex: 1.2;
+  display: flex;
+  flex-direction: column;
+  padding-right: 1.5rem;
+  border-right: 2px solid #0f0;
+}
+
+.romance-nobody {
+  padding: 1rem 0;
+}
+
+.nobody-title {
+  font-size: 28px;
+  font-weight: 700;
+  font-style: italic;
+  color: #b8ff5c;
+  margin: 0 0 0.25rem 0;
+  text-align: left;
+}
+
+.nobody-subtitle {
+  font-size: 14px;
+  font-style: italic;
+  color: #b8ff5c;
+  margin: 0 0 1rem 0;
+  text-align: left;
+}
+
+.nobody-text {
+  font-size: 14px;
+  font-style: italic;
+  color: #b8ff5c;
+  line-height: 1.8;
+  text-align: left;
+}
+
+.romance-active.hidden {
+  display: none;
+}
+
+.romance-portrait {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 1px solid #0f0;
+  background-color: #000;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0f0;
+  font-size: 12px;
+}
+
+.girlfriend-name {
+  font-size: 20px;
+  font-weight: 700;
+  color: #b8ff5c;
+  margin: 0 0 0.25rem 0;
+}
+
+.girlfriend-subtitle {
+  font-size: 14px;
+  color: #b8ff5c;
+  text-decoration: underline;
+  margin: 0 0 1rem 0;
+}
+
+.girlfriend-bio {
+  font-size: 13px;
+  color: #0f0;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+.girlfriend-challenge {
+  font-size: 13px;
+  color: #0f0;
+}
+
+/* Friendships Column (right, stacked cards) */
+.friendships-column {
+  flex: 0.9;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding-left: 0.25rem;
+}
+
+.friend-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #0f0;
+}
+
+.friend-card:last-of-type {
+  border-bottom: none;
+}
+
+.friend-portrait {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 1px solid #0f0;
+  background-color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  color: #0f0;
+}
+
+.friend-details {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+}
+
+.friend-left {
+  flex-shrink: 0;
+  min-width: 0;
+}
+
+.friend-right {
+  flex: 1;
+  min-width: 0;
+}
+  border: 1px solid #0f0;
+  background-color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  color: #0f0;
+  flex-shrink: 0;
+}
+
+.friend-info {
+  flex: 1;
+}
+
+.friend-name {
+  font-size: 24px;
+  font-weight: 700;
+  font-style: italic;
+  color: #b8ff5c;
+  margin: 0;
+  text-align: left;
+}
+
+.friend-role {
+  font-size: 14px;
+  font-weight: 600;
+  color: #b8ff5c;
+  margin: 0 0 0.25rem 0;
+  text-align: left;
+}
+
+.friend-archetype {
+  font-size: 13px;
+  font-style: italic;
+  color: #b8ff5c;
+  text-decoration: underline;
+  margin: 0 0 0.25rem 0;
+  text-align: left;
+}
+
+.friend-desc {
+  font-size: 13px;
+  font-style: italic;
+  color: #b8ff5c;
+  line-height: 1.5;
+  margin: 0;
+  text-align: left;
+}
+
+/* Leaning Towards section */
+.leaning-section {
+  margin-top: 1rem;
+}
+
+.leaning-label {
+  font-size: 12px;
+  color: #0f0;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.leaning-section .bar-container {
+  height: 24px;
+}
+
+/* Mobile: stack columns */
+@media (max-width: 600px) {
+  .social-layout {
+    flex-direction: column;
+  }
+  
+  .romance-column {
+    border-right: none;
+    padding-right: 0;
+    border-bottom: 2px solid #0f0;
+    padding-bottom: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .friendships-column {
+    padding-left: 0;
+  }
+}
