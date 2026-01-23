@@ -167,11 +167,11 @@
       "question":"An email arrives in your inbox. It’s the Office of the Dean of Undergraduate Students.  \n“Dear Student, We are reaching out to inform you that your peers have requested a wellness check…” \n\n You file it away. You’ll deal with the bleeding hearts later, but what do you do now?",
       "options": [
         {
-          "option": "Teddy Roosevelt once said that ultimate triumph is won from bitter toil. I think it’s time to get back into the gym.",
+          "option": "I need to get back to basics. Hit the gym. Clear my head. Maybe that'll help.",
           "key": 109001
         },
         {
-          "option": "I think it’s time to be frank about my shitty mental health. What’s the number for the campus CAPS services?",
+          "option": "I think it’s time to be frank about my shitty mental health. Fuck it, therapy might help.",
           "key": 109002
         },
         {

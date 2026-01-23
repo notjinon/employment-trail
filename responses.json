@@ -258,7 +258,7 @@
     {
       "id": 109002,
       "question": 9,
-      "response": "You stare the therapist in the eyes for 90 minutes.  Does she even understand what pressure you’re under? Does she really believe in you? Isn’t she just paid to keep you happy? Either way, it works.",
+      "response": "You stare the therapist in the eyes for 90 minutes.  Does she even understand what pressure you’re under? Does she really believe in you? Does she even care? You leave feeling like she might.",
       "effects": {
           "burnout": -1,
           "social": 1,
