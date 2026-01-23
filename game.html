@@ -33,7 +33,7 @@
       <h2>DISCLAIMER</h2>
       <h3>It's all just one big joke.</h3>
       <p>This game is a satirical depiction of post-COVID college life, career anxiety, and the evolving nature/grind of STEM careers in this day and age. I decide to explore this from the lens of a narcissistic and self-absorbed student saddled with a deep sense of dread.</p>
-      <p>While the tone is biting, nihilistic, and cynical, this is only for artistic flavor. The writing and events depicted within are entirely fictional and do NOT reflect my personal views of any company, industry, or educational system.</p>
+      <p>While the tone is biting, nihilistic, and cynical, this is only for artistic flavor. The writing and events depicted within are entirely fictional and do NOT reflect my personal views of any company, university, industry, or educational system.</p>
       <button onclick="startGame()" class="button">Start Game</button>
     </div>
 
@@ -43,9 +43,9 @@
       <p id="question-text">Loading...</p>
       <div id="options-container"></div>
       <div class="question-buttons">
-        <button onclick="showStatus()" class="button">Status</button>
+        <button onclick="showStatusScreen()" class="button">Status</button>
         <button onclick="submitOption()" class="button">Submit</button>
-        <button onclick="showSocial()" class="button">Social</button>
+        <button onclick="showSocialScreen()" class="button">Social</button>
       </div>
     </div>
 
@@ -55,6 +55,69 @@
       <p id="feedback-text">Feedback goes here...</p>
       <button onclick="nextQuestion()" class="button">Next</button>
     </div>
+
+    <!-- Status Report Screen -->
+    <div class="slide hidden" id="status-screen">
+      <h2>STATUS REPORT</h2>
+      <div class="status-content">
+        <div class="status-item">
+          <label>You Are A:</label>
+          <span id="status-school">Loading...</span>
+        </div>
+        <div class="status-item">
+          <label>It is:</label>
+          <span id="status-term">Loading...</span>
+        </div>
+        <div class="status-item">
+          <label>Company Focus:</label>
+          <span id="status-company">Loading...</span>
+        </div>
+        <div class="status-item">
+          <label>Burnout:</label>
+          <span id="status-burnout">Loading...</span>
+        </div>
+        <div class="status-item">
+          <label>Academics:</label>
+          <span id="status-academics">Loading...</span>
+        </div>
+        <div class="status-item">
+          <label>Social:</label>
+          <span id="status-social">Loading...</span>
+        </div>
+        <div class="status-item">
+          <label>Romance:</label>
+          <span id="status-fondness">Loading...</span>
+        </div>
+      </div>
+      <button onclick="backToQuestion()" class="button">Back</button>
+    </div>
+
+    <!-- Social / Your People Screen -->
+    <div class="slide hidden" id="social-screen">
+      <h2>YOUR PEOPLE</h2>
+      <div class="people-container">
+        <!-- Partner slot -->
+        <div class="person-slot">
+          <div class="person-portrait" id="partner-portrait"></div>
+          <h3 id="partner-name">Partner</h3>
+          <p id="partner-reaction">Reaction line here...</p>
+        </div>
+        <!-- Homegirl slot -->
+        <div class="person-slot">
+          <div class="person-portrait" id="homegirl-portrait"></div>
+          <h3 id="homegirl-name">Homegirl</h3>
+          <p id="homegirl-reaction">Reaction line here...</p>
+        </div>
+        <!-- Roommate slot -->
+        <div class="person-slot">
+          <div class="person-portrait" id="roommate-portrait"></div>
+          <h3 id="roommate-name">Roommate</h3>
+          <p id="roommate-reaction">Reaction line here...</p>
+        </div>
+      </div>
+      <button onclick="backToQuestion()" class="button">Back</button>
+    </div>
+
     <!-- Ending Slide 1 – Display ending message with a Next button -->
     <div class="slide hidden" id="ending-slide-1">
       <h2 id="ending-title">Ending</h2>
@@ -73,7 +136,9 @@
     <!-- Ending Slide 3 – Custom ending message with a Home button -->
     <div class="slide hidden" id="ending-slide-3">
       <h2 id="thanks-title">Thanks for Playing</h2>
-      <p id="thanks-text">I wrote this game over the course of two weeks while I was in lecture. The scripting was finished during an exam week on my campus.</p>
+      <p>I originally wrote this game over the course of two weeks while I was in lecture. The scripting was finished during an exam week on my campus.</p>
+      
+      <p>As time went on, I felt like this was a bit underbaked, and have been tinkering with it ever since.</p>
 
       <p>Please don’t infer anything about my perspectives from this game, this is merely a work of fiction! Furthermore, I’m neither a CS nor DS student so this is an outside-in perspective on the SWE market as it stands. And yes, I grossly overestimate your chances of getting a job. Makes it more fun.</p>
         
@@ -86,7 +151,7 @@
 
   <footer>
     The Employment Trail -- V. 1.1 - "Human Resouces" DevBranch <br>
-    Designed, Written, and Built by <a href="https://notjinon.github.io" target="_blank">Jino Nicolas</a> · 2025
+    Designed, Written, and Built by <a href="https://notjinon.github.io" target="_blank">Jino Nicolas</a> · 2026
   </footer>
 
   <script src="gamelogic.js"></script>

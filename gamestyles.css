@@ -190,3 +190,27 @@ footer{
 ::-webkit-scrollbar-thumb {
     background-color: #0f0;
 }
+/* School color classes */
+.school-default {
+    color: #0f0;
+}
+
+.school-purdue {
+    color: #FFD700;
+    text-shadow: 0 0 5px #FFD700;
+}
+
+.school-cornell {
+    color: #DC143C;
+    text-shadow: 0 0 5px #DC143C;
+}
+
+.school-washington {
+    color: #9400D3;
+    text-shadow: 0 0 5px #9400D3;
+}
+
+.school-georgia-tech {
+    color: #0066FF;
+    text-shadow: 0 0 5px #0066FF;
+}

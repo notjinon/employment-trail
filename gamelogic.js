@@ -1,3 +1,68 @@
+const SCHOOL_MAP = {
+  0: "High School Student",
+  1: "Purdue Boilermaker",
+  2: "Cornellian",
+  3: "Washington Husky",
+  4: "Georgia Tech Yellow Jacket"
+};
+
+const COMPANY_MAP = {
+  0: null,
+  1: "Apple",
+  2: "Jane Street",
+  3: "Stratasys",
+  4: "Lockheed Martin",
+  5: "Capital One",
+  6: "IBM",
+  7: "L3Harris",
+  8: "General Motors",
+  9: "Deloitte"
+};
+
+function getTimePeriod(questionKey) {
+  if (questionKey < 104000) return "High School";
+  if (questionKey < 105000) return "Early August";
+  if (questionKey < 106000) return "Late August";
+  if (questionKey < 108000) return "Mid September";
+  if (questionKey < 111000) return "Mid October";
+  if (questionKey < 114000) return "Early November";
+  if (questionKey < 117000) return "Late November";
+  if (questionKey < 120000) return "Early December";
+  return "Late December";
+}
+
+function getBurnoutTier(value) {
+  if (value <= 1) return "No Pressure";
+  if (value <= 3) return "Normal Stress";
+  if (value <= 5) return "Daily Migraines";
+  if (value <= 7) return "Hourly Caffeine";
+  return "On Watchlist";
+}
+
+function getAcademicsTier(value) {
+  if (value <= 1) return "Dumbass";
+  if (value <= 3) return "ChatGPT User";
+  if (value <= 5) return "Nothing Special";
+  if (value <= 7) return "B Average";
+  return "Fucking Nerd";
+}
+
+function getSocialTier(value) {
+  if (value <= 1) return "Loser";
+  if (value <= 3) return "Irrelevant";
+  if (value <= 5) return "Total Wannabe";
+  if (value <= 7) return "Side Character";
+  return "Prestige Whore";
+}
+
+function getFondnessTier(value) {
+  if (value <= 2) return "Chud";
+  if (value <= 4) return "\" Who are you again? \"";
+  if (value <= 6) return "\" Aren't you in my class? \"";
+  if (value <= 8) return "\" You're not that ugly. \"";
+  return "**Together Forever**";
+}
+
 let currentSlide = 0;
 let currentEnding = null;
 let nextQuestionKey = null;
@@ -399,17 +464,62 @@ function nextQuestion() {
   showQuestion();
 }
 
-// Show a quick readout of the current stats for debugging / status view.
-function showStatus() {
-  const lines = Object.keys(gameState)
-    .map(stat => `${stat.toUpperCase()}: ${gameState[stat]}`)
-    .join("\n");
-  alert("Current Status:\n\n" + lines);
+function showStatusScreen() {
+  populateStatus();
+  switchSlide("status-screen");
 }
 
-// Placeholder for a "social" panel – currently just surfaces the social score.
-function showSocial() {
-  alert("girlfriend / roommate / homegirl");
+function showSocialScreen() {
+  populateSocial();
+  switchSlide("social-screen");
+}
+
+function backToQuestion() {
+  switchSlide("question-slide");
+}
+
+function populateStatus() {
+  // TODO: Map stat values to qualitative labels
+  const schoolElement = document.getElementById("status-school");
+  const schoolCode = gameState.school;
+  const schoolName = SCHOOL_MAP[schoolCode] || "High School Student";
+  const schoolNames = ["default", "purdue", "cornell", "washington", "georgia-tech"];
+  const schoolColor = `school-${schoolNames[schoolCode]}`;
+  
+  schoolElement.textContent =  schoolName;
+  schoolElement.className = schoolColor;
+  
+  document.getElementById("status-term").textContent = getTimePeriod(currentQuestionKey);
+  
+  // Company focus logic
+  let companyFocus;
+  if (gameState.company === 0) {
+    // No company selected yet - show progression
+    if (currentQuestionKey < 106000) {
+      companyFocus = "Khan Academy";
+    } else if (currentQuestionKey < 114000) {
+      companyFocus = "LeetCode";
+    } else {
+      companyFocus = "Recruiting";
+    }
+  } else {
+    companyFocus = COMPANY_MAP[gameState.company] || "Unknown";
+  }
+  document.getElementById("status-company").textContent = companyFocus;
+  document.getElementById("status-burnout").textContent = getBurnoutTier(gameState.burnout);
+  document.getElementById("status-academics").textContent = getAcademicsTier(gameState.academic);
+  document.getElementById("status-social").textContent = getSocialTier(gameState.social);
+  document.getElementById("status-fondness").textContent = getFondnessTier(gameState.fondness);
+}
+
+function populateSocial() {
+  // TODO: Fetch character data and stat-driven reactions
+  document.getElementById("partner-name").textContent = "Partner";
+  document.getElementById("homegirl-name").textContent = "Homegirl";
+  document.getElementById("roommate-name").textContent = "Roommate";
+  document.getElementById("partner-reaction").textContent = "...";
+  document.getElementById("homegirl-reaction").textContent = "...";
+  document.getElementById("roommate-reaction").textContent = "...";
 }
 
 

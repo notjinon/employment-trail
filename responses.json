@@ -20,7 +20,9 @@
       "id": 101003,
       "response": "It’s a sharp pivot. You alternate between long stretches of laziness, chaotic underage parties, and frenetic bouts of catching up to schoolwork. The American Dream.",
       "effects": {
-        "burnout": -2
+        "burnout": -2,
+        "academic": -1,
+        "social": 1
       }
     },
     {
