@@ -3,7 +3,7 @@ const SCHOOL_MAP = {
   1: "Purdue Boilermaker",
   2: "Cornellian",
   3: "Washington Husky",
-  4: "Georgia Tech Yellow Jacket"
+  4: "Duke Blue Devil"
 };
 
 const COMPANY_MAP = {
@@ -40,7 +40,7 @@ function getBurnoutTier(value) {
 }
 
 function getAcademicsTier(value) {
-  if (value <= 1) return "Dumbass";
+  if (value <= 1) return "Dunce";
   if (value <= 3) return "ChatGPT User";
   if (value <= 5) return "Nothing Special";
   if (value <= 7) return "B Average";
@@ -48,10 +48,10 @@ function getAcademicsTier(value) {
 }
 
 function getSocialTier(value) {
-  if (value <= 1) return "Loser";
-  if (value <= 3) return "Irrelevant";
-  if (value <= 5) return "Total Wannabe";
-  if (value <= 7) return "Side Character";
+  if (value <= 1) return "Sherm";
+  if (value <= 3) return "Irrelevant Loser";
+  if (value <= 5) return "Side Character";
+  if (value <= 7) return "Social Butterfly";
   return "Prestige Whore";
 }
 
@@ -482,7 +482,7 @@ function populateStatus() {
   const schoolElement = document.getElementById("status-school");
   const schoolCode = gameState.school;
   const schoolName = SCHOOL_MAP[schoolCode] || "High School Student";
-  const schoolNames = ["default", "purdue", "cornell", "washington", "georgia-tech"];
+  const schoolNames = ["default", "purdue", "cornell", "washington", "duke"];
   const schoolColor = `school-${schoolNames[schoolCode]}`;
   
   schoolElement.textContent = schoolName;
@@ -511,15 +511,17 @@ function populateStatus() {
   document.getElementById("status-academics").textContent = getAcademicsTier(gameState.academic);
   document.getElementById("status-social").textContent = getSocialTier(gameState.social);
 
-  // Update bar widths (values cap at 10 for 100%)
+  // Helper to clamp bar percentage between 0% and 100%
+  function clampPercent(value, max) {
+    return Math.max(0, Math.min(value / max, 1)) * 100 + "%";
+  }
+
+  // Update bar widths (display clamped to 0-100%, gameState unchanged)
   const maxStat = 10;
-  document.getElementById("bar-social").style.width =
-    Math.min(gameState.social / maxStat, 1) * 100 + "%";
-  document.getElementById("bar-academics").style.width =
-    Math.min(gameState.academic / maxStat, 1) * 100 + "%";
+  document.getElementById("bar-social").style.width = clampPercent(gameState.social, maxStat);
+  document.getElementById("bar-academics").style.width = clampPercent(gameState.academic, maxStat);
   // Burnout is inverted: high burnout = low mental health bar
-  document.getElementById("bar-burnout").style.width =
-    Math.max(1 - gameState.burnout / maxStat, 0) * 100 + "%";
+  document.getElementById("bar-burnout").style.width = clampPercent(maxStat - gameState.burnout, maxStat);
 }
 
 function populateSocial() {

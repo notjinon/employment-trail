@@ -54,7 +54,7 @@
     },
     {
       "id": 102004,
-      "response": "You quickly realize that for every Vanderbilt and Duke, there’s a dozen more LSUs academically. You’re puzzled by the presence of Confederate statues in the same town that hosts NASA Marshall. In the end, you end up committing to Georgia Tech.",
+      "response": "You quickly realize that for every Vanderbilt and Georgia Tech, there's a dozen more LSUs academically. You're puzzled by the presence of Confederate statues in the same town that hosts NASA Marshall. In the end, you end up committing to Duke.",
       "effects": {
         "defense": 2,
         "manufacturing": 1,
