@@ -280,7 +280,8 @@
       "response": "You’re now considered a regular among the party scene. The night swiftly turns into a blur, but all you know is that it was a needed reprieve. Your roommate spots you drinking with the same girl all night long.",
       "effects": {
           "burnout": -2,
-          "fondness": 2
+          "fondness": 2,
+          "girlfriendId": 1
       },
       "nextQuestion": 111000
     },
@@ -291,7 +292,8 @@
       "effects": {
           "burnout": -2,
           "social": 2,
-          "fondness": 1
+          "fondness": 1,
+          "girlfriendId": 1
       },
       "nextQuestion": 111000
     },

@@ -1,0 +1,27 @@
+{
+  "girlfriends": {
+    "0": null,
+    "1": {
+      "name": "TIFFANY C.",
+      "subtitle": "CS - Incoming @ Google",
+      "bio": "From growing up in the Bay Area to individual research at CMU, she's worked harder than anyone she knows to succeed.",
+      "challenge": "Can you prove that you're worth it?"
+    }
+  },
+  "bestFriends": {
+    "1": {
+      "name": "TARA",
+      "role": "BEST FRIEND",
+      "archetype": "Collaborative Confidant",
+      "desc": "A steadfast and reserved friend from a time long gone."
+    }
+  },
+  "roommates": {
+    "1": {
+      "name": "CHEN",
+      "role": "ROOMMATE",
+      "archetype": "Studious Solitary",
+      "desc": "Quiet, reserved, whip-smart. Won't do you any favors socially."
+    }
+  }
+}

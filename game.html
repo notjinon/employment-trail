@@ -123,67 +123,82 @@
 
     <!-- Social / Your Friends Screen -->
     <div class="slide hidden" id="social-screen">
-      <h2>YOUR FRIENDS</h2>
+      <h2>YOUR CIRCLE</h2>
 
-      <div class="social-layout">
-        <!-- Left Column: Romance -->
-        <div class="romance-column">
-          <h3 class="column-header">ROMANCE</h3>
-
-          <!-- Nobody state (shown before meeting girlfriend) -->
-          <div id="romance-nobody" class="romance-nobody">
-            <div class="romance-portrait">pix art</div>
-            <h4 class="nobody-title">NOBODY</h4>
-            <p class="nobody-subtitle"><u>IMAGINARY PURSUITS</u></p>
-            <p class="nobody-text">You have no girlfriend.<br>Nobody wants you.<br>Try harder.<br>Check back later.</p>
+      <div class="social-grid">
+        <!-- Romance Section -->
+        <div class="social-section">
+          <h3 class="section-header">ROMANCE</h3>
+          
+          <!-- Nobody state -->
+          <div id="romance-nobody" class="character-card">
+            <div class="card-portrait">pix art</div>
+            <div class="card-content">
+              <h4 class="card-name">NOBODY</h4>
+              <p class="card-role">NOBODY</p>
+              <p class="card-subtitle"><u>IMAGINARY PURSUITS</u></p>
+              <p class="card-desc">You have no girlfriend.<br>Nobody wants you.<br>Try harder.<br>Check back later.</p>
+            </div>
           </div>
 
           <!-- Girlfriend state (hidden until unlocked) -->
-          <div id="romance-active" class="romance-active hidden">
-            <div class="romance-portrait" id="girlfriend-portrait">pix art</div>
-            <h4 class="girlfriend-name" id="girlfriend-name">TIFFANY</h4>
-            <p class="girlfriend-subtitle" id="girlfriend-subtitle">CS - Incoming @ Google</p>
-            <p class="girlfriend-bio" id="girlfriend-bio">From growing up in the Bay Area to individual research at CMU, she's worked harder than anyone she knows to succeed.</p>
-            <p class="girlfriend-challenge" id="girlfriend-challenge"><em>Can you prove that you're worth it?</em></p>
+          <div id="romance-active" class="character-card hidden">
+            <div class="card-portrait" id="girlfriend-portrait">pix art</div>
+            <div class="card-content">
+              <h4 class="card-name" id="girlfriend-name">TIFFANY</h4>
+              <p class="card-subtitle" id="girlfriend-subtitle"><u>CS - Incoming @ Google</u></p>
+              <p class="card-desc" id="girlfriend-bio">From growing up in the Bay Area to individual research at CMU, she's worked harder than anyone she knows to succeed.</p>
+              <p class="card-challenge" id="girlfriend-challenge"><em>Can you prove that you're worth it?</em></p>
+              <!-- Fondness bar -->
+              <div class="fondness-section">
+                <p class="fondness-label">SHE THINKS: <span id="fondness-text">Loading...</span></p>
+                <div class="bar-container">
+                  <div class="bar-fill" id="bar-fondness"></div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
-        <!-- Right Column: Friendships -->
-        <div class="friendships-column">
-          <h3 class="column-header">FRIENDSHIPS</h3>
+        <!-- Divider -->
+        <div class="social-divider"></div>
 
-          <!-- Best Friend card -->
-          <div class="friend-card">
-            <div class="friend-portrait" id="bestfriend-portrait">pix art</div>
-            <div class="friend-details">
-              <div class="friend-left">
-                <h4 class="friend-name" id="bestfriend-name">TARA</h4>
-                <p class="friend-role">BEST FRIEND</p>
+        <!-- Friendships Section -->
+        <div class="social-section">
+          <h3 class="section-header">FRIENDSHIPS</h3>
+
+          <!-- Best Friend -->
+          <div class="character-card compact">
+            <div class="card-portrait" id="bestfriend-portrait">pix art</div>
+            <div class="card-content split">
+              <div class="card-left">
+                <h4 class="card-name" id="bestfriend-name">TARA</h4>
+                <p class="card-role">BEST FRIEND</p>
               </div>
-              <div class="friend-right">
-                <p class="friend-archetype" id="bestfriend-archetype">Collaborative Confidant</p>
-                <p class="friend-desc" id="bestfriend-desc">A steadfast and reserved friend from a time long gone.</p>
+              <div class="card-right">
+                <p class="card-archetype" id="bestfriend-archetype"><u>Collaborative Confidant</u></p>
+                <p class="card-desc" id="bestfriend-desc">A steadfast and reserved friend from a time long gone.</p>
               </div>
             </div>
           </div>
 
-          <!-- Roommate card -->
-          <div class="friend-card">
-            <div class="friend-portrait" id="roommate-portrait">pix art</div>
-            <div class="friend-details">
-              <div class="friend-left">
-                <h4 class="friend-name" id="roommate-name">CHEN</h4>
-                <p class="friend-role">ROOMMATE</p>
+          <!-- Roommate -->
+          <div class="character-card compact">
+            <div class="card-portrait" id="roommate-portrait">pix art</div>
+            <div class="card-content split">
+              <div class="card-left">
+                <h4 class="card-name" id="roommate-name">CHEN</h4>
+                <p class="card-role">ROOMMATE</p>
               </div>
-              <div class="friend-right">
-                <p class="friend-archetype" id="roommate-archetype">Studious Solitary</p>
-                <p class="friend-desc" id="roommate-desc">Quiet, reserved, whip-smart. Won't do you any favors socially.</p>
+              <div class="card-right">
+                <p class="card-archetype" id="roommate-archetype"><u>Studious Solitary</u></p>
+                <p class="card-desc" id="roommate-desc">Quiet, reserved, whip-smart. Keeps you grounded and humble.</p>
               </div>
             </div>
           </div>
 
-          <!-- Leaning Towards bar -->
-          <div class="leaning-section">
+          <!-- Leaning Towards -->
+          <div class="leaning-bar">
             <p class="leaning-label">LEANING TOWARDS: <span id="leaning-text">(Best Friend/Roommate)</span></p>
             <div class="bar-container">
               <div class="bar-fill" id="bar-leaning"></div>

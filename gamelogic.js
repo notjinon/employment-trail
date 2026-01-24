@@ -19,6 +19,11 @@ const COMPANY_MAP = {
   9: "Deloitte"
 };
 
+// Character maps - loaded from characters.json
+let GIRLFRIEND_MAP = {};
+let BESTFRIEND_MAP = {};
+let ROOMMATE_MAP = {};
+
 function getTimePeriod(questionKey) {
   if (questionKey < 104000) return "High School";
   if (questionKey < 105000) return "Early August";
@@ -57,10 +62,10 @@ function getSocialTier(value) {
 
 function getFondnessTier(value) {
   if (value <= 2) return "Chud";
-  if (value <= 4) return "\" Who are you again? \"";
-  if (value <= 6) return "\" Aren't you in my class? \"";
-  if (value <= 8) return "\" You're not that ugly. \"";
-  return "**Together Forever**";
+  if (value <= 4) return "\"Who are you again?\"";
+  if (value <= 6) return "\"Aren't you in my class?\"";
+  if (value <= 8) return "\"You're not that ugly.\"";
+  return "\"We're getting married!\"";
 }
 
 let currentSlide = 0;
@@ -82,6 +87,10 @@ let gameState = {
   manufacturing: 0,
   company: 0,
   ending: 0,
+  girlfriendId: 0,
+  bestFriendId: 1,
+  roommateId: 1,
+  leaning: 0
 };
 
 const slides = document.querySelectorAll(".slide");
@@ -106,8 +115,10 @@ function startGame() {
 async function loadGameData() {
   const qRes = await fetch("questions.json");
   const rRes = await fetch("responses.json");
+  const cRes = await fetch("characters.json");
   const qData = await qRes.json();
   const rData = await rRes.json();
+  const cData = await cRes.json();
 
   questions = Object.fromEntries(
     qData.questions.map(q => [q.key, q])
@@ -116,6 +127,10 @@ responses = Object.fromEntries(
     rData.responses.map(r => [r.id, r])
 );
 
+  // Load character maps
+  GIRLFRIEND_MAP = cData.girlfriends;
+  BESTFRIEND_MAP = cData.bestFriends;
+  ROOMMATE_MAP = cData.roommates;
 }
 
 function showQuestion() {
@@ -525,32 +540,81 @@ function populateStatus() {
 }
 
 function populateSocial() {
-  // Romance section: show "nobody" until fondness >= 4 (met a girl)
+  // Romance section: show girlfriend if girlfriendId > 0
   const romanceNobody = document.getElementById("romance-nobody");
   const romanceActive = document.getElementById("romance-active");
+  const girlfriend = GIRLFRIEND_MAP[gameState.girlfriendId];
 
-  if (gameState.fondness >= 4) {
+  if (girlfriend) {
     // Girl unlocked - show active romance panel
     romanceNobody.classList.add("hidden");
     romanceActive.classList.remove("hidden");
 
-    // Placeholder: Tiffany (can be swapped based on which girl you meet)
-    document.getElementById("girlfriend-name").textContent = "TIFFANY";
-    document.getElementById("girlfriend-subtitle").textContent = "CS - Incoming @ Google";
-    document.getElementById("girlfriend-bio").textContent =
-      "From growing up in the Bay Area to individual research at CMU, she's worked harder than anyone she knows to succeed.";
-    document.getElementById("girlfriend-challenge").innerHTML =
-      "<em>Can you prove that you're worth it?</em>";
+    document.getElementById("girlfriend-name").textContent = girlfriend.name;
+    document.getElementById("girlfriend-subtitle").innerHTML = "<u>" + girlfriend.subtitle + "</u>";
+    document.getElementById("girlfriend-bio").textContent = girlfriend.bio;
+    document.getElementById("girlfriend-challenge").innerHTML = "<em>" + girlfriend.challenge + "</em>";
+
+    // Fondness bar
+    document.getElementById("fondness-text").textContent = getFondnessTier(gameState.fondness);
+    const maxFondness = 10;
+    const fondnessPercent = Math.max(0, Math.min(gameState.fondness / maxFondness, 1)) * 100 + "%";
+    document.getElementById("bar-fondness").style.width = fondnessPercent;
   } else {
     // No girl yet - show "nobody" state
     romanceNobody.classList.remove("hidden");
     romanceActive.classList.add("hidden");
   }
 
-  // Leaning Towards bar: starts empty, will be driven by gameState later
+  // Populate best friend from map
+  const bestFriend = BESTFRIEND_MAP[gameState.bestFriendId];
+  if (bestFriend) {
+    document.getElementById("bestfriend-name").textContent = bestFriend.name;
+    document.getElementById("bestfriend-archetype").innerHTML = "<u>" + bestFriend.archetype + "</u>";
+    document.getElementById("bestfriend-desc").textContent = bestFriend.desc;
+  }
+
+  // Populate roommate from map
+  const roommate = ROOMMATE_MAP[gameState.roommateId];
+  if (roommate) {
+    document.getElementById("roommate-name").textContent = roommate.name;
+    document.getElementById("roommate-archetype").innerHTML = "<u>" + roommate.archetype + "</u>";
+    document.getElementById("roommate-desc").textContent = roommate.desc;
+  }
+
+  // Leaning Towards bar: negative = Best Friend (fills from right), positive = Roommate (fills from left)
   const leaningBar = document.getElementById("bar-leaning");
-  leaningBar.style.width = "0%";
-  document.getElementById("leaning-text").textContent = "(Best Friend/Roommate)";
+  const leaning = gameState.leaning;
+  let leaningText;
+  
+  if (leaning < 0) {
+    leaningText = "Best Friend";
+  } else if (leaning > 0) {
+    leaningText = "Roommate";
+  } else {
+    leaningText = "Neutral";
+  }
+  
+  document.getElementById("leaning-text").textContent = leaningText;
+  
+  // Bar logic: empty at neutral, fills from left for roommate, fills from right for best friend
+  const maxLeaning = 5;
+  const magnitude = Math.min(Math.abs(leaning), maxLeaning);
+  const leaningPercent = (magnitude / maxLeaning) * 100;
+  
+  if (leaning > 0) {
+    // Roommate: fill from left
+    leaningBar.style.width = leaningPercent + "%";
+    leaningBar.style.marginLeft = "0";
+  } else if (leaning < 0) {
+    // Best Friend: fill from right
+    leaningBar.style.width = leaningPercent + "%";
+    leaningBar.style.marginLeft = (100 - leaningPercent) + "%";
+  } else {
+    // Neutral: empty
+    leaningBar.style.width = "0%";
+    leaningBar.style.marginLeft = "0";
+  }
 }
 
 
