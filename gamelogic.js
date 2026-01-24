@@ -231,7 +231,8 @@ function cacheDOM() {
   DOM.barAcademics = document.getElementById("bar-academics");
   DOM.barBurnout = document.getElementById("bar-burnout");
   DOM.barFondness = document.getElementById("bar-fondness");
-  DOM.barLeaning = document.getElementById("bar-leaning");
+  DOM.barLeaningLeft = document.getElementById("bar-leaning-left");
+  DOM.barLeaningRight = document.getElementById("bar-leaning-right");
   DOM.fondnessText = document.getElementById("fondness-text");
   DOM.leaningText = document.getElementById("leaning-text");
   DOM.endingTitle = document.getElementById("ending-title");
@@ -657,24 +658,32 @@ function populateSocial() {
     document.getElementById("roommate-desc").textContent = roommate.desc;
   }
 
-  // Leaning bar
+  // Leaning bar - center-out bidirectional
   const leaning = gameState.leaning;
-  DOM.leaningText.textContent = leaning < 0 ? "Best Friend" : leaning > 0 ? "Roommate" : "Neutral";
+  const maxLeaning = 4;
+  const clampedLeaning = Math.max(-maxLeaning, Math.min(maxLeaning, leaning));
   
-  const maxLeaning = 5;
-  const magnitude = Math.min(Math.abs(leaning), maxLeaning);
-  const leaningPercent = (magnitude / maxLeaning) * 100;
+  // Update leaning bar end labels with actual character names
+  const leftLabel = document.getElementById("leaning-left-label");
+  const rightLabel = document.getElementById("leaning-right-label");
+  if (leftLabel && bestFriend) leftLabel.textContent = bestFriend.name;
+  if (rightLabel && roommate) rightLabel.textContent = roommate.name;
   
-  if (leaning > 0) {
-    DOM.barLeaning.style.width = leaningPercent + "%";
-    DOM.barLeaning.style.marginLeft = "0";
-  } else if (leaning < 0) {
-    DOM.barLeaning.style.width = leaningPercent + "%";
-    DOM.barLeaning.style.marginLeft = (100 - leaningPercent) + "%";
+  // Update text label with actual character name
+  if (clampedLeaning < 0) {
+    DOM.leaningText.textContent = bestFriend ? bestFriend.name : "Best Friend";
+  } else if (clampedLeaning > 0) {
+    DOM.leaningText.textContent = roommate ? roommate.name : "Roommate";
   } else {
-    DOM.barLeaning.style.width = "0%";
-    DOM.barLeaning.style.marginLeft = "0";
+    DOM.leaningText.textContent = "Neutral";
   }
+  
+  // Calculate fill percentages (50% = full bar on one side)
+  const leftPercent = clampedLeaning < 0 ? (Math.abs(clampedLeaning) / maxLeaning) * 50 : 0;
+  const rightPercent = clampedLeaning > 0 ? (clampedLeaning / maxLeaning) * 50 : 0;
+  
+  if (DOM.barLeaningLeft) DOM.barLeaningLeft.style.width = leftPercent + "%";
+  if (DOM.barLeaningRight) DOM.barLeaningRight.style.width = rightPercent + "%";
 }
 
 
