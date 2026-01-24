@@ -441,6 +441,17 @@ function populateSocial() {
     document.getElementById("girlfriend-name").textContent = girlfriend.name;
     document.getElementById("girlfriend-subtitle").innerHTML = "<u>" + girlfriend.subtitle + "</u>";
     document.getElementById("girlfriend-bio").textContent = girlfriend.bio;
+    
+    // Archetype and tooltip (hide if no archetype)
+    const gfArchetype = document.getElementById("girlfriend-archetype");
+    const gfTooltip = document.getElementById("girlfriend-tooltip");
+    if (girlfriend.archetype) {
+      gfArchetype.parentElement.parentElement.style.display = "block";
+      gfArchetype.textContent = girlfriend.archetype;
+      gfTooltip.textContent = girlfriend.tooltip || "";
+    } else {
+      gfArchetype.parentElement.parentElement.style.display = "none";
+    }
   }
 
   // Only show fondness bar if girlfriendId in [1,8] (actual romance, not 0=nobody or 9=failure)
@@ -457,7 +468,8 @@ function populateSocial() {
   const bestFriend = BESTFRIEND_MAP[gameState.bestFriendId];
   if (bestFriend) {
     document.getElementById("bestfriend-name").textContent = bestFriend.name;
-    document.getElementById("bestfriend-archetype").innerHTML = "<u>" + bestFriend.archetype + "</u>";
+    document.getElementById("bestfriend-archetype").textContent = bestFriend.archetype;
+    document.getElementById("bestfriend-tooltip").textContent = bestFriend.tooltip || "";
     document.getElementById("bestfriend-desc").textContent = bestFriend.desc;
   }
 
@@ -465,7 +477,8 @@ function populateSocial() {
   const roommate = ROOMMATE_MAP[gameState.roommateId];
   if (roommate) {
     document.getElementById("roommate-name").textContent = roommate.name;
-    document.getElementById("roommate-archetype").innerHTML = "<u>" + roommate.archetype + "</u>";
+    document.getElementById("roommate-archetype").textContent = roommate.archetype;
+    document.getElementById("roommate-tooltip").textContent = roommate.tooltip || "";
     document.getElementById("roommate-desc").textContent = roommate.desc;
   }
 

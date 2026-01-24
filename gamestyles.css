@@ -479,3 +479,46 @@ footer {
     height: 2px;
   }
 }
+
+/* ===== Tooltips ===== */
+.tooltip-wrapper {
+  position: relative;
+  display: inline-block;
+  cursor: help;
+}
+
+.tooltip-wrapper .tooltip-text {
+  visibility: hidden;
+  opacity: 0;
+  width: 220px;
+  background-color: var(--color-bg);
+  color: var(--color-primary);
+  text-align: left;
+  border: var(--border-primary);
+  padding: 0.5rem;
+  position: absolute;
+  z-index: 100;
+  bottom: 125%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 11px;
+  font-style: normal;
+  line-height: 1.4;
+  transition: opacity 0.2s ease;
+}
+
+.tooltip-wrapper .tooltip-text::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: var(--color-primary) transparent transparent transparent;
+}
+
+.tooltip-wrapper:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
