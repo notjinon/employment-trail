@@ -527,7 +527,8 @@
         "response": "As you walk away, you tell yourself it’s not the right time. That you need to focus. That it wouldn’t have worked anyway. The text thread goes cold. \n\nYou lose more than you expected.",
         "effects": {
           "social": -1,
-          "fondness": -15
+          "fondness": -15,
+          "girlfriendId": 9
         },
         "nextQuestion": 117000
     },
@@ -537,7 +538,8 @@
         "response": "The night starts fine. But the silences stretch. You fumble for words that don’t come. It ends with an awkward hug and an unspoken understanding. You check your phone later. No new messages. It was a valuable experience, you say, consoling yourself late that night.\n\nBut the sun rises on two solitary beds.",
         "effects": {
           "social": 1,
-          "fondness": -15
+          "fondness": -15,
+          "girlfriendId": 9
         },
         "nextQuestion": 117000
     },
@@ -547,7 +549,8 @@
         "response": "As you walk away, you tell yourself it’s not the right time. That you need to focus. That it wouldn’t have worked anyway. The text thread goes cold. \n\nYou lose more than you expected.",
         "effects": {
           "social": -1,
-          "fondness": -15
+          "fondness": -15,
+          "girlfriendId": 9
         },
         "nextQuestion": 117000
     },

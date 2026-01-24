@@ -1,11 +1,19 @@
 {
   "girlfriends": {
-    "0": null,
+    "0": {
+      "name": "NOBODY",
+      "subtitle": "Imaginary Pursuits",
+      "bio": "You have no girlfriend. Nobody wants you. Try harder. Check back later."
+    },
     "1": {
       "name": "TIFFANY C.",
       "subtitle": "CS - Incoming @ Google",
-      "bio": "From growing up in the Bay Area to individual research at CMU, she's worked harder than anyone she knows to succeed.",
-      "challenge": "Can you prove that you're worth it?"
+      "bio": "From growing up in the Bay Area to individual research at CMU, she's worked harder than anyone she knows to succeed."
+    },
+    "9": {
+      "name": "NOBODY",
+      "subtitle": "You and the Void",
+      "bio": "You had your shot. You blew it. You pray they'll come back.\nThey won't."
     }
   },
   "bestFriends": {

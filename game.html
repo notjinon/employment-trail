@@ -130,29 +130,17 @@
         <div class="social-section">
           <h3 class="section-header">ROMANCE</h3>
           
-          <!-- Nobody state -->
-          <div id="romance-nobody" class="character-card">
-            <div class="card-portrait">pix art</div>
-            <div class="card-content">
-              <h4 class="card-name">NOBODY</h4>
-              <p class="card-role">NOBODY</p>
-              <p class="card-subtitle"><u>IMAGINARY PURSUITS</u></p>
-              <p class="card-desc">You have no girlfriend.<br>Nobody wants you.<br>Try harder.<br>Check back later.</p>
-            </div>
-          </div>
-
-          <!-- Girlfriend state (hidden until unlocked) -->
-          <div id="romance-active" class="character-card hidden">
+          <!-- Romance state (data-driven) -->
+          <div id="romance-active" class="character-card">
             <div class="card-portrait" id="girlfriend-portrait">pix art</div>
             <div class="card-content">
               <h4 class="card-name" id="girlfriend-name">TIFFANY</h4>
               <p class="card-subtitle" id="girlfriend-subtitle"><u>CS - Incoming @ Google</u></p>
               <p class="card-desc" id="girlfriend-bio">From growing up in the Bay Area to individual research at CMU, she's worked harder than anyone she knows to succeed.</p>
-              <p class="card-challenge" id="girlfriend-challenge"><em>Can you prove that you're worth it?</em></p>
               <!-- Fondness bar -->
               <div class="fondness-section">
                 <p class="fondness-label">SHE THINKS: <span id="fondness-text">Loading...</span></p>
-                <div class="bar-container">
+                <div class="bar-container small">
                   <div class="bar-fill" id="bar-fondness"></div>
                 </div>
               </div>
@@ -200,7 +188,7 @@
           <!-- Leaning Towards -->
           <div class="leaning-bar">
             <p class="leaning-label">LEANING TOWARDS: <span id="leaning-text">(Best Friend/Roommate)</span></p>
-            <div class="bar-container">
+            <div class="bar-container small">
               <div class="bar-fill" id="bar-leaning"></div>
             </div>
           </div>
@@ -242,7 +230,7 @@
   </main>
 
   <footer>
-    The Employment Trail -- V. 1.1 - "Human Resouces" DevBranch <br>
+    The Employment Trail -- V. 2.0 - "Return Offer" DevBranch <br>
     Designed, Written, and Built by <a href="https://notjinon.github.io" target="_blank">Jino Nicolas</a> · 2026
   </footer>
 

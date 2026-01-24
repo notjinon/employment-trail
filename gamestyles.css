@@ -1,56 +1,65 @@
+/* ===== CSS Variables ===== */
+:root {
+  --color-primary: #0f0;
+  --color-accent: #b8ff5c;
+  --color-bg: #000;
+  --font-mono: "IBM Plex Mono", monospace;
+  --border-primary: 1px solid var(--color-primary);
+}
+
+/* ===== Base Styles ===== */
 body {
-    background-color: #000;
-    color: #0f0;
-    font-family: "IBM Plex Mono", monospace;
+    background-color: var(--color-bg);
+    color: var(--color-primary);
+    font-family: var(--font-mono);
     font-size: 14px;
     line-height: 1.4;
     text-align: center;
-    max-width: 800px; /* Added max-width property */
-    margin: 0 auto; /* Added margin property to center the content */
+    max-width: 800px;
+    margin: 0 auto;
     padding-left: 5%;
 }
 
 pre {
     padding: 10px;
-    border: 1px solid #0f0;
+    border: var(--border-primary);
     border-radius: 5px;
-    background-color: #000;
+    background-color: var(--color-bg);
     overflow: auto;
 }
 
 code {
-    color: #0f0;
-    font-family: "IBM Plex Mono", monospace;
+    color: var(--color-primary);
+    font-family: var(--font-mono);
     font-size: 14px;
 }
 
-h1{
+h1, h2, h3, h4, h5, h6 {
     text-align: center;
-    color: #0f0;
-    text-shadow: 0 0 5px #0f0;
-    font-size: 64px;
+    color: var(--color-primary);
 }
-h2, h3, h4, h5, h6 {
-    text-align: center;
-    color: #0f0;
+
+h1 {
+    text-shadow: 0 0 5px var(--color-primary);
+    font-size: 64px;
 }
 
 hr {
-    border-color: #0f0;
+    border-color: var(--color-primary);
 }
 
 a {
-    color: #0f0;
+    color: var(--color-primary);
     text-decoration: none;
 }
+
 a:hover {
-    color: #0f0;
     text-decoration: underline;
 }
 
-footer{
+footer {
     text-align: center;
-    color: #0f0;
+    color: var(--color-primary);
     font-size: 12px;
     margin-top: 20px;
     margin-bottom: 10px;
@@ -61,7 +70,7 @@ footer{
   margin: 5vh auto;
   padding: 2rem;
   text-align: center;
-  border: 1px solid #0f0;
+  border: var(--border-primary);
 }
 
 /* Question navigation buttons (Status / Submit / Social) */
@@ -155,11 +164,11 @@ footer{
     padding: 10px 24px;
     margin-top: 20px;
     border-radius: 0;
-  border: 1px solid #0f0;
-    background-color: #000;
-    color: #0f0;
+    border: var(--border-primary);
+    background-color: var(--color-bg);
+    color: var(--color-primary);
     text-decoration: none;
-    font-family: "IBM Plex Mono", monospace;
+    font-family: var(--font-mono);
     font-size: 14px;
     font-weight: 600;
     text-transform: uppercase;
@@ -169,7 +178,7 @@ footer{
 
 .button:hover {
   background-color: #003300;
-  color: #b8ff5c;
+  color: var(--color-accent);
 }
 
 .button:active {
@@ -181,40 +190,34 @@ footer{
 }
 
 ::-webkit-scrollbar-track {
-    background-color: #000;
+    background-color: var(--color-bg);
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: #0f0;
+    background-color: var(--color-primary);
 }
 /* School color classes – only override color */
-.school-default {
-    color: #b8ff5c !important;
-}
-
-.school-purdue {
-    color: #FFD700 !important;
-}
-
-.school-cornell {
-    color: #DC143C !important;
-}
-
-.school-washington {
-    color: #9400D3 !important;
-}
-
-.school-duke {
-    color: #0066FF !important;
-}
+.school-default { color: var(--color-accent) !important; }
+.school-purdue { color: #FFD700 !important; }
+.school-cornell { color: #DC143C !important; }
+.school-washington { color: #9400D3 !important; }
+.school-duke { color: #0066FF !important; }
 
 /* ===== Status Screen Layout ===== */
+
+/* Shared label style */
+.label-small {
+  font-size: 11px;
+  color: var(--color-primary);
+  text-transform: uppercase;
+  margin: 0 0 0.5rem 0;
+}
 
 /* Three-column header grid */
 .status-header-grid {
   display: flex;
   justify-content: space-between;
-  border: 1px solid #0f0;
+  border: var(--border-primary);
   margin-bottom: 2rem;
 }
 
@@ -227,12 +230,12 @@ footer{
 }
 
 .status-col:not(:last-child) {
-  border-right: 1px solid #0f0;
+  border-right: var(--border-primary);
 }
 
 .status-label {
   font-size: 12px;
-  color: #0f0;
+  color: var(--color-primary);
   text-transform: uppercase;
   margin-bottom: 0.25rem;
 }
@@ -240,7 +243,7 @@ footer{
 .status-value {
   font-size: 16px;
   font-weight: 600;
-  color: #b8ff5c;
+  color: var(--color-accent);
   text-transform: uppercase;
 }
 
@@ -259,14 +262,14 @@ footer{
 
 .stat-name {
   font-size: 14px;
-  color: #0f0;
+  color: var(--color-primary);
   text-transform: uppercase;
 }
 
 .stat-tier {
   font-size: 14px;
   font-style: italic;
-  color: #b8ff5c;
+  color: var(--color-accent);
 }
 
 .bar-row {
@@ -279,13 +282,13 @@ footer{
 .art-placeholder {
   width: 48px;
   height: 48px;
-  border: 1px solid #0f0;
-  background-color: #000;
+  border: var(--border-primary);
+  background-color: var(--color-bg);
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 12px;
-  color: #0f0;
+  color: var(--color-primary);
   text-transform: lowercase;
   flex-shrink: 0;
 }
@@ -293,14 +296,18 @@ footer{
 .bar-container {
   flex: 1;
   height: 28px;
-  border: 1px solid #0f0;
-  background-color: #000;
+  border: var(--border-primary);
+  background-color: var(--color-bg);
 }
 
 .bar-fill {
   height: 100%;
-  background-color: #b8ff5c;
+  background-color: var(--color-accent);
   transition: width 0.3s ease;
+}
+
+.bar-container.small {
+  height: 20px;
 }
 
 /* ===== Social / Your Friends Screen ===== */
@@ -320,14 +327,14 @@ footer{
 
 .social-divider {
   width: 2px;
-  background-color: #0f0;
+  background-color: var(--color-primary);
   flex-shrink: 0;
 }
 
 .section-header {
   font-size: 16px;
   font-weight: 600;
-  color: #0f0;
+  color: var(--color-primary);
   text-transform: uppercase;
   margin: 0 0 0.5rem 0;
   text-align: center;
@@ -343,7 +350,7 @@ footer{
 
 .character-card.compact {
   padding-bottom: 1rem;
-  border-bottom: 1px solid #0f0;
+  border-bottom: var(--border-primary);
 }
 
 .character-card.compact:last-of-type {
@@ -358,12 +365,12 @@ footer{
 .card-portrait {
   width: 100%;
   aspect-ratio: 2.75 / 1;
-  border: 1px solid #0f0;
-  background-color: #000;
+  border: var(--border-primary);
+  background-color: var(--color-bg);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #0f0;
+  color: var(--color-primary);
   font-size: 12px;
 }
 
@@ -394,85 +401,71 @@ footer{
   width: 150px;
 }
 
+/* Card text styles - consolidated accent color */
+.card-name,
+.card-subtitle,
+.card-role,
+.card-archetype {
+  color: var(--color-accent);
+  margin: 0;
+}
+
 .card-name {
   font-size: 26px;
   font-weight: 700;
   font-style: italic;
-  color: #b8ff5c;
-  margin: 0;
   line-height: 1;
   text-align: left;
 }
 
-.card-subtitle {
+.card-subtitle,
+.card-archetype {
   font-size: 13px;
   font-style: italic;
-  color: #b8ff5c;
-  margin: 0;
+}
+
+.card-archetype {
+  font-size: 12px;
+  margin-bottom: 0.25rem;
 }
 
 .card-role {
   font-size: 13px;
   font-weight: 600;
-  color: #b8ff5c;
-  margin: 0.25rem 0 0 0;
+  margin-top: 0.25rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-}
-
-.card-archetype {
-  font-size: 12px;
-  font-style: italic;
-  color: #b8ff5c;
-  margin: 0 0 0.25rem 0;
 }
 
 .card-desc {
   font-size: 12px;
   font-style: italic;
-  color: #0f0;
+  color: var(--color-primary);
   line-height: 1.5;
   margin: 0;
 }
 
-.card-challenge {
-  font-size: 12px;
-  color: #b8ff5c;
-  margin: 0.5rem 0 0 0;
-}
-
-/* Fondness Section (girlfriend status bar) */
-.fondness-section {
+/* Fondness & Leaning sections - shared styles */
+.fondness-section,
+.leaning-bar {
   margin-top: 0.75rem;
 }
 
-.fondness-label {
-  font-size: 11px;
-  color: #0f0;
-  text-transform: uppercase;
-  margin: 0 0 0.5rem 0;
-}
-
-.fondness-section .bar-container {
-  height: 20px;
-}
-
-/* Leaning Towards */
-.leaning-bar {
-  align-items: center;
-  margin-top: 0.5rem;
-}
-
-.leaning-bar .leaning-label {
-  font-size: 11px;
-  color: #0f0;
-  text-transform: uppercase;
-  margin: 0 0 0.5rem 0;
-  text-align: center;
-}
-
+.fondness-section .bar-container,
 .leaning-bar .bar-container {
   height: 20px;
+}
+
+.fondness-label,
+.leaning-label {
+  font-size: 11px;
+  color: var(--color-primary);
+  text-transform: uppercase;
+  margin: 0 0 0.5rem 0;
+}
+
+.leaning-label {
+  text-align: center;
 }
 
 /* Mobile: stack sections */
