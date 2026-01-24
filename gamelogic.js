@@ -75,7 +75,11 @@ const BRANCH_RULES = {
   },
   114000: () => 114100,
   115000: (g) => g.burnout < 4 ? 115100 : 115200,
-  116000: (g) => g.fondness >= 4 ? 116100 : 116200,
+  116000: (g) => {
+    // If there's no girlfriend (0) or the failed-gf state (9), skip the date scene
+    if (!g.girlfriendId || g.girlfriendId === 9) return 117000;
+    return g.fondness >= 4 ? 116100 : 116200;
+  },
   117000: (g) => {
     // Failstate skips interview prep - go to failstate Q17
     if (g.failstate) {
@@ -262,8 +266,8 @@ let gameState = {
   company: 0,
   ending: 0,
   girlfriendId: 0,
-  bestFriendId: 1,
-  roommateId: 1,
+  bestFriendId: 0,
+  roommateId: 0,
   leaning: 0
 };
 
@@ -445,7 +449,13 @@ function submitOption() {
   if (response.effects) {
     for (let stat in response.effects) {
       if (gameState.hasOwnProperty(stat)) {
-        gameState[stat] += response.effects[stat];
+        // If the effect is an ID (bestFriendId, roommateId, girlfriendId, etc.), set it directly
+        if (/Id$/.test(stat)) {
+          gameState[stat] = response.effects[stat];
+          console.debug(`Set ${stat} = ${response.effects[stat]}`);
+        } else {
+          gameState[stat] += response.effects[stat];
+        }
       }
     }
   }
@@ -642,20 +652,44 @@ function populateSocial() {
 
   // Best friend
   const bestFriend = BESTFRIEND_MAP[gameState.bestFriendId];
+  const bfNameEl = document.getElementById("bestfriend-name");
+  const bfArcheEl = document.getElementById("bestfriend-archetype");
+  const bfTooltipEl = document.getElementById("bestfriend-tooltip");
+  const bfDescEl = document.getElementById("bestfriend-desc");
+  const bfTooltipWrapper = bfArcheEl ? bfArcheEl.parentElement.parentElement : null;
   if (bestFriend) {
-    document.getElementById("bestfriend-name").textContent = bestFriend.name;
-    document.getElementById("bestfriend-archetype").textContent = bestFriend.archetype;
-    document.getElementById("bestfriend-tooltip").textContent = bestFriend.tooltip || "";
-    document.getElementById("bestfriend-desc").textContent = bestFriend.desc;
+    bfNameEl.textContent = bestFriend.name;
+    bfArcheEl.textContent = bestFriend.archetype;
+    bfDescEl.textContent = bestFriend.desc;
+    if (bfTooltipEl) { bfTooltipEl.textContent = bestFriend.tooltip || ""; bfTooltipEl.style.display = ""; }
+    if (bfTooltipWrapper) bfTooltipWrapper.style.cursor = "help";
+  } else {
+    bfNameEl.textContent = "???";
+    bfArcheEl.textContent = "???";
+    bfDescEl.textContent = "";
+    if (bfTooltipEl) { bfTooltipEl.textContent = ""; bfTooltipEl.style.display = "none"; }
+    if (bfTooltipWrapper) bfTooltipWrapper.style.cursor = "default";
   }
 
   // Roommate
   const roommate = ROOMMATE_MAP[gameState.roommateId];
+  const rmNameEl = document.getElementById("roommate-name");
+  const rmArcheEl = document.getElementById("roommate-archetype");
+  const rmTooltipEl = document.getElementById("roommate-tooltip");
+  const rmDescEl = document.getElementById("roommate-desc");
+  const rmTooltipWrapper = rmArcheEl ? rmArcheEl.parentElement.parentElement : null;
   if (roommate) {
-    document.getElementById("roommate-name").textContent = roommate.name;
-    document.getElementById("roommate-archetype").textContent = roommate.archetype;
-    document.getElementById("roommate-tooltip").textContent = roommate.tooltip || "";
-    document.getElementById("roommate-desc").textContent = roommate.desc;
+    rmNameEl.textContent = roommate.name;
+    rmArcheEl.textContent = roommate.archetype;
+    rmDescEl.textContent = roommate.desc;
+    if (rmTooltipEl) { rmTooltipEl.textContent = roommate.tooltip || ""; rmTooltipEl.style.display = ""; }
+    if (rmTooltipWrapper) rmTooltipWrapper.style.cursor = "help";
+  } else {
+    rmNameEl.textContent = "???";
+    rmArcheEl.textContent = "???";
+    rmDescEl.textContent = "";
+    if (rmTooltipEl) { rmTooltipEl.textContent = ""; rmTooltipEl.style.display = "none"; }
+    if (rmTooltipWrapper) rmTooltipWrapper.style.cursor = "default";
   }
 
   // Leaning bar - center-out bidirectional

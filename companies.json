@@ -21,8 +21,8 @@
   },
 
   "thresholds": {
-    "boutique": { "skill": 9, "social": 7 },
-    "midMajor": { "skill": 6, "social": 5 },
+    "boutique": { "skill": 7, "social": 7 },
+    "midMajor": { "skill": 5, "social": 5 },
     "weak": { "skill": 3, "social": 3 }
   },
 

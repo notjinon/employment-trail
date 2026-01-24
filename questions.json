@@ -241,11 +241,11 @@
       "question": "It’s dinner. Over slices of pizza, your group of friends talk about their experiences this semester. Hiking. Road trips. Movie nights. When they ask you about what you’ve done, you stammer out a half-response about going to house parties. It’s pathetic.  \n\nIn a drunken stupor, you ask your friends for advice, and respond best…?",
       "options": [
         {
-          "option": "…to your best friend. She thinks you’ve just got to continue the trajectory you’re on. Self-care, self-worth, and steady progress. Grow your own garden to attract the butterflies.",
+"option": "…to your best friend. They think you've just got to continue the trajectory you're on. Self-care, self-worth, and steady progress. Grow your own garden to attract the butterflies.",
           "key": 113101
         },
         {
-          "option": "…to your roommate. He takes one look at you and realizes that you’re a nice enough person– just awful at projecting yourself. He suggests you go out and try to make yourself known to more people.",
+          "option": "…to your roommate. They take one look at you and realize that you're a nice enough person– just awful at projecting yourself. They suggest you go out and try to make yourself known to more people.",
           "key": 113102
         }
       ]
@@ -255,30 +255,30 @@
       "question": "It’s dinner. Over slices of pizza, your group of friends talk about their experiences this semester. Hiking. Road trips. Movie nights. When they ask you about what you’ve done, you stammer out a half-response about going to house parties. It’s pathetic.  \n\nIn a drunken stupor, you ask your friends for advice, and respond best…?",
       "options": [
         {
-          "option": "…to your best friend. She thinks you’ve just got to continue the trajectory you’re on. Self-care, self-worth, and steady progress. Grow your own garden to attract the butterflies.",
+"option": "…to your best friend. They think you've just got to continue the trajectory you're on. Self-care, self-worth, and steady progress. Grow your own garden to attract the butterflies.",
           "key": 113201
         },
         {
-          "option": "…to your roommate. He takes one look at you and realizes that you’re a nice enough person– just awful at projecting yourself. He suggests you go out and try to make yourself known to more people.",
+"option": "…to your roommate. They take one look at you and realize that you're a nice enough person– just awful at projecting yourself. They suggest you go out and try to make yourself known to more people.",
           "key": 113202
         }
       ]
     },
     {      "key": 113300,
-      "question": "It's supposed to be dinner. But when you arrive at the pizza place, something's off. Your roommate is there. Your other friends are there. But Tara isn't.\n\nYou text her. 'Where are you?'\n\nThe reply comes quick: 'I can't do this anymore. You've changed. You don't need me—you've made that clear.'\n\nNash—some guy from your stats class—slides into the seat next to you. 'Hey, I heard there was an open spot.' He's nice enough. But he's not Tara.",
+      "question": "It's supposed to be dinner. But when you arrive at the pizza place, something's off. Your roommate is there. Your other friends are there. But Tara isn't.\n\nYou text them. 'Where are you?'\n\nThe reply comes quick: 'I can't do this anymore. You've changed. You don't need me—you've made that clear.'\n\nNash—some guy from your stats class—slides into the seat next to you. 'Hey, I heard there was an open spot.' He's nice enough. But he's not Tara.",
       "options": [
         {
-          "option": "…she's right. I've been cold. But I can't undo it now.",
+          "option": "…they're right. I've been cold. But I can't undo it now.",
           "key": 113301
         }
       ]
     },
     {
       "key": 113400,
-      "question": "It's supposed to be dinner. But when you arrive at the pizza place, something's off. Your best friend is there. Your other friends are there. But Chen isn't.\n\nYou text him. 'Bro where are you?'\n\nThe reply comes an hour later: 'Moved my stuff out. Found a single. Good luck with everything.'\n\nKevin—some dude from your floor—shows up uninvited. 'Yo, I heard you needed a new roommate.' He's loud. He's annoying. But he's there.",
+      "question": "It's supposed to be dinner. But when you arrive at the pizza place, something's off. Your best friend is there. Your other friends are there. But Chen isn't.\n\nYou text them. 'Bro where are you?'\n\nThe reply comes an hour later: 'Moved my stuff out. Found a single. Good luck with everything.'\n\nKevin—some dude from your floor—shows up uninvited. 'Yo, I heard you needed a new roommate.' He's loud. He's annoying. But he's there.",
       "options": [
         {
-          "option": "…he's right. I haven't been serious. But I can't undo it now.",
+          "option": "…they're right. I haven't been serious. But I can't undo it now.",
           "key": 113401
         }
       ]
@@ -516,12 +516,13 @@
     },
     {
       "key": 117500,
-      "question": "The sun is long gone. The day's over. You sit at your desk, staring at nothing. There's no interview tomorrow. No final round. No last chance. Just... silence.\n\nShe texts you. 'Hey. You okay?'\n\nWhat do you say?",
+      "question": "The sun is long gone. The day's over. You sit at your desk, staring at nothing. There's no interview tomorrow. No final round. No last chance. Just... silence.\n\nThey text you. 'Hey. You okay?'\n\nWhat do you say?",
       "options": [
         {
           "option": "'Yeah. Just tired.'",
           "key": 117501
         },
+
         {
           "option": "'No. I don't think I am.'",
           "key": 117502
@@ -544,12 +545,13 @@
     },
     {
       "key": 118500,
-      "question": "Finals week ends. Not with a bang, but with the quiet click of a submit button. You did okay. Maybe. You're not sure anymore.\n\nShe's waiting for you outside the library. She doesn't ask about grades. Just takes your hand.\n\nWhat do you tell her?",
+      "question": "Finals week ends. Not with a bang, but with the quiet click of a submit button. You did okay. Maybe. You're not sure anymore.\n\nThey're waiting for you outside the library. They don't ask about grades. They just take your hand.\n\nWhat do you tell them?",
       "options": [
         {
           "option": "'I think I'm gonna be okay.'",
           "key": 118501
         },
+
         {
           "option": "'I don't know what I'm doing anymore.'",
           "key": 118502

@@ -73,9 +73,12 @@
         "academic": 2,
         "burnout": 2,
         "social": -1,
-        "leaning": 1
+        "leaning": 1,
+        "bestFriendId": 1,
+        "roommateId": 1
       }
     },
+
     {
       "id": 104002,
       "response": "Sips turn into shots, which turn into swigs. Your stomach hates you and your brain is in revolt. You can't help but wonder how much you've changed from High School, and what people would think about you now.",
@@ -83,18 +86,24 @@
         "social": 2,
         "burnout": 1,
         "academic": -1,
-        "leaning": -1
+        "leaning": -1,
+        "bestFriendId": 1,
+        "roommateId": 1
       }
     },
+
     {
       "id": 104003,
       "response": "What was supposed to be a productive session of organization and unpacking quickly devolved into an afternoon of bedrotting. Every time you scroll to another TikTok, you can picture more synapses withering and dying.",
       "effects": {
         "burnout": -2,
         "academic": -1,
-        "social": -1
+        "social": -1,
+        "bestFriendId": 1,
+        "roommateId": 1
       }
     },
+
     {
       "id": 105001,
       "response": "Your charismatic best friend decides to go alone. She comes back with an interview scheduled at UPS for a Data Analytics role—talked her way into it with zero technical background. You stare at your empty inbox in silence.",
@@ -518,20 +527,22 @@
       "question": 15,
       "response": "You hole up in the library, fueled by iced coffee and trauma. The hours blur. By sunrise, your code compiles, your deck looks decent, and your notes are color-coded. Caffeine, a color-coded Notion, and adrenaline pushes you past the finish line this one last time. \n\nAnd it’s just enough to punch your ticket on the Dean’s List.",
       "effects": {
-        "academic": 4
+        "academic": 2
       },
       "nextQuestion": 116000
     },
+
     {
       "id": 115102,
       "question": 15,
       "response": "You text the group chat. Soon, laptops are open, snacks are everywhere, and Spotify is arguing with your attention span. The work gets done… to a point. You know you could be more productive alone, but this avoids a crash. \n\nMost importantly, no one feels alone, and no one fails outright.",
       "effects": {
         "academic": 1,
-        "social": 3
+        "social": 2
       },
       "nextQuestion": 116000
     },
+
     {
       "id": 115201,
       "question": 15,
@@ -548,20 +559,22 @@
       "response": "You text the group chat. Soon, laptops are open, snacks are everywhere, and Spotify is arguing with your attention span. The work gets done… to a point. You know you could be more productive alone, but this avoids a crash. \n\nMost importantly, no one feels alone, and no one fails outright.",
       "effects": {
         "academic": 1,
-        "social": 3
+        "social": 2
       },
       "nextQuestion": 116000
     },
+
     {
       "id": 116101,
       "question": 16,
-      "response": "It starts quiet. Fries split, hands almost brushing, soft laughter between long silences. But the way she looks at you tonight? It’s different. Real. You talk about dreams, failures, the future. By the time you make it back to her place, there’s no need for small talk. \n\nYou stay the night.",
+      "response": "It starts quiet. Fries split, hands almost brushing, soft laughter between long silences. But the way they look at you tonight? It’s different. Real. You talk about dreams, failures, the future. By the time you make it back to their place, there’s no need for small talk. \n\nYou stay the night.",
       "effects": {
-        "social": 3,
+        "social": 2,
         "fondness": 15
       },
       "nextQuestion": 117000
     },
+
     {
       "id": 116102,
       "question": 16,
@@ -744,20 +757,19 @@
     },
     {
       "id": 117501,
-      "response": "'Yeah. Just tired.'\n\nShe doesn't push. Just sends a heart emoji. You stare at it for a long time.\n\nYou're not okay. But saying it out loud would make it real.",
+      "response": "'Yeah. Just tired.'\n\nThey don't push. They just send a heart emoji. You stare at it for a long time.\n\nYou're not okay. But saying it out loud would make it real.",
+      "nextQuestion": 118500
+    },
+
+    {
+      "id": 117502,
+      "response": "'No. I don't think I am.'\n\nThree dots. Then: 'I'm coming over.'\n\nThey show up with takeout and say nothing. Just sit next to you. Sometimes that's enough.",
       "effects": {
         "social": 1
       },
       "nextQuestion": 118500
     },
-    {
-      "id": 117502,
-      "response": "'No. I don't think I am.'\n\nThree dots. Then: 'I'm coming over.'\n\nShe shows up with takeout and says nothing. Just sits next to you. Sometimes that's enough.",
-      "effects": {
-        "social": 2
-      },
-      "nextQuestion": 118500
-    },
+
     {
       "id": 117601,
       "response": "You scroll. And scroll. And scroll.\n\n'Excited to announce...' 'Thrilled to share...' 'Grateful for this opportunity...'\n\nEvery post is a knife. You close the app. Open it again five minutes later.",
@@ -770,20 +782,19 @@
     },
     {
       "id": 118501,
-      "response": "'I think I'm gonna be okay.'\n\nShe squeezes your hand. 'I know you are.'\n\nYou're not sure if you believe it. But maybe believing it can come later.",
+      "response": "'I think I'm gonna be okay.'\n\nThey squeeze your hand. 'I know you are.'\n\nYou're not sure if you believe it. But maybe believing it can come later.",
+      "nextQuestion": 121500
+    },
+
+    {
+      "id": 118502,
+      "response": "'I don't know what I'm doing anymore.'\n\n'That's okay.' They pull you closer. 'Nobody does. We're all just pretending.'\n\nIt doesn't fix anything. But it makes the weight a little lighter.",
       "effects": {
         "social": 1
       },
       "nextQuestion": 121500
     },
-    {
-      "id": 118502,
-      "response": "'I don't know what I'm doing anymore.'\n\n'That's okay.' She pulls you closer. 'Nobody does. We're all just pretending.'\n\nIt doesn't fix anything. But it makes the weight a little lighter.",
-      "effects": {
-        "social": 2
-      },
-      "nextQuestion": 121500
-    },
+
     {
       "id": 118601,
       "response": "You call home. Mom answers on the second ring.\n\n'How'd it go, honey?'\n\n'Fine. I'm fine.'\n\nShe knows you're lying. But she lets you have it.",

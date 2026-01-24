@@ -467,8 +467,8 @@ footer {
   text-align: center;
 }
 
-/* Leaning bar - center-out bidirectional */
-.leaning-bar-container {
+/* Leaning bar - DOS-style with center marker */
+.leaning-bar-row {
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -478,7 +478,7 @@ footer {
   font-size: 10px;
   color: var(--color-muted);
   text-transform: uppercase;
-  min-width: 70px;
+  min-width: 50px;
 }
 
 #leaning-left-label {
@@ -490,15 +490,7 @@ footer {
 }
 
 .leaning-track {
-  flex: 1;
-  height: 16px;
-  background: var(--color-background);
-  border: 2px solid var(--color-border);
-  border-radius: 8px;
   position: relative;
-  display: flex;
-  align-items: center;
-  overflow: hidden;
 }
 
 .leaning-center-marker {
@@ -507,26 +499,20 @@ footer {
   transform: translateX(-50%);
   width: 2px;
   height: 100%;
-  background: var(--color-border);
+  background: var(--color-primary);
   z-index: 2;
 }
 
-.leaning-fill {
-  position: absolute;
-  height: 100%;
-  transition: width 0.3s ease;
-}
-
 .leaning-fill-left {
+  position: absolute;
   right: 50%;
-  background: linear-gradient(to left, var(--color-primary), #8b5cf6);
-  border-radius: 6px 0 0 6px;
+  height: 100%;
 }
 
 .leaning-fill-right {
+  position: absolute;
   left: 50%;
-  background: linear-gradient(to right, var(--color-primary), #f59e0b);
-  border-radius: 0 6px 6px 0;
+  height: 100%;
 }
 
 /* Mobile: stack sections */
