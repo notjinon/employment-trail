@@ -8,16 +8,25 @@ const SCHOOL_MAP = {
 };
 
 const COMPANY_MAP = {
-  0: null,
-  1: "Apple",
-  2: "Jane Street",
-  3: "Stratasys",
-  4: "Lockheed Martin",
-  5: "Capital One",
+  // Boutique tier
+  1: "JPMorgan Chase",
+  2: "Apple",
+  3: "Anduril Industries",
+  4: "TSMC",
+  // Mid-major tier
+  5: "Bank of America",
   6: "IBM",
-  7: "L3Harris",
-  8: "General Motors",
-  9: "Deloitte"
+  7: "RTX Corporation",
+  8: "Siemens",
+  // Weak tier
+  9: "Pinnacle Credit Union",
+  10: "TechFlow Solutions",
+  11: "Mason Defense Services",
+  12: "Apex Components",
+  // Failstate
+  100: "Municipal Internship",
+  101: "Paid Research",
+  102: "Nothing"
 };
 
 // Tier configurations - { max, label }
@@ -62,13 +71,42 @@ const BRANCH_RULES = {
   115000: (g) => g.burnout < 4 ? 115100 : 115200,
   116000: (g) => g.fondness >= 4 ? 116100 : 116200,
   117000: (g) => {
+    // Failstate skips interview prep - go to failstate Q17
+    if (g.failstate) {
+      if (g.fondness >= 10) return 117500; // Failstate with girlfriend
+      return 117600; // Failstate alone
+    }
     if (g.fondness >= 10 && g.burnout < 2) return 117100;
     if (g.fondness >= 10) return 117200;
     if (g.burnout < 2) return 117300;
     return 117400;
   },
-  120000: () => 120100,
+  118000: (g) => {
+    // Failstate skips interview - go to failstate Q18
+    if (g.failstate) {
+      if (g.fondness >= 10) return 118500; // Failstate with girlfriend
+      return 118600; // Failstate alone
+    }
+    return 118000; // Normal interview question
+  },
+  119000: (g) => {
+    // Failstate skips post-interview reflection
+    if (g.failstate) return 121000; // Skip to backup plans
+    return 119000; // Normal post-interview
+  },
+  120000: (g) => {
+    // Failstate skips offer email
+    if (g.failstate) return 121000; // Skip to backup plans
+    return 120100;
+  },
   121000: (g) => {
+    // Failstate gets different Q21 variants
+    if (g.failstate) {
+      if (g.fondness >= 10 && g.academic >= 5) return 121500; // gf + research option
+      if (g.fondness >= 10) return 121600; // gf only
+      if (g.academic >= 5) return 121700; // research option only
+      return 121800; // nothing
+    }
     if (g.burnout < 4 && g.social >= 5 && g.academic >= 5) return 121100;
     if (g.burnout < 4 && g.social >= 5) return 121200;
     if (g.burnout < 4 && g.academic >= 5) return 121300;
@@ -76,42 +114,72 @@ const BRANCH_RULES = {
   }
 };
 
-// Company selection rules for question 114100
-const COMPANY_RULES = {
-  114900: [ // Unicorn
-    { test: (g) => g.technology >= 4 && g.school == 3, company: 1, response: 114901 },
-    { test: (g) => g.defense >= 4 && g.school == 4, company: 4, response: 114904 },
-    { test: (g) => g.finance >= 4 && g.school == 2, company: 2, response: 114902 },
-    { test: (g) => g.manufacturing >= 4 && g.school == 1, company: 3, response: 114903 },
-    { default: true, company: 9, response: 114905 }
-  ],
-  114200: [ // CapitalOne
-    { test: (g) => g.finance >= 2, company: 5, response: 114201 },
-    { default: true, company: 9, response: 114202 }
-  ],
-  114400: [ // IBM
-    { test: (g) => g.technology >= 2, company: 6, response: 114401 },
-    { default: true, company: 9, response: 114402 }
-  ],
-  114300: [ // L3Harris
-    { test: (g) => g.defense >= 2, company: 7, response: 114301 },
-    { default: true, company: 9, response: 114302 }
-  ],
-  114500: [ // GM
-    { test: (g) => g.manufacturing >= 2, company: 8, response: 114501 },
-    { default: true, company: 9, response: 114502 }
-  ],
-  114600: [ // Deloitte
-    { default: true, company: 9, response: 114601, effect: { social: 1 } }
-  ]
+// Company selection - tier-based system
+// Tier keys map to response option keys: 114100 = boutique, 114200 = midMajor, 114300 = weak
+const TIER_MAP = {
+  114100: "boutique",
+  114200: "midMajor",
+  114300: "weak"
 };
 
+// Sector detection: returns the sector with highest stat
+function getMaxSector(g) {
+  const sectors = {
+    finance: g.finance || 0,
+    technology: g.technology || 0,
+    defense: g.defense || 0,
+    manufacturing: g.manufacturing || 0
+  };
+  return Object.entries(sectors).reduce((a, b) => b[1] > a[1] ? b : a)[0];
+}
+
+// Company selection: checks thresholds and returns company info
+// Called with gameState, tier key, and loaded companies data
+function selectCompany(g, tierKey, companiesData) {
+  const tier = TIER_MAP[tierKey];
+  if (!tier) return null;
+  
+  const sector = getMaxSector(g);
+  const thresholds = companiesData.thresholds[tier];
+  const sectorSkill = g[sector] || 0;
+  const social = g.social || 0;
+  
+  // Check if player meets thresholds
+  if (sectorSkill >= thresholds.skill && social >= thresholds.social) {
+    const company = companiesData.companies[tier][sector];
+    return {
+      success: true,
+      company: company,
+      sector: sector,
+      tier: tier
+    };
+  }
+  
+  // Failed threshold check
+  return {
+    success: false,
+    sector: sector,
+    tier: tier
+  };
+}
+
 // Ending rules for question 120100
+// New company IDs: 1-4 boutique (JPMC, Apple, Anduril, TSMC)
+//                  5-8 midMajor (BofA, IBM, RTX, Siemens)
+//                  9-12 weak (Pinnacle, TechFlow, Mason, Apex)
 const ENDING_MAP = {
-  // Base endings by company (no fondness)
-  1: 7, 2: 8, 3: 9, 4: 10, 5: 12, 6: 13, 7: 14, 8: 11, 9: 15,
-  // Fondness variants (company + 80)
-  fondness: { 1: 87, 2: 88, 3: 89, 4: 90, 5: 92, 6: 93, 7: 94, 8: 91, 9: 95 }
+  // Boutique tier endings
+  1: 7, 2: 8, 3: 9, 4: 10,
+  // Mid-major tier endings
+  5: 12, 6: 13, 7: 14, 8: 11,
+  // Weak tier endings
+  9: 92, 10: 93, 11: 94, 12: 95,
+  // Fondness variants
+  fondness: { 
+    1: 87, 2: 88, 3: 89, 4: 90,
+    5: 92, 6: 93, 7: 94, 8: 91,
+    9: 96, 10: 96, 11: 96, 12: 96
+  }
 };
 
 // Character maps - loaded from characters.json
@@ -211,13 +279,19 @@ function startGame() {
   showQuestion();
 }
 
+// Companies data - loaded from companies.json
+let companiesData = {};
+
 async function loadGameData() {
-  const [qRes, rRes, cRes] = await Promise.all([
+  const [qRes, rRes, cRes, compRes] = await Promise.all([
     fetch("questions.json"),
     fetch("responses.json"),
-    fetch("characters.json")
+    fetch("characters.json"),
+    fetch("companies.json")
   ]);
-  const [qData, rData, cData] = await Promise.all([qRes.json(), rRes.json(), cRes.json()]);
+  const [qData, rData, cData, compData] = await Promise.all([
+    qRes.json(), rRes.json(), cRes.json(), compRes.json()
+  ]);
 
   questions = Object.fromEntries(qData.questions.map(q => [q.key, q]));
   responses = Object.fromEntries(rData.responses.map(r => [r.id, r]));
@@ -227,8 +301,73 @@ async function loadGameData() {
   BESTFRIEND_MAP = cData.bestFriends;
   ROOMMATE_MAP = cData.roommates;
   
+  // Load companies data
+  companiesData = compData;
+  
   // Cache DOM elements after page load
   cacheDOM();
+  
+  // Set up keyboard shortcuts for option selection
+  document.addEventListener("keydown", handleNumberKeyPress);
+  
+  // Set up debug menu trigger
+  let debugBuffer = "";
+  document.addEventListener("keydown", (event) => {
+    debugBuffer += event.key.toLowerCase();
+    if (debugBuffer.length > 9) {
+      debugBuffer = debugBuffer.slice(-9);
+    }
+    if (debugBuffer.endsWith("debugdebug")) {
+      showDebugMenu();
+      debugBuffer = "";
+    }
+  });
+}
+
+function showDebugMenu() {
+  const debugInfo = {
+    gameState: gameState,
+    currentQuestion: questions[currentQuestionKey],
+    currentResponseId: currentResponseId
+  };
+  
+  console.log("=== GAME STATE DEBUG ===");
+  console.table(gameState);
+  console.log("Current Question:", currentQuestionKey, questions[currentQuestionKey]);
+  console.log("Current Response ID:", currentResponseId);
+  console.log("Full Debug Object:", debugInfo);
+  
+  alert("DEBUG MENU OPENED - Check browser console for gameState details!\n\n" + 
+    JSON.stringify(gameState, null, 2));
+}
+
+function handleNumberKeyPress(event) {
+  // Check if we're on the question slide
+  if (document.getElementById("question-slide").classList.contains("hidden")) {
+    return;
+  }
+  
+  // Handle Enter key as submit
+  if (event.key === "Enter") {
+    submitOption();
+    event.preventDefault();
+    return;
+  }
+  
+  // Check if key is 1-9
+  const key = event.key;
+  if (!/^[1-9]$/.test(key)) {
+    return;
+  }
+  
+  const optionIndex = parseInt(key) - 1;
+  const radioButtons = document.querySelectorAll('input[name="question"]');
+  
+  if (optionIndex < radioButtons.length) {
+    radioButtons[optionIndex].checked = true;
+    radioButtons[optionIndex].focus();
+    event.preventDefault();
+  }
 }
 
 function showQuestion() {
@@ -304,35 +443,58 @@ function submitOption() {
     }
   }
 
+  // Handle setEnding flag (for failstate responses)
+  if (response.setEnding) {
+    gameState.ending = response.setEnding;
+  }
+
   DOM.feedbackText.innerText = response.response;
   switchSlide("feedback-slide");
 }
 
 function handleCompanySelection(optKey) {
-  const rules = COMPANY_RULES[optKey];
-  if (!rules) return;
+  const tier = TIER_MAP[optKey];
+  if (!tier) return;
 
-  for (const rule of rules) {
-    if (rule.default || rule.test(gameState)) {
-      gameState.company = rule.company;
-      currentResponseId = rule.response;
-      if (rule.effect) {
-        for (let stat in rule.effect) {
-          gameState[stat] += rule.effect[stat];
-        }
-      }
-      break;
-    }
+  const sector = getMaxSector(gameState);
+  const thresholds = companiesData.thresholds[tier];
+  const academic = gameState.academic || 0;
+  const social = gameState.social || 0;
+
+  // Check if player meets thresholds (academic for skill, social for social)
+  if (academic >= thresholds.skill && social >= thresholds.social) {
+    // Success - got the interview
+    const company = companiesData.companies[tier][sector];
+    gameState.company = company.id;
+    
+    // Response ID format: 114[tier][sector]1
+    // tier: 1=boutique, 2=midMajor, 3=weak
+    // sector: 1=finance, 2=technology, 3=defense, 4=manufacturing
+    const tierNum = tier === "boutique" ? 1 : tier === "midMajor" ? 2 : 3;
+    const sectorNum = sector === "finance" ? 1 : sector === "technology" ? 2 : sector === "defense" ? 3 : 4;
+    currentResponseId = parseInt(`114${tierNum}${sectorNum}1`);
+  } else {
+    // Failed - set failstate
+    gameState.failstate = true;
+    // Response ID is the tier fail response: 114100, 114200, or 114300
+    currentResponseId = optKey;
   }
 }
 
 function handleFinalEvaluation() {
   const { social, academic, company, fondness } = gameState;
-  const isUnicorn = [1, 2, 3, 4].includes(company);
-  const passUnicorn = social >= 10 && academic >= 10 && isUnicorn;
-  const passNormal = social >= 7 && academic >= 7 && [5, 6, 7, 8, 9].includes(company);
+  
+  // Company tiers: 1-4 boutique, 5-8 midMajor, 9-12 weak
+  const isBoutique = company >= 1 && company <= 4;
+  const isMidMajor = company >= 5 && company <= 8;
+  const isWeak = company >= 9 && company <= 12;
+  
+  // Different thresholds by tier
+  const passBoutique = social >= 10 && academic >= 10 && isBoutique;
+  const passMidMajor = social >= 7 && academic >= 7 && isMidMajor;
+  const passWeak = social >= 4 && academic >= 4 && isWeak;
 
-  if (passUnicorn || passNormal) {
+  if (passBoutique || passMidMajor || passWeak) {
     const base = ENDING_MAP[company];
     gameState.ending = fondness >= 10 ? ENDING_MAP.fondness[company] : base;
     currentResponseId = 120101;
@@ -368,6 +530,13 @@ function nextQuestion() {
 
   const response = responses[currentResponseId];
   let nextKey = response.nextQuestion || (currentQuestionKey + 1000);
+
+  // Handle "ending" as a special nextQuestion value
+  if (nextKey === "ending") {
+    console.error("Reached 'ending' nextQuestion without setEnding - defaulting to demo ending");
+    endGame(1);
+    return;
+  }
 
   // Apply branching rules if applicable
   if (BRANCH_RULES[nextKey]) {

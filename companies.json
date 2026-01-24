@@ -1,0 +1,34 @@
+{
+  "companies": {
+    "boutique": {
+      "finance": { "id": 1, "name": "JPMorgan Chase", "short": "JPMC" },
+      "technology": { "id": 2, "name": "Apple", "short": "Apple" },
+      "defense": { "id": 3, "name": "Anduril Industries", "short": "Anduril" },
+      "manufacturing": { "id": 4, "name": "TSMC", "short": "TSMC" }
+    },
+    "midMajor": {
+      "finance": { "id": 5, "name": "Bank of America", "short": "BofA" },
+      "technology": { "id": 6, "name": "IBM", "short": "IBM" },
+      "defense": { "id": 7, "name": "RTX Corporation", "short": "RTX" },
+      "manufacturing": { "id": 8, "name": "Siemens", "short": "Siemens" }
+    },
+    "weak": {
+      "finance": { "id": 9, "name": "Pinnacle Credit Union", "short": "Pinnacle" },
+      "technology": { "id": 10, "name": "TechFlow Solutions", "short": "TechFlow" },
+      "defense": { "id": 11, "name": "Mason Defense Services", "short": "Mason Defense" },
+      "manufacturing": { "id": 12, "name": "Apex Components", "short": "Apex" }
+    }
+  },
+
+  "thresholds": {
+    "boutique": { "skill": 9, "social": 7 },
+    "midMajor": { "skill": 6, "social": 5 },
+    "weak": { "skill": 3, "social": 3 }
+  },
+
+  "failstate": {
+    "municipal": { "id": 100, "name": "Municipal Internship", "short": "Municipal" },
+    "research": { "id": 101, "name": "Paid Research", "short": "Research" },
+    "nothing": { "id": 102, "name": "Nothing", "short": "Nothing" }
+  }
+}

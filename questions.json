@@ -1,4 +1,4 @@
-{
+﻿{
   "questions": [
     {
       "key": 101000,
@@ -92,7 +92,7 @@
     },
     {
       "key": 106000,
-      "question":"Fuck, that was bad. An absolute embarrassment. But you’re only down for now, and not yet out. \n Where to go now?",
+      "question": "Fuck, that was bad. An absolute embarrassment. But you’re only down for now, and not yet out. \n Where to go now?",
       "options": [
         {
           "option": "Give up. 2025’s recruiting season is not for me.",
@@ -114,7 +114,7 @@
     },
     {
       "key": 107000,
-      "question":"The morning after, you’re hit with a sober reality. You’re balls deep in a group project, and nobody’s helping you out. \nHow do you get back on track?",
+      "question": "The morning after, you’re hit with a sober reality. You’re balls deep in a group project, and nobody’s helping you out. \nHow do you get back on track?",
       "options": [
         {
           "option": "I need to whip them back into line.",
@@ -136,7 +136,7 @@
     },
     {
       "key": 108100,
-      "question":"Your group’s final presentation is in 45 minutes. They’ve got the deck, the script, the outfits. They don’t need you to speak. But they did say you’d be useful for any technical questions. They did say, “just be there.” Your alarm keeps ringing. Your body’s not listening.  \nDo you go?",
+      "question": "Your group’s final presentation is in 45 minutes. They’ve got the deck, the script, the outfits. They don’t need you to speak. But they did say you’d be useful for any technical questions. They did say, “just be there.” Your alarm keeps ringing. Your body’s not listening.  \nDo you go?",
       "options": [
         {
           "option": "Yeah. I said I’d be there. I’ll go.",
@@ -150,7 +150,7 @@
     },
     {
       "key": 108200,
-      "question":"Your group’s final presentation is in 45 minutes. They’ve got the deck, the script, the outfits. They don’t need you to speak. But they did say you’d be useful for any technical questions. They did say, “just be there.” Your alarm keeps ringing. Your body’s not listening.  \nDo you go?",
+      "question": "Your group’s final presentation is in 45 minutes. They’ve got the deck, the script, the outfits. They don’t need you to speak. But they did say you’d be useful for any technical questions. They did say, “just be there.” Your alarm keeps ringing. Your body’s not listening.  \nDo you go?",
       "options": [
         {
           "option": "Yeah. I said I’d be there. I’ll go.",
@@ -164,7 +164,7 @@
     },
     {
       "key": 109000,
-      "question":"An email arrives in your inbox. It’s the Office of the Dean of Undergraduate Students.  \n“Dear Student, We are reaching out to inform you that your peers have requested a wellness check…” \n\n You file it away. You’ll deal with the bleeding hearts later, but what do you do now?",
+      "question": "An email arrives in your inbox. It’s the Office of the Dean of Undergraduate Students.  \n“Dear Student, We are reaching out to inform you that your peers have requested a wellness check…” \n\n You file it away. You’ll deal with the bleeding hearts later, but what do you do now?",
       "options": [
         {
           "option": "I need to get back to basics. Hit the gym. Clear my head. Maybe that'll help.",
@@ -182,7 +182,7 @@
     },
     {
       "key": 110100,
-      "question":"Post-midterm celebration. By the grace of God, you scored an 85% on your first CS midterm. Your brain won’t let you study at all.  \nWhat's the plan?",
+      "question": "Post-midterm celebration. By the grace of God, you scored an 85% on your first CS midterm. Your brain won’t let you study at all.  \nWhat's the plan?",
       "options": [
         {
           "option": "Let’s go out to party again. Fuck it, it’s still early in the year.",
@@ -190,17 +190,17 @@
         },
         {
           "option": "How about I have a nice kickback with my friends in their apartment?",
-          "key": 110102 
+          "key": 110102
         },
         {
           "option": "It’s Friday. No better thing to do than watch a college football game!",
-          "key": 110103 
+          "key": 110103
         }
       ]
     },
     {
       "key": 110200,
-      "question":"You get your first CS midterm back. The average is 79, and you got a 52. You failed. After going home from a raucous night of drinking, you call your parents.",
+      "question": "You get your first CS midterm back. The average is 79, and you got a 52. You failed. After going home from a raucous night of drinking, you call your parents.",
       "options": [
         {
           "option": "“Hey mom, I haven’t called you in a while…”",
@@ -238,7 +238,7 @@
     },
     {
       "key": 113100,
-      "question":"It’s dinner. Over slices of pizza, your group of friends talk about their experiences this semester. Hiking. Road trips. Movie nights. When they ask you about what you’ve done, you stammer out a half-response about going to house parties. It’s pathetic.  \n\nIn a drunken stupor, you ask your friends for advice, and respond best…?",
+      "question": "It’s dinner. Over slices of pizza, your group of friends talk about their experiences this semester. Hiking. Road trips. Movie nights. When they ask you about what you’ve done, you stammer out a half-response about going to house parties. It’s pathetic.  \n\nIn a drunken stupor, you ask your friends for advice, and respond best…?",
       "options": [
         {
           "option": "…to your best friend. She thinks you’ve just got to continue the trajectory you’re on. Self-care, self-worth, and steady progress. Grow your own garden to attract the butterflies.",
@@ -252,7 +252,7 @@
     },
     {
       "key": 113200,
-      "question":"It’s dinner. Over slices of pizza, your group of friends talk about their experiences this semester. Hiking. Road trips. Movie nights. When they ask you about what you’ve done, you stammer out a half-response about going to house parties. It’s pathetic.  \n\nIn a drunken stupor, you ask your friends for advice, and respond best…?",
+      "question": "It’s dinner. Over slices of pizza, your group of friends talk about their experiences this semester. Hiking. Road trips. Movie nights. When they ask you about what you’ve done, you stammer out a half-response about going to house parties. It’s pathetic.  \n\nIn a drunken stupor, you ask your friends for advice, and respond best…?",
       "options": [
         {
           "option": "…to your best friend. She thinks you’ve just got to continue the trajectory you’re on. Self-care, self-worth, and steady progress. Grow your own garden to attract the butterflies.",
@@ -266,37 +266,25 @@
     },
     {
       "key": 114100,
-      "question":"Gameday. \n\n It’s time for the second job fair. A sea of tents dot the grassy mall in the center of your campus’ quad. After getting the nerves out from talking to smaller companies, it’s time to make a big move. \n\n Who do you talk to?",
+      "question": "Gameday.\n\nIt's time for the second job fair. A sea of tents dot the grassy mall in the center of your campus' quad. You've spent the morning psyching yourself up, going over your pitch. But now you're here, staring at the sea of corporate banners.\n\nWhat's your approach?",
       "options": [
         {
-          "option": "CapitalOne. A “tech-forward” financial firm that definitely wants me to know they’re more than just credit cards. It’s the only shot I’ve really got at proving my tenuous interest in Finance is more than just a Reddit phase.",
+          "option": "Shoot for the stars. Go big or go home - I'm targeting the most prestigious companies here. If I'm gonna swing, I'm gonna swing hard.",
+          "key": 114100
+        },
+        {
+          "option": "Play it smart. I'll target solid, respectable mid-tier companies. Less glory, but better odds.",
           "key": 114200
         },
         {
-          "option": "L3Harris. They’re not flashy, but they know their way around embedded systems. I figure if I can fake enough passion for “defending America,” I might just sneak into a defense role no one else applied for.",
+          "option": "Cast a wide net. I'll take any corporate experience I can get. Something is better than nothing.",
           "key": 114300
-        },
-        {
-          "option": "IBM. The ghost of tech's past, now rebranded as the “future of hybrid cloud.” I don’t even know what that means—and I don’t think they do either. But they still show up with a table, and I still need a win.",
-          "key": 114400
-        },
-        {
-          "option": "GM. They’ve been building real things longer than most tech firms have existed. Between EVs, robotics, and controls work, it actually feels like something meaningful. I could see myself here.",
-          "key": 114500
-        },
-        {
-          "option": "Deloitte is a safe pick for us Computer Science majors. They’re practically always in need for eggheads like me to sell overpriced SaaS packages to middle managers who know no better.",
-          "key": 114600
-        },
-        {
-          "option": "This school gives me many more… “boutique” options. I wanna try finding an experience I’d be hard-pressed to gain anywhere else. Sure, they don’t bother with amateurs. But what’s stopping me?",
-          "key": 114900
         }
       ]
     },
     {
       "key": 115100,
-      "question":"You’ve hit the final stretch. A sprawling CS project, a dead-week final, and a half-baked case comp are all due within 48 hours. This is the kind of week that breaks people. You can feel it in your bones. You’re almost out of fuel. But you need to win. \n\nWhat's the move?",
+      "question": "You’ve hit the final stretch. A sprawling CS project, a dead-week final, and a half-baked case comp are all due within 48 hours. This is the kind of week that breaks people. You can feel it in your bones. You’re almost out of fuel. But you need to win. \n\nWhat's the move?",
       "options": [
         {
           "option": "Pull the all-nighters. Sleep be damned, we need this. Just one last push.",
@@ -310,7 +298,7 @@
     },
     {
       "key": 115200,
-      "question":"You’ve hit the final stretch. A sprawling CS project, a dead-week final, and a half-baked case comp are all due within 48 hours. This is the kind of week that breaks people. You can feel it in your bones. You’re almost out of fuel. But you need to win. \n\nWhat's the move?",
+      "question": "You’ve hit the final stretch. A sprawling CS project, a dead-week final, and a half-baked case comp are all due within 48 hours. This is the kind of week that breaks people. You can feel it in your bones. You’re almost out of fuel. But you need to win. \n\nWhat's the move?",
       "options": [
         {
           "option": "Pull the all-nighters. Sleep be damned, we need this. Just one last push.",
@@ -324,7 +312,7 @@
     },
     {
       "key": 116100,
-      "question":"It’s been a chaotic semester, but somehow, you got a “Hey, want to hang out?” text. You know what this is. You know who she is. You’ve known for a while. You stare at the message for a long time. \n\nTwo hours later, you’re standing outside a Parisian-style bistro not too far from campus. You see her inside.",
+      "question": "It’s been a chaotic semester, but somehow, you got a “Hey, want to hang out?” text. You know what this is. You know who she is. You’ve known for a while. You stare at the message for a long time. \n\nTwo hours later, you’re standing outside a Parisian-style bistro not too far from campus. You see her inside.",
       "options": [
         {
           "option": "I’ll go.",
@@ -338,7 +326,7 @@
     },
     {
       "key": 116200,
-      "question":"It’s been a chaotic semester, but somehow, you got a “Hey, want to hang out?” text. You know what this is. You know who she is. You’ve known for a while. You stare at the message for a long time. \n\nTwo hours later, you’re standing outside a Parisian-style bistro not too far from campus. You see her inside.",
+      "question": "It’s been a chaotic semester, but somehow, you got a “Hey, want to hang out?” text. You know what this is. You know who she is. You’ve known for a while. You stare at the message for a long time. \n\nTwo hours later, you’re standing outside a Parisian-style bistro not too far from campus. You see her inside.",
       "options": [
         {
           "option": "I’ll go in.",
@@ -352,7 +340,8 @@
     },
     {
       "key": 117100,
-      "question":"The sun is long gone. The day’s over. You sit at your desk, staring at a blank Google Doc, blinking cursor pulsing like a metronome. Tomorrow is your final round. Just one more day. One more chance. One more version of yourself to present.\n\nSo… what do you do tonight?",      "options": [
+      "question": "The sun is long gone. The day’s over. You sit at your desk, staring at a blank Google Doc, blinking cursor pulsing like a metronome. Tomorrow is your final round. Just one more day. One more chance. One more version of yourself to present.\n\nSo… what do you do tonight?",
+      "options": [
         {
           "option": "Go see her. You said you’d come over.",
           "key": 117101
@@ -369,7 +358,8 @@
     },
     {
       "key": 117200,
-      "question":"The sun is long gone. The day’s over. You sit at your desk, staring at a blank Google Doc, blinking cursor pulsing like a metronome. Tomorrow is your final round. Just one more day. One more chance. One more version of yourself to present.\n\nSo… what do you do tonight?",      "options": [
+      "question": "The sun is long gone. The day’s over. You sit at your desk, staring at a blank Google Doc, blinking cursor pulsing like a metronome. Tomorrow is your final round. Just one more day. One more chance. One more version of yourself to present.\n\nSo… what do you do tonight?",
+      "options": [
         {
           "option": "Go see her. You said you’d come over.",
           "key": 117201
@@ -382,7 +372,8 @@
     },
     {
       "key": 117300,
-      "question":"The sun is long gone. The day’s over. You sit at your desk, staring at a blank Google Doc, blinking cursor pulsing like a metronome. Tomorrow is your final round. Just one more day. One more chance. One more version of yourself to present.\n\nSo… what do you do tonight?",      "options": [
+      "question": "The sun is long gone. The day’s over. You sit at your desk, staring at a blank Google Doc, blinking cursor pulsing like a metronome. Tomorrow is your final round. Just one more day. One more chance. One more version of yourself to present.\n\nSo… what do you do tonight?",
+      "options": [
         {
           "option": "Hit up your TA’s office hours. One extra review can’t hurt.",
           "key": 117301
@@ -395,7 +386,7 @@
     },
     {
       "key": 117400,
-      "question":"The sun is long gone. The day’s over. You sit at your desk, staring at a blank Google Doc, blinking cursor pulsing like a metronome. Tomorrow is your final round. Just one more day. One more chance. One more version of yourself to present.\n\nSo… what do you do tonight?",
+      "question": "The sun is long gone. The day’s over. You sit at your desk, staring at a blank Google Doc, blinking cursor pulsing like a metronome. Tomorrow is your final round. Just one more day. One more chance. One more version of yourself to present.\n\nSo… what do you do tonight?",
       "options": [
         {
           "option": "Just sit here. Think. Worry. Hope.",
@@ -405,7 +396,7 @@
     },
     {
       "key": 118000,
-      "question":"This is it. The final round.\nAfter all the LeetCode grinds, mock interviews, group presentations, and résumé rewrites, you're finally here. One last shot to make it count.\n\nWhat do you lead off with?",
+      "question": "This is it. The final round.\nAfter all the LeetCode grinds, mock interviews, group presentations, and résumé rewrites, you're finally here. One last shot to make it count.\n\nWhat do you lead off with?",
       "options": [
         {
           "option": "I wanna focus on my behavioral skills...",
@@ -419,7 +410,7 @@
     },
     {
       "key": 119000,
-      "question":"The interview is over. You step out of the building. The campus is quiet in that strange, in-between way. Your earbuds are dead. There’s nothing left to distract you. You start walking. The sky is pale. The wind is soft. You think about everything that got you here. And then, like an old photo pulled from the back of a drawer, something comes back to you.\n\nWhat is it?",
+      "question": "The interview is over. You step out of the building. The campus is quiet in that strange, in-between way. Your earbuds are dead. There’s nothing left to distract you. You start walking. The sky is pale. The wind is soft. You think about everything that got you here. And then, like an old photo pulled from the back of a drawer, something comes back to you.\n\nWhat is it?",
       "options": [
         {
           "option": "Where I started.",
@@ -441,7 +432,7 @@
     },
     {
       "key": 120100,
-      "question":"The email hits your inbox at 8:46 AM. Subject line: “Offer Decision – Thank you for interviewing with us.”  You hover over it. Your hands are shaking.",
+      "question": "The email hits your inbox at 8:46 AM. Subject line: “Offer Decision – Thank you for interviewing with us.”  You hover over it. Your hands are shaking.",
       "options": [
         {
           "option": "You click.",
@@ -451,7 +442,7 @@
     },
     {
       "key": 121100,
-      "question":"You stare at the screen. Not angry. Not even surprised. Just tired. You scroll back through your sent folder. Dozens of applications. Dozens of versions of yourself. None of them was enough. Now what?",
+      "question": "You stare at the screen. Not angry. Not even surprised. Just tired. You scroll back through your sent folder. Dozens of applications. Dozens of versions of yourself. None of them was enough. Now what?",
       "options": [
         {
           "option": "…Maybe I can still get something... anything. I’ll ask around, find a local internship.",
@@ -469,7 +460,7 @@
     },
     {
       "key": 121200,
-      "question":"You stare at the screen. Not angry. Not even surprised. Just tired. You scroll back through your sent folder. Dozens of applications. Dozens of versions of yourself. None of them was enough. Now what?",
+      "question": "You stare at the screen. Not angry. Not even surprised. Just tired. You scroll back through your sent folder. Dozens of applications. Dozens of versions of yourself. None of them was enough. Now what?",
       "options": [
         {
           "option": "…Maybe I can still get something... anything. I’ll ask around, find a local internship.",
@@ -483,7 +474,7 @@
     },
     {
       "key": 121300,
-      "question":"You stare at the screen. Not angry. Not even surprised. Just tired. You scroll back through your sent folder. Dozens of applications. Dozens of versions of yourself. None of them was enough. Now what?",
+      "question": "You stare at the screen. Not angry. Not even surprised. Just tired. You scroll back through your sent folder. Dozens of applications. Dozens of versions of yourself. None of them was enough. Now what?",
       "options": [
         {
           "option": "…Maybe I can do research. Something to keep my resume from dying.",
@@ -497,11 +488,123 @@
     },
     {
       "key": 121400,
-      "question":"You stare at the screen. Not angry. Not even surprised. Just tired. You scroll back through your sent folder. Dozens of applications. Dozens of versions of yourself. None of them was enough. Now what?",
+      "question": "You stare at the screen. Not angry. Not even surprised. Just tired. You scroll back through your sent folder. Dozens of applications. Dozens of versions of yourself. None of them was enough. Now what?",
       "options": [
         {
           "option": "…I think I just need to stop. For a while.",
           "key": 121401
+        }
+      ]
+    },
+    {
+      "key": 117500,
+      "question": "The sun is long gone. The day's over. You sit at your desk, staring at nothing. There's no interview tomorrow. No final round. No last chance. Just... silence.\n\nShe texts you. 'Hey. You okay?'\n\nWhat do you say?",
+      "options": [
+        {
+          "option": "'Yeah. Just tired.'",
+          "key": 117501
+        },
+        {
+          "option": "'No. I don't think I am.'",
+          "key": 117502
+        }
+      ]
+    },
+    {
+      "key": 117600,
+      "question": "The sun is long gone. The day's over. You sit at your desk, staring at nothing. There's no interview tomorrow. No final round. No last chance.\n\nYour roommate's out. Your phone is silent. It's just you and the weight of everything you didn't accomplish.\n\nWhat do you do?",
+      "options": [
+        {
+          "option": "Scroll through LinkedIn. Torture yourself with other people's wins.",
+          "key": 117601
+        },
+        {
+          "option": "Close the laptop. Stare at the ceiling. Try to feel nothing.",
+          "key": 117602
+        }
+      ]
+    },
+    {
+      "key": 118500,
+      "question": "Finals week ends. Not with a bang, but with the quiet click of a submit button. You did okay. Maybe. You're not sure anymore.\n\nShe's waiting for you outside the library. She doesn't ask about grades. Just takes your hand.\n\nWhat do you tell her?",
+      "options": [
+        {
+          "option": "'I think I'm gonna be okay.'",
+          "key": 118501
+        },
+        {
+          "option": "'I don't know what I'm doing anymore.'",
+          "key": 118502
+        }
+      ]
+    },
+    {
+      "key": 118600,
+      "question": "Finals week ends. Not with a bang, but with the quiet click of a submit button. You did okay. Maybe. You're not sure anymore.\n\nYou walk back to your dorm alone. The campus is emptying out. Everyone's leaving for break.\n\nWhat do you do?",
+      "options": [
+        {
+          "option": "Call home. Tell them you're fine.",
+          "key": 118601
+        },
+        {
+          "option": "Just walk. Keep walking until you feel something.",
+          "key": 118602
+        }
+      ]
+    },
+    {
+      "key": 121500,
+      "question": "The career fair emails have stopped. The recruiter callbacks never came. You're not angry anymore. Just... empty.\n\nShe's sitting next to you. Your laptop is open to a blank job search.\n\nWhat now?",
+      "options": [
+        {
+          "option": "'Maybe I can still get something... anything. A local internship.'",
+          "key": 121501
+        },
+        {
+          "option": "'Maybe I can do research. Something to keep my resume alive.'",
+          "key": 121502
+        },
+        {
+          "option": "'I think I just need to stop. For a while.'",
+          "key": 121503
+        }
+      ]
+    },
+    {
+      "key": 121600,
+      "question": "The career fair emails have stopped. The recruiter callbacks never came. You're not angry anymore. Just... empty.\n\nShe's sitting next to you. Your laptop is open to a blank job search.\n\nWhat now?",
+      "options": [
+        {
+          "option": "'Maybe I can still get something... anything. A local internship.'",
+          "key": 121601
+        },
+        {
+          "option": "'I think I just need to stop. For a while.'",
+          "key": 121602
+        }
+      ]
+    },
+    {
+      "key": 121700,
+      "question": "The career fair emails have stopped. The recruiter callbacks never came. You're not angry anymore. Just... empty.\n\nYou stare at your laptop. The job search tabs are all closed. Your resume sits unsent in drafts.\n\nWhat now?",
+      "options": [
+        {
+          "option": "'Maybe I can do research. Something to keep my resume alive.'",
+          "key": 121701
+        },
+        {
+          "option": "'I think I just need to stop. For a while.'",
+          "key": 121702
+        }
+      ]
+    },
+    {
+      "key": 121800,
+      "question": "The career fair emails have stopped. The recruiter callbacks never came. You're not angry anymore. Just... empty.\n\nYou stare at your laptop. The job search tabs are all closed. Your resume sits unsent in drafts.\n\nWhat now?",
+      "options": [
+        {
+          "option": "'I think I just need to stop. For a while.'",
+          "key": 121801
         }
       ]
     }

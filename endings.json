@@ -181,6 +181,41 @@
       "subtitle": "Ending 26/25",
       "s1": "Thanks for playing the Demo! \n\nThis is a placeholder ending for the demo version of the game. The full version will have more content (25 endings and 20+ questions) and features. Stay tuned for updates!\n\nIf you enjoyed this demo, please hire me.\n\nThank you for your support!",
       "s2": "You: so that’s it? demo’s over?\nBest Friend: yeah… kinda hit too close to home, huh?\nRoommate: dude it’s literally our lives. no internships, rejection emails...\nYou: why’d they make a game about our suffering?\nBest Friend: because it’s *relatable*\nYou: tragic.\nRoommate: at least in the game we got a support system\nYou: true. wish that counted for more"
+    },
+    {
+      "code": 106,
+      "title": "GAME OVER: SMALL VICTORIES",
+      "subtitle": "Ending ??/25",
+      "s1": "The internship isn't glamorous. It's a small office, a cluttered desk, and a manager who still uses Internet Explorer. But you show up. You learn. You figure things out.\n\nShe texts you after your first week: 'Proud of you.'\n\nYou're not where you thought you'd be. But you're somewhere. And that's enough.",
+      "s2": "You: just finished my first week. survived.\nBest Friend: that's huge actually\nRoommate: local legend\nYou: she brought me lunch on friday\nBest Friend: keeper status confirmed\nRoommate: when's the wedding\nYou: lol shut up"
+    },
+    {
+      "code": 107,
+      "title": "GAME OVER: THE LONG GAME",
+      "subtitle": "Ending ??/25",
+      "s1": "The lab is quiet. The work is slow. But the professor trusts you with real problems, not just busywork.\n\nIt's not what you planned. But plans were always just educated guesses. This feels like learning. Like becoming something.\n\nMaybe the path forward was never straight.",
+      "s2": "You: running my first independent experiment tomorrow\nBest Friend: SCIENTIST ARC\nRoommate: bro's getting a phd next\nYou: calm down it's just undergrad research\nBest Friend: still. proud of you\nYou: thanks. i'm kinda proud too"
+    },
+    {
+      "code": 108,
+      "title": "GAME OVER: BREATHING ROOM",
+      "subtitle": "Ending ??/25",
+      "s1": "The summer stretches out, empty and uncertain. No internship. No hustle. Just... time.\n\nShe's there. You go on walks. You cook together. You read books you've been meaning to finish.\n\nIt's not productive. But it's healing. And maybe that's what you needed all along.",
+      "s2": "You: haven't opened linkedin in two weeks\nBest Friend: honestly... good for you\nRoommate: touch grass arc\nYou: she taught me how to make pasta from scratch\nBest Friend: that's literally the dream\nRoommate: ok that's cute actually"
+    },
+    {
+      "code": 109,
+      "title": "GAME OVER: NOT ALONE",
+      "subtitle": "Ending ??/25",
+      "s1": "The summer passes without fanfare. No big wins. No comeback story. Just two people figuring things out together.\n\nShe doesn't fix you. You don't fix her. But you make each other's bad days a little more bearable.\n\nSometimes that's the whole point.",
+      "s2": "You: still don't know what i'm doing\nBest Friend: none of us do\nRoommate: fr\nYou: but she's here. that helps\nBest Friend: that's everything honestly\nRoommate: simp but valid"
+    },
+    {
+      "code": 110,
+      "title": "GAME OVER: EMPTY SUMMER",
+      "subtitle": "Ending ??/25",
+      "s1": "The summer passes in silence. No internship. No girlfriend. No grand plan.\n\nYou read. You sleep. You stare at job postings you don't apply to. It's not growth. It's just... survival.\n\nBut sometimes surviving is enough. Sometimes it has to be.",
+      "s2": "You: summer's almost over. didn't do anything\nBest Friend: that's okay man\nRoommate: rest is underrated\nYou: doesn't feel like rest. feels like giving up\nBest Friend: it's not. you're still here\nRoommate: and next time you'll be ready\nYou: maybe. yeah. maybe"
     }
   ]
 }
