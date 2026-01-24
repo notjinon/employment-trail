@@ -264,8 +264,26 @@
         }
       ]
     },
+    {      "key": 113300,
+      "question": "It's supposed to be dinner. But when you arrive at the pizza place, something's off. Your roommate is there. Your other friends are there. But Tara isn't.\n\nYou text her. 'Where are you?'\n\nThe reply comes quick: 'I can't do this anymore. You've changed. You don't need me—you've made that clear.'\n\nNash—some guy from your stats class—slides into the seat next to you. 'Hey, I heard there was an open spot.' He's nice enough. But he's not Tara.",
+      "options": [
+        {
+          "option": "…she's right. I've been cold. But I can't undo it now.",
+          "key": 113301
+        }
+      ]
+    },
     {
-      "key": 114100,
+      "key": 113400,
+      "question": "It's supposed to be dinner. But when you arrive at the pizza place, something's off. Your best friend is there. Your other friends are there. But Chen isn't.\n\nYou text him. 'Bro where are you?'\n\nThe reply comes an hour later: 'Moved my stuff out. Found a single. Good luck with everything.'\n\nKevin—some dude from your floor—shows up uninvited. 'Yo, I heard you needed a new roommate.' He's loud. He's annoying. But he's there.",
+      "options": [
+        {
+          "option": "…he's right. I haven't been serious. But I can't undo it now.",
+          "key": 113401
+        }
+      ]
+    },
+    {      "key": 114100,
       "question": "Gameday.\n\nIt's time for the second job fair. A sea of tents dot the grassy mall in the center of your campus' quad. You've spent the morning psyching yourself up, going over your pitch. But now you're here, staring at the sea of corporate banners.\n\nWhat's your approach?",
       "options": [
         {

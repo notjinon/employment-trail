@@ -66,7 +66,13 @@ const FONDNESS_TIERS = [
 const BRANCH_RULES = {
   108000: (g) => g.burnout < 4 ? 108100 : 108200,
   110000: (g) => g.academic > 3 ? 110100 : 110200,
-  113000: (g) => g.social >= 5 ? 113100 : 113200,
+  113000: (g) => {
+    // Leaning checkpoint - if too far in either direction, a friend leaves
+    if (g.leaning >= 4) return 113300; // Tara leaves (too Chen-aligned)
+    if (g.leaning <= -4) return 113400; // Chen leaves (too Tara-aligned)
+    // Normal dinner variants based on social
+    return g.social >= 5 ? 113100 : 113200;
+  },
   114000: () => 114100,
   115000: (g) => g.burnout < 4 ? 115100 : 115200,
   116000: (g) => g.fondness >= 4 ? 116100 : 116200,
@@ -141,11 +147,11 @@ function selectCompany(g, tierKey, companiesData) {
   
   const sector = getMaxSector(g);
   const thresholds = companiesData.thresholds[tier];
-  const sectorSkill = g[sector] || 0;
+  const academic = g.academic || 0;
   const social = g.social || 0;
   
-  // Check if player meets thresholds
-  if (sectorSkill >= thresholds.skill && social >= thresholds.social) {
+  // Check if player meets thresholds (academic for skill, social for social)
+  if (academic >= thresholds.skill && social >= thresholds.social) {
     const company = companiesData.companies[tier][sector];
     return {
       success: true,

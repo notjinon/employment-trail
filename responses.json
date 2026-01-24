@@ -72,16 +72,18 @@
       "effects": {
         "academic": 2,
         "burnout": 2,
-        "social": -1
+        "social": -1,
+        "leaning": 1
       }
     },
     {
       "id": 104002,
-      "response": "Sips turn into shots, which turn into swigs. Your stomach hates you and your brain is in revolt. You can’t help but wonder how much you’ve changed from High School, and what people would think about you now.",
+      "response": "Sips turn into shots, which turn into swigs. Your stomach hates you and your brain is in revolt. You can't help but wonder how much you've changed from High School, and what people would think about you now.",
       "effects": {
         "social": 2,
         "burnout": 1,
-        "academic": -1
+        "academic": -1,
+        "leaning": -1
       }
     },
     {
@@ -95,7 +97,7 @@
     },
     {
       "id": 105001,
-      "response": "Your optimistic best friend decides to go alone. She comes back with an interview scheduled at UPS for a Data Analytics role. You stare at your empty inbox in silence.",
+      "response": "Your charismatic best friend decides to go alone. She comes back with an interview scheduled at UPS for a Data Analytics role—talked her way into it with zero technical background. You stare at your empty inbox in silence.",
       "effects": {
         "academic": 1,
         "social": -1
@@ -103,7 +105,7 @@
     },
     {
       "id": 105002,
-      "response": "You think it’s an avenue to explore, but you quickly realize it’s just mailing list fluff. The same day, your charismatic roommate connects with an AMD recruiter online.",
+      "response": "You think it's an avenue to explore, but you quickly realize it's just mailing list fluff. The same day, your genius roommate gets an AMD recruiter to reach out after they found his GitHub profile.",
       "effects": {
         "burnout": 1,
         "social": 1
@@ -144,17 +146,19 @@
         "defense": 1,
         "manufacturing": 1,
         "academic": 1,
-        "social": 1
+        "social": 1,
+        "leaning": 1
       }
     },
     {
       "id": 106003,
       "question": 6,
-      "response": "A case and behavioral interview later, you’re officially in the frat. It’s a nice couple of days before you realize that it (like any business-adjacent club) is a nothingburger. At least you’ll learn Excel.",
+      "response": "A case and behavioral interview later, you're officially in the frat. It's a nice couple of days before you realize that it (like any business-adjacent club) is a nothingburger. At least you'll learn Excel.",
       "effects": {
         "finance": 1,
         "technology": 1,
-        "social": 2
+        "social": 2,
+        "leaning": -1
       }
     },
     {
@@ -173,7 +177,8 @@
       "effects": {
         "burnout": 1,
         "academic": 1,
-        "social": -1
+        "social": -1,
+        "leaning": -1
       }
     },
     {
@@ -192,7 +197,8 @@
       "response": "Your TA checks the group repo and notes that 80% of the codebase has been written by you alone. You notice the same thing while buying another case of Red Bull.",
       "effects": {
         "burnout": 2,
-        "academic": 3
+        "academic": 3,
+        "leaning": 1
       }
     },
     {
@@ -262,7 +268,8 @@
       "effects": {
         "burnout": -1,
         "social": 1,
-        "fondness": 1
+        "fondness": 1,
+        "leaning": -1
       }
     },
     {
@@ -271,24 +278,25 @@
       "response": "Your next battery of midterms yields dramatically better results. At the same time, your daily dosage of caffeine creeps upward while your average length of sleep steadily declines.",
       "effects": {
         "burnout": 1,
-        "academic": 3
+        "academic": 3,
+        "leaning": 1
       }
     },
     {
       "id": 110101,
       "question": 10,
-      "response": "You’re now considered a regular among the party scene. The night swiftly turns into a blur, but all you know is that it was a needed reprieve. Your roommate spots you drinking with the same girl all night long.",
+      "response": "You're now considered a regular among the party scene. The night swiftly turns into a blur, but all you know is that it was a needed reprieve. You end up talking to Jenny. Sorority treasurer, effortlessly magnetic—for most of the night. Your roommate notices and gives you a knowing smirk.",
       "effects": {
         "burnout": -2,
         "fondness": 2,
-        "girlfriendId": 1
+        "girlfriendId": 3
       },
       "nextQuestion": 111000
     },
     {
       "id": 110102,
       "question": 10,
-      "response": "You bond with classmates over copious amounts of beer while playing MarioKart. A cute girl is there and you exchange Instagrams. Your best friend sees it and silently immortalizes the blackmail in her mind.",
+      "response": "You bond with classmates over copious amounts of beer while playing MarioKart. You meet Tiffany. CS major, terrifyingly smart. She absolutely demolishes everyone at the game while explaining optimal drift mechanics. You exchange Instagrams. Your best friend sees it and silently immortalizes the blackmail in her mind.",
       "effects": {
         "burnout": -2,
         "social": 2,
@@ -300,10 +308,12 @@
     {
       "id": 110103,
       "question": 10,
-      "response": "Your home team gets routed off the field 52-21. The commentators call it an absolute disgrace, but you pay no mind. It’s a blast getting to make new friends there.",
+      "response": "Your home team gets routed off the field 52-21. The commentators call it an absolute disgrace, but you pay no mind. You end up sitting next to Ezra—philosophy major, unapologetically carefree—who spends the whole game ranting about the commodification of college sports. Somehow, it's the most fun you've had in weeks.",
       "effects": {
         "burnout": -2,
-        "social": 2
+        "social": 2,
+        "fondness": 1,
+        "girlfriendId": 2
       },
       "nextQuestion": 111000
     },
@@ -338,16 +348,18 @@
       "response": "Going to the career center over time helps you nail down the mock interview questions they give you. By the end of your grueling “interview bootcamp” sessions, you’re confident in your ability to sell yourself, while you feel more tiresome than ever.",
       "effects": {
         "burnout": 1,
-        "social": 2
+        "social": 2,
+        "leaning": -1
       }
     },
     {
       "id": 112003,
       "question": 12,
-      "response": "You’re right. Learning how to approach technical and casing questions is an invaluable skill. From the sheer amount of time and effort you put into this, you feel very well prepared on this end, while fatigue creeps in.",
+      "response": "You're right. Learning how to approach technical and casing questions is an invaluable skill. From the sheer amount of time and effort you put into this, you feel very well prepared on this end, while fatigue creeps in.",
       "effects": {
         "burnout": 1,
-        "academic": 2
+        "academic": 2,
+        "leaning": 1
       }
     },
     {
@@ -388,8 +400,28 @@
       },
       "nextQuestion": 114000
     },
+    {      "id": 113301,
+      "question": 13,
+      "response": "Tara is gone. The one person who always believed in you, who pushed you to take care of yourself first. Nash tries to fill the void—he's friendly enough, but his advice feels hollow. Generic. He doesn't know you like Tara did.\n\nChen offers some advice about the career fair. It rings colder than usual without Tara's warmth to balance it.",
+      "effects": {
+        "social": -2,
+        "burnout": 2,
+        "bestFriendId": 2
+      },
+      "nextQuestion": 114000
+    },
     {
-      "id": 114111,
+      "id": 113401,
+      "question": 13,
+      "response": "Chen is gone. The genius who pushed you to be better, to grind harder, to actually know your shit. Kevin moves his stuff in that weekend—he's loud, messy, and treats your shared space like a frat house. He doesn't help you study. He doesn't push you to be better.\n\nTara offers some advice about self-care. It doesn't help with the interviews ahead.",
+      "effects": {
+        "academic": -2,
+        "burnout": 2,
+        "roommateId": 2
+      },
+      "nextQuestion": 114000
+    },
+    {      "id": 114111,
       "question": 14,
       "response": "You stride up to the JPMorgan booth and launch into a pitch about monetary policy, embedded payments, and your fascination with institutional risk. The recruiter's eyes light up. She pulls you aside for a deeper conversation.\n\nYou walk away with a first-round interview locked in. The finance grind paid off.",
       "nextQuestion": 115000
