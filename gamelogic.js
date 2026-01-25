@@ -628,15 +628,21 @@ function populateSocial() {
     document.getElementById("girlfriend-subtitle").innerHTML = "<u>" + girlfriend.subtitle + "</u>";
     document.getElementById("girlfriend-bio").textContent = girlfriend.bio;
     
-    // Archetype and tooltip (hide if no archetype)
+    // Archetype and tooltip (hide if no archetype) — tooltip now anchored on name
+    const gfNameEl = document.getElementById("girlfriend-name");
     const gfArchetype = document.getElementById("girlfriend-archetype");
     const gfTooltip = document.getElementById("girlfriend-tooltip");
+    const gfTooltipWrapper = gfNameEl ? gfNameEl.parentElement : null;
     if (girlfriend.archetype) {
-      gfArchetype.parentElement.parentElement.style.display = "block";
+      // Only hide/show the archetype paragraph, not the entire card content
+      if (gfArchetype && gfArchetype.parentElement) gfArchetype.parentElement.style.display = "block";
       gfArchetype.textContent = girlfriend.archetype;
-      gfTooltip.textContent = girlfriend.tooltip || "";
+      if (gfTooltip) { gfTooltip.textContent = girlfriend.tooltip || ""; gfTooltip.style.display = gfTooltip.textContent ? "" : "none"; }
+      if (gfTooltipWrapper) gfTooltipWrapper.style.cursor = (gfTooltip && gfTooltip.textContent) ? "help" : "default";
     } else {
-      gfArchetype.parentElement.parentElement.style.display = "none";
+      if (gfArchetype && gfArchetype.parentElement) gfArchetype.parentElement.style.display = "none";
+      if (gfTooltip) { gfTooltip.textContent = ""; gfTooltip.style.display = "none"; }
+      if (gfTooltipWrapper) gfTooltipWrapper.style.cursor = "default";
     }
   }
 
@@ -656,7 +662,7 @@ function populateSocial() {
   const bfArcheEl = document.getElementById("bestfriend-archetype");
   const bfTooltipEl = document.getElementById("bestfriend-tooltip");
   const bfDescEl = document.getElementById("bestfriend-desc");
-  const bfTooltipWrapper = bfArcheEl ? bfArcheEl.parentElement.parentElement : null;
+  const bfTooltipWrapper = bfNameEl ? bfNameEl.parentElement : null;
   if (bestFriend) {
     bfNameEl.textContent = bestFriend.name;
     bfArcheEl.textContent = bestFriend.archetype;
@@ -677,7 +683,7 @@ function populateSocial() {
   const rmArcheEl = document.getElementById("roommate-archetype");
   const rmTooltipEl = document.getElementById("roommate-tooltip");
   const rmDescEl = document.getElementById("roommate-desc");
-  const rmTooltipWrapper = rmArcheEl ? rmArcheEl.parentElement.parentElement : null;
+  const rmTooltipWrapper = rmNameEl ? rmNameEl.parentElement : null;
   if (roommate) {
     rmNameEl.textContent = roommate.name;
     rmArcheEl.textContent = roommate.archetype;
