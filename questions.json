@@ -330,7 +330,7 @@
     },
     {
       "key": 116100,
-      "question": "It’s been a chaotic semester, but somehow, you got a “Hey, want to hang out?” text. You know what this is. You know who she is. You’ve known for a while. You stare at the message for a long time. \n\nTwo hours later, you’re standing outside a Parisian-style bistro not too far from campus. You see her inside.",
+      "question": "It’s been a chaotic semester, but somehow, you got a “Hey, want to hang out?” text. You know what this is. You know who she is. You’ve known for a while. You stare at the message for a long time. \n\nTwo hours later, you’re standing outside a Parisian-style bistro not too far from campus. You see them inside.",
       "options": [
         {
           "option": "I’ll go.",
@@ -344,7 +344,7 @@
     },
     {
       "key": 116200,
-      "question": "It’s been a chaotic semester, but somehow, you got a “Hey, want to hang out?” text. You know what this is. You know who she is. You’ve known for a while. You stare at the message for a long time. \n\nTwo hours later, you’re standing outside a Parisian-style bistro not too far from campus. You see her inside.",
+      "question": "It’s been a chaotic semester, but somehow, you got a “Hey, want to hang out?” text. You know what this is. You know who she is. You’ve known for a while. You stare at the message for a long time. \n\nTwo hours later, you’re standing outside a Parisian-style bistro not too far from campus. You see them inside.",
       "options": [
         {
           "option": "I’ll go in.",
@@ -361,7 +361,7 @@
       "question": "The sun is long gone. The day’s over. You sit at your desk, staring at a blank Google Doc, blinking cursor pulsing like a metronome. Tomorrow is your final round. Just one more day. One more chance. One more version of yourself to present.\n\nSo… what do you do tonight?",
       "options": [
         {
-          "option": "Go see her. You said you’d come over.",
+          "option": "Go see them. You said you’d come over.",
           "key": 117101
         },
         {
