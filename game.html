@@ -229,17 +229,26 @@
 
     <!-- Ending Slide 3 – Scorecard and stats -->
     <div class="slide hidden" id="ending-slide-3">
-      <h2 class="scorecard-title">SCORECARD</h2>
+      <h2 class="ending-hero">ENDING</h2>
       <div class="ending-grid">
         <div class="ending-scorecard">
+          <h3 class="section-title">SCORECARD</h3>
           <ul id="ending-bullets"></ul>
-          <h3>Overall Grade: <span id="ending-grade" class="ending-grade">A</span></h3>
+
+          <div class="ending-score-row">
+            <div class="overall-label">Overall Grade:</div>
+            <div id="ending-grade" class="ending-grade">A</div>
+          </div>
         </div>
+
+        <div class="ending-divider" aria-hidden="true"></div>
+
         <div class="ending-stats">
-          <h3>STATS</h3>
-          <pre id="ending-stats" class="ending-stats-pre"></pre>
+          <h3 class="section-title">STATS</h3>
+          <pre id="ending-stats" class="ending-stats-pre">Loading game state...</pre>
         </div>
       </div>
+
       <button onclick="nextEndingSlide()" class="button">Next</button>
     </div>
 

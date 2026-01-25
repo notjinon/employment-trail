@@ -213,7 +213,6 @@
     {
       "id": 107004,
       "question": 7,
-      "prompt": "Screw this. Let it ride, I’ll tank it.",
       "response": "Your group gets a 63. The average was 85. When discussing your submission, the TA chides you all for not working together. No one says a word. You hate them more for it.",
       "effects": {
         "burnout": -2,
@@ -227,7 +226,8 @@
       "effects": {
         "academic": 3,
         "social": 1,
-        "burnout": -1
+        "fondness": 1,
+        "burnout": -2
       },
       "nextQuestion": 109000
     },
@@ -289,7 +289,8 @@
       "effects": {
         "burnout": 1,
         "academic": 3,
-        "leaning": 1
+        "leaning": 1,
+        "fondness":-1
       }
     },
     {
@@ -298,7 +299,7 @@
       "response": "You're now considered a regular among the party scene. The night swiftly turns into a blur, but all you know is that it was a needed reprieve. You end up talking to Jenny. Sorority treasurer, effortlessly magnetic—for most of the night. Your roommate notices and gives you a knowing smirk.",
       "effects": {
         "burnout": -2,
-        "fondness": 2,
+        "fondness": 3,
         "girlfriendId": 3
       },
       "nextQuestion": 111000
@@ -310,7 +311,7 @@
       "effects": {
         "burnout": -2,
         "social": 2,
-        "fondness": 1,
+        "fondness": 2,
         "girlfriendId": 1
       },
       "nextQuestion": 111000
@@ -322,7 +323,7 @@
       "effects": {
         "burnout": -2,
         "social": 2,
-        "fondness": 1,
+        "fondness": 2,
         "girlfriendId": 2
       },
       "nextQuestion": 111000
@@ -612,7 +613,7 @@
     {
       "id": 117101,
       "question": 17,
-      "response": "The lights are low. Her Spotify playlist is on shuffle. The two of you talk softly—about nothing, about everything. She holds your hand and reminds you you’re more than a résumé. \n\nFor the first time in weeks, you feel like a human being.",
+      "response": "The lights are low. The playlist is on shuffle. The two of you talk softly—about nothing, about everything. They hold your hand and remind you you’re more than a résumé. \n\nFor the first time in weeks, you feel like a human being.",
       "effects": {
         "social": 1
       },

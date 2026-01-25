@@ -58,7 +58,7 @@ const FONDNESS_TIERS = [
   { max: 2, label: "\"You're a Chud.\""},
   { max: 4, label: "\"Who are you again?\"" },
   { max: 6, label: "\"Aren't you in my class?\"" },
-  { max: 8, label: "\"You're not that ugly.\"" },
+  { max: 10, label: "\"You're not that ugly.\"" },
   { max: Infinity, label: "\"We're getting married!\"" }
 ];
 
@@ -822,23 +822,45 @@ function nextEndingSlide() {
 }
 
 
-// Compute a simple grade from tier + modifiers (fondness/conflict)
+// Compute a numeric score from tier + modifiers, then map to A/B/C/D/F
+// Scoring rules (data-driven):
+// tier: boutique=+85, midmajor=+75, weak=+65, fail=+55, canonical=+50 (default low)
+// modifiers: girlfriend (fondness>=10) = +10, no conflict with friends = +5
+// grade thresholds: A >=90, B >=80, C >=70, D >=60, F >=50
 function computeGrade(ending, g) {
-  const grades = ['F','D','C','B','A'];
-  let base;
-  switch ((ending.tier || '').toLowerCase()) {
-    case 'boutique': base = 'A'; break;
-    case 'midmajor': base = 'B'; break;
-    case 'midMajor': base = 'B'; break;
-    case 'weak': base = 'C'; break;
-    case 'fail': base = 'D'; break;
-    case 'canonical': base = 'F'; break;
-    default: base = 'C';
-  }
-  let idx = grades.indexOf(base);
-  if (g.fondness >= 10) idx = Math.min(grades.length - 1, idx + 1);
-  if (g.bestFriendId === 2 || g.roommateId === 2) idx = Math.max(0, idx - 1);
-  return grades[idx];
+  const tier = (ending.tier || '').toLowerCase();
+  const tierPoints = {
+    'boutique': 85,
+    'midmajor': 75,
+    'midmajor': 75,
+    'weak': 65,
+    'fail': 55,
+    'canonical': 50
+  };
+
+  const base = tierPoints[tier] ?? 65; // default to 65 if unknown
+  let score = base;
+
+  // Girlfriend bonus
+  if (g.fondness >= 10) score += 10;
+
+  // No-conflict bonus: only if BOTH best friend and roommate codes are 1
+  // (per spec: iff they are both 1, give +5)
+  const noConflict = (g.bestFriendId === 1 && g.roommateId === 1);
+  if (noConflict) score += 5;
+
+  // Clamp to [0,100]
+  score = Math.max(0, Math.min(100, score));
+
+  // Map numeric score to letter grade
+  let letter;
+  if (score >= 90) letter = 'A';
+  else if (score >= 80) letter = 'B';
+  else if (score >= 70) letter = 'C';
+  else if (score >= 60) letter = 'D';
+  else letter = 'F';
+
+  return { letter, score };
 }
 
 function renderEndingDetails(ending, g) {
@@ -851,27 +873,51 @@ function renderEndingDetails(ending, g) {
     bullets.push('No Girlfriend (-XX)');
   }
 
-  // Tier-based bullet
-  const tier = (ending.tier || '').toLowerCase();
-  if (tier === 'boutique') bullets.push('Boutique internship (+XX)');
-  else if (tier === 'midmajor' || tier === 'midMajor') bullets.push('Mid-major internship (+XX)');
-  else if (tier === 'weak') bullets.push('Local internship (+XX)');
-  else if (tier === 'fail') bullets.push('Failstate outcome');
+  // Tier-based bullet (determine once)
+  const endingTier = (ending.tier || '').toLowerCase();
+  if (endingTier === 'boutique') bullets.push('Boutique internship (+XX)');
+  else if (endingTier === 'midmajor' || endingTier === 'midMajor') bullets.push('Mid-major internship (+XX)');
+  else if (endingTier === 'weak') bullets.push('Local internship (+XX)');
+  else if (endingTier === 'fail') bullets.push('Failstate outcome');
   else bullets.push('Outcome: ' + (ending.subtitle || 'Unknown'));
 
-  // Conflict detection
-  if (g.bestFriendId === 2 || g.roommateId === 2) {
-    bullets.push('Conflict with friends (-XX)');
+  // Show bullets with explicit point values where appropriate
+  if (g.fondness >= 10) {
+    // display exact bonus
+    bullets[0] = `Got Girlfriend (+10)`;
   } else {
-    bullets.push('No conflict with friends (+XX)');
+    bullets[0] = `No Girlfriend (+0)`;
+  }
+
+  // Tier bullet with explicit points
+  const tierLabelMap = {
+    'boutique': ['Boutique internship', 85],
+    'midmajor': ['Mid-major internship', 75],
+    'weak': ['Local internship', 65],
+    'fail': ['Failstate outcome', 55],
+    'canonical': ['Canonical outcome', 50]
+  };
+  const tierInfo = tierLabelMap[endingTier] || ['Outcome', 65];
+  bullets[1] = `${tierInfo[0]} (+${tierInfo[1]})`;
+
+  // Conflict detection bullet
+  // Conflict bonus only if BOTH best friend and roommate codes are 1
+  if (g.bestFriendId === 1 && g.roommateId === 1) {
+    bullets[2] = 'No conflict with friends (+5)';
+  } else {
+    bullets[2] = 'Conflict with friends (-0)';
   }
 
   if (DOM.endingBullets) {
     DOM.endingBullets.innerHTML = bullets.map(b => `<li>${b}</li>`).join('');
   }
 
+  // Compute and display grade (letter + numeric score)
+  const gradeResult = computeGrade(ending, g);
   if (DOM.endingGrade) {
-    DOM.endingGrade.textContent = computeGrade(ending, g);
+    DOM.endingGrade.textContent = `${gradeResult.letter} (${gradeResult.score})`;
+    DOM.endingGrade.setAttribute('data-score', gradeResult.score);
+    DOM.endingGrade.title = `Computed score: ${gradeResult.score}`;
   }
 
   // Friendly stats
