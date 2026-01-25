@@ -225,7 +225,8 @@
       "question": 8,
       "response": "You show up in the nick of time. Plug in the laptop. When the questions come, you’re sharp. Relaxed. In control. Well-rested. Your team daps you up after. Pure and deserved bliss.",
       "effects": {
-        "academic": 2,
+        "academic": 3,
+        "social": 1,
         "burnout": -1
       },
       "nextQuestion": 109000
