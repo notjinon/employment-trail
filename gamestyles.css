@@ -515,6 +515,14 @@ footer {
   height: 100%;
 }
 
+/* Ending number small label */
+.ending-number {
+  font-size: 12px;
+  color: var(--color-accent);
+  margin-top: 0.25rem;
+  font-style: italic;
+}
+
 /* Mobile: stack sections */
 @media (max-width: 600px) {
   .social-grid {

@@ -808,49 +808,49 @@
     {
       "id": 121501,
       "response": "'Maybe I can still get something... anything. A local internship.'\n\nShe nods. 'Worth a shot.'\n\nYou spend the next week sending applications to places you've never heard of. One of them calls back. It's not glamorous. It's not what you dreamed of.\n\nBut it's something.",
-      "setEnding": 106,
+      "setEnding": 218,
       "nextQuestion": "ending"
     },
     {
       "id": 121502,
       "response": "'Maybe I can do research. Something to keep my resume alive.'\n\nShe smiles. 'You'd be good at that.'\n\nYou email a professor who always liked your questions. He responds within an hour. 'Come by my office tomorrow.'\n\nIt's not what you planned. But plans were always just guesses anyway.",
-      "setEnding": 107,
+      "setEnding": 228,
       "nextQuestion": "ending"
     },
     {
       "id": 121503,
       "response": "'I think I just need to stop. For a while.'\n\nShe doesn't argue. 'Then stop. Rest.'\n\nThe summer stretches out ahead of you. Empty. Uncertain. But for the first time in months, you're not running toward something.\n\nMaybe that's okay.",
-      "setEnding": 108,
+      "setEnding": 18,
       "nextQuestion": "ending"
     },
     {
       "id": 121601,
       "response": "'Maybe I can still get something... anything. A local internship.'\n\nShe takes your hand. 'Let's look together.'\n\nYou spend the afternoon sending applications to places you've never heard of. She edits your cover letters. One of them calls back.\n\nIt's not what you dreamed of. But you're not alone in it.",
-      "setEnding": 106,
+      "setEnding": 217,
       "nextQuestion": "ending"
     },
     {
       "id": 121602,
       "response": "'I think I just need to stop. For a while.'\n\nShe nods. 'Then I'm stopping with you.'\n\nThe summer stretches out ahead. She's there. That's something.\n\nMaybe that's enough.",
-      "setEnding": 109,
+      "setEnding": 229,
       "nextQuestion": "ending"
     },
     {
       "id": 121701,
       "response": "'Maybe I can do research. Something to keep my resume alive.'\n\nYou email a professor who always liked your questions. He responds within the hour. 'Come by my office tomorrow.'\n\nIt's not what you planned. But maybe there's something here. A different path.",
-      "setEnding": 107,
+      "setEnding": 227,
       "nextQuestion": "ending"
     },
     {
       "id": 121702,
       "response": "'I think I just need to stop. For a while.'\n\nThe laptop closes with a soft click. The silence is deafening.\n\nYou don't know what comes next. Maybe nothing. Maybe something.\n\nBut right now, you're done trying to figure it out.",
-      "setEnding": 110,
+      "setEnding": 18,
       "nextQuestion": "ending"
     },
     {
       "id": 121801,
       "response": "'I think I just need to stop. For a while.'\n\nThe laptop closes. The room is quiet. You're alone.\n\nThe summer stretches out ahead of you. Empty. You don't know what comes next.\n\nMaybe that's okay. Maybe it has to be.",
-      "setEnding": 110,
+      "setEnding": 18,
       "nextQuestion": "ending"
     }
   ]

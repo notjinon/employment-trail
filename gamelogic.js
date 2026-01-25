@@ -82,19 +82,23 @@ const BRANCH_RULES = {
   },
   117000: (g) => {
     // Failstate skips interview prep - go to failstate Q17
+    const hasGF = g.girlfriendId >= 1 && g.girlfriendId <= 8;
+    const fondEnough = g.fondness >= 10 && hasGF;
     if (g.failstate) {
-      if (g.fondness >= 10) return 117500; // Failstate with girlfriend
+      if (fondEnough) return 117500; // Failstate with girlfriend
       return 117600; // Failstate alone
     }
-    if (g.fondness >= 10 && g.burnout < 2) return 117100;
-    if (g.fondness >= 10) return 117200;
+    if (fondEnough && g.burnout < 2) return 117100;
+    if (fondEnough) return 117200;
     if (g.burnout < 2) return 117300;
     return 117400;
   },
   118000: (g) => {
     // Failstate skips interview - go to failstate Q18
+    const hasGF = g.girlfriendId >= 1 && g.girlfriendId <= 8;
+    const fondEnough = g.fondness >= 10 && hasGF;
     if (g.failstate) {
-      if (g.fondness >= 10) return 118500; // Failstate with girlfriend
+      if (fondEnough) return 118500; // Failstate with girlfriend
       return 118600; // Failstate alone
     }
     return 118000; // Normal interview question
@@ -111,9 +115,11 @@ const BRANCH_RULES = {
   },
   121000: (g) => {
     // Failstate gets different Q21 variants
+    const hasGF = g.girlfriendId >= 1 && g.girlfriendId <= 8;
+    const fondEnough = g.fondness >= 10 && hasGF;
     if (g.failstate) {
-      if (g.fondness >= 10 && g.academic >= 5) return 121500; // gf + research option
-      if (g.fondness >= 10) return 121600; // gf only
+      if (fondEnough && g.academic >= 5) return 121500; // gf + research option
+      if (fondEnough) return 121600; // gf only
       if (g.academic >= 5) return 121700; // research option only
       return 121800; // nothing
     }
@@ -178,17 +184,17 @@ function selectCompany(g, tierKey, companiesData) {
 //                  5-8 midMajor (BofA, IBM, RTX, Siemens)
 //                  9-12 weak (Pinnacle, TechFlow, Mason, Apex)
 const ENDING_MAP = {
-  // Boutique tier endings
-  1: 7, 2: 8, 3: 9, 4: 10,
+  // Boutique tier endings (no partner base -> partner fondness variant)
+  1: 206, 2: 202, 3: 204, 4: 208,
   // Mid-major tier endings
-  5: 12, 6: 13, 7: 14, 8: 11,
+  5: 214, 6: 210, 7: 212, 8: 216,
   // Weak tier endings
-  9: 92, 10: 93, 11: 94, 12: 95,
-  // Fondness variants
-  fondness: { 
-    1: 87, 2: 88, 3: 89, 4: 90,
-    5: 92, 6: 93, 7: 94, 8: 91,
-    9: 96, 10: 96, 11: 96, 12: 96
+  9: 222, 10: 218, 11: 220, 12: 224,
+  // Fondness variants (partner Yes)
+  fondness: {
+    1: 205, 2: 201, 3: 203, 4: 207,
+    5: 213, 6: 209, 7: 211, 8: 215,
+    9: 221, 10: 217, 11: 219, 12: 223
   }
 };
 
@@ -241,8 +247,13 @@ function cacheDOM() {
   DOM.leaningText = document.getElementById("leaning-text");
   DOM.endingTitle = document.getElementById("ending-title");
   DOM.endingSubtitle = document.getElementById("ending-subtitle");
+  DOM.endingNumber = document.getElementById("ending-number");
   DOM.endingText = document.getElementById("ending-text");
   DOM.finalText = document.getElementById("final-text");
+  // New ending UI elements
+  DOM.endingBullets = document.getElementById("ending-bullets");
+  DOM.endingGrade = document.getElementById("ending-grade");
+  DOM.endingStats = document.getElementById("ending-stats");
 }
 
 // ===== Game State =====
@@ -513,7 +524,8 @@ function handleFinalEvaluation() {
 
   if (passBoutique || passMidMajor || passWeak) {
     const base = ENDING_MAP[company];
-    gameState.ending = fondness >= 10 ? ENDING_MAP.fondness[company] : base;
+    const hasGF = gameState.girlfriendId >= 1 && gameState.girlfriendId <= 8;
+    gameState.ending = (fondness >= 10 && hasGF) ? ENDING_MAP.fondness[company] : base;
     currentResponseId = 120101;
   } else {
     currentResponseId = 120102;
@@ -522,19 +534,24 @@ function handleFinalEvaluation() {
 
 function handleFallbackEndings(optKey) {
   const endingPairs = {
-    121101: { base: 16, fondness: 96 },
-    121201: { base: 16, fondness: 96 },
-    121102: { base: 17, fondness: 97 },
-    121301: { base: 17, fondness: 97 }
+    // Local internship options -> TechFlow: Partner No (218), Partner Yes (217)
+    121101: { base: 218, fondness: 217 },
+    121201: { base: 218, fondness: 217 },
+    // Research options -> Paid Research: Partner No (228), Partner Yes (227)
+    121102: { base: 228, fondness: 227 },
+    121301: { base: 228, fondness: 227 }
   };
 
   if (endingPairs[optKey]) {
     const pair = endingPairs[optKey];
     currentResponseId = [121101, 121201].includes(optKey) ? 121101 : 121102;
-    gameState.ending = gameState.fondness >= 10 ? pair.fondness : pair.base;
+    const hasGF = gameState.girlfriendId >= 1 && gameState.girlfriendId <= 8;
+    gameState.ending = (gameState.fondness >= 10 && hasGF) ? pair.fondness : pair.base;
   } else {
     currentResponseId = 121103;
-    gameState.ending = gameState.fondness >= 10 ? 98 : 18;
+    // Fallback: breathing room (with partner => Fresh Breaths 229) else canonical Dreams Deferred (18)
+    const hasGF = gameState.girlfriendId >= 1 && gameState.girlfriendId <= 8;
+    gameState.ending = (gameState.fondness >= 10 && hasGF) ? 229 : 18;
   }
 }
 
@@ -548,21 +565,36 @@ function nextQuestion() {
   const response = responses[currentResponseId];
   let nextKey = response.nextQuestion || (currentQuestionKey + 1000);
 
+  // Allow numeric-ish strings; keep 'ending' special case
+  if (nextKey !== "ending" && !isNaN(Number(nextKey))) nextKey = Number(nextKey);
+
   // Handle "ending" as a special nextQuestion value
   if (nextKey === "ending") {
-    console.error("Reached 'ending' nextQuestion without setEnding - defaulting to demo ending");
-    endGame(1);
+    console.error("Reached 'ending' nextQuestion without setEnding - defaulting to canonical ending");
+    endGame(18);
     return;
   }
 
-  // Apply branching rules if applicable
+  // Apply branching rules if applicable (branch keys like 117000 map to real 117100+ keys)
   if (BRANCH_RULES[nextKey]) {
     nextKey = BRANCH_RULES[nextKey](gameState);
   }
 
   const nextQuestion = questions[nextKey];
   if (!nextQuestion) {
-    console.error(`Question with key ${nextKey} not found`);
+    console.error(`Question with key ${nextKey} not found. BRANCH_RULES keys: ${Object.keys(BRANCH_RULES).join(', ')}`);
+    // As a recovery, if this was meant to be a branching key, try applying BRANCH_RULES using numeric coercion
+    if (BRANCH_RULES[nextKey]) {
+      nextKey = BRANCH_RULES[nextKey](gameState);
+      if (questions[nextKey]) {
+        currentQuestionKey = nextKey;
+        showQuestion();
+        return;
+      }
+    }
+    // Final fallback: go to canonical ending to avoid dead state
+    console.warn('Falling back to canonical ending (code 18)');
+    endGame(18);
     return;
   }
 
@@ -737,7 +769,14 @@ function endGame(endingCode) {
         currentEnding = ending;
         DOM.endingTitle.innerText = ending.title;
         DOM.endingSubtitle.innerText = ending.subtitle;
-        DOM.endingText.innerText = ending.s1;
+        // Show narrative first
+        DOM.endingText.innerText = ending.s1 || '';
+        if (ending.number) {
+          DOM.endingNumber.innerText = `Ending ${String(ending.number).padStart(2, '0')}/31`;
+          DOM.endingNumber.style.display = "";
+        } else {
+          if (DOM.endingNumber) DOM.endingNumber.style.display = "none";
+        }
         switchSlide("ending-slide-1");
       } else {
         console.warn("Ending not found in endings.json");
@@ -751,12 +790,111 @@ function endGame(endingCode) {
 }
 
 function nextEndingSlide() {
-  if (currentEnding) {
-    DOM.finalText.innerText = currentEnding.s2;
-    switchSlide("ending-slide-2");
+  if (!currentEnding) return;
+
+  const s1Visible = !document.getElementById('ending-slide-1').classList.contains('hidden');
+  const s2Visible = !document.getElementById('ending-slide-2').classList.contains('hidden');
+  const s3Visible = !document.getElementById('ending-slide-3').classList.contains('hidden');
+
+  if (s1Visible) {
+    // Move to slice-of-life slide (s2)
+    DOM.finalText.innerText = currentEnding.s2 || '';
+    switchSlide('ending-slide-2');
+    return;
+  }
+
+  if (s2Visible) {
+    // Prepare and show scorecard (s3)
+    try {
+      renderEndingDetails(currentEnding, gameState);
+    } catch (err) {
+      console.error('Error rendering scorecard:', err);
+    }
+    switchSlide('ending-slide-3');
+    return;
+  }
+
+  if (s3Visible) {
+    // Show thanks slide (s4)
+    switchSlide('ending-slide-4');
+    return;
   }
 }
 
+
+// Compute a simple grade from tier + modifiers (fondness/conflict)
+function computeGrade(ending, g) {
+  const grades = ['F','D','C','B','A'];
+  let base;
+  switch ((ending.tier || '').toLowerCase()) {
+    case 'boutique': base = 'A'; break;
+    case 'midmajor': base = 'B'; break;
+    case 'midMajor': base = 'B'; break;
+    case 'weak': base = 'C'; break;
+    case 'fail': base = 'D'; break;
+    case 'canonical': base = 'F'; break;
+    default: base = 'C';
+  }
+  let idx = grades.indexOf(base);
+  if (g.fondness >= 10) idx = Math.min(grades.length - 1, idx + 1);
+  if (g.bestFriendId === 2 || g.roommateId === 2) idx = Math.max(0, idx - 1);
+  return grades[idx];
+}
+
+function renderEndingDetails(ending, g) {
+  const bullets = [];
+
+  // Girlfriend detection
+  if (g.fondness >= 10) {
+    bullets.push('Got Girlfriend (+XX)');
+  } else {
+    bullets.push('No Girlfriend (-XX)');
+  }
+
+  // Tier-based bullet
+  const tier = (ending.tier || '').toLowerCase();
+  if (tier === 'boutique') bullets.push('Boutique internship (+XX)');
+  else if (tier === 'midmajor' || tier === 'midMajor') bullets.push('Mid-major internship (+XX)');
+  else if (tier === 'weak') bullets.push('Local internship (+XX)');
+  else if (tier === 'fail') bullets.push('Failstate outcome');
+  else bullets.push('Outcome: ' + (ending.subtitle || 'Unknown'));
+
+  // Conflict detection
+  if (g.bestFriendId === 2 || g.roommateId === 2) {
+    bullets.push('Conflict with friends (-XX)');
+  } else {
+    bullets.push('No conflict with friends (+XX)');
+  }
+
+  if (DOM.endingBullets) {
+    DOM.endingBullets.innerHTML = bullets.map(b => `<li>${b}</li>`).join('');
+  }
+
+  if (DOM.endingGrade) {
+    DOM.endingGrade.textContent = computeGrade(ending, g);
+  }
+
+  // Friendly stats
+  const companyName = COMPANY_MAP[g.company] || (g.company === 0 ? 'No Offer' : 'Unknown');
+  const gfName = (GIRLFRIEND_MAP[g.girlfriendId] || {}).name || 'None';
+  const bfName = (BESTFRIEND_MAP[g.bestFriendId] || {}).name || 'None';
+  const rmName = (ROOMMATE_MAP[g.roommateId] || {}).name || 'None';
+
+  const stats = {
+    School: SCHOOL_MAP[g.school] || 'Unknown',
+    Company: companyName,
+    'Fondness': g.fondness,
+    'Burnout': g.burnout,
+    'Academics': g.academic,
+    'Social': g.social,
+    'Best Friend': bfName,
+    'Roommate': rmName
+  };
+
+  if (DOM.endingStats) {
+    DOM.endingStats.textContent = Object.entries(stats).map(([k,v]) => `${k}: ${v}`).join('\n');
+  }
+}
 
 function restartGame() {
   window.location.href = "index.html";

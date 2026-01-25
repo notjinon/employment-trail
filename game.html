@@ -211,23 +211,54 @@
       <button onclick="backToQuestion()" class="button">Back</button>
     </div>
 
-    <!-- Ending Slide 1 – Display ending message with a Next button -->
+    <!-- Ending Slide 1 – Narrative/textual ending -->
     <div class="slide hidden" id="ending-slide-1">
       <h2 id="ending-title">Ending</h2>
       <h3 id="ending-subtitle">Your ending subtitle goes here...</h3>
+      <p id="ending-number" class="ending-number" style="display:none;">Ending 01/31</p>
       <p id="ending-text">Your ending message goes here...</p>
       <button onclick="nextEndingSlide()" class="button">Next</button>
     </div>
 
-    <!-- Ending Slide 2 – Final ending message with a Restart button -->
+    <!-- Ending Slide 2 – Slice-of-life / final message -->
     <div class="slide hidden" id="ending-slide-2">
       <h2 id="final-title">The End</h2>
       <p id="final-text">Additional ending text or final thoughts go here...</p>
-      <button onclick="switchSlide('ending-slide-3')" class="button">Next</button>
+      <button onclick="nextEndingSlide()" class="button">Next</button>
     </div>
 
-    <!-- Ending Slide 3 – Custom ending message with a Home button -->
+    <!-- Ending Slide 3 – Scorecard and stats -->
     <div class="slide hidden" id="ending-slide-3">
+      <h2 class="scorecard-title">SCORECARD</h2>
+      <div class="ending-grid">
+        <div class="ending-scorecard">
+          <ul id="ending-bullets"></ul>
+          <h3>Overall Grade: <span id="ending-grade" class="ending-grade">A</span></h3>
+        </div>
+        <div class="ending-stats">
+          <h3>STATS</h3>
+          <pre id="ending-stats" class="ending-stats-pre"></pre>
+        </div>
+      </div>
+      <button onclick="nextEndingSlide()" class="button">Next</button>
+    </div>
+
+    <!-- Ending Slide 4 – Custom ending message with a Home button -->
+    <div class="slide hidden" id="ending-slide-4">
+      <h2 id="thanks-title">Thanks for Playing</h2>
+      <p>I originally wrote this game over the course of two weeks while I was in lecture. The scripting was finished during an exam week on my campus.</p>
+
+      <p>As time went on, I felt like this was a bit underbaked, and have been tinkering with it ever since.</p>
+
+      <p>Please don’t infer anything about my perspectives from this game, this is merely a work of fiction! Furthermore, I’m neither a CS nor DS student so this is an outside-in perspective on the SWE market as it stands. And yes, I grossly overestimate your chances of getting a job. Makes it more fun.</p>
+
+      <p>I hope you enjoyed <b>The Employment Trail!</b></p>
+      <h3>Check out my other projects (or send me hate mail) on my portfolio <a href = "https://notjinon.github.io">here</a>.</h3>
+      <button onclick="restartGame()" class="button">Home</button>
+    </div>
+
+    <!-- Ending Slide 4 – Custom ending message with a Home button -->
+    <div class="slide hidden" id="ending-slide-4">
       <h2 id="thanks-title">Thanks for Playing</h2>
       <p>I originally wrote this game over the course of two weeks while I was in lecture. The scripting was finished during an exam week on my campus.</p>
       
