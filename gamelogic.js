@@ -178,17 +178,17 @@ function selectCompany(g, tierKey, companiesData) {
 //                  5-8 midMajor (BofA, IBM, RTX, Siemens)
 //                  9-12 weak (Pinnacle, TechFlow, Mason, Apex)
 const ENDING_MAP = {
-  // Boutique tier endings
-  1: 7, 2: 8, 3: 9, 4: 10,
+  // Boutique tier endings (companyId -> no-gf code)
+  1: 112, 2: 122, 3: 132, 4: 142,
   // Mid-major tier endings
-  5: 12, 6: 13, 7: 14, 8: 11,
+  5: 212, 6: 222, 7: 232, 8: 242,
   // Weak tier endings
-  9: 92, 10: 93, 11: 94, 12: 95,
-  // Fondness variants
-  fondness: { 
-    1: 87, 2: 88, 3: 89, 4: 90,
-    5: 92, 6: 93, 7: 94, 8: 91,
-    9: 96, 10: 96, 11: 96, 12: 96
+  9: 312, 10: 322, 11: 462, 12: 492,
+  // Fondness (girlfriend-present) variants
+  fondness: {
+    1: 111, 2: 121, 3: 131, 4: 141,
+    5: 211, 6: 221, 7: 231, 8: 241,
+    9: 311, 10: 451, 11: 461, 12: 491
   }
 };
 
@@ -465,8 +465,56 @@ function submitOption() {
     gameState.ending = response.setEnding;
   }
 
+  // Date outcome check: if this response is a date outcome, evaluate success/failure
+  if (response.dateCheck) {
+    evaluateDateOutcome(response);
+  }
+
   DOM.feedbackText.innerText = response.response;
   switchSlide("feedback-slide");
+}
+
+// Get date metric info for a girlfriend id
+function getDateMetricForGirlfriend(id) {
+  const gf = GIRLFRIEND_MAP[id];
+  if (!gf) return null;
+  return {
+    metric: gf.dateMetric || null,
+    threshold: typeof gf.dateThreshold === 'number' ? gf.dateThreshold : null
+  };
+}
+
+// Evaluate date success/failure and apply game state changes
+function evaluateDateOutcome(response) {
+  const gfId = gameState.girlfriendId;
+  const info = getDateMetricForGirlfriend(gfId);
+  if (!info || !info.metric || info.threshold === null) {
+    // No metric configured: default to success (keep behavior stable)
+    gameState.fondness = (gameState.fondness || 0) + 15;
+    response.response += "\n\nThe date went well.";
+    return;
+  }
+
+  let success = false;
+  if (info.metric === "burnout") {
+    success = (gameState.burnout || 0) <= info.threshold;
+  } else {
+    success = (gameState[info.metric] || 0) >= info.threshold;
+  }
+
+  if (success) {
+    gameState.fondness = (gameState.fondness || 0) + 15;
+    response.response += "\n\nIt went well—the date clicked. This went a long way.";
+  } else {
+    // If the response already sets girlfriendId or fondness penalties, don't double-apply
+    if (!(response.effects && response.effects.girlfriendId !== undefined)) {
+      gameState.girlfriendId = 9; // breakup/failure state
+    }
+    if (!(response.effects && response.effects.fondness !== undefined)) {
+      gameState.fondness = Math.max(0, (gameState.fondness || 0) - 15);
+    }
+    response.response += "\n\nIt didn't go well. They moved on.";
+  }
 }
 
 function handleCompanySelection(optKey) {
@@ -629,14 +677,19 @@ function populateSocial() {
     document.getElementById("girlfriend-bio").textContent = girlfriend.bio;
     
     // Archetype and tooltip (hide if no archetype)
+    const gfNameEl = document.getElementById("girlfriend-name");
     const gfArchetype = document.getElementById("girlfriend-archetype");
     const gfTooltip = document.getElementById("girlfriend-tooltip");
+    const gfTooltipWrapper = gfNameEl ? gfNameEl.parentElement : null;
     if (girlfriend.archetype) {
-      gfArchetype.parentElement.parentElement.style.display = "block";
+      gfArchetype.parentElement.style.display = "block";
       gfArchetype.textContent = girlfriend.archetype;
-      gfTooltip.textContent = girlfriend.tooltip || "";
+      if (gfTooltip) { gfTooltip.textContent = girlfriend.tooltip || ""; gfTooltip.style.display = ""; }
+      if (gfTooltipWrapper) gfTooltipWrapper.style.cursor = "help";
     } else {
-      gfArchetype.parentElement.parentElement.style.display = "none";
+      gfArchetype.parentElement.style.display = "none";
+      if (gfTooltip) { gfTooltip.textContent = ""; gfTooltip.style.display = "none"; }
+      if (gfTooltipWrapper) gfTooltipWrapper.style.cursor = "default";
     }
   }
 
@@ -656,7 +709,7 @@ function populateSocial() {
   const bfArcheEl = document.getElementById("bestfriend-archetype");
   const bfTooltipEl = document.getElementById("bestfriend-tooltip");
   const bfDescEl = document.getElementById("bestfriend-desc");
-  const bfTooltipWrapper = bfArcheEl ? bfArcheEl.parentElement.parentElement : null;
+  const bfTooltipWrapper = bfNameEl ? bfNameEl.parentElement : null;
   if (bestFriend) {
     bfNameEl.textContent = bestFriend.name;
     bfArcheEl.textContent = bestFriend.archetype;
@@ -677,7 +730,7 @@ function populateSocial() {
   const rmArcheEl = document.getElementById("roommate-archetype");
   const rmTooltipEl = document.getElementById("roommate-tooltip");
   const rmDescEl = document.getElementById("roommate-desc");
-  const rmTooltipWrapper = rmArcheEl ? rmArcheEl.parentElement.parentElement : null;
+  const rmTooltipWrapper = rmNameEl ? rmNameEl.parentElement : null;
   if (roommate) {
     rmNameEl.textContent = roommate.name;
     rmArcheEl.textContent = roommate.archetype;

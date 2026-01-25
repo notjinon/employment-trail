@@ -10,22 +10,29 @@
       "subtitle": "Computer Science - Incoming @ Google",
       "archetype": "Academic Ace",
       "bio": "From growing up in the Bay Area to publishing her research at 18, she's worked harder than anyone she knows to succeed.",
-      "tooltip": "Tiffany is extremely intelligent. Flattery will only get you so far with her. You need to prove you're smart enough to be worth her time."
+      "tooltip": "Tiffany is extremely intelligent. Flattery will only get you so far with her. You need to prove you're smart enough to be worth her time.",
+      "dateMetric": "academic",
+      "dateThreshold": 5
     },
     "2": {
       "name": "EZRA M.",
       "subtitle": "Philosophy & History - Double Major",
       "archetype": "Blissful Bohemian",
       "bio": "A fun-loving and whimsical free spirit, he won't let anything—or anyone—drag him and his vibe down.",
-      "tooltip": "Ezra is turned off by the rat race. He sees things more holistically than you do, and isn't really swayed by how many hackathons you win."
+      "tooltip": "Ezra is turned off by the rat race. He sees things more holistically than you do, and isn't really swayed by how many hackathons you win.",
+      "dateMetric": "burnout",
+      "dateThreshold": 3
     },
     "3": {
       "name": "JENNY T.",
       "subtitle": "Economics - Treasurer, αΚΔΦ",
       "archetype": "Affable Aristo",
       "bio": "The youngest E-Board member in her chapter's history, she's well aware of the leverage her well-known status provides.",
-      "tooltip": "Beneath Jenny's friendly demeanor is a cautious, calculating mind. You need to stick out from the other antisocial losers she meets."
+      "tooltip": "Beneath Jenny's friendly demeanor is a cautious, calculating mind. You need to stick out from the other antisocial losers she meets.",
+      "dateMetric": "social",
+      "dateThreshold": 5
     },
+
     "9": {
       "name": "NOBODY",
       "subtitle": "You and the Void",
