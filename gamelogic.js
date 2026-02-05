@@ -189,12 +189,12 @@ const ENDING_MAP = {
   // Mid-major tier endings
   5: 214, 6: 210, 7: 212, 8: 216,
   // Weak tier endings
-  9: 222, 10: 218, 11: 220, 12: 224,
+  9: 222, 10: 226, 11: 220, 12: 224,
   // Fondness variants (partner Yes)
   fondness: {
     1: 205, 2: 201, 3: 203, 4: 207,
     5: 213, 6: 209, 7: 211, 8: 215,
-    9: 221, 10: 217, 11: 219, 12: 223
+    9: 221, 10: 225, 11: 219, 12: 223
   }
 };
 
@@ -660,6 +660,16 @@ function populateSocial() {
     document.getElementById("girlfriend-subtitle").innerHTML = "<u>" + girlfriend.subtitle + "</u>";
     document.getElementById("girlfriend-bio").textContent = girlfriend.bio;
     
+    // Load portrait from JSON if available
+    const gfPortrait = document.getElementById("girlfriend-portrait");
+    if (girlfriend.portrait && gfPortrait) {
+      const img = document.createElement("img");
+      img.src = girlfriend.portrait;
+      img.alt = girlfriend.name;
+      gfPortrait.innerHTML = "";
+      gfPortrait.appendChild(img);
+    }
+    
     // Archetype and tooltip (hide if no archetype) — tooltip now anchored on name
     const gfNameEl = document.getElementById("girlfriend-name");
     const gfArchetype = document.getElementById("girlfriend-archetype");
@@ -699,6 +709,17 @@ function populateSocial() {
     bfNameEl.textContent = bestFriend.name;
     bfArcheEl.textContent = bestFriend.archetype;
     bfDescEl.textContent = bestFriend.desc;
+    
+    // Load portrait from JSON if available
+    const bfPortrait = document.getElementById("bestfriend-portrait");
+    if (bestFriend.portrait && bfPortrait) {
+      const img = document.createElement("img");
+      img.src = bestFriend.portrait;
+      img.alt = bestFriend.name;
+      bfPortrait.innerHTML = "";
+      bfPortrait.appendChild(img);
+    }
+    
     if (bfTooltipEl) { bfTooltipEl.textContent = bestFriend.tooltip || ""; bfTooltipEl.style.display = ""; }
     if (bfTooltipWrapper) bfTooltipWrapper.style.cursor = "help";
   } else {
@@ -720,6 +741,17 @@ function populateSocial() {
     rmNameEl.textContent = roommate.name;
     rmArcheEl.textContent = roommate.archetype;
     rmDescEl.textContent = roommate.desc;
+    
+    // Load portrait from JSON if available
+    const rmPortrait = document.getElementById("roommate-portrait");
+    if (roommate.portrait && rmPortrait) {
+      const img = document.createElement("img");
+      img.src = roommate.portrait;
+      img.alt = roommate.name;
+      rmPortrait.innerHTML = "";
+      rmPortrait.appendChild(img);
+    }
+    
     if (rmTooltipEl) { rmTooltipEl.textContent = roommate.tooltip || ""; rmTooltipEl.style.display = ""; }
     if (rmTooltipWrapper) rmTooltipWrapper.style.cursor = "help";
   } else {

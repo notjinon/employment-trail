@@ -9,6 +9,7 @@
       "name": "TIFFANY C.",
       "subtitle": "Computer Science - Incoming @ Google",
       "archetype": "Academic Ace",
+      "portrait": "assets/tiffany.png",
       "bio": "From growing up in the Bay Area to publishing her research at 18, she's worked harder than anyone she knows to succeed.",
       "tooltip": "Tiffany is extremely intelligent. Flattery will only get you so far with her. You need to prove you're smart enough to be worth her time."
     },
@@ -16,6 +17,7 @@
       "name": "EZRA M.",
       "subtitle": "Philosophy & History - Double Major",
       "archetype": "Blissful Bohemian",
+      "portrait": "assets/ezra.png",
       "bio": "A fun-loving and whimsical free spirit, he won't let anything—or anyone—drag him and his vibe down.",
       "tooltip": "Ezra is turned off by the rat race. He sees things more holistically than you do, and isn't really swayed by how many hackathons you win."
     },
@@ -23,6 +25,7 @@
       "name": "JENNY T.",
       "subtitle": "Economics - Treasurer, αΚΔΦ",
       "archetype": "Affable Aristo",
+      "portrait": "assets/jenny.png",
       "bio": "The youngest E-Board member in her chapter's history, she's well aware of the leverage her well-known status provides.",
       "tooltip": "Beneath Jenny's friendly demeanor is a cautious, calculating mind. You need to stick out from the other antisocial losers she meets."
     },
@@ -37,6 +40,7 @@
       "name": "TARA",
       "role": "BEST FRIEND",
       "archetype": "Collaborative Confidant",
+      "portrait": "assets/tara.png",
       "desc": "A steadfast and reserved friend from a time long gone.",
       "tooltip": "One of the only friends from high school you retain. She cares deeply about your mental health and wellbeing, and enjoys life."
     },
@@ -44,6 +48,7 @@
       "name": "NASH",
       "role": "BEST FRIEND",
       "archetype": "Competitive Cowboy",
+      "portrait": "assets/nash.png",
       "desc": "The only thing bigger than his brain is his ego.",
       "tooltip": "You met Nash at a party in August. The only thing he has on his mind is getting rich. To his credit, he's been working like a dog."
     }
@@ -53,6 +58,7 @@
       "name": "CHEN",
       "role": "ROOMMATE",
       "archetype": "Studious Solitary",
+      "portrait": "assets/chen.png",
       "desc": "Quiet, reserved, whip-smart. Won't do you any favors socially.",
       "tooltip": "You met Chen online, and from day one you could tell his main priority would be studying. That's probably how you'll get close."
     },
@@ -60,6 +66,7 @@
       "name": "KEVIN",
       "role": "ROOMMATE",
       "archetype": "Senseless Stoner",
+      "portrait": "assets/kevin.png",
       "desc": "A narc's wet dream. Good luck trying to study.",
       "tooltip": "You met Kevin when he was begging for help on the first week of classes. Even then, he was high as a kite. Now you're stuck with him."
     }

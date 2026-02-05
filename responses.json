@@ -143,9 +143,8 @@
     {
       "id": 106001,
       "response": "Gave up this quick? \n\nYou drop out of engineering school and join the School of Business. Even your parents say they know you could've done better. \n\nWhat a sick fucking joke.",
-      "effects": {
-        "ending": 19
-      }
+      "setEnding": 19,
+      "nextQuestion": "ending"
     },
     {
       "id": 106002,
@@ -520,16 +519,18 @@
     {
       "id": 114300,
       "question": 14,
-      "response": "You cast the widest net possiblebut even the small companies aren't biting. Your resume is thin, your pitch is weak, and everyone can tell.\n\nYou walk away with nothing but a handful of flyers and a sinking feeling.",
+      "response": "You cast the widest net possible, but even the small companies aren't biting. Your resume is thin, your pitch is weak, and everyone can tell.\n\nYou walk away with nothing but a handful of flyers and a sinking feeling.",
       "nextQuestion": 115000,
       "setFailstate": true
     },
     {
       "id": 115101,
       "question": 15,
-      "response": "You hole up in the library, fueled by iced coffee and trauma. The hours blur. By sunrise, your code compiles, your deck looks decent, and your notes are color-coded. Caffeine, a color-coded Notion, and adrenaline pushes you past the finish line this one last time. \n\nAnd it’s just enough to punch your ticket on the Dean’s List.",
+      "response": "You hole up in the library, fueled by iced coffee and trauma. The hours blur. By sunrise, your code compiles, your deck looks decent, and your notes are color-coded. You feel sharp. Wired. Alone. \n\nAnd it's just enough to punch your ticket.",
       "effects": {
-        "academic": 2
+        "academic": 2,
+        "burnout": 1,
+        "social": -1
       },
       "nextQuestion": 116000
     },
@@ -540,7 +541,8 @@
       "response": "You text the group chat. Soon, laptops are open, snacks are everywhere, and Spotify is arguing with your attention span. The work gets done… to a point. You know you could be more productive alone, but this avoids a crash. \n\nMost importantly, no one feels alone, and no one fails outright.",
       "effects": {
         "academic": 1,
-        "social": 2
+        "social": 1,
+        "burnout": -1
       },
       "nextQuestion": 116000
     },
@@ -561,7 +563,8 @@
       "response": "You text the group chat. Soon, laptops are open, snacks are everywhere, and Spotify is arguing with your attention span. The work gets done… to a point. You know you could be more productive alone, but this avoids a crash. \n\nMost importantly, no one feels alone, and no one fails outright.",
       "effects": {
         "academic": 1,
-        "social": 2
+        "social": 1,
+        "burnout": -1
       },
       "nextQuestion": 116000
     },
@@ -615,7 +618,8 @@
       "question": 17,
       "response": "The lights are low. The playlist is on shuffle. The two of you talk softly—about nothing, about everything. They hold your hand and remind you you’re more than a résumé. \n\nFor the first time in weeks, you feel like a human being.",
       "effects": {
-        "social": 1
+        "social": 1,
+        "academic": -1
       },
       "nextQuestion": 118000
     },
@@ -624,14 +628,18 @@
       "question": 17,
       "response": "It’s just you and one other student. Your TA makes dumb jokes about recursion and explains fluid dynamics like a bedtime story. For once, you’re smiling at a whiteboard instead of crying at one. They say, “You’re gonna kill it.” \n\nYou believe them.",
       "effects": {
-        "academic": 1
+        "academic": 1,
+        "social": -1
       },
       "nextQuestion": 118000
     },
     {
       "id": 117103,
       "question": 17,
-      "response": "You open old Notion pages. Re-read half-written cover letters. Scroll through texts you never sent. You picture the recruiter’s face tomorrow, unreadable and cold. You close your eyes. Try to sleep. \n\nYou dream about fire alarms, whiteboards, and your best friend saying “you got this.”",
+      "response": "You open old Notion pages. Re-read half-written cover letters. Scroll through texts you never sent. You picture the recruiter's face tomorrow, unreadable and cold. You close your eyes. Try to sleep. \n\nYou dream about fire alarms, whiteboards, and your best friend saying \"you got this.\" Your breathing slows. The knot in your chest loosens, just a little.",
+      "effects": {
+        "burnout": -1
+      },
       "nextQuestion": 118000
     },
     {
@@ -639,14 +647,18 @@
       "question": 17,
       "response": "The lights are low. Her Spotify playlist is on shuffle. The two of you talk softly—about nothing, about everything. She holds your hand and reminds you you’re more than a résumé. \n\nFor the first time in weeks, you feel like a human being.",
       "effects": {
-        "social": 1
+        "social": 1,
+        "academic": -1
       },
       "nextQuestion": 118000
     },
     {
       "id": 117202,
       "question": 17,
-      "response": "You open old Notion pages. Re-read half-written cover letters. Scroll through texts you never sent. You picture the recruiter’s face tomorrow, unreadable and cold. You close your eyes. Try to sleep. \n\nYou dream about fire alarms, whiteboards, and your best friend saying “you got this.”",
+      "response": "You open old Notion pages. Re-read half-written cover letters. Scroll through texts you never sent. You picture the recruiter's face tomorrow, unreadable and cold. You close your eyes. Try to sleep. \n\nYou dream about fire alarms, whiteboards, and your best friend saying \"you got this.\" Your breathing slows. The knot in your chest loosens, just a little.",
+      "effects": {
+        "burnout": -1
+      },
       "nextQuestion": 118000
     },
     {
@@ -654,20 +666,27 @@
       "question": 17,
       "response": "It’s just you and one other student. Your TA makes dumb jokes about recursion and explains fluid dynamics like a bedtime story. For once, you’re smiling at a whiteboard instead of crying at one. They say, “You’re gonna kill it.” \n\nYou believe them.",
       "effects": {
-        "academic": 1
+        "academic": 1,
+        "social": -1
       },
       "nextQuestion": 118000
     },
     {
       "id": 117302,
       "question": 17,
-      "response": "You open old Notion pages. Re-read half-written cover letters. Scroll through texts you never sent. You picture the recruiter’s face tomorrow, unreadable and cold. You close your eyes. Try to sleep. \n\nYou dream about fire alarms, whiteboards, and your best friend saying “you got this.”",
+      "response": "You open old Notion pages. Re-read half-written cover letters. Scroll through texts you never sent. You picture the recruiter's face tomorrow, unreadable and cold. You close your eyes. Try to sleep. \n\nYou dream about fire alarms, whiteboards, and your best friend saying \"you got this.\" Your breathing slows. The knot in your chest loosens, just a little.",
+      "effects": {
+        "burnout": -1
+      },
       "nextQuestion": 118000
     },
     {
       "id": 117401,
       "question": 17,
-      "response": "You open old Notion pages. Re-read half-written cover letters. Scroll through texts you never sent. You picture the recruiter’s face tomorrow, unreadable and cold. You close your eyes. Try to sleep. \n\nYou dream about fire alarms, whiteboards, and your best friend saying “you got this.”",
+      "response": "You open old Notion pages. Re-read half-written cover letters. Scroll through texts you never sent. You picture the recruiter's face tomorrow, unreadable and cold. You close your eyes. Try to sleep. \n\nYou dream about fire alarms, whiteboards, and your best friend saying \"you got this.\" Your breathing slows. The knot in your chest loosens, just a little.",
+      "effects": {
+        "burnout": -1
+      },
       "nextQuestion": 118000
     },
     {
