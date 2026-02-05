@@ -1,56 +1,80 @@
+/* ===== CSS Variables ===== */
+:root {
+  /* Colors */
+  --color-primary: #0f0;
+  --color-accent: #b8ff5c;
+  --color-bg: #000;
+  --color-muted: #666;
+  
+  /* Typography */
+  --font-mono: "IBM Plex Mono", monospace;
+  
+  /* Spacing scale (rem-based) */
+  --spacing-xs: 0.25rem;   /* 4px */
+  --spacing-sm: 0.5rem;    /* 8px */
+  --spacing-md: 1rem;      /* 16px */
+  --spacing-lg: 1.5rem;    /* 24px */
+  --spacing-xl: 2rem;      /* 32px */
+  
+  /* Borders & Effects */
+  --border-primary: 1px solid var(--color-primary);
+  --border-radius: 0;      /* DOS-style sharp edges */
+  --transition-speed: 0.2s;
+}
+
+/* ===== Base Styles ===== */
 body {
-    background-color: #000;
-    color: #228B22;
-    font-family: "IBM Plex Mono", monospace;
+    background-color: var(--color-bg);
+    color: var(--color-primary);
+    font-family: var(--font-mono);
     font-size: 14px;
     line-height: 1.4;
     text-align: center;
-    max-width: 800px; /* Added max-width property */
-    margin: 0 auto; /* Added margin property to center the content */
+    max-width: 800px;
+    margin: 0 auto;
     padding-left: 5%;
 }
 
 pre {
     padding: 10px;
-    border: 1px solid #0f0;
+    border: var(--border-primary);
     border-radius: 5px;
-    background-color: #000;
+    background-color: var(--color-bg);
     overflow: auto;
 }
 
 code {
-    color: #0f0;
-    font-family: "IBM Plex Mono", monospace;
+    color: var(--color-primary);
+    font-family: var(--font-mono);
     font-size: 14px;
 }
 
-h1{
+h1, h2, h3, h4, h5, h6 {
     text-align: center;
-    color: #0f0;
-    text-shadow: 0 0 5px #0f0;
-    font-size: 64px;
+    color: var(--color-primary);
 }
-h2, h3, h4, h5, h6 {
-    text-align: center;
-    color: #0f0;
+
+h1 {
+    text-shadow: 0 0 5px var(--color-primary);
+    font-size: 64px;
 }
 
 hr {
-    border-color: #0f0;
+    border-color: var(--color-primary);
 }
 
 a {
-    color: #0f0;
+    color: var(--color-primary);
     text-decoration: none;
 }
+
 a:hover {
-    color: #0f0;
     text-decoration: underline;
 }
 
-footer{
+footer {
     text-align: center;
-    color: #0f0;
+    color: var(--color-primary);
     font-size: 12px;
     margin-top: 20px;
     margin-bottom: 10px;
@@ -61,7 +85,54 @@ footer{
   margin: 5vh auto;
   padding: 2rem;
   text-align: center;
-  border: 1px solid #0f0;
+  border: var(--border-primary);
+}
+
+/* Question navigation buttons (Status / Submit / Social) */
+.question-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 2.5rem;
+  flex-wrap: wrap;
+}
+
+/* Header image/text swap */
+.site-header {
+  text-align: center;
+  margin: 2rem auto 1rem;
+}
+
+.site-header .header-image {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.site-header .header-text {
+  margin: 0;
+}
+
+/* Default: desktop/tablet – show image, hide text */
+.site-header .header-text {
+  display: none;
+}
+
+.site-header .header-image {
+  display: block;
+}
+
+/* Mobile: show text-only header, hide image */
+@media (max-width: 600px) {
+  .site-header .header-text {
+    display: block;
+  }
+
+  .site-header .header-image {
+    display: none;
+  }
 }
 
 /* Container for the option buttons */
@@ -104,18 +175,29 @@ footer{
 
 .button {
     display: inline-block;
-    background-color: #0f0;
-    color: #000;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-family: "IBM Plex Mono", monospace;
-    font-size: 16px;
+    min-width: 140px;
+    padding: 10px 24px;
     margin-top: 20px;
+    border-radius: 0;
+    border: var(--border-primary);
+    background-color: var(--color-bg);
+    color: var(--color-primary);
+    text-decoration: none;
+    font-family: var(--font-mono);
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    cursor: pointer;
 }
 
 .button:hover {
-  background: #292929;
+  background-color: #003300;
+  color: var(--color-accent);
+}
+
+.button:active {
+  background-color: #001900;
 }
 
 ::-webkit-scrollbar {
@@ -123,9 +205,744 @@ footer{
 }
 
 ::-webkit-scrollbar-track {
-    background-color: #000;
+    background-color: var(--color-bg);
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: #0f0;
+    background-color: var(--color-primary);
+}
+/* School color classes – only override color */
+.school-default { color: var(--color-accent) !important; }
+.school-purdue { color: #FFD700 !important; }
+.school-cornell { color: #DC143C !important; }
+.school-washington { color: #9400D3 !important; }
+.school-duke { color: #0066FF !important; }
+
+/* ===== Status Screen Layout ===== */
+
+/* Shared label style */
+.label-small {
+  font-size: 11px;
+  color: var(--color-primary);
+  text-transform: uppercase;
+  margin: 0 0 0.5rem 0;
+}
+
+/* Three-column header grid */
+.status-header-grid {
+  display: flex;
+  justify-content: space-between;
+  border: var(--border-primary);
+  margin-bottom: 2rem;
+}
+
+.status-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 0.5rem;
+  text-align: left;
+}
+
+.status-col:not(:last-child) {
+  border-right: var(--border-primary);
+}
+
+.status-label {
+  font-size: 12px;
+  color: var(--color-primary);
+  text-transform: uppercase;
+  margin-bottom: 0.25rem;
+}
+
+.status-value {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--color-accent);
+  text-transform: uppercase;
+}
+
+/* Stat bars section */
+.stat-bars {
+  text-align: left;
+  margin-bottom: 1.5rem;
+}
+
+.stat-row {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 0.25rem;
+}
+
+.stat-name {
+  font-size: 14px;
+  color: var(--color-primary);
+  text-transform: uppercase;
+}
+
+.stat-tier {
+  font-size: 14px;
+  font-style: italic;
+  color: var(--color-accent);
+}
+
+.bar-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.art-placeholder {
+  width: 48px;
+  height: 48px;
+  border: var(--border-primary);
+  background-color: var(--color-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  color: var(--color-primary);
+  text-transform: lowercase;
+  flex-shrink: 0;
+}
+
+.bar-container {
+  flex: 1;
+  height: 28px;
+  border: var(--border-primary);
+  background-color: var(--color-bg);
+}
+
+.bar-fill {
+  height: 100%;
+  background-color: var(--color-accent);
+  transition: width 0.3s ease;
+}
+
+.bar-container.small {
+  height: 20px;
+}
+
+/* ===== Social / Your Friends Screen ===== */
+
+.social-grid {
+  display: flex;
+  gap: 1rem;
+  text-align: left;
+}
+
+.social-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.social-divider {
+  width: 2px;
+  background-color: var(--color-primary);
+  flex-shrink: 0;
+}
+
+.section-header {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--color-primary);
+  text-transform: uppercase;
+  margin: 0 0 0.5rem 0;
+  text-align: center;
+  letter-spacing: 0.1em;
+}
+
+/* Character Cards */
+.character-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.character-card.compact {
+  padding-bottom: 1rem;
+  border-bottom: var(--border-primary);
+}
+
+.character-card.compact:last-of-type {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.character-card.hidden {
+  display: none;
+}
+
+.card-portrait {
+  width: 100%;
+  aspect-ratio: 2.75 / 1;
+  border: var(--border-primary);
+  background-color: var(--color-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-primary);
+  font-size: 12px;
+}
+
+/* Romance portrait - larger with 1:1 aspect ratio */
+.social-section:first-child .card-portrait {
+  aspect-ratio: 1 / 1;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.card-content.split {
+  flex-direction: row;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.card-left {
+  flex-shrink: 0;
+  width: 100px;
+}
+
+.card-right {
+  flex: 1;
+  width: 150px;
+}
+
+/* Card text styles - consolidated accent color */
+.card-name,
+.card-subtitle,
+.card-role,
+.card-archetype {
+  color: var(--color-accent);
+  margin: 0;
+}
+
+.card-name {
+  font-size: 26px;
+  font-weight: 700;
+  font-style: italic;
+  line-height: 1;
+  text-align: left;
+}
+
+.card-subtitle,
+.card-archetype {
+  font-size: 13px;
+  font-style: italic;
+}
+
+.card-archetype {
+  font-size: 12px;
+  margin-bottom: 0.25rem;
+}
+
+.card-role {
+  font-size: 13px;
+  font-weight: 600;
+  margin-top: 0.25rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.card-desc {
+  font-size: 12px;
+  font-style: italic;
+  color: var(--color-primary);
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Fondness & Leaning sections - shared styles */
+.fondness-section,
+.leaning-bar {
+  margin-top: 0.75rem;
+}
+
+.fondness-section .bar-container {
+  height: 20px;
+}
+
+.fondness-label,
+.leaning-label {
+  font-size: 11px;
+  color: var(--color-primary);
+  text-transform: uppercase;
+  margin: 0 0 0.5rem 0;
+}
+
+.leaning-label {
+  text-align: center;
+}
+
+/* Leaning bar - DOS-style with center marker */
+.leaning-bar-row {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: var(--spacing-sm);
+  align-items: center;
+}
+
+.leaning-end-label {
+  font-size: 10px;
+  color: var(--color-muted);
+  text-transform: uppercase;
+  min-width: 50px;
+}
+
+#leaning-left-label {
+  text-align: right;
+}
+
+#leaning-right-label {
+  text-align: left;
+}
+
+.leaning-track {
+  display: grid;
+  grid-template-columns: 1fr 2px 1fr;
+  height: 20px;
+  border: var(--border-primary);
+  background: var(--color-bg);
+  position: relative;
+}
+
+.leaning-center-marker {
+  background: var(--color-primary);
+  width: 2px;
+  height: 100%;
+}
+
+.leaning-fill-left {
+  background: var(--color-accent);
+  justify-self: end;
+  height: 100%;
+  width: 0%;
+}
+
+.leaning-fill-right {
+  background: var(--color-accent);
+  justify-self: start;
+  height: 100%;
+  width: 0%;
+}
+
+/* Ending number small label */
+.ending-number {
+  font-size: 12px;
+  color: var(--color-accent);
+  margin-top: 0.25rem;
+  font-style: italic;
+}
+
+/* ===== Ending Scorecard Slide ===== */
+.ending-hero {
+  font-size: 48px;
+  font-weight: 700;
+  color: var(--color-accent);
+  margin: 0 0 var(--spacing-xl) 0;
+  letter-spacing: 0.08em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.ending-container {
+  display: grid;
+  grid-template-columns: 1fr 2px 1fr;
+  gap: var(--spacing-xl);
+  border: var(--border-primary);
+  padding: var(--spacing-xl);
+  margin-bottom: var(--spacing-xl);
+  background: var(--color-bg);
+}
+
+.ending-section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.ending-section .section-header {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--color-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  text-align: center;
+  padding-bottom: var(--spacing-sm);
+  border-bottom: var(--border-primary);
+}
+
+/* Scorecard Content */
+.scorecard-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.scorecard-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.scorecard-list li {
+  color: var(--color-primary);
+  font-size: 14px;
+  padding: var(--spacing-sm) var(--spacing-md);
+  border: var(--border-primary);
+  background: var(--color-bg);
+  display: flex;
+  align-items: center;
+  line-height: 1.4;
+}
+
+.scorecard-list li::before {
+  content: "▸";
+  color: var(--color-accent);
+  font-weight: bold;
+  margin-right: var(--spacing-sm);
+  flex-shrink: 0;
+}
+
+.grade-display {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-lg) 0;
+  border: var(--border-primary);
+  background: var(--color-bg);
+}
+
+.grade-label {
+  font-size: 12px;
+  color: var(--color-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.grade-value {
+  font-size: 64px;
+  font-weight: 800;
+  color: var(--color-accent);
+  line-height: 1;
+  text-shadow: 0 0 8px var(--color-accent);
+}
+
+/* Stats Content */
+.stats-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.stats-display {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--color-accent);
+  background: transparent;
+  border: none;
+  padding: var(--spacing-md);
+  margin: 0;
+  white-space: pre-wrap;
+  line-height: 1.8;
+  border: var(--border-primary);
+}
+
+.ending-divider {
+  width: 2px;
+  background: var(--color-primary);
+  align-self: stretch;
+}
+
+/* ===== IRC Chat Window (Ending Slide 2) ===== */
+.irc-window {
+  border: var(--border-primary);
+  background: var(--color-bg);
+  display: flex;
+  flex-direction: column;
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.irc-header {
+  border-bottom: var(--border-primary);
+  padding: var(--spacing-md);
+  background: var(--color-bg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+.irc-channel-info {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+
+.irc-channel-name {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--color-accent);
+  text-transform: lowercase;
+  letter-spacing: 0.02em;
+}
+
+.irc-status {
+  font-size: 11px;
+  color: var(--color-primary);
+  text-transform: uppercase;
+  opacity: 0.8;
+}
+
+.irc-topic {
+  font-size: 12px;
+  color: var(--color-muted);
+  font-style: italic;
+  padding-left: var(--spacing-xs);
+}
+
+.irc-log {
+  padding: var(--spacing-lg) var(--spacing-md);
+  min-height: 320px;
+  max-height: 400px;
+  overflow-y: auto;
+  background: var(--color-bg);
+  font-family: var(--font-mono);
+  font-size: 13px;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+/* IRC log scrollbar styling */
+.irc-log::-webkit-scrollbar {
+  width: 8px;
+}
+
+.irc-log::-webkit-scrollbar-track {
+  background-color: var(--color-bg);
+  border-left: 1px solid var(--color-primary);
+}
+
+.irc-log::-webkit-scrollbar-thumb {
+  background-color: var(--color-accent);
+  border-left: 1px solid var(--color-primary);
+}
+
+.irc-log::-webkit-scrollbar-thumb:hover {
+  background-color: var(--color-primary);
+}
+
+.irc-message {
+  display: flex;
+  gap: var(--spacing-sm);
+  align-items: baseline;
+}
+
+.irc-timestamp {
+  color: var(--color-muted);
+  font-size: 11px;
+  flex-shrink: 0;
+  min-width: 45px;
+}
+
+.irc-nick {
+  font-weight: 600;
+  flex-shrink: 0;
+  min-width: 100px;
+}
+
+.irc-nick.you {
+  color: #b8ff5c; /* accent yellow-green */
+}
+
+.irc-nick.friend {
+  color: #00d9ff; /* cyan */
+}
+
+.irc-nick.roommate {
+  color: #ff9500; /* orange */
+}
+
+.irc-text {
+  color: var(--color-primary);
+  word-wrap: break-word;
+  flex: 1;
+}
+
+.irc-input-bar {
+  border-top: var(--border-primary);
+  padding: var(--spacing-md);
+  background: rgba(0, 25, 0, 0.3);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  font-family: var(--font-mono);
+  font-size: 13px;
+}
+
+.irc-prompt {
+  color: var(--color-accent);
+  font-weight: 600;
+}
+
+.irc-input-text {
+  color: var(--color-primary);
+  flex: 1;
+}
+
+.irc-cursor {
+  color: var(--color-accent);
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+/* Mobile Responsive */
+@media (max-width: 600px) {
+  .ending-hero {
+    font-size: 32px;
+    margin-bottom: var(--spacing-lg);
+  }
+  
+  .ending-container {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+    padding: var(--spacing-md);
+  }
+  
+  .ending-divider {
+    display: none;
+  }
+  
+  .grade-value {
+    font-size: 48px;
+  }
+  
+  .stats-display {
+    font-size: 12px;
+    padding: var(--spacing-sm);
+  }
+  
+  /* IRC window mobile adjustments */
+  .irc-header {
+    padding: var(--spacing-sm);
+  }
+  
+  .irc-channel-name {
+    font-size: 14px;
+  }
+  
+  .irc-topic {
+    font-size: 11px;
+  }
+  
+  .irc-log {
+    padding: var(--spacing-md) var(--spacing-sm);
+    min-height: 280px;
+    max-height: 350px;
+    font-size: 12px;
+  }
+  
+  .irc-timestamp {
+    min-width: 40px;
+    font-size: 10px;
+  }
+  
+  .irc-nick {
+    min-width: 80px;
+    font-size: 12px;
+  }
+  
+  .irc-input-bar {
+    padding: var(--spacing-sm);
+    font-size: 12px;
+  }
+}
+
+/* Mobile: stack sections */
+@media (max-width: 600px) {
+  .social-grid {
+    flex-direction: column;
+  }
+  
+  .social-divider {
+    width: 100%;
+    height: 2px;
+  }
+}
+
+/* ===== Tooltips ===== */
+.tooltip-wrapper {
+  position: relative;
+  display: inline-block;
+  cursor: help;
+}
+
+.tooltip-wrapper .tooltip-text {
+  visibility: hidden;
+  opacity: 0;
+  width: 220px;
+  max-width: 90vw;
+  background-color: var(--color-bg);
+  color: var(--color-primary);
+  text-align: left;
+  border: var(--border-primary);
+  padding: var(--spacing-sm);
+  position: absolute;
+  z-index: 100;
+  bottom: calc(100% + var(--spacing-xs));
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 11px;
+  font-style: normal;
+  line-height: 1.4;
+  transition: opacity var(--transition-speed) ease;
+  text-transform: none;
+}
+
+.tooltip-wrapper .tooltip-text::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: var(--color-primary) transparent transparent transparent;
+}
+
+.tooltip-wrapper:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Mobile fallback: flip tooltip to bottom on small screens */
+@media (max-height: 400px) {
+  .tooltip-wrapper .tooltip-text {
+    bottom: auto;
+    top: calc(100% + var(--spacing-xs));
+  }
+  
+  .tooltip-wrapper .tooltip-text::after {
+    top: auto;
+    bottom: 100%;
+    border-color: transparent transparent var(--color-primary) transparent;
+  }
 }

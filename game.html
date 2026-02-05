@@ -11,9 +11,10 @@
 </head>
 
 <body>
-  <header>
-    <h1>THE EMPLOYMENT TRAIL</h1>
-  </header>
+    <header class="site-header">
+      <h1 class="header-text">THE EMPLOYMENT TRAIL</h1>
+      <img class="header-image" src="assets/TET Banner.png" alt="The Employment Trail" />
+    </header>
 
   <main id="game-container">
     <!-- Slide 0 – Scenario -->
@@ -32,7 +33,7 @@
       <h2>DISCLAIMER</h2>
       <h3>It's all just one big joke.</h3>
       <p>This game is a satirical depiction of post-COVID college life, career anxiety, and the evolving nature/grind of STEM careers in this day and age. I decide to explore this from the lens of a narcissistic and self-absorbed student saddled with a deep sense of dread.</p>
-      <p>While the tone is biting, nihilistic, and cynical, this is only for artistic flavor. The writing and events depicted within are entirely fictional and do NOT reflect my personal views of any company, industry, or educational system.</p>
+      <p>While the tone is biting, nihilistic, and cynical, this is only for artistic flavor. The writing and events depicted within are entirely fictional and do NOT reflect my personal views of any company, university, industry, or educational system.</p>
       <button onclick="startGame()" class="button">Start Game</button>
     </div>
 
@@ -41,7 +42,11 @@
       <h2 id="question-title">Question</h2>
       <p id="question-text">Loading...</p>
       <div id="options-container"></div>
-    <button onclick="submitOption()" class="button">Submit</button>
+      <div class="question-buttons">
+        <button onclick="showStatusScreen()" class="button">Status</button>
+        <button onclick="submitOption()" class="button"><u>Submit</u></button>
+        <button onclick="showSocialScreen()" class="button">Social</button>
+      </div>
     </div>
 
     <!-- Slide 3 – Feedback -->
@@ -50,25 +55,250 @@
       <p id="feedback-text">Feedback goes here...</p>
       <button onclick="nextQuestion()" class="button">Next</button>
     </div>
-    <!-- Ending Slide 1 – Display ending message with a Next button -->
+
+    <!-- Status Report Screen -->
+    <div class="slide hidden" id="status-screen">
+      <h2>YOUR STATUS</h2>
+
+      <!-- Three-column header grid -->
+      <div class="status-header-grid">
+        <div class="status-col">
+          <span class="status-label">YOU ARE A:</span>
+          <span class="status-value" id="status-school">Loading...</span>
+        </div>
+        <div class="status-col">
+          <span class="status-label">IT IS:</span>
+          <span class="status-value" id="status-term">Loading...</span>
+        </div>
+        <div class="status-col">
+          <span class="status-label">COMPANY FOCUS:</span>
+          <span class="status-value" id="status-company">Loading...</span>
+        </div>
+      </div>
+
+      <!-- Stat bars -->
+      <div class="stat-bars">
+        <!-- Social Status -->
+        <div class="stat-row">
+          <span class="stat-name"><span class="tooltip-wrapper">CLOUT<span class="tooltip-text">Your ability to network, charm recruiters, and navigate social dynamics.</span></span>:</span>
+          <span class="stat-tier" id="status-social">Loading...</span>
+        </div>
+        <div class="bar-row">
+          <div class="art-placeholder" data-asset="clout-left">?</div>
+          <div class="bar-container">
+            <div class="bar-fill" id="bar-social"></div>
+          </div>
+          <div class="art-placeholder" data-asset="clout-right">?</div>
+        </div>
+
+        <!-- Academic Skill -->
+        <div class="stat-row">
+          <span class="stat-name"><span class="tooltip-wrapper">BRAINS<span class="tooltip-text">Your technical depth, problem-solving ability, and academic reputation.</span></span>:</span>
+          <span class="stat-tier" id="status-academics">Loading...</span>
+        </div>
+        <div class="bar-row">
+          <div class="art-placeholder" data-asset="brains-left">?</div>
+          <div class="bar-container">
+            <div class="bar-fill" id="bar-academics"></div>
+          </div>
+          <div class="art-placeholder" data-asset="brains-right">?</div>
+        </div>
+
+        <!-- Mental Health (Burnout inverted) -->
+        <div class="stat-row">
+          <span class="stat-name"><span class="tooltip-wrapper">MOOD<span class="tooltip-text">The weight you carry. High stress closes off options and clouds judgment.</span></span>:</span>
+          <span class="stat-tier" id="status-burnout">Loading...</span>
+        </div>
+        <div class="bar-row">
+          <div class="art-placeholder" data-asset="mood-left">?</div>
+          <div class="bar-container">
+            <div class="bar-fill" id="bar-burnout"></div>
+          </div>
+          <div class="art-placeholder" data-asset="mood-right">?</div>
+        </div>
+      </div>
+
+      <button onclick="backToQuestion()" class="button">Back</button>
+    </div>
+
+    <!-- Social / Your Friends Screen -->
+    <div class="slide hidden" id="social-screen">
+      <h2>YOUR CIRCLE</h2>
+
+      <div class="social-grid">
+        <!-- Romance Section -->
+        <div class="social-section">
+          <h3 class="section-header">ROMANCE</h3>
+          
+          <!-- Romance state (data-driven) -->
+          <div id="romance-active" class="character-card">
+            <div class="card-portrait" id="girlfriend-portrait" data-asset="girlfriend">?</div>
+            <div class="card-content">
+              <h4 class="card-name"><span class="tooltip-wrapper"><span id="girlfriend-name">Loading...</span><span class="tooltip-text" id="girlfriend-tooltip">Loading...</span></span></h4>
+              <p class="card-role" id="girlfriend-subtitle"><u>Loading...</u></p>
+              <p class="card-archetype">
+                <u id="girlfriend-archetype">Loading...</u>
+              </p>
+              <p class="card-desc" id="girlfriend-bio">Loading...</p>
+              <!-- Fondness bar -->
+              <div class="fondness-section">
+                <p class="fondness-label"><span class="tooltip-wrapper">THEY THINK<span class="tooltip-text">How deeply someone cares about you. Shared futures require more than surface-level attraction.</span></span>: <span id="fondness-text">Loading...</span></p>
+                <div class="bar-container small">
+                  <div class="bar-fill" id="bar-fondness"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Divider -->
+        <div class="social-divider"></div>
+
+        <!-- Friendships Section -->
+        <div class="social-section">
+          <h3 class="section-header">FRIENDSHIPS</h3>
+
+          <!-- Best Friend -->
+          <div class="character-card compact">
+            <div class="card-portrait" id="bestfriend-portrait" data-asset="bestfriend">?</div>
+            <div class="card-content split">
+              <div class="card-left">
+                <h4 class="card-name"><span class="tooltip-wrapper"><span id="bestfriend-name">Loading...</span><span class="tooltip-text" id="bestfriend-tooltip">Loading...</span></span></h4>
+                <p class="card-role">BEST FRIEND</p>
+              </div>
+              <div class="card-right">
+                <p class="card-archetype">
+                  <u id="bestfriend-archetype">Loading...</u>
+                </p>
+                <p class="card-desc" id="bestfriend-desc">Loading...</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Roommate -->
+          <div class="character-card compact">
+            <div class="card-portrait" id="roommate-portrait" data-asset="roommate">?</div>
+            <div class="card-content split">
+              <div class="card-left">
+                <h4 class="card-name"><span class="tooltip-wrapper"><span id="roommate-name">Loading...</span><span class="tooltip-text" id="roommate-tooltip">Loading...</span></span></h4>
+                <p class="card-role">ROOMMATE</p>
+              </div>
+              <div class="card-right">
+                <p class="card-archetype">
+                  <u id="roommate-archetype">Loading...</u>
+                </p>
+                <p class="card-desc" id="roommate-desc">Loading...</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Leaning Towards -->
+          <div class="leaning-bar">
+            <p class="leaning-label"><span class="tooltip-wrapper">LEANING TOWARDS:<span class="tooltip-text">Who you're closer to. Relationships are fragile, and neglect can break them.</span></span> <span id="leaning-text">Neutral</span></p>
+            <div class="leaning-bar-row">
+              <span class="leaning-end-label" id="leaning-left-label">Best Friend</span>
+              <div class="bar-container small leaning-track">
+                <div class="bar-fill leaning-fill-left" id="bar-leaning-left"></div>
+                <div class="leaning-center-marker"></div>
+                <div class="bar-fill leaning-fill-right" id="bar-leaning-right"></div>
+              </div>
+              <span class="leaning-end-label" id="leaning-right-label">Roommate</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <button onclick="backToQuestion()" class="button">Back</button>
+    </div>
+
+    <!-- Ending Slide 1 – Narrative/textual ending -->
     <div class="slide hidden" id="ending-slide-1">
       <h2 id="ending-title">Ending</h2>
       <h3 id="ending-subtitle">Your ending subtitle goes here...</h3>
+      <p id="ending-number" class="ending-number" style="display:none;">Ending 01/31</p>
       <p id="ending-text">Your ending message goes here...</p>
       <button onclick="nextEndingSlide()" class="button">Next</button>
     </div>
 
-    <!-- Ending Slide 2 – Final ending message with a Restart button -->
+    <!-- Ending Slide 2 – Slice-of-life / final message -->
     <div class="slide hidden" id="ending-slide-2">
-      <h2 id="final-title">The End</h2>
-      <p id="final-text">Additional ending text or final thoughts go here...</p>
-      <button onclick="switchSlide('ending-slide-3')" class="button">Next</button>
+      <div class="irc-window">
+        <!-- IRC Header -->
+        <div class="irc-header">
+          <div class="irc-channel-info">
+            <span class="irc-channel-name">#groupchat</span>
+            <span class="irc-status">● Connected</span>
+          </div>
+          <div class="irc-topic">three stooges</div>
+        </div>
+        
+        <!-- IRC Message Log -->
+        <div class="irc-log" id="irc-message-log">
+          <!-- Messages will be populated by JavaScript -->
+        </div>
+        
+        <!-- IRC Input Bar (faux) -->
+        <div class="irc-input-bar">
+          <span class="irc-prompt">&gt;</span>
+          <span class="irc-input-text"></span>
+          <span class="irc-cursor">█</span>
+        </div>
+      </div>
+      <button onclick="nextEndingSlide()" class="button" style="margin-top: 1.5rem;">Next</button>
     </div>
 
-    <!-- Ending Slide 3 – Custom ending message with a Home button -->
+    <!-- Ending Slide 3 – Scorecard and stats -->
     <div class="slide hidden" id="ending-slide-3">
+      <h2 class="ending-hero">FINAL REPORT</h2>
+      
+      <div class="ending-container">
+        <!-- Scorecard Section -->
+        <div class="ending-section">
+          <div class="section-header">SCORECARD</div>
+          <div class="scorecard-content">
+            <ul id="ending-bullets" class="scorecard-list"></ul>
+            
+            <div class="grade-display">
+              <span class="grade-label">FINAL GRADE</span>
+              <span id="ending-grade" class="grade-value">A</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="ending-divider"></div>
+
+        <!-- Stats Section -->
+        <div class="ending-section">
+          <div class="section-header">GAME STATS</div>
+          <div class="stats-content">
+            <pre id="ending-stats" class="stats-display"></pre>
+          </div>
+        </div>
+      </div>
+
+      <button onclick="nextEndingSlide()" class="button">Continue</button>
+    </div>
+
+    <!-- Ending Slide 4 – Custom ending message with a Home button -->
+    <div class="slide hidden" id="ending-slide-4">
       <h2 id="thanks-title">Thanks for Playing</h2>
-      <p id="thanks-text">I wrote this game over the course of two weeks while I was in lecture. The scripting was finished during an exam week on my campus.</p>
+      <p>I originally wrote this game over the course of two weeks while I was in lecture. The scripting was finished during an exam week on my campus.</p>
+
+      <p>As time went on, I felt like this was a bit underbaked, and have been tinkering with it ever since.</p>
+
+      <p>Please don’t infer anything about my perspectives from this game, this is merely a work of fiction! Furthermore, I’m neither a CS nor DS student so this is an outside-in perspective on the SWE market as it stands. And yes, I grossly overestimate your chances of getting a job. Makes it more fun.</p>
+
+      <p>I hope you enjoyed <b>The Employment Trail!</b></p>
+      <h3>Check out my other projects (or send me hate mail) on my portfolio <a href = "https://notjinon.github.io">here</a>.</h3>
+      <button onclick="restartGame()" class="button">Home</button>
+    </div>
+
+    <!-- Ending Slide 4 – Custom ending message with a Home button -->
+    <div class="slide hidden" id="ending-slide-4">
+      <h2 id="thanks-title">Thanks for Playing</h2>
+      <p>I originally wrote this game over the course of two weeks while I was in lecture. The scripting was finished during an exam week on my campus.</p>
+      
+      <p>As time went on, I felt like this was a bit underbaked, and have been tinkering with it ever since.</p>
 
       <p>Please don’t infer anything about my perspectives from this game, this is merely a work of fiction! Furthermore, I’m neither a CS nor DS student so this is an outside-in perspective on the SWE market as it stands. And yes, I grossly overestimate your chances of getting a job. Makes it more fun.</p>
         
@@ -80,10 +310,13 @@
   </main>
 
   <footer>
-    The Employment Trail -- V. 1.0 - "Resume Review" <br>
-    Designed, Written, and Built by <a href="https://notjinon.github.io" target="_blank">Jino Nicolas</a> · 2025
+    The Employment Trail -- V. 2.0 - "Social Cues" DevBranch <br>
+    Designed, Written, and Built by <a href="https://notjinon.github.io" target="_blank">Jino Nicolas</a> · 2026
   </footer>
 
   <script src="gamelogic.js"></script>
+  <!-- 100% privacy-first analytics -->
+  <script async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+
 </body>
 </html>
