@@ -32,6 +32,7 @@
     "9": {
       "name": "NOBODY",
       "subtitle": "You and the Void",
+      "portrait": "assets/nobody.png",
       "bio": "You had your shot. You blew it. You pray they'll come back.\nThey won't."
     }
   },

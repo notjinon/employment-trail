@@ -68,8 +68,8 @@ const BRANCH_RULES = {
   110000: (g) => g.academic > 3 ? 110100 : 110200,
   113000: (g) => {
     // Leaning checkpoint - if too far in either direction, a friend leaves
-    if (g.leaning >= 4) return 113300; // Tara leaves (too Chen-aligned)
-    if (g.leaning <= -4) return 113400; // Chen leaves (too Tara-aligned)
+    if (g.leaning >= 3) return 113300; // Tara leaves (too Chen-aligned)
+    if (g.leaning <= -3) return 113400; // Chen leaves (too Tara-aligned)
     // Normal dinner variants based on social
     return g.social >= 5 ? 113100 : 113200;
   },
@@ -82,7 +82,7 @@ const BRANCH_RULES = {
   },
   117000: (g) => {
     // Failstate skips interview prep - go to failstate Q17
-    const hasGF = g.girlfriendId >= 1 && g.girlfriendId <= 8;
+    const hasGF = g.girlfriendId >= 1 && g.girlfriendId <= 8 && g.girlfriendId !== 9;
     const fondEnough = g.fondness >= 10 && hasGF;
     if (g.failstate) {
       if (fondEnough) return 117500; // Failstate with girlfriend
@@ -95,7 +95,7 @@ const BRANCH_RULES = {
   },
   118000: (g) => {
     // Failstate skips interview - go to failstate Q18
-    const hasGF = g.girlfriendId >= 1 && g.girlfriendId <= 8;
+    const hasGF = g.girlfriendId >= 1 && g.girlfriendId <= 8 && g.girlfriendId !== 9;
     const fondEnough = g.fondness >= 10 && hasGF;
     if (g.failstate) {
       if (fondEnough) return 118500; // Failstate with girlfriend
@@ -115,7 +115,7 @@ const BRANCH_RULES = {
   },
   121000: (g) => {
     // Failstate gets different Q21 variants
-    const hasGF = g.girlfriendId >= 1 && g.girlfriendId <= 8;
+    const hasGF = g.girlfriendId >= 1 && g.girlfriendId <= 8 && g.girlfriendId !== 9;
     const fondEnough = g.fondness >= 10 && hasGF;
     if (g.failstate) {
       if (fondEnough && g.academic >= 5) return 121500; // gf + research option
@@ -189,12 +189,12 @@ const ENDING_MAP = {
   // Mid-major tier endings
   5: 214, 6: 210, 7: 212, 8: 216,
   // Weak tier endings
-  9: 222, 10: 226, 11: 220, 12: 224,
+  9: 222, 10: 218, 11: 220, 12: 224,
   // Fondness variants (partner Yes)
   fondness: {
     1: 205, 2: 201, 3: 203, 4: 207,
     5: 213, 6: 209, 7: 211, 8: 215,
-    9: 221, 10: 225, 11: 219, 12: 223
+    9: 221, 10: 217, 11: 219, 12: 223
   }
 };
 
@@ -365,30 +365,44 @@ function showDebugMenu() {
 
 function handleNumberKeyPress(event) {
   // Check if we're on the question slide
-  if (document.getElementById("question-slide").classList.contains("hidden")) {
-    return;
-  }
-  
-  // Handle Enter key as submit
-  if (event.key === "Enter") {
-    submitOption();
-    event.preventDefault();
-    return;
-  }
-  
-  // Check if key is 1-9
-  const key = event.key;
-  if (!/^[1-9]$/.test(key)) {
-    return;
-  }
-  
-  const optionIndex = parseInt(key) - 1;
-  const radioButtons = document.querySelectorAll('input[name="question"]');
-  
-  if (optionIndex < radioButtons.length) {
-    radioButtons[optionIndex].checked = true;
-    radioButtons[optionIndex].focus();
-    event.preventDefault();
+  if (!document.getElementById("question-slide").classList.contains("hidden")) {
+    // Handle Enter key as submit
+    if (event.key === "Enter") {
+      submitOption();
+      event.preventDefault();
+      return;
+    }
+    
+    // Check if key is 1-9
+    const key = event.key;
+    if (!/^[1-9]$/.test(key)) {
+      return;
+    }
+    
+    const optionIndex = parseInt(key) - 1;
+    const radioButtons = document.querySelectorAll('input[name="question"]');
+    
+    if (optionIndex < radioButtons.length) {
+      radioButtons[optionIndex].checked = true;
+      radioButtons[optionIndex].focus();
+      event.preventDefault();
+    }
+  } else if (!document.getElementById("feedback-slide").classList.contains("hidden")) {
+    // Handle Enter key as next on feedback slide
+    if (event.key === "Enter") {
+      nextQuestion();
+      event.preventDefault();
+      return;
+    }
+  } else if (!document.getElementById("ending-slide-1").classList.contains("hidden") ||
+             !document.getElementById("ending-slide-2").classList.contains("hidden") ||
+             !document.getElementById("ending-slide-3").classList.contains("hidden")) {
+    // Handle Enter key as next on ending slides
+    if (event.key === "Enter") {
+      nextEndingSlide();
+      event.preventDefault();
+      return;
+    }
   }
 }
 
@@ -524,7 +538,7 @@ function handleFinalEvaluation() {
 
   if (passBoutique || passMidMajor || passWeak) {
     const base = ENDING_MAP[company];
-    const hasGF = gameState.girlfriendId >= 1 && gameState.girlfriendId <= 8;
+    const hasGF = gameState.girlfriendId >= 1 && gameState.girlfriendId <= 8 && gameState.girlfriendId !== 9;
     gameState.ending = (fondness >= 10 && hasGF) ? ENDING_MAP.fondness[company] : base;
     currentResponseId = 120101;
   } else {
@@ -534,9 +548,9 @@ function handleFinalEvaluation() {
 
 function handleFallbackEndings(optKey) {
   const endingPairs = {
-    // Local internship options -> TechFlow: Partner No (218), Partner Yes (217)
-    121101: { base: 218, fondness: 217 },
-    121201: { base: 218, fondness: 217 },
+    // Local internship options -> Municipal: Partner No (226), Partner Yes (225)
+    121101: { base: 226, fondness: 225 },
+    121201: { base: 226, fondness: 225 },
     // Research options -> Paid Research: Partner No (228), Partner Yes (227)
     121102: { base: 228, fondness: 227 },
     121301: { base: 228, fondness: 227 }
@@ -545,12 +559,12 @@ function handleFallbackEndings(optKey) {
   if (endingPairs[optKey]) {
     const pair = endingPairs[optKey];
     currentResponseId = [121101, 121201].includes(optKey) ? 121101 : 121102;
-    const hasGF = gameState.girlfriendId >= 1 && gameState.girlfriendId <= 8;
+    const hasGF = gameState.girlfriendId >= 1 && gameState.girlfriendId <= 8 && gameState.girlfriendId !== 9;
     gameState.ending = (gameState.fondness >= 10 && hasGF) ? pair.fondness : pair.base;
   } else {
     currentResponseId = 121103;
     // Fallback: breathing room (with partner => Fresh Breaths 229) else canonical Dreams Deferred (18)
-    const hasGF = gameState.girlfriendId >= 1 && gameState.girlfriendId <= 8;
+    const hasGF = gameState.girlfriendId >= 1 && gameState.girlfriendId <= 8 && gameState.girlfriendId !== 9;
     gameState.ending = (gameState.fondness >= 10 && hasGF) ? 229 : 18;
   }
 }
@@ -764,7 +778,7 @@ function populateSocial() {
 
   // Leaning bar - center-out bidirectional
   const leaning = gameState.leaning;
-  const maxLeaning = 4;
+  const maxLeaning = 3;
   const clampedLeaning = Math.max(-maxLeaning, Math.min(maxLeaning, leaning));
   
   // Update leaning bar end labels with actual character names
@@ -783,8 +797,9 @@ function populateSocial() {
   }
   
   // Calculate fill percentages (50% = full bar on one side)
-  const leftPercent = clampedLeaning < 0 ? (Math.abs(clampedLeaning) / maxLeaning) * 50 : 0;
-  const rightPercent = clampedLeaning > 0 ? (clampedLeaning / maxLeaning) * 50 : 0;
+  // Calculate fill percentages (100% = full bar on one side)
+  const leftPercent = clampedLeaning < 0 ? (Math.abs(clampedLeaning) / maxLeaning) * 100 : 0;
+  const rightPercent = clampedLeaning > 0 ? (clampedLeaning / maxLeaning) * 100 : 0;
   
   if (DOM.barLeaningLeft) DOM.barLeaningLeft.style.width = leftPercent + "%";
   if (DOM.barLeaningRight) DOM.barLeaningRight.style.width = rightPercent + "%";
@@ -829,8 +844,8 @@ function nextEndingSlide() {
   const s3Visible = !document.getElementById('ending-slide-3').classList.contains('hidden');
 
   if (s1Visible) {
-    // Move to slice-of-life slide (s2)
-    DOM.finalText.innerText = currentEnding.s2 || '';
+    // Move to slice-of-life slide (s2) - render as IRC chat
+    renderIRCMessages(currentEnding.s2 || '');
     switchSlide('ending-slide-2');
     return;
   }
@@ -895,6 +910,68 @@ function computeGrade(ending, g) {
   return { letter, score };
 }
 
+// Parse and render IRC-style chat messages from s2 text
+function renderIRCMessages(s2Text) {
+  const logContainer = document.getElementById('irc-message-log');
+  if (!logContainer) return;
+  
+  logContainer.innerHTML = '';
+  
+  // Split by lines
+  const lines = s2Text.split('\n').filter(line => line.trim());
+  
+  // Generate random base time (23:XX)
+  let minutes = Math.floor(Math.random() * 60);
+  
+  lines.forEach((line, index) => {
+    // Parse "Speaker: message" format
+    const match = line.match(/^([^:]+):\s*(.+)$/);
+    if (!match) return;
+    
+    const speaker = match[1].trim();
+    const message = match[2].trim();
+    
+    // Generate timestamp (increment by 1-3 minutes per message)
+    const timestamp = `23:${String(minutes).padStart(2, '0')}`;
+    minutes = (minutes + Math.floor(Math.random() * 3) + 1) % 60;
+    
+    // Determine nick class
+    let nickClass = '';
+    if (speaker.toLowerCase() === 'you') {
+      nickClass = 'you';
+    } else if (speaker.toLowerCase().includes('friend')) {
+      nickClass = 'friend';
+    } else if (speaker.toLowerCase().includes('roommate')) {
+      nickClass = 'roommate';
+    }
+    
+    // Create message element
+    const msgDiv = document.createElement('div');
+    msgDiv.className = 'irc-message';
+    
+    const timestampSpan = document.createElement('span');
+    timestampSpan.className = 'irc-timestamp';
+    timestampSpan.textContent = timestamp;
+    
+    const nickSpan = document.createElement('span');
+    nickSpan.className = `irc-nick ${nickClass}`;
+    nickSpan.textContent = `<${speaker}>`;
+    
+    const textSpan = document.createElement('span');
+    textSpan.className = 'irc-text';
+    textSpan.textContent = message;
+    
+    msgDiv.appendChild(timestampSpan);
+    msgDiv.appendChild(nickSpan);
+    msgDiv.appendChild(textSpan);
+    
+    logContainer.appendChild(msgDiv);
+  });
+  
+  // Scroll to bottom
+  logContainer.scrollTop = logContainer.scrollHeight;
+}
+
 function renderEndingDetails(ending, g) {
   const bullets = [];
 
@@ -935,9 +1012,9 @@ function renderEndingDetails(ending, g) {
   // Conflict detection bullet
   // Conflict bonus only if BOTH best friend and roommate codes are 1
   if (g.bestFriendId === 1 && g.roommateId === 1) {
-    bullets[2] = 'No conflict with friends (+5)';
+    bullets[2] = 'Both friends okay (+5)';
   } else {
-    bullets[2] = 'Conflict with friends (-0)';
+    bullets[2] = 'One friend lost (-0)';
   }
 
   if (DOM.endingBullets) {

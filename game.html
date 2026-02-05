@@ -142,7 +142,7 @@
               <p class="card-desc" id="girlfriend-bio">Loading...</p>
               <!-- Fondness bar -->
               <div class="fondness-section">
-                <p class="fondness-label">THEY THINK: <span class="tooltip-wrapper"><span id="fondness-text">Loading...</span><span class="tooltip-text">How deeply someone cares about you. Shared futures require more than surface-level attraction.</span></span></p>
+                <p class="fondness-label"><span class="tooltip-wrapper">THEY THINK<span class="tooltip-text">How deeply someone cares about you. Shared futures require more than surface-level attraction.</span></span>: <span id="fondness-text">Loading...</span></p>
                 <div class="bar-container small">
                   <div class="bar-fill" id="bar-fondness"></div>
                 </div>
@@ -222,9 +222,29 @@
 
     <!-- Ending Slide 2 – Slice-of-life / final message -->
     <div class="slide hidden" id="ending-slide-2">
-      <h2 id="final-title">The End</h2>
-      <p id="final-text">Additional ending text or final thoughts go here...</p>
-      <button onclick="nextEndingSlide()" class="button">Next</button>
+      <div class="irc-window">
+        <!-- IRC Header -->
+        <div class="irc-header">
+          <div class="irc-channel-info">
+            <span class="irc-channel-name">#groupchat</span>
+            <span class="irc-status">● Connected</span>
+          </div>
+          <div class="irc-topic">three stooges</div>
+        </div>
+        
+        <!-- IRC Message Log -->
+        <div class="irc-log" id="irc-message-log">
+          <!-- Messages will be populated by JavaScript -->
+        </div>
+        
+        <!-- IRC Input Bar (faux) -->
+        <div class="irc-input-bar">
+          <span class="irc-prompt">&gt;</span>
+          <span class="irc-input-text"></span>
+          <span class="irc-cursor">█</span>
+        </div>
+      </div>
+      <button onclick="nextEndingSlide()" class="button" style="margin-top: 1.5rem;">Next</button>
     </div>
 
     <!-- Ending Slide 3 – Scorecard and stats -->
@@ -295,5 +315,8 @@
   </footer>
 
   <script src="gamelogic.js"></script>
+  <!-- 100% privacy-first analytics -->
+  <script async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+
 </body>
 </html>

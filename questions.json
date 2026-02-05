@@ -265,7 +265,7 @@
       ]
     },
     {      "key": 113300,
-      "question": "It's supposed to be dinner. But when you arrive at the pizza place, something's off. Your roommate is there. Your other friends are there. But Tara isn't.\n\nYou text them. 'Where are you?'\n\nThe reply comes quick: 'I can't do this anymore. You've changed. You don't need me—you've made that clear.'\n\nNash—some guy from your stats class—slides into the seat next to you. 'Hey, I heard there was an open spot.' He's nice enough. But he's not Tara.",
+      "question": "It's supposed to be dinner. But Tara isn't there.\n\n You text them. 'Where are you?'\n\n 'I can't do this anymore. You've changed.'\n\n Nash slides into the empty seat. He's nice enough. But he's not Tara.",
       "options": [
         {
           "option": "…they're right. I've been cold. But I can't undo it now.",
@@ -275,7 +275,7 @@
     },
     {
       "key": 113400,
-      "question": "It's supposed to be dinner. But when you arrive at the pizza place, something's off. Your best friend is there. Your other friends are there. But Chen isn't.\n\nYou text them. 'Bro where are you?'\n\nThe reply comes an hour later: 'Moved my stuff out. Found a single. Good luck with everything.'\n\nKevin—some dude from your floor—shows up uninvited. 'Yo, I heard you needed a new roommate.' He's loud. He's annoying. But he's there.",
+      "question": "It's supposed to be dinner. But Chen isn't there.\n\n You text them. 'Bro where are you?'\n\n 'Moved my stuff out. Found a single. Good luck.'\n\n Kevin shows up uninvited. 'Yo, I heard you needed a new roommate.' He's loud. He's annoying. But he's there.",
       "options": [
         {
           "option": "…they're right. I haven't been serious. But I can't undo it now.",
@@ -369,7 +369,7 @@
           "key": 117102
         },
         {
-          "option": "I’ll pass.",
+          "option": "Just sit here. Think. Worry. Hope.",
           "key": 117103
         }
       ]

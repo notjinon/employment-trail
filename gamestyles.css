@@ -665,6 +665,155 @@ footer {
   align-self: stretch;
 }
 
+/* ===== IRC Chat Window (Ending Slide 2) ===== */
+.irc-window {
+  border: var(--border-primary);
+  background: var(--color-bg);
+  display: flex;
+  flex-direction: column;
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.irc-header {
+  border-bottom: var(--border-primary);
+  padding: var(--spacing-md);
+  background: var(--color-bg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+.irc-channel-info {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+
+.irc-channel-name {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--color-accent);
+  text-transform: lowercase;
+  letter-spacing: 0.02em;
+}
+
+.irc-status {
+  font-size: 11px;
+  color: var(--color-primary);
+  text-transform: uppercase;
+  opacity: 0.8;
+}
+
+.irc-topic {
+  font-size: 12px;
+  color: var(--color-muted);
+  font-style: italic;
+  padding-left: var(--spacing-xs);
+}
+
+.irc-log {
+  padding: var(--spacing-lg) var(--spacing-md);
+  min-height: 320px;
+  max-height: 400px;
+  overflow-y: auto;
+  background: var(--color-bg);
+  font-family: var(--font-mono);
+  font-size: 13px;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+/* IRC log scrollbar styling */
+.irc-log::-webkit-scrollbar {
+  width: 8px;
+}
+
+.irc-log::-webkit-scrollbar-track {
+  background-color: var(--color-bg);
+  border-left: 1px solid var(--color-primary);
+}
+
+.irc-log::-webkit-scrollbar-thumb {
+  background-color: var(--color-accent);
+  border-left: 1px solid var(--color-primary);
+}
+
+.irc-log::-webkit-scrollbar-thumb:hover {
+  background-color: var(--color-primary);
+}
+
+.irc-message {
+  display: flex;
+  gap: var(--spacing-sm);
+  align-items: baseline;
+}
+
+.irc-timestamp {
+  color: var(--color-muted);
+  font-size: 11px;
+  flex-shrink: 0;
+  min-width: 45px;
+}
+
+.irc-nick {
+  font-weight: 600;
+  flex-shrink: 0;
+  min-width: 100px;
+}
+
+.irc-nick.you {
+  color: #b8ff5c; /* accent yellow-green */
+}
+
+.irc-nick.friend {
+  color: #00d9ff; /* cyan */
+}
+
+.irc-nick.roommate {
+  color: #ff9500; /* orange */
+}
+
+.irc-text {
+  color: var(--color-primary);
+  word-wrap: break-word;
+  flex: 1;
+}
+
+.irc-input-bar {
+  border-top: var(--border-primary);
+  padding: var(--spacing-md);
+  background: rgba(0, 25, 0, 0.3);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  font-family: var(--font-mono);
+  font-size: 13px;
+}
+
+.irc-prompt {
+  color: var(--color-accent);
+  font-weight: 600;
+}
+
+.irc-input-text {
+  color: var(--color-primary);
+  flex: 1;
+}
+
+.irc-cursor {
+  color: var(--color-accent);
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
 /* Mobile Responsive */
 @media (max-width: 600px) {
   .ending-hero {
@@ -689,6 +838,41 @@ footer {
   .stats-display {
     font-size: 12px;
     padding: var(--spacing-sm);
+  }
+  
+  /* IRC window mobile adjustments */
+  .irc-header {
+    padding: var(--spacing-sm);
+  }
+  
+  .irc-channel-name {
+    font-size: 14px;
+  }
+  
+  .irc-topic {
+    font-size: 11px;
+  }
+  
+  .irc-log {
+    padding: var(--spacing-md) var(--spacing-sm);
+    min-height: 280px;
+    max-height: 350px;
+    font-size: 12px;
+  }
+  
+  .irc-timestamp {
+    min-width: 40px;
+    font-size: 10px;
+  }
+  
+  .irc-nick {
+    min-width: 80px;
+    font-size: 12px;
+  }
+  
+  .irc-input-bar {
+    padding: var(--spacing-sm);
+    font-size: 12px;
   }
 }
 

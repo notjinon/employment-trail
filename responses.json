@@ -5,7 +5,8 @@
       "response": "It’s four years of studying and all-nighters. Your classmates go out and enjoy their last years at home. You don’t care. You have dreams to build.",
       "effects": {
         "academic": 3,
-        "burnout": 1
+        "burnout": 1,
+        "leaning": 1
       }
     },
     {
@@ -13,7 +14,8 @@
       "response": "It’s all so tedious. Performative. Fake smiles, handshakes, student clubs. You win HS DECA awards for being a visionary. Does that even matter?",
       "effects": {
         "social": 3,
-        "burnout": 1
+        "burnout": 1,
+        "leaning": -1
       }
     },
     {
@@ -106,10 +108,11 @@
 
     {
       "id": 105001,
-      "response": "Your charismatic best friend decides to go alone. She comes back with an interview scheduled at UPS for a Data Analytics role—talked her way into it with zero technical background. You stare at your empty inbox in silence.",
+      "response": "Your charismatic best friend decides to go alone. She comes back with an interview scheduled at UPS for a Data Analytics role, having talked her way into it with zero technical background. You stare at your empty inbox in silence.",
       "effects": {
         "academic": 1,
-        "social": -1
+        "social": -1,
+        "leaning": 1
       }
     },
     {
@@ -117,7 +120,8 @@
       "response": "You think it's an avenue to explore, but you quickly realize it's just mailing list fluff. The same day, your genius roommate gets an AMD recruiter to reach out after they found his GitHub profile.",
       "effects": {
         "burnout": 1,
-        "social": 1
+        "social": 1,
+        "leaning": -1
       }
     },
     {
@@ -175,38 +179,40 @@
       "response": "It’s 3 AM. You’ve been staring at a LeetCode Hard for the past 90 minutes. Your roommate kicked you out of the room to bring a girl over. You fight back the soreness in your eyes.",
       "effects": {
         "burnout": 1,
-        "academic": 2
+        "academic": 2,
+        "leaning": 1
       }
     },
     {
       "id": 107001,
       "question": 7,
-      "response": "You fire off a strongly worded group chat message at 10:00 AM. They all read it. No one replies. You notice their commits being pushed to the repo later that evening.",
+      "response": "You fire off a strongly worded group chat message at 10:00 AM. They all read it. No one replies. You notice their commits being pushed to the repo later that evening. \n\nTara looks at you with quiet disappointment, wondering why you couldn't just talk it out like adults.",
       "effects": {
         "burnout": 1,
         "academic": 1,
         "social": -1,
-        "leaning": -1
+        "leaning": 2
       }
     },
     {
       "id": 107002,
       "question": 7,
-      "response": "Two people cancel, one shows up late. After a lengthy discussion about accountability and norms, no concrete agreement is made. Still, it’s progress, and they appreciate you trying.",
+      "response": "Two people cancel, one shows up late. After a lengthy discussion about accountability and norms, no concrete agreement is made. Still, it’s progress, and they appreciate you trying. \n\nChen thinks this whole ordeal is beneath you either way.",
       "effects": {
         "burnout": 1,
         "academic": -1,
-        "social": 1
+        "social": 1,
+        "leaning": -2
       }
     },
     {
       "id": 107003,
       "question": 7,
-      "response": "Your TA checks the group repo and notes that 80% of the codebase has been written by you alone. You notice the same thing while buying another case of Red Bull.",
+      "response": "Your TA checks the group repo and notes that 80% of the codebase has been written by you alone. You notice the same thing while buying another case of Red Bull. Tara tries to check in on you later, but you brush her off—too tired to deal with feelings right now.",
       "effects": {
         "burnout": 2,
         "academic": 3,
-        "leaning": 1
+        "leaning": 2
       }
     },
     {
@@ -267,7 +273,7 @@
       "response": "You were once a varsity athlete in high school. After months of lethargy, your muscles are sore and your head is throbbing after a punishing HIIT set. But you’ve never felt more alive.",
       "effects": {
         "burnout": -2,
-        "fondness": 1
+        "fondness": 2
       }
     },
     {
@@ -295,7 +301,7 @@
     {
       "id": 110101,
       "question": 10,
-      "response": "You're now considered a regular among the party scene. The night swiftly turns into a blur, but all you know is that it was a needed reprieve. You end up talking to Jenny. Sorority treasurer, effortlessly magnetic—for most of the night. Your roommate notices and gives you a knowing smirk.",
+      "response": "You're now considered a regular among the party scene. The night swiftly turns into a blur, but all you know is that it was a needed reprieve. You end up talking to Jenny for most of the night. Effortlessly beautiful and magnetic. Your roommate notices and gives you a knowing smirk.",
       "effects": {
         "burnout": -2,
         "fondness": 3,
@@ -412,7 +418,7 @@
     },
     {      "id": 113301,
       "question": 13,
-      "response": "Tara is gone. The one person who always believed in you, who pushed you to take care of yourself first. Nash tries to fill the void—he's friendly enough, but his advice feels hollow. Generic. He doesn't know you like Tara did.\n\nChen offers some advice about the career fair. It rings colder than usual without Tara's warmth to balance it.",
+      "response": "Tara is gone. The one person who always believed in you, who pushed you to take care of yourself first. Nash tries to fill the void; he's friendly enough, but his advice feels hollow. Generic. He doesn't know you like Tara did.\n\nChen offers some advice about the career fair. It rings colder than usual without Tara's warmth to balance it.",
       "effects": {
         "social": -2,
         "burnout": 2,
@@ -423,7 +429,7 @@
     {
       "id": 113401,
       "question": 13,
-      "response": "Chen is gone. The genius who pushed you to be better, to grind harder, to actually know your shit. Kevin moves his stuff in that weekend—he's loud, messy, and treats your shared space like a frat house. He doesn't help you study. He doesn't push you to be better.\n\nTara offers some advice about self-care. It doesn't help with the interviews ahead.",
+      "response": "Chen is gone. The genius who pushed you to be better, to grind harder, to actually know your shit. Kevin moves his stuff in that weekend; he's loud, messy, and treats your shared space like a frat house. He doesn't help you study. He doesn't push you to be better.\n\nTara offers some advice about self-care. It doesn't help with the interviews ahead.",
       "effects": {
         "academic": -2,
         "burnout": 2,
@@ -586,7 +592,7 @@
       "response": "As you walk away, you tell yourself it’s not the right time. That you need to focus. That it wouldn’t have worked anyway. The text thread goes cold. \n\nYou lose more than you expected.",
       "effects": {
         "social": -1,
-        "fondness": -15,
+        "fondness": -25,
         "girlfriendId": 9
       },
       "nextQuestion": 117000
@@ -597,7 +603,7 @@
       "response": "The night starts fine. But the silences stretch. You fumble for words that don’t come. It ends with an awkward hug and an unspoken understanding. You check your phone later. No new messages. It was a valuable experience, you say, consoling yourself late that night.\n\nBut the sun rises on two solitary beds.",
       "effects": {
         "social": 1,
-        "fondness": -15,
+        "fondness": -25,
         "girlfriendId": 9
       },
       "nextQuestion": 117000
@@ -608,7 +614,7 @@
       "response": "As you walk away, you tell yourself it’s not the right time. That you need to focus. That it wouldn’t have worked anyway. The text thread goes cold. \n\nYou lose more than you expected.",
       "effects": {
         "social": -1,
-        "fondness": -15,
+        "fondness": -25,
         "girlfriendId": 9
       },
       "nextQuestion": 117000
@@ -829,25 +835,25 @@
     {
       "id": 121501,
       "response": "'Maybe I can still get something... anything. A local internship.'\n\nShe nods. 'Worth a shot.'\n\nYou spend the next week sending applications to places you've never heard of. One of them calls back. It's not glamorous. It's not what you dreamed of.\n\nBut it's something.",
-      "setEnding": 218,
+      "setEnding": 225,
       "nextQuestion": "ending"
     },
     {
       "id": 121502,
       "response": "'Maybe I can do research. Something to keep my resume alive.'\n\nShe smiles. 'You'd be good at that.'\n\nYou email a professor who always liked your questions. He responds within an hour. 'Come by my office tomorrow.'\n\nIt's not what you planned. But plans were always just guesses anyway.",
-      "setEnding": 228,
+      "setEnding": 227,
       "nextQuestion": "ending"
     },
     {
       "id": 121503,
       "response": "'I think I just need to stop. For a while.'\n\nShe doesn't argue. 'Then stop. Rest.'\n\nThe summer stretches out ahead of you. Empty. Uncertain. But for the first time in months, you're not running toward something.\n\nMaybe that's okay.",
-      "setEnding": 18,
+      "setEnding": 229,
       "nextQuestion": "ending"
     },
     {
       "id": 121601,
       "response": "'Maybe I can still get something... anything. A local internship.'\n\nShe takes your hand. 'Let's look together.'\n\nYou spend the afternoon sending applications to places you've never heard of. She edits your cover letters. One of them calls back.\n\nIt's not what you dreamed of. But you're not alone in it.",
-      "setEnding": 217,
+      "setEnding": 225,
       "nextQuestion": "ending"
     },
     {
@@ -859,7 +865,7 @@
     {
       "id": 121701,
       "response": "'Maybe I can do research. Something to keep my resume alive.'\n\nYou email a professor who always liked your questions. He responds within the hour. 'Come by my office tomorrow.'\n\nIt's not what you planned. But maybe there's something here. A different path.",
-      "setEnding": 227,
+      "setEnding": 228,
       "nextQuestion": "ending"
     },
     {
