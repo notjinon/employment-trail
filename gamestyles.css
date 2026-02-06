@@ -619,7 +619,7 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: var(--spacing-sm);
+  gap: var(--spacing-md);
   padding: var(--spacing-lg) 0;
   border: var(--border-primary);
   background: var(--color-bg);
@@ -632,12 +632,51 @@ footer {
   letter-spacing: 0.1em;
 }
 
-.grade-value {
-  font-size: 64px;
+.grade-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.grade-letter {
+  font-size: 96px;
   font-weight: 800;
   color: var(--color-accent);
   line-height: 1;
-  text-shadow: 0 0 8px var(--color-accent);
+  min-width: 100px;
+  text-align: center;
+}
+
+.grade-fraction-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.grade-numerator {
+  font-size: 48px;
+  font-weight: 800;
+  color: var(--color-accent);
+  line-height: 1;
+  min-width: 100px;
+  text-align: center;
+}
+
+.grade-divider-line {
+  width: 100px;
+  height: 2px;
+  background: var(--color-accent);
+}
+
+.grade-denominator {
+  font-size: 48px;
+  font-weight: 800;
+  color: var(--color-accent);
+  line-height: 1;
+  min-width: 100px;
+  text-align: center;
 }
 
 /* Stats Content */
@@ -831,8 +870,24 @@ footer {
     display: none;
   }
   
-  .grade-value {
-    font-size: 48px;
+  .grade-letter {
+    font-size: 64px;
+  }
+  
+  .grade-row {
+    gap: 1rem;
+  }
+  
+  .grade-numerator {
+    font-size: 32px;
+  }
+  
+  .grade-divider-line {
+    width: 80px;
+  }
+  
+  .grade-denominator {
+    font-size: 32px;
   }
   
   .stats-display {

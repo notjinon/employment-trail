@@ -1040,9 +1040,13 @@ function renderEndingDetails(ending, g) {
   // Compute and display grade (letter + numeric score)
   const gradeResult = computeGrade(ending, g);
   if (DOM.endingGrade) {
-    DOM.endingGrade.textContent = `${gradeResult.letter} (${gradeResult.score})`;
+    DOM.endingGrade.textContent = gradeResult.letter;
     DOM.endingGrade.setAttribute('data-score', gradeResult.score);
     DOM.endingGrade.title = `Computed score: ${gradeResult.score}`;
+  }
+  const scoreElement = document.getElementById('ending-score');
+  if (scoreElement) {
+    scoreElement.textContent = gradeResult.score;
   }
 
   // Friendly stats
