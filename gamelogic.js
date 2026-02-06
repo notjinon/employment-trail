@@ -64,7 +64,7 @@ const FONDNESS_TIERS = [
 
 // Branch rules - key: function that returns next question key
 const BRANCH_RULES = {
-  108000: (g) => g.burnout < 4 ? 108100 : 108200,
+  108000: (g) => g.burnout < 5 ? 108100 : 108200,
   110000: (g) => g.academic > 3 ? 110100 : 110200,
   113000: (g) => {
     // Leaning checkpoint - if too far in either direction, a friend leaves
@@ -556,6 +556,7 @@ function handleFinalEvaluation() {
     gameState.ending = (fondness >= 10 && hasGF) ? ENDING_MAP.fondness[company] : base;
     currentResponseId = 120101;
   } else {
+    gameState.company = 0; // Set company to 0 for interview failure
     currentResponseId = 120102;
   }
 }
@@ -1045,7 +1046,7 @@ function renderEndingDetails(ending, g) {
   }
 
   // Friendly stats
-  const companyName = COMPANY_MAP[g.company] || (g.company === 0 ? 'No Offer' : 'Unknown');
+  const companyName = COMPANY_MAP[g.company] || (g.company === 0 ? 'NO OFFER' : 'Unknown');
   const gfName = (GIRLFRIEND_MAP[g.girlfriendId] || {}).name || 'None';
   const bfName = (BESTFRIEND_MAP[g.bestFriendId] || {}).name || 'None';
   const rmName = (ROOMMATE_MAP[g.roommateId] || {}).name || 'None';

@@ -157,8 +157,8 @@
       "effects": {
         "defense": 1,
         "manufacturing": 1,
+        "social": 2,
         "academic": 1,
-        "social": 1,
         "leaning": 1
       }
     },
@@ -170,6 +170,7 @@
         "finance": 1,
         "technology": 1,
         "social": 2,
+        "academic": 1,
         "leaning": -1
       }
     },
@@ -178,8 +179,9 @@
       "question": 6,
       "response": "It’s 3 AM. You’ve been staring at a LeetCode Hard for the past 90 minutes. Your roommate kicked you out of the room to bring a girl over. You fight back the soreness in your eyes.",
       "effects": {
-        "burnout": 1,
-        "academic": 2,
+        "burnout": 2,
+        "academic": 3,
+        "social": -1,
         "leaning": 1
       }
     },
@@ -208,20 +210,21 @@
     {
       "id": 107003,
       "question": 7,
-      "response": "Your TA checks the group repo and notes that 80% of the codebase has been written by you alone. You notice the same thing while buying another case of Red Bull. Tara tries to check in on you later, but you brush her off—too tired to deal with feelings right now.",
+      "response": "Your TA checks the group repo and notes that 80% of the codebase has been written by you alone. You notice the same thing while buying another case of Red Bull. Tara tries to check in on you later, but you brush her off; too tired to deal with feelings right now.",
       "effects": {
         "burnout": 2,
         "academic": 3,
-        "leaning": 2
+        "leaning": 1
       }
     },
     {
       "id": 107004,
       "question": 7,
-      "response": "Your group gets a 63. The average was 85. When discussing your submission, the TA chides you all for not working together. No one says a word. You hate them more for it.",
+      "response": "Your group gets a 63. The average was 85. When discussing your submission, the TA chides you all for not working together. No one says a word. You hate them more for it. Chen won't buy any of your excuses when you rant about it later.",
       "effects": {
         "burnout": -2,
-        "academic": -2
+        "academic": -2,
+        "leaning": -1
       }
     },
     {
@@ -383,8 +386,9 @@
       "question": 13,
       "response": "It’s not flashy. It’s not going to get you anywhere quick. Your Instagram feed turns into a curated, aesthetic feed. Nobody says it outright, but you gain quiet admiration from others on campus about your turnaround.",
       "effects": {
-        "academic": 2,
-        "social": 1
+        "social": 1,
+        "fondness": 2,
+        "leaning": -1
       },
       "nextQuestion": 114000
     },
@@ -393,7 +397,9 @@
       "question": 13,
       "response": "The transformation is instant. Gone is the uncoordinated Instagram feed, replaced by a unified, coordinated, and bold set of posts. Heads are turned and people start looking at you in a new light.",
       "effects": {
-        "fondness": 4
+        "fondness": 4,
+        "social": 1,
+        "leaning": 1
       },
       "nextQuestion": 114000
     },
@@ -402,9 +408,9 @@
       "question": 13,
       "response": "It’s not flashy. It’s not going to get you anywhere quick. Your Instagram feed turns into a curated, aesthetic feed. Nobody says it outright, but you gain quiet admiration from others on campus about your turnaround.",
       "effects": {
-        "academic": 2,
         "social": 1,
-        "fondness": 2
+        "fondness": 2,
+        "leaning": -1
       },
       "nextQuestion": 114000
     },
@@ -413,7 +419,8 @@
       "question": 13,
       "response": "It’s a disaster. Your thirst traps are met with silence and empty DM’s. You can feel the eyes digging into your soul, mentally dressing down your appearance, your mannerisms, every ounce of your personality. You set your Instagram profile to private.",
       "effects": {
-        "fondness": -1
+        "fondness": -2,
+        "leaning": 1
       },
       "nextQuestion": 114000
     },
