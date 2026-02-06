@@ -1052,6 +1052,7 @@ function renderEndingDetails(ending, g) {
   const stats = {
     School: SCHOOL_MAP[g.school] || 'Unknown',
     Company: companyName,
+    'Partner': gfName,
     'Fondness': g.fondness,
     'Burnout': g.burnout,
     'Academics': g.academic,
