@@ -5,7 +5,7 @@
       "response": "It’s four years of studying and all-nighters. Your classmates go out and enjoy their last years at home. You don’t care. You have dreams to build.",
       "effects": {
         "academic": 3,
-        "burnout": 1,
+        "burnout": 2,
         "leaning": 1
       }
     },
@@ -14,7 +14,7 @@
       "response": "It’s all so tedious. Performative. Fake smiles, handshakes, student clubs. You win HS DECA awards for being a visionary. Does that even matter?",
       "effects": {
         "social": 3,
-        "burnout": 1,
+        "burnout": 2,
         "leaning": -1
       }
     },
@@ -22,7 +22,7 @@
       "id": 101003,
       "response": "It’s a sharp pivot. You alternate between long stretches of laziness, chaotic underage parties, and frenetic bouts of catching up to schoolwork. The American Dream.",
       "effects": {
-        "burnout": -2,
+        "burnout": -1,
         "academic": -1,
         "social": 1
       }
@@ -128,7 +128,7 @@
       "id": 105003,
       "response": "You could feel the pity. Quite frankly, you should’ve known better, but they silently respect the balls you had to go up to Lockheed Martin and Stratasys as a freshman.",
       "effects": {
-        "burnout": 2,
+        "burnout": 1,
         "defense": 1,
         "manufacturing": 1,
         "social": 1
@@ -138,7 +138,7 @@
       "id": 105004,
       "response": "You could feel the pity. Quite frankly, you should’ve known better, but they silently respect the balls you had to go up to Apple and Jane Street as a freshman.",
       "effects": {
-        "burnout": 2,
+        "burnout": 1,
         "technology": 1,
         "finance": 1,
         "social": 1
@@ -177,10 +177,10 @@
     {
       "id": 106004,
       "question": 6,
-      "response": "It’s 3 AM. You’ve been staring at a LeetCode Hard for the past 90 minutes. Your roommate kicked you out of the room to bring a girl over. You fight back the soreness in your eyes.",
+      "response": "It’s 3 AM. You’ve been staring at a LeetCode Hard for the past 90 minutes. Your roommate kicked you out of the room to bring  a girl over. You fight back the soreness in your eyes.",
       "effects": {
-        "burnout": 2,
-        "academic": 3,
+        "burnout": 3,
+        "academic": 4,
         "social": -1,
         "leaning": 1
       }
@@ -213,7 +213,7 @@
       "response": "Your TA checks the group repo and notes that 80% of the codebase has been written by you alone. You notice the same thing while buying another case of Red Bull. Tara tries to check in on you later, but you brush her off; too tired to deal with feelings right now.",
       "effects": {
         "burnout": 2,
-        "academic": 3,
+        "academic": 4,
         "leaning": 1
       }
     },
@@ -235,7 +235,7 @@
         "academic": 3,
         "social": 1,
         "fondness": 1,
-        "burnout": -2
+        "burnout": -1
       },
       "nextQuestion": 109000
     },
@@ -255,7 +255,8 @@
       "question": 8,
       "response": "Everyone can tell you’re not okay. Your clothes are wrinkled. Your eyes are dead. But when the TA throws a curveball about your code, you knock it out of the park. Your headache crescendos as your classmates applaud the presentation.",
       "effects": {
-        "academic": 1
+        "academic": 1,
+        "burnout": 1
       },
       "nextQuestion": 109000
     },
@@ -295,7 +296,7 @@
       "question": 9,
       "response": "Your next battery of midterms yields dramatically better results. At the same time, your daily dosage of caffeine creeps upward while your average length of sleep steadily declines.",
       "effects": {
-        "burnout": 1,
+        "burnout": 2,
         "academic": 3,
         "leaning": 1,
         "fondness":-1
@@ -341,20 +342,38 @@
       "question": 10,
       "response": "She asks if you’re okay. You fight back the welling tears. You’re stronger than this. You’re meant to be here. It’s just another setback, you say.",
       "effects": {
-        "burnout": -2
+        "burnout": -1
       },
       "nextQuestion": 111000
     },
-    {
-      "id": 111001,
+    {      "id": 110202,
+      "question": 10,
+      "response": "You tell yourself you need to focus. You stay in, order takeout, crack open LeetCode. By Sunday, you've solved 8 more problems. Your friends post pics. You scroll past them quick. Self-discipline over FOMO, you think. But the hollow feeling lingers longer than the endorphins from solved problems.",
+      "effects": {
+        "burnout": 2,
+        "academic": 1,
+        "social": -2
+      },
+      "nextQuestion": 111000
+    },
+    {      "id": 111001,
       "question": 11,
       "response": "Despite your own protests, your friends force you to go home for the break. You sit at the end of the dinner table, listening to your Woke mom and MAGA uncle scream their heads off. There’s no place like home.",
       "effects": {
         "burnout": -1
       }
     },
-    {
-      "id": 112001,
+    {      "id": 111002,
+      "question": 11,
+      "response": "You convince yourself that a week on campus is better than the chaos at home. The dorms empty out. It's quiet. Too quiet. You tell yourself you're being productive. By Thursday, you've realized no one's here and you're just alone with your thoughts and a mountain of work.",
+      "effects": {
+        "burnout": 2,
+        "academic": 1,
+        "social": -1
+      },
+      "nextQuestion": 112000
+    },
+    {      "id": 112001,
       "question": 12,
       "response": "This conservative approach saves you lots of energy and mental fortitude leading up to the fair. If you had wanted to continue coasting on upward momentum, it worked. Otherwise, expect a tougher climb socially and academically.",
       "effects": {
@@ -366,8 +385,8 @@
       "question": 12,
       "response": "Going to the career center over time helps you nail down the mock interview questions they give you. By the end of your grueling “interview bootcamp” sessions, you’re confident in your ability to sell yourself, while you feel more tiresome than ever.",
       "effects": {
-        "burnout": 1,
-        "social": 2,
+        "burnout": 3,
+        "social": 4,
         "leaning": -1
       }
     },
@@ -376,8 +395,19 @@
       "question": 12,
       "response": "You're right. Learning how to approach technical and casing questions is an invaluable skill. From the sheer amount of time and effort you put into this, you feel very well prepared on this end, while fatigue creeps in.",
       "effects": {
-        "burnout": 1,
-        "academic": 2,
+        "burnout": 3,
+        "academic": 4,
+        "leaning": 1
+      }
+    },
+    {
+      "id": 112004,
+      "question": 12,
+      "response": "You sign up for EVERY preparation track: mock interviews daily, LeetCode at night, system design on weekends. Your wall is a grid of check marks. Your sleep is a grid of check marks missed. By the end, you're the most prepared zombie on campus.",
+      "effects": {
+        "burnout": 5,
+        "academic": 3,
+        "social": 3,
         "leaning": 1
       }
     },
@@ -388,7 +418,8 @@
       "effects": {
         "social": 1,
         "fondness": 2,
-        "leaning": -1
+        "leaning": -1,
+        "burnout": -1
       },
       "nextQuestion": 114000
     },
@@ -420,7 +451,8 @@
       "response": "It’s a disaster. Your thirst traps are met with silence and empty DM’s. You can feel the eyes digging into your soul, mentally dressing down your appearance, your mannerisms, every ounce of your personality. You set your Instagram profile to private.",
       "effects": {
         "fondness": -2,
-        "leaning": 1
+        "leaning": 1,
+        "burnout": 1
       },
       "nextQuestion": 114000
     },
@@ -448,62 +480,72 @@
     {      "id": 114111,
       "question": 14,
       "response": "You stride up to the JPMorgan booth and launch into a pitch about monetary policy, embedded payments, and your fascination with institutional risk. The recruiter's eyes light up. She pulls you aside for a deeper conversation.\n\nYou walk away with a first-round interview locked in. The finance grind paid off.",
-      "nextQuestion": 115000
+      "nextQuestion": 115000,
+      "burnout": 1
     },
     {
       "id": 114121,
       "question": 14,
       "response": "You approach the Apple booth and preach about user privacy, design systems, and your distaste for Material UI. The recruiter listens intently, then asks if you'd relocate to Cupertino.\n\nYou nod so hard your phone almost drops. The interview invite comes before you've left the quad.",
-      "nextQuestion": 115000
+      "nextQuestion": 115000,
+      "burnout": 1
     },
     {
       "id": 114131,
       "question": 14,
       "response": "You find yourself at the Anduril booth, speaking with reverence about autonomous systems and defense innovation. The recruiterclearly ex-militarynods approvingly at your technical depth.\n\n'We'll be in touch,' he says. But the way he says it, you know he means it.",
-      "nextQuestion": 115000
+      "nextQuestion": 115000,
+      "burnout": 1
     },
     {
       "id": 114141,
       "question": 14,
       "response": "You approach the TSMC booth and dive into semiconductor fabrication, EUV lithography, and yield optimization. The recruiter's eyebrows rise. This isn't the usual CS student pitch.\n\nShe hands you her card directly. 'Skip the online app. Email me.'",
-      "nextQuestion": 115000
+      "nextQuestion": 115000,
+      "burnout": 1
     },
     {
       "id": 114100,
       "question": 14,
       "response": "You stride up to the most prestigious booths with confidencebut confidence isn't enough. The recruiters see right through you. Polite smiles, QR codes, 'apply online.'\n\nYou weren't ready. Not even close.",
       "nextQuestion": 115000,
+      "burnout": 3,
       "setFailstate": true
     },
     {
       "id": 114211,
       "question": 14,
       "response": "You approach Bank of America's booth and talk about financial technology and digital banking transformation. The recruiter seems genuinely interested in your perspective.\n\nA follow-up interview is scheduled before you leave. Solid start.",
-      "nextQuestion": 115000
+      "nextQuestion": 115000,
+      "burnout": 1
     },
     {
       "id": 114221,
       "question": 14,
       "response": "You find yourself at the IBM booth, dropping lines about hybrid cloud and AI ethics. A recruiter asks about Red Hat, and you rattle off something you remember from Hacker News.\n\nThey nod, impressed. You're moving forward.",
-      "nextQuestion": 115000
+      "nextQuestion": 115000,
+      "burnout": 1
     },
     {
       "id": 114231,
       "question": 14,
       "response": "You shamble up to RTX and ramble about avionics systems and defense tech. The recruiters are just university liaisonsbut your enthusiasm is enough.\n\nYou're invited to the next round.",
-      "nextQuestion": 115000
+      "nextQuestion": 115000,
+      "burnout": 1
     },
     {
       "id": 114241,
       "question": 14,
       "response": "You approach Siemens and talk about industrial automation and manufacturing systems. The recruiter looks relieved to find someone who doesn't flinch at 'PLC programming.'\n\nYou're ushered into a follow-up almost immediately.",
-      "nextQuestion": 115000
+      "nextQuestion": 115000,
+      "burnout": 1
     },
     {
       "id": 114200,
       "question": 14,
       "response": "You target the mid-tier companies with what you thought was a solid pitch. But the recruiters aren't impressedtoo many candidates, not enough standout moments.\n\n'We'll let you know,' they all say. They won't.",
       "nextQuestion": 115000,
+      "burnout": 2,
       "setFailstate": true
     },
     {
@@ -535,15 +577,16 @@
       "question": 14,
       "response": "You cast the widest net possible, but even the small companies aren't biting. Your resume is thin, your pitch is weak, and everyone can tell.\n\nYou walk away with nothing but a handful of flyers and a sinking feeling.",
       "nextQuestion": 115000,
+      "burnout": 3,
       "setFailstate": true
     },
     {
       "id": 115101,
       "question": 15,
-      "response": "You hole up in the library, fueled by iced coffee and trauma. The hours blur. By sunrise, your code compiles, your deck looks decent, and your notes are color-coded. You feel sharp. Wired. Alone. \n\nAnd it's just enough to punch your ticket.",
+      "response": "You hole up in the library, fueled by iced coffee and trauma. The hours blur. By sunrise, your code compiles, your deck looks decent, and your notes are color-coded. You feel sharp. Wired. Alone. \n\nAnd it's just enough to punch your ticket on the dean's list.",
       "effects": {
         "academic": 2,
-        "burnout": 1,
+        "burnout": 3,
         "social": -1
       },
       "nextQuestion": 116000
@@ -567,7 +610,8 @@
       "response": "You try. God, you try. But sometime around 3 AM, your body says no. You fall asleep in the library, miss the group chat call, and turn in a half-working repo. You feel numb as you receive your failing grades back and isolate yourself from your friends. \n\nIt’s a crash, but you’re too tired to care.",
       "effects": {
         "academic": -3,
-        "social": -3
+        "social": -3,
+        "burnout": 5
       },
       "nextQuestion": 116000
     },

@@ -204,8 +204,10 @@
       "options": [
         {
           "option": "“Hey mom, I haven’t called you in a while…”",
-          "key": 110201
-        }
+          "key": 110201        },
+        {
+          "option": "I need to fix this. Skip the call, lock in, and grind LeetCode all weekend.",
+          "key": 110202        }
       ]
     },
     {
@@ -214,8 +216,10 @@
       "options": [
         {
           "option": "Let's just go home and rest.",
-          "key": 111001
-        }
+          "key": 111001        },
+        {
+          "option": "I can't afford a break right now. Stay on campus and keep working.",
+          "key": 111002        }
       ]
     },
     {
@@ -232,8 +236,10 @@
         },
         {
           "option": "I can’t sell a person that’s not worth anything, can I? There’s lots of online coding assessments, even past LeetCode, to try and cut my teeth on.",
-          "key": 112003
-        }
+          "key": 112003        },
+        {
+          "option": "Go all-in. Sign up for every mock interview, every prep session, every workshop. Sleep is optional.",
+          "key": 112004        }
       ]
     },
     {

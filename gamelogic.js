@@ -65,7 +65,7 @@ const FONDNESS_TIERS = [
 // Branch rules - key: function that returns next question key
 const BRANCH_RULES = {
   108000: (g) => g.burnout < 5 ? 108100 : 108200,
-  110000: (g) => g.academic > 3 ? 110100 : 110200,
+  110000: (g) => g.academic > 5 ? 110100 : 110200,
   113000: (g) => {
     // Leaning checkpoint - if too far in either direction, a friend leaves
     if (g.leaning >= 3) return 113300; // Tara leaves (too Chen-aligned)
@@ -73,7 +73,14 @@ const BRANCH_RULES = {
     // Normal dinner variants based on social
     return g.social >= 5 ? 113100 : 113200;
   },
-  114000: () => 114100,
+  114000: (g) => {
+    // Burnout too high = you bomb the career fair
+    if (g.burnout > 7) {
+      g.failstate = true;
+      return 114100; // Auto-fail with setFailstate
+    }
+    return 114100;
+  },
   115000: (g) => g.burnout < 4 ? 115100 : 115200,
   116000: (g) => {
     // If there's no girlfriend (0) or the failed-gf state (9), skip the date scene
@@ -125,6 +132,10 @@ const BRANCH_RULES = {
   120000: (g) => {
     // Failstate skips offer email
     if (g.failstate) return 121000; // Skip to backup plans
+    // Burnout too high = they don't make offer / you bomb last round
+    if (g.burnout > 7) {
+      return 120102; // Auto-reject response
+    }
     return 120100;
   },
   121000: (g) => {
@@ -494,10 +505,23 @@ function submitOption() {
           console.debug(`Set ${stat} = ${response.effects[stat]}`);
         } else {
           gameState[stat] += response.effects[stat];
+            // Cap stats at minimum 0
+            if (stat === 'burnout' && gameState.burnout < 0) {
+            gameState.burnout = 0;
+            }
+            if (stat === 'social' && gameState.social < 0) {
+            gameState.social = 0;
+            }
+            if (stat === 'academic' && gameState.academic < 0) {
+            gameState.academic = 0;
+            }
         }
       }
     }
   }
+
+  // Log current gamestate after submission
+  console.log("=== GAMESTATE AFTER SUBMISSION ===", gameState);
 
   // Handle setEnding flag (for failstate responses)
   if (response.setEnding) {
@@ -535,6 +559,9 @@ function handleCompanySelection(optKey) {
     // Response ID is the tier fail response: 114100, 114200, or 114300
     currentResponseId = optKey;
   }
+
+  // Log gamestate after company selection
+  console.log("=== GAMESTATE AFTER COMPANY SELECTION ===", gameState);
 }
 
 function handleFinalEvaluation() {
@@ -559,6 +586,9 @@ function handleFinalEvaluation() {
     gameState.company = 0; // Set company to 0 for interview failure
     currentResponseId = 120102;
   }
+
+  // Log gamestate after final evaluation
+  console.log("=== GAMESTATE AFTER FINAL EVALUATION ===", gameState);
 }
 
 function handleFallbackEndings(optKey) {
@@ -802,13 +832,17 @@ function populateSocial() {
   if (leftLabel && bestFriend) leftLabel.textContent = bestFriend.name;
   if (rightLabel && roommate) rightLabel.textContent = roommate.name;
   
-  // Update text label with actual character name
-  if (clampedLeaning < 0) {
-    DOM.leaningText.textContent = bestFriend ? bestFriend.name : "Best Friend";
-  } else if (clampedLeaning > 0) {
-    DOM.leaningText.textContent = roommate ? roommate.name : "Roommate";
-  } else {
+  // Keep leaning display neutral until after Question 4
+  if (typeof currentQuestionKey !== "undefined" && currentQuestionKey < 104000) {
     DOM.leaningText.textContent = "Neutral";
+  } else {
+    if (clampedLeaning < 0) {
+      DOM.leaningText.textContent = bestFriend ? bestFriend.name : "Best Friend";
+    } else if (clampedLeaning > 0) {
+      DOM.leaningText.textContent = roommate ? roommate.name : "Roommate";
+    } else {
+      DOM.leaningText.textContent = "Neutral";
+    }
   }
   
   // Calculate fill percentages (50% = full bar on one side)
