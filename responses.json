@@ -403,7 +403,8 @@
       "response": "It’s not flashy. It’s not going to get you anywhere quick. Your Instagram feed turns into a curated, aesthetic feed. Nobody says it outright, but you gain quiet admiration from others on campus about your turnaround.",
       "effects": {
         "academic": 2,
-        "social": 1
+        "social": 1,
+        "fondness": 2
       },
       "nextQuestion": 114000
     },

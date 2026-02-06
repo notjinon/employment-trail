@@ -57,7 +57,7 @@ const SOCIAL_TIERS = [
 const FONDNESS_TIERS = [
   { max: 2, label: "\"You're a Chud.\""},
   { max: 4, label: "\"Who are you again?\"" },
-  { max: 6, label: "\"Aren't you in my class?\"" },
+  { max: 7, label: "\"Aren't you in my class?\"" },
   { max: 10, label: "\"You're not that ugly.\"" },
   { max: Infinity, label: "\"We're getting married!\"" }
 ];
@@ -78,7 +78,21 @@ const BRANCH_RULES = {
   116000: (g) => {
     // If there's no girlfriend (0) or the failed-gf state (9), skip the date scene
     if (!g.girlfriendId || g.girlfriendId === 9) return 117000;
-    return g.fondness >= 4 ? 116100 : 116200;
+    
+    // Base requirement: fondness >= 6
+    if (g.fondness < 7) return 116200;
+    
+    // Girlfriend-specific requirements for successful date
+    if (g.girlfriendId === 1) { // Tiffany - needs academic >= 7
+      return g.academic >= 7 ? 116100 : 116200;
+    } else if (g.girlfriendId === 2) { // Ezra - needs burnout <= 5
+      return g.burnout <= 5 ? 116100 : 116200;
+    } else if (g.girlfriendId === 3) { // Jenny - needs social >= 7
+      return g.social >= 7 ? 116100 : 116200;
+    }
+    
+    // exception handling
+    return g.fondness >= 7 ? 116100 : 116200;
   },
   117000: (g) => {
     // Failstate skips interview prep - go to failstate Q17
