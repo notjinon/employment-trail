@@ -1,11 +1,12 @@
-{
+﻿{
   "responses": [
     {
       "id": 101001,
       "response": "It’s four years of studying and all-nighters. Your classmates go out and enjoy their last years at home. You don’t care. You have dreams to build.",
       "effects": {
         "academic": 3,
-        "burnout": 1
+        "burnout": 1,
+        "leaning": 1
       }
     },
     {
@@ -13,14 +14,17 @@
       "response": "It’s all so tedious. Performative. Fake smiles, handshakes, student clubs. You win HS DECA awards for being a visionary. Does that even matter?",
       "effects": {
         "social": 3,
-        "burnout": 1
+        "burnout": 1,
+        "leaning": -1
       }
     },
     {
       "id": 101003,
       "response": "It’s a sharp pivot. You alternate between long stretches of laziness, chaotic underage parties, and frenetic bouts of catching up to schoolwork. The American Dream.",
       "effects": {
-        "burnout": -2
+        "burnout": -2,
+        "academic": -1,
+        "social": 1
       }
     },
     {
@@ -52,7 +56,7 @@
     },
     {
       "id": 102004,
-      "response": "You quickly realize that for every Vanderbilt and Duke, there’s a dozen more LSUs academically. You’re puzzled by the presence of Confederate statues in the same town that hosts NASA Marshall. In the end, you end up committing to Georgia Tech.",
+      "response": "You quickly realize that for every Vanderbilt and Georgia Tech, there's a dozen more LSUs academically. You're puzzled by the presence of Confederate statues in the same town that hosts NASA Marshall. In the end, you end up committing to Duke.",
       "effects": {
         "defense": 2,
         "manufacturing": 1,
@@ -70,41 +74,54 @@
       "effects": {
         "academic": 2,
         "burnout": 2,
-        "social": -1
+        "social": -1,
+        "leaning": 1,
+        "bestFriendId": 1,
+        "roommateId": 1
       }
     },
+
     {
       "id": 104002,
-      "response": "Sips turn into shots, which turn into swigs. Your stomach hates you and your brain is in revolt. You can’t help but wonder how much you’ve changed from High School, and what people would think about you now.",
+      "response": "Sips turn into shots, which turn into swigs. Your stomach hates you and your brain is in revolt. You can't help but wonder how much you've changed from High School, and what people would think about you now.",
       "effects": {
         "social": 2,
         "burnout": 1,
-        "academic": -1
+        "academic": -1,
+        "leaning": -1,
+        "bestFriendId": 1,
+        "roommateId": 1
       }
     },
+
     {
       "id": 104003,
       "response": "What was supposed to be a productive session of organization and unpacking quickly devolved into an afternoon of bedrotting. Every time you scroll to another TikTok, you can picture more synapses withering and dying.",
       "effects": {
         "burnout": -2,
         "academic": -1,
-        "social": -1
+        "social": -1,
+        "bestFriendId": 1,
+        "roommateId": 1
       }
     },
+
     {
       "id": 105001,
-      "response": "Your optimistic best friend decides to go alone. She comes back with an interview scheduled at UPS for a Data Analytics role. You stare at your empty inbox in silence.",
+      "response": "Your charismatic best friend decides to go alone. She comes back with an interview scheduled at UPS for a Data Analytics role, having talked her way into it with zero technical background. You stare at your empty inbox in silence.",
       "effects": {
         "academic": 1,
-        "social": -1
+        "social": -1,
+        "leaning": 1
       }
     },
     {
       "id": 105002,
-      "response": "You think it’s an avenue to explore, but you quickly realize it’s just mailing list fluff. The same day, your charismatic roommate connects with an AMD recruiter online.",
+      "response": "You think it's an avenue to explore, but you quickly realize it's just mailing list fluff. The same day, your genius roommate gets an AMD recruiter to reach out after they found his GitHub profile.",
       "effects": {
         "burnout": 1,
-        "social": 1
+        "social": 1,
+        "leaning": -1
       }
     },
     {
@@ -129,138 +146,145 @@
     },
     {
       "id": 106001,
-      "response":"Gave up this quick? \n\nYou drop out of engineering school and join the School of Business. Even your parents say they know you could've done better. \n\nWhat a sick fucking joke.",
+      "response": "Gave up this quick? \n\nYou drop out of engineering school and join the School of Business. Even your parents say they know you could've done better. \n\nWhat a sick fucking joke.",
+      "setEnding": 19,
+      "nextQuestion": "ending"
+    },
+    {
+      "id": 106002,
+      "question": 6,
+      "response": "After the fair, there’s lots of new faces looking to “make an impact.” But the rest of the club rightfully sees you all as carpetbaggers desperate for a ladder out of the pit. Either way, you have work to do.",
       "effects": {
-        "ending": 19
+        "defense": 1,
+        "manufacturing": 1,
+        "academic": 1,
+        "social": 1,
+        "leaning": 1
       }
     },
     {
-        "id": 106002,
-        "question": 6,
-        "response": "After the fair, there’s lots of new faces looking to “make an impact.” But the rest of the club rightfully sees you all as carpetbaggers desperate for a ladder out of the pit. Either way, you have work to do.",
-        "effects": {
-            "defense": 1,
-            "manufacturing": 1,
-            "academic": 1,
-            "social": 1
-        }
+      "id": 106003,
+      "question": 6,
+      "response": "A case and behavioral interview later, you're officially in the frat. It's a nice couple of days before you realize that it (like any business-adjacent club) is a nothingburger. At least you'll learn Excel.",
+      "effects": {
+        "finance": 1,
+        "technology": 1,
+        "social": 2,
+        "leaning": -1
+      }
     },
     {
-        "id": 106003,
-        "question": 6,
-        "response": "A case and behavioral interview later, you’re officially in the frat. It’s a nice couple of days before you realize that it (like any business-adjacent club) is a nothingburger. At least you’ll learn Excel.",
-        "effects": {
-            "finance": 1,
-            "technology": 1,
-            "social": 2
-        }
+      "id": 106004,
+      "question": 6,
+      "response": "It’s 3 AM. You’ve been staring at a LeetCode Hard for the past 90 minutes. Your roommate kicked you out of the room to bring a girl over. You fight back the soreness in your eyes.",
+      "effects": {
+        "burnout": 1,
+        "academic": 2,
+        "leaning": 1
+      }
     },
     {
-        "id": 106004,
-        "question": 6,
-        "response": "It’s 3 AM. You’ve been staring at a LeetCode Hard for the past 90 minutes. Your roommate kicked you out of the room to bring a girl over. You fight back the soreness in your eyes.",
-        "effects": {
-            "burnout": 1,
-            "academic": 2
-        }
+      "id": 107001,
+      "question": 7,
+      "response": "You fire off a strongly worded group chat message at 10:00 AM. They all read it. No one replies. You notice their commits being pushed to the repo later that evening. \n\nTara looks at you with quiet disappointment, wondering why you couldn't just talk it out like adults.",
+      "effects": {
+        "burnout": 1,
+        "academic": 1,
+        "social": -1,
+        "leaning": 2
+      }
     },
     {
-        "id": 107001,
-        "question": 7,
-        "response": "You fire off a strongly worded group chat message at 10:00 AM. They all read it. No one replies. You notice their commits being pushed to the repo later that evening.",
-        "effects": {
-            "burnout": 1,
-            "academic": 1,
-            "social": -1
-        }
+      "id": 107002,
+      "question": 7,
+      "response": "Two people cancel, one shows up late. After a lengthy discussion about accountability and norms, no concrete agreement is made. Still, it’s progress, and they appreciate you trying. \n\nChen thinks this whole ordeal is beneath you either way.",
+      "effects": {
+        "burnout": 1,
+        "academic": -1,
+        "social": 1,
+        "leaning": -2
+      }
     },
     {
-        "id": 107002,
-        "question": 7,
-        "response": "Two people cancel, one shows up late. After a lengthy discussion about accountability and norms, no concrete agreement is made. Still, it’s progress, and they appreciate you trying.",
-        "effects": {
-            "burnout": 1,
-            "academic": -1,
-            "social": 1
-        }
+      "id": 107003,
+      "question": 7,
+      "response": "Your TA checks the group repo and notes that 80% of the codebase has been written by you alone. You notice the same thing while buying another case of Red Bull. Tara tries to check in on you later, but you brush her off—too tired to deal with feelings right now.",
+      "effects": {
+        "burnout": 2,
+        "academic": 3,
+        "leaning": 2
+      }
     },
     {
-        "id": 107003,
-        "question": 7,
-        "response": "Your TA checks the group repo and notes that 80% of the codebase has been written by you alone. You notice the same thing while buying another case of Red Bull.",
-        "effects": {
-            "burnout": 2,
-            "academic": 3
-        }
+      "id": 107004,
+      "question": 7,
+      "response": "Your group gets a 63. The average was 85. When discussing your submission, the TA chides you all for not working together. No one says a word. You hate them more for it.",
+      "effects": {
+        "burnout": -2,
+        "academic": -2
+      }
     },
     {
-        "id": 107004,
-        "question": 7,
-        "prompt": "Screw this. Let it ride, I’ll tank it.",
-        "response": "Your group gets a 63. The average was 85. When discussing your submission, the TA chides you all for not working together. No one says a word. You hate them more for it.",
-        "effects": {
-            "burnout": -2,
-            "academic": -2
-        }
-    },
-    {
-        "id": 108101,
-        "question": 8,
-        "response": "You show up in the nick of time. Plug in the laptop. When the questions come, you’re sharp. Relaxed. In control. Well-rested. Your team daps you up after. Pure and deserved bliss.",
-        "effects": {
-            "academic": 2,
-            "burnout": -1
-        },
-        "nextQuestion": 109000
-    },
-    {
-        "id": 108102,
-        "question": 8,
-        "response": "You send a text: “Sorry, something came up.” They reply, “Ok.” Nothing more. You sleep through the morning. It helps for a bit. But when you wake up, the shame’s already waiting for you.",
-        "effects": {
-          "burnout": -2,
-          "academic": -1,
-          "social": -1
+      "id": 108101,
+      "question": 8,
+      "response": "You show up in the nick of time. Plug in the laptop. When the questions come, you’re sharp. Relaxed. In control. Well-rested. Your team daps you up after. Pure and deserved bliss.",
+      "effects": {
+        "academic": 3,
+        "social": 1,
+        "fondness": 1,
+        "burnout": -2
       },
-        "nextQuestion": 109000
+      "nextQuestion": 109000
     },
     {
-        "id": 108201,
-        "question": 8,
-        "response": "Everyone can tell you’re not okay. Your clothes are wrinkled. Your eyes are dead. But when the TA throws a curveball about your code, you knock it out of the park. Your headache crescendos as your classmates applaud the presentation.",
-        "effects": {
-            "academic": 1
-        },
-        "nextQuestion": 109000
-    },
-    {
-        "id": 108202,
-        "question": 8,
-        "response": "You send a text: “Sorry, something came up.” They reply, “Ok.” Nothing more. You sleep through the morning. It helps for a bit. But when you wake up, the shame’s already waiting for you.",
-        "effects": {
-          "burnout": -2,
-          "academic": -1,
-          "social": -1
+      "id": 108102,
+      "question": 8,
+      "response": "You send a text: “Sorry, something came up.” They reply, “Ok.” Nothing more. You sleep through the morning. It helps for a bit. But when you wake up, the shame’s already waiting for you.",
+      "effects": {
+        "burnout": -2,
+        "academic": -1,
+        "social": -1
       },
-        "nextQuestion": 109000
+      "nextQuestion": 109000
+    },
+    {
+      "id": 108201,
+      "question": 8,
+      "response": "Everyone can tell you’re not okay. Your clothes are wrinkled. Your eyes are dead. But when the TA throws a curveball about your code, you knock it out of the park. Your headache crescendos as your classmates applaud the presentation.",
+      "effects": {
+        "academic": 1
+      },
+      "nextQuestion": 109000
+    },
+    {
+      "id": 108202,
+      "question": 8,
+      "response": "You send a text: “Sorry, something came up.” They reply, “Ok.” Nothing more. You sleep through the morning. It helps for a bit. But when you wake up, the shame’s already waiting for you.",
+      "effects": {
+        "burnout": -2,
+        "academic": -1,
+        "social": -1
+      },
+      "nextQuestion": 109000
     },
     {
       "id": 109001,
       "question": 9,
       "response": "You were once a varsity athlete in high school. After months of lethargy, your muscles are sore and your head is throbbing after a punishing HIIT set. But you’ve never felt more alive.",
       "effects": {
-          "burnout": -2,
-          "fondness": 1
+        "burnout": -2,
+        "fondness": 2
       }
     },
     {
       "id": 109002,
       "question": 9,
-      "response": "You stare the therapist in the eyes for 90 minutes.  Does she even understand what pressure you’re under? Does she really believe in you? Isn’t she just paid to keep you happy? Either way, it works.",
+      "response": "You stare the therapist in the eyes for 90 minutes.  Does she even understand what pressure you’re under? Does she really believe in you? Does she even care? You leave feeling like she might.",
       "effects": {
-          "burnout": -1,
-          "social": 1,
-          "fondness": 1
+        "burnout": -1,
+        "social": 1,
+        "fondness": 1,
+        "leaning": -1
       }
     },
     {
@@ -268,38 +292,44 @@
       "question": 9,
       "response": "Your next battery of midterms yields dramatically better results. At the same time, your daily dosage of caffeine creeps upward while your average length of sleep steadily declines.",
       "effects": {
-          "burnout": 1,
-          "academic": 3
+        "burnout": 1,
+        "academic": 3,
+        "leaning": 1,
+        "fondness":-1
       }
     },
     {
       "id": 110101,
       "question": 10,
-      "response": "You’re now considered a regular among the party scene. The night swiftly turns into a blur, but all you know is that it was a needed reprieve. Your roommate spots you drinking with the same girl all night long.",
+      "response": "You're now considered a regular among the party scene. The night swiftly turns into a blur, but all you know is that it was a needed reprieve. You end up talking to Jenny for most of the night. Effortlessly beautiful and magnetic. Your roommate notices and gives you a knowing smirk.",
       "effects": {
-          "burnout": -2,
-          "fondness": 2
+        "burnout": -2,
+        "fondness": 3,
+        "girlfriendId": 3
       },
       "nextQuestion": 111000
     },
     {
       "id": 110102,
       "question": 10,
-      "response": "You bond with classmates over copious amounts of beer while playing MarioKart. A cute girl is there and you exchange Instagrams. Your best friend sees it and silently immortalizes the blackmail in her mind.",
+      "response": "You bond with classmates over copious amounts of beer while playing MarioKart. You meet Tiffany. CS major, terrifyingly smart. She absolutely demolishes everyone at the game while explaining optimal drift mechanics. You exchange Instagrams. Your best friend sees it and silently immortalizes the blackmail in her mind.",
       "effects": {
-          "burnout": -2,
-          "social": 2,
-          "fondness": 1
+        "burnout": -2,
+        "social": 2,
+        "fondness": 2,
+        "girlfriendId": 1
       },
       "nextQuestion": 111000
     },
     {
       "id": 110103,
       "question": 10,
-      "response": "Your home team gets routed off the field 52-21. The commentators call it an absolute disgrace, but you pay no mind. It’s a blast getting to make new friends there.",
+      "response": "Your home team gets routed off the field 52-21. The commentators call it an absolute disgrace, but you pay no mind. You end up sitting next to Ezra—philosophy major, unapologetically carefree—who spends the whole game ranting about the commodification of college sports. Somehow, it's the most fun you've had in weeks.",
       "effects": {
-          "burnout": -2,
-          "social": 2
+        "burnout": -2,
+        "social": 2,
+        "fondness": 2,
+        "girlfriendId": 2
       },
       "nextQuestion": 111000
     },
@@ -308,7 +338,7 @@
       "question": 10,
       "response": "She asks if you’re okay. You fight back the welling tears. You’re stronger than this. You’re meant to be here. It’s just another setback, you say.",
       "effects": {
-          "burnout": -2
+        "burnout": -2
       },
       "nextQuestion": 111000
     },
@@ -317,7 +347,7 @@
       "question": 11,
       "response": "Despite your own protests, your friends force you to go home for the break. You sit at the end of the dinner table, listening to your Woke mom and MAGA uncle scream their heads off. There’s no place like home.",
       "effects": {
-          "burnout": -1
+        "burnout": -1
       }
     },
     {
@@ -325,7 +355,7 @@
       "question": 12,
       "response": "This conservative approach saves you lots of energy and mental fortitude leading up to the fair. If you had wanted to continue coasting on upward momentum, it worked. Otherwise, expect a tougher climb socially and academically.",
       "effects": {
-          "burnout": -2
+        "burnout": -2
       }
     },
     {
@@ -333,17 +363,19 @@
       "question": 12,
       "response": "Going to the career center over time helps you nail down the mock interview questions they give you. By the end of your grueling “interview bootcamp” sessions, you’re confident in your ability to sell yourself, while you feel more tiresome than ever.",
       "effects": {
-          "burnout": 1,
-          "social": 2
+        "burnout": 1,
+        "social": 2,
+        "leaning": -1
       }
     },
     {
       "id": 112003,
       "question": 12,
-      "response": "You’re right. Learning how to approach technical and casing questions is an invaluable skill. From the sheer amount of time and effort you put into this, you feel very well prepared on this end, while fatigue creeps in.",
+      "response": "You're right. Learning how to approach technical and casing questions is an invaluable skill. From the sheer amount of time and effort you put into this, you feel very well prepared on this end, while fatigue creeps in.",
       "effects": {
-          "burnout": 1,
-          "academic": 2
+        "burnout": 1,
+        "academic": 2,
+        "leaning": 1
       }
     },
     {
@@ -351,348 +383,502 @@
       "question": 13,
       "response": "It’s not flashy. It’s not going to get you anywhere quick. Your Instagram feed turns into a curated, aesthetic feed. Nobody says it outright, but you gain quiet admiration from others on campus about your turnaround.",
       "effects": {
-          "academic": 2,
-          "social": 1
+        "academic": 2,
+        "social": 1
       },
       "nextQuestion": 114000
     },
     {
-        "id": 113102,
-        "question": 13,
-        "response": "The transformation is instant. Gone is the uncoordinated Instagram feed, replaced by a unified, coordinated, and bold set of posts. Heads are turned and people start looking at you in a new light.",
-        "effects": {
-            "fondness": 4
-        },
-        "nextQuestion": 114000
-    },
-    {
-        "id": 113201,
-        "question": 13,
-        "response": "It’s not flashy. It’s not going to get you anywhere quick. Your Instagram feed turns into a curated, aesthetic feed. Nobody says it outright, but you gain quiet admiration from others on campus about your turnaround.",
-        "effects": {
-          "academic": 2,
-          "social": 1
+      "id": 113102,
+      "question": 13,
+      "response": "The transformation is instant. Gone is the uncoordinated Instagram feed, replaced by a unified, coordinated, and bold set of posts. Heads are turned and people start looking at you in a new light.",
+      "effects": {
+        "fondness": 4
       },
-        "nextQuestion": 114000
+      "nextQuestion": 114000
     },
     {
-        "id": 113202,
-        "question": 13,
-        "response": "It’s a disaster. Your thirst traps are met with silence and empty DM’s. You can feel the eyes digging into your soul, mentally dressing down your appearance, your mannerisms, every ounce of your personality. You set your Instagram profile to private.",
-        "effects": {
-            "fondness": -1
-        },
-        "nextQuestion": 114000
-    },
-    {
-        "id": 114901,
-        "question": 14,
-        "response": "You preach about user privacy, design systems, and your hatred of Material UI to the Apple booth. The recruiter listens quietly, then asks if you’d be willing to relocate to Cupertino.\n\nYou nod so hard your iPhone drops. The offer to interview comes before you’ve even opened LinkedIn.\n\nYou walk away in a daze, convinced you just won the lottery.",
-        "nextQuestion": 115000
-    },
-    {
-        "id": 114902,
-        "question": 14,
-        "response": "You speak in fluent acronyms—MMFs, HFT, QE. You talk about rates with the detached violence of someone who actually reads central bank PDFs.\n\nThe Jane Street recruiter doesn’t smile. She just scribbles your name down and tells you to be ready by Tuesday.\n\nYou feel like you passed a test no one told you existed.",
-        "nextQuestion": 115000
-    },
-    {
-        "id": 114904,
-        "question": 14,
-        "response": "You speak with reverence about aerospace telemetry and fifth-gen RAM coatings. The Lockheed Martin recruiter hits you with acronyms that sound like classified documents. You respond in kind.\n\nThere’s a brief pause. Then she nods. “You’ll do.”\n\nYou don’t remember the rest of the fair—you were too busy mentally rehearsing your Top Secret clearance interview.",
-        "nextQuestion": 115000
-    },
-    {
-        "id": 114903,
-        "question": 14,
-        "response": "You mention topology optimization and polymer blends in the same sentence. The Stratasys recruiter doesn’t blink. She asks if you’ve ever worked with a Markforged.\n\nYou say yes, even though you haven't. Doesn’t matter—you’re invited to the next round.\n\nYou pretend not to notice your hands shaking with excitement.",
-        "nextQuestion": 115000
-    },
-    {
-        "id": 114905,
-        "question": 14,
-        "response": "The Amazon recruiter gives you a thin smile. Hands you a QR code. “Apply online,” she says. She turns around and greets your roommate behind you with their name. \n\nYou stand there, blinking. At least Deloitte still wants you.",
-        "nextQuestion": 115000
-    },
-    {
-        "id": 114201,
-        "question": 14,
-        "response": "You launch into a pitch about economic resilience, embedded payments, and your fascination with policy-driven FinTech innovation. The recruiter blinks once, nods twice, and pulls you aside for a talk. You don’t even remember what you said, but you sail past first round either way.",
-        "nextQuestion": 115000
-    },
-    {
-        "id": 114202,
-        "question": 14,
-        "response": "You say “machine learning” and “financial accessibility” like you just read it off a slide. She asks you a question about the Fed’s role in stimulus. You blink. “Apply online,” she says, turning to complement your best friend’s blazer.\n\nYou stare at your resume, unsure what it even says. Deloitte it is.",
-        "nextQuestion": 115000
-    },
-    {
-        "id": 114301,
-        "question": 14,
-        "response": "You shamble up to their booth and ramble on and on about their work on the F-35’s avionics suite. They’re just university recruiters. Neither you nor they actually understand the conversation that takes place, but it’s enough to get you to finals.",
-        "nextQuestion": 115000
-    },
-    {
-        "id": 114302,
-        "question": 14,
-        "response": "You say “defense” with the enthusiasm of someone who just Googled what L3Harris does. You mumble something about “military-adjacent tech.” She replies, “we’ll be in touch.” The Deloitte recruiter catches your eye from across the room. You know what’s coming.",
-        "nextQuestion": 115000
-    },
-    {
-        "id": 114401,
-        "question": 14,
-        "response": "You drop a line about AI ethics and quantum computing, and their ears perk up. A recruiter asks about your thoughts on hybrid cloud strategies, and you rattle off something about Red Hat you vaguely remember from Hacker News. They nod, impressed.",
-        "nextQuestion": 115000
-    },
-    {
-        "id": 114402,
-        "question": 14,
-        "response": " You say “cloud computing” like it’s a spell. The recruiter’s smile doesn’t quite reach her eyes. She hands you a flyer and says you’ll “find plenty of great resources online.” You nod, defeated, as the Deloitte recruiter waves you over with a lanyard.",
-        "nextQuestion": 115000
-    },
-    {
-        "id": 114501,
-        "question": 14,
-        "response": "You talk about embedded systems and supply chain resilience. The recruiter looks like they’ve finally found someone who doesn’t flinch at the word 'MES.' You're ushered into a follow-up round almost immediately.",
-        "nextQuestion": 115000
-    },
-    {
-        "id": 114502,
-        "question": 14,
-        "response": "You try to spin your summer of Python tutorials into “strong embedded systems experience.” She thanks you for stopping by and gestures toward the QR code taped to the table. You notice the Deloitte recruiter waving at you.",
-        "nextQuestion": 115000
-    },
-    {
-        "id": 114601,
-        "question": 14,
-        "response": "You gambled little and gained even less. While your friends are locking in offers at Northrop Grumman and Meta, you’re able to beat a bunch of Econ and Finance majors for a Technology Consulting final round.",
-        "nextQuestion": 115000
-    },
-    {
-        "id": 115101,
-        "question": 15,
-        "response": "You hole up in the library, fueled by iced coffee and trauma. The hours blur. By sunrise, your code compiles, your deck looks decent, and your notes are color-coded. Caffeine, a color-coded Notion, and adrenaline pushes you past the finish line this one last time. \n\nAnd it’s just enough to punch your ticket on the Dean’s List.",
-        "effects": {
-          "academic": 4
-        },
-        "nextQuestion": 116000
-    },
-    {
-        "id": 115102,
-        "question": 15,
-        "response": "You text the group chat. Soon, laptops are open, snacks are everywhere, and Spotify is arguing with your attention span. The work gets done… to a point. You know you could be more productive alone, but this avoids a crash. \n\nMost importantly, no one feels alone, and no one fails outright.",
-        "effects": {
-          "academic": 1,
-          "social": 3
-        },
-        "nextQuestion": 116000
-    },
-    {
-        "id": 115201,
-        "question": 15,
-        "response": "You try. God, you try. But sometime around 3 AM, your body says no. You fall asleep in the library, miss the group chat call, and turn in a half-working repo. You feel numb as you receive your failing grades back and isolate yourself from your friends. \n\nIt’s a crash, but you’re too tired to care.",
-        "effects": {
-          "academic": -3,
-          "social": -3
-        },
-        "nextQuestion": 116000
-    },
-    {
-        "id": 115202,
-        "question": 15,
-        "response": "You text the group chat. Soon, laptops are open, snacks are everywhere, and Spotify is arguing with your attention span. The work gets done… to a point. You know you could be more productive alone, but this avoids a crash. \n\nMost importantly, no one feels alone, and no one fails outright.",
-        "effects": {
-          "academic": 1,
-          "social": 3
-        },
-        "nextQuestion": 116000
-    },
-    {
-        "id": 116101,
-        "question": 16,
-        "response": "It starts quiet. Fries split, hands almost brushing, soft laughter between long silences. But the way she looks at you tonight? It’s different. Real. You talk about dreams, failures, the future. By the time you make it back to her place, there’s no need for small talk. \n\nYou stay the night.",
-        "effects": {
-          "social": 3,
-          "fondness": 15
-        },
-        "nextQuestion": 117000
-    },
-    {
-        "id": 116102,
-        "question": 16,
-        "response": "As you walk away, you tell yourself it’s not the right time. That you need to focus. That it wouldn’t have worked anyway. The text thread goes cold. \n\nYou lose more than you expected.",
-        "effects": {
-          "social": -1,
-          "fondness": -15
-        },
-        "nextQuestion": 117000
-    },
-    {
-        "id": 116201,
-        "question": 16,
-        "response": "The night starts fine. But the silences stretch. You fumble for words that don’t come. It ends with an awkward hug and an unspoken understanding. You check your phone later. No new messages. It was a valuable experience, you say, consoling yourself late that night.\n\nBut the sun rises on two solitary beds.",
-        "effects": {
-          "social": 1,
-          "fondness": -15
-        },
-        "nextQuestion": 117000
-    },
-    {
-        "id": 116202,
-        "question": 16,
-        "response": "As you walk away, you tell yourself it’s not the right time. That you need to focus. That it wouldn’t have worked anyway. The text thread goes cold. \n\nYou lose more than you expected.",
-        "effects": {
-          "social": -1,
-          "fondness": -15
-        },
-        "nextQuestion": 117000
-    },
-    {
-        "id": 117101,
-        "question": 17,
-        "response": "The lights are low. Her Spotify playlist is on shuffle. The two of you talk softly—about nothing, about everything. She holds your hand and reminds you you’re more than a résumé. \n\nFor the first time in weeks, you feel like a human being.",
-        "effects": {
-          "social": 1
-        },
-        "nextQuestion": 118000
-    },
-    {
-        "id": 117102,
-        "question": 17,
-        "response": "It’s just you and one other student. Your TA makes dumb jokes about recursion and explains fluid dynamics like a bedtime story. For once, you’re smiling at a whiteboard instead of crying at one. They say, “You’re gonna kill it.” \n\nYou believe them.",
-        "effects": {
-          "academic": 1
-        },
-        "nextQuestion": 118000
-    },
-    {
-        "id": 117103,
-        "question": 17,
-        "response": "You open old Notion pages. Re-read half-written cover letters. Scroll through texts you never sent. You picture the recruiter’s face tomorrow, unreadable and cold. You close your eyes. Try to sleep. \n\nYou dream about fire alarms, whiteboards, and your best friend saying “you got this.”",
-        "nextQuestion": 118000
-    },
-    {
-        "id": 117201,
-        "question": 17,
-        "response": "The lights are low. Her Spotify playlist is on shuffle. The two of you talk softly—about nothing, about everything. She holds your hand and reminds you you’re more than a résumé. \n\nFor the first time in weeks, you feel like a human being.",
-        "effects": {
-          "social": 1
-        },
-        "nextQuestion": 118000
-    },
-    {
-        "id": 117202,
-        "question": 17,
-        "response": "You open old Notion pages. Re-read half-written cover letters. Scroll through texts you never sent. You picture the recruiter’s face tomorrow, unreadable and cold. You close your eyes. Try to sleep. \n\nYou dream about fire alarms, whiteboards, and your best friend saying “you got this.”",
-        "nextQuestion": 118000
-    },
-    {
-        "id": 117301,
-        "question": 17,
-        "response": "It’s just you and one other student. Your TA makes dumb jokes about recursion and explains fluid dynamics like a bedtime story. For once, you’re smiling at a whiteboard instead of crying at one. They say, “You’re gonna kill it.” \n\nYou believe them.",
-        "effects": {
-          "academic": 1
-        },
-        "nextQuestion": 118000
-    },
-    {
-        "id": 117302,
-        "question": 17,
-        "response": "You open old Notion pages. Re-read half-written cover letters. Scroll through texts you never sent. You picture the recruiter’s face tomorrow, unreadable and cold. You close your eyes. Try to sleep. \n\nYou dream about fire alarms, whiteboards, and your best friend saying “you got this.”",
-        "nextQuestion": 118000
-    },
-    {
-        "id": 117401,
-        "question": 17,
-        "response": "You open old Notion pages. Re-read half-written cover letters. Scroll through texts you never sent. You picture the recruiter’s face tomorrow, unreadable and cold. You close your eyes. Try to sleep. \n\nYou dream about fire alarms, whiteboards, and your best friend saying “you got this.”",
-        "nextQuestion": 118000
-    },
-    {
-        "id": 118001,
-        "question": 18,
-        "response": "You rehearse your story: adversity, resilience, teamwork. You force a smile as you walk in and pray they don’t ask about that semester you bombed. Somehow, it feels more real this time. \n\nLike you're not just reading a script anymore…",
-        "effects": {
-          "social": 1
-        }
+      "id": 113201,
+      "question": 13,
+      "response": "It’s not flashy. It’s not going to get you anywhere quick. Your Instagram feed turns into a curated, aesthetic feed. Nobody says it outright, but you gain quiet admiration from others on campus about your turnaround.",
+      "effects": {
+        "academic": 2,
+        "social": 1
       },
-    {
-        "id": 118002,
-        "question": 18,
-        "response": "You whiteboard until your hand cramps, polish your GitHub one last time, and reread every system design note you’ve ever taken. You enter the call tired, but focused. \n\nWhen they say “walk us through your approach,” you actually feel confident…",
-        "effects": {
-          "academic": 1
-        }
+      "nextQuestion": 114000
     },
     {
-        "id": 119001,
-        "question": 19,
-        "response": "It feels like a lifetime ago. A hallway. A club meeting. Quiet promises to yourself you didn’t know you’d have to break. \n\nYou wonder what that version of you would think now."
+      "id": 113202,
+      "question": 13,
+      "response": "It’s a disaster. Your thirst traps are met with silence and empty DM’s. You can feel the eyes digging into your soul, mentally dressing down your appearance, your mannerisms, every ounce of your personality. You set your Instagram profile to private.",
+      "effects": {
+        "fondness": -1
       },
-    {
-        "id": 119002,
-        "question": 19,
-        "response": "Late nights. Missed calls. Friendships that slowly faded into the background noise of the grind. You can’t decide if it was worth it. \n\nMaybe that’s the point."
+      "nextQuestion": 114000
     },
-    {
-        "id": 119003,
-        "question": 19,
-        "response": "The project that finally ran. The smile you got across the room. The one friend who said, “Hey, I believe in you.” \n\nYou hold onto those tighter than anything else."
+    {      "id": 113301,
+      "question": 13,
+      "response": "Tara is gone. The one person who always believed in you, who pushed you to take care of yourself first. Nash tries to fill the void; he's friendly enough, but his advice feels hollow. Generic. He doesn't know you like Tara did.\n\nChen offers some advice about the career fair. It rings colder than usual without Tara's warmth to balance it.",
+      "effects": {
+        "social": -2,
+        "burnout": 2,
+        "bestFriendId": 2
       },
-    {
-        "id": 119004,
-        "question": 19,
-        "response": "Quiet breakdowns. Arguments with your roommate. Growing pains living alone. Inbox rejections. Doomscrolling until sunrise. You survived every one of them. \n\nThat counts, doesn’t it?"
+      "nextQuestion": 114000
     },
     {
-        "id": 120101,
-        "question": 20,
-        "response": "We’re thrilled to offer you…"
+      "id": 113401,
+      "question": 13,
+      "response": "Chen is gone. The genius who pushed you to be better, to grind harder, to actually know your shit. Kevin moves his stuff in that weekend; he's loud, messy, and treats your shared space like a frat house. He doesn't help you study. He doesn't push you to be better.\n\nTara offers some advice about self-care. It doesn't help with the interviews ahead.",
+      "effects": {
+        "academic": -2,
+        "burnout": 2,
+        "roommateId": 2
+      },
+      "nextQuestion": 114000
+    },
+    {      "id": 114111,
+      "question": 14,
+      "response": "You stride up to the JPMorgan booth and launch into a pitch about monetary policy, embedded payments, and your fascination with institutional risk. The recruiter's eyes light up. She pulls you aside for a deeper conversation.\n\nYou walk away with a first-round interview locked in. The finance grind paid off.",
+      "nextQuestion": 115000
     },
     {
-        "id": 120102,
-        "question": 20,
-        "response": "Thank you for your interest, but…",
-        "nextQuestion": 121000
+      "id": 114121,
+      "question": 14,
+      "response": "You approach the Apple booth and preach about user privacy, design systems, and your distaste for Material UI. The recruiter listens intently, then asks if you'd relocate to Cupertino.\n\nYou nod so hard your phone almost drops. The interview invite comes before you've left the quad.",
+      "nextQuestion": 115000
     },
     {
-        "id": 121101,
-        "question": 21,
-        "response": "You message a friend of a friend. Their local tech office “might have something.” It’s unpaid at first. You say yes before they finish explaining. It’s not even in your field. You pretend not to care. It’s better than nothing. \n\nRight?"
+      "id": 114131,
+      "question": 14,
+      "response": "You find yourself at the Anduril booth, speaking with reverence about autonomous systems and defense innovation. The recruiterclearly ex-militarynods approvingly at your technical depth.\n\n'We'll be in touch,' he says. But the way he says it, you know he means it.",
+      "nextQuestion": 115000
     },
     {
-        "id": 121102,
-        "question": 21,
-        "response": "You send a desperate email to your old TA. She forwards it to a professor who doesn’t remember your name. He offers you a spot “to build experience.” There’s no funding. You accept instantly. You delete the email thread right after."
+      "id": 114141,
+      "question": 14,
+      "response": "You approach the TSMC booth and dive into semiconductor fabrication, EUV lithography, and yield optimization. The recruiter's eyebrows rise. This isn't the usual CS student pitch.\n\nShe hands you her card directly. 'Skip the online app. Email me.'",
+      "nextQuestion": 115000
     },
     {
-        "id": 121103,
-        "question": 21,
-        "response": "You close the laptop. You sit there, staring at nothing. You tell yourself the market was tough. That you just started too late. That it's not your fault. \n\nYou don’t believe it."
+      "id": 114100,
+      "question": 14,
+      "response": "You stride up to the most prestigious booths with confidencebut confidence isn't enough. The recruiters see right through you. Polite smiles, QR codes, 'apply online.'\n\nYou weren't ready. Not even close.",
+      "nextQuestion": 115000,
+      "setFailstate": true
     },
     {
-        "id": 121201,
-        "question": 21,
-        "response": "You message a friend of a friend. Their local tech office “might have something.” It’s unpaid at first. You say yes before they finish explaining. It’s not even in your field. You pretend not to care. It’s better than nothing. \n\nRight?"
+      "id": 114211,
+      "question": 14,
+      "response": "You approach Bank of America's booth and talk about financial technology and digital banking transformation. The recruiter seems genuinely interested in your perspective.\n\nA follow-up interview is scheduled before you leave. Solid start.",
+      "nextQuestion": 115000
     },
     {
-        "id": 121202,
-        "question": 21,
-        "response": "You close the laptop. You sit there, staring at nothing. You tell yourself the market was tough. That you just started too late. That it's not your fault. \n\nYou don’t believe it."    
+      "id": 114221,
+      "question": 14,
+      "response": "You find yourself at the IBM booth, dropping lines about hybrid cloud and AI ethics. A recruiter asks about Red Hat, and you rattle off something you remember from Hacker News.\n\nThey nod, impressed. You're moving forward.",
+      "nextQuestion": 115000
     },
     {
-        "id": 121301,
-        "question": 21,
-        "response": "You send a desperate email to your old TA. She forwards it to a professor who doesn’t remember your name. He offers you a spot “to build experience.” There’s no funding. You accept instantly. You delete the email thread right after."
+      "id": 114231,
+      "question": 14,
+      "response": "You shamble up to RTX and ramble about avionics systems and defense tech. The recruiters are just university liaisonsbut your enthusiasm is enough.\n\nYou're invited to the next round.",
+      "nextQuestion": 115000
     },
     {
-        "id": 121302,
-        "question": 21,
-        "response": "You close the laptop. You sit there, staring at nothing. You tell yourself the market was tough. That you just started too late. That it's not your fault. \n\nYou don’t believe it."
+      "id": 114241,
+      "question": 14,
+      "response": "You approach Siemens and talk about industrial automation and manufacturing systems. The recruiter looks relieved to find someone who doesn't flinch at 'PLC programming.'\n\nYou're ushered into a follow-up almost immediately.",
+      "nextQuestion": 115000
     },
     {
-        "id": 121401,
-        "question": 21,
-        "response": "You close the laptop. You sit there, staring at nothing. You tell yourself the market was tough. That you just started too late. That it's not your fault. \n\nYou don’t believe it."
+      "id": 114200,
+      "question": 14,
+      "response": "You target the mid-tier companies with what you thought was a solid pitch. But the recruiters aren't impressedtoo many candidates, not enough standout moments.\n\n'We'll let you know,' they all say. They won't.",
+      "nextQuestion": 115000,
+      "setFailstate": true
+    },
+    {
+      "id": 114311,
+      "question": 14,
+      "response": "You find yourself at Pinnacle Credit Union's modest booth. The recruiter seems surprised anyone stopped by. Your pitch about community banking resonates.\n\nIt's not glamorous, but you've got an interview. That's something.",
+      "nextQuestion": 115000
+    },
+    {
+      "id": 114321,
+      "question": 14,
+      "response": "TechFlow Solutions has a small table near the back. You talk about IT consulting and managed services. The recruiter hands you a business card.\n\n'We're always looking for hungry people,' she says. You're in.",
+      "nextQuestion": 115000
+    },
+    {
+      "id": 114331,
+      "question": 14,
+      "response": "Mason Defense Services barely has a presencejust one tired recruiter and a banner. But you show up, talk about logistics and facilities work.\n\nHe writes down your email on a napkin. It's something.",
+      "nextQuestion": 115000
+    },
+    {
+      "id": 114341,
+      "question": 14,
+      "response": "Apex Components has a booth that screams 'we make parts for other companies.' But you talk about supply chain and manufacturing processes.\n\nThe recruiter nods. 'Send me your resume tonight.' You will.",
+      "nextQuestion": 115000
+    },
+    {
+      "id": 114300,
+      "question": 14,
+      "response": "You cast the widest net possible, but even the small companies aren't biting. Your resume is thin, your pitch is weak, and everyone can tell.\n\nYou walk away with nothing but a handful of flyers and a sinking feeling.",
+      "nextQuestion": 115000,
+      "setFailstate": true
+    },
+    {
+      "id": 115101,
+      "question": 15,
+      "response": "You hole up in the library, fueled by iced coffee and trauma. The hours blur. By sunrise, your code compiles, your deck looks decent, and your notes are color-coded. You feel sharp. Wired. Alone. \n\nAnd it's just enough to punch your ticket.",
+      "effects": {
+        "academic": 2,
+        "burnout": 1,
+        "social": -1
+      },
+      "nextQuestion": 116000
+    },
+
+    {
+      "id": 115102,
+      "question": 15,
+      "response": "You text the group chat. Soon, laptops are open, snacks are everywhere, and Spotify is arguing with your attention span. The work gets done… to a point. You know you could be more productive alone, but this avoids a crash. \n\nMost importantly, no one feels alone, and no one fails outright.",
+      "effects": {
+        "academic": 1,
+        "social": 1,
+        "burnout": -1
+      },
+      "nextQuestion": 116000
+    },
+
+    {
+      "id": 115201,
+      "question": 15,
+      "response": "You try. God, you try. But sometime around 3 AM, your body says no. You fall asleep in the library, miss the group chat call, and turn in a half-working repo. You feel numb as you receive your failing grades back and isolate yourself from your friends. \n\nIt’s a crash, but you’re too tired to care.",
+      "effects": {
+        "academic": -3,
+        "social": -3
+      },
+      "nextQuestion": 116000
+    },
+    {
+      "id": 115202,
+      "question": 15,
+      "response": "You text the group chat. Soon, laptops are open, snacks are everywhere, and Spotify is arguing with your attention span. The work gets done… to a point. You know you could be more productive alone, but this avoids a crash. \n\nMost importantly, no one feels alone, and no one fails outright.",
+      "effects": {
+        "academic": 1,
+        "social": 1,
+        "burnout": -1
+      },
+      "nextQuestion": 116000
+    },
+
+    {
+      "id": 116101,
+      "question": 16,
+      "response": "It starts quiet. Fries split, hands almost brushing, soft laughter between long silences. But the way they look at you tonight? It’s different. Real. You talk about dreams, failures, the future. By the time you make it back to their place, there’s no need for small talk. \n\nYou stay the night.",
+      "effects": {
+        "social": 2,
+        "fondness": 15
+      },
+      "nextQuestion": 117000
+    },
+
+    {
+      "id": 116102,
+      "question": 16,
+      "response": "As you walk away, you tell yourself it’s not the right time. That you need to focus. That it wouldn’t have worked anyway. The text thread goes cold. \n\nYou lose more than you expected.",
+      "effects": {
+        "social": -1,
+        "fondness": -25,
+        "girlfriendId": 9
+      },
+      "nextQuestion": 117000
+    },
+    {
+      "id": 116201,
+      "question": 16,
+      "response": "The night starts fine. But the silences stretch. You fumble for words that don’t come. It ends with an awkward hug and an unspoken understanding. You check your phone later. No new messages. It was a valuable experience, you say, consoling yourself late that night.\n\nBut the sun rises on two solitary beds.",
+      "effects": {
+        "social": 1,
+        "fondness": -25,
+        "girlfriendId": 9
+      },
+      "nextQuestion": 117000
+    },
+    {
+      "id": 116202,
+      "question": 16,
+      "response": "As you walk away, you tell yourself it’s not the right time. That you need to focus. That it wouldn’t have worked anyway. The text thread goes cold. \n\nYou lose more than you expected.",
+      "effects": {
+        "social": -1,
+        "fondness": -25,
+        "girlfriendId": 9
+      },
+      "nextQuestion": 117000
+    },
+    {
+      "id": 117101,
+      "question": 17,
+      "response": "The lights are low. The playlist is on shuffle. The two of you talk softly—about nothing, about everything. They hold your hand and remind you you’re more than a résumé. \n\nFor the first time in weeks, you feel like a human being.",
+      "effects": {
+        "social": 1,
+        "academic": -1
+      },
+      "nextQuestion": 118000
+    },
+    {
+      "id": 117102,
+      "question": 17,
+      "response": "It’s just you and one other student. Your TA makes dumb jokes about recursion and explains fluid dynamics like a bedtime story. For once, you’re smiling at a whiteboard instead of crying at one. They say, “You’re gonna kill it.” \n\nYou believe them.",
+      "effects": {
+        "academic": 1,
+        "social": -1
+      },
+      "nextQuestion": 118000
+    },
+    {
+      "id": 117103,
+      "question": 17,
+      "response": "You open old Notion pages. Re-read half-written cover letters. Scroll through texts you never sent. You picture the recruiter's face tomorrow, unreadable and cold. You close your eyes. Try to sleep. \n\nYou dream about fire alarms, whiteboards, and your best friend saying \"you got this.\" Your breathing slows. The knot in your chest loosens, just a little.",
+      "effects": {
+        "burnout": -1
+      },
+      "nextQuestion": 118000
+    },
+    {
+      "id": 117201,
+      "question": 17,
+      "response": "The lights are low. Her Spotify playlist is on shuffle. The two of you talk softly—about nothing, about everything. She holds your hand and reminds you you’re more than a résumé. \n\nFor the first time in weeks, you feel like a human being.",
+      "effects": {
+        "social": 1,
+        "academic": -1
+      },
+      "nextQuestion": 118000
+    },
+    {
+      "id": 117202,
+      "question": 17,
+      "response": "You open old Notion pages. Re-read half-written cover letters. Scroll through texts you never sent. You picture the recruiter's face tomorrow, unreadable and cold. You close your eyes. Try to sleep. \n\nYou dream about fire alarms, whiteboards, and your best friend saying \"you got this.\" Your breathing slows. The knot in your chest loosens, just a little.",
+      "effects": {
+        "burnout": -1
+      },
+      "nextQuestion": 118000
+    },
+    {
+      "id": 117301,
+      "question": 17,
+      "response": "It’s just you and one other student. Your TA makes dumb jokes about recursion and explains fluid dynamics like a bedtime story. For once, you’re smiling at a whiteboard instead of crying at one. They say, “You’re gonna kill it.” \n\nYou believe them.",
+      "effects": {
+        "academic": 1,
+        "social": -1
+      },
+      "nextQuestion": 118000
+    },
+    {
+      "id": 117302,
+      "question": 17,
+      "response": "You open old Notion pages. Re-read half-written cover letters. Scroll through texts you never sent. You picture the recruiter's face tomorrow, unreadable and cold. You close your eyes. Try to sleep. \n\nYou dream about fire alarms, whiteboards, and your best friend saying \"you got this.\" Your breathing slows. The knot in your chest loosens, just a little.",
+      "effects": {
+        "burnout": -1
+      },
+      "nextQuestion": 118000
+    },
+    {
+      "id": 117401,
+      "question": 17,
+      "response": "You open old Notion pages. Re-read half-written cover letters. Scroll through texts you never sent. You picture the recruiter's face tomorrow, unreadable and cold. You close your eyes. Try to sleep. \n\nYou dream about fire alarms, whiteboards, and your best friend saying \"you got this.\" Your breathing slows. The knot in your chest loosens, just a little.",
+      "effects": {
+        "burnout": -1
+      },
+      "nextQuestion": 118000
+    },
+    {
+      "id": 118001,
+      "question": 18,
+      "response": "You rehearse your story: adversity, resilience, teamwork. You force a smile as you walk in and pray they don’t ask about that semester you bombed. Somehow, it feels more real this time. \n\nLike you're not just reading a script anymore…",
+      "effects": {
+        "social": 1
+      }
+    },
+    {
+      "id": 118002,
+      "question": 18,
+      "response": "You whiteboard until your hand cramps, polish your GitHub one last time, and reread every system design note you’ve ever taken. You enter the call tired, but focused. \n\nWhen they say “walk us through your approach,” you actually feel confident…",
+      "effects": {
+        "academic": 1
+      }
+    },
+    {
+      "id": 119001,
+      "question": 19,
+      "response": "It feels like a lifetime ago. A hallway. A club meeting. Quiet promises to yourself you didn’t know you’d have to break. \n\nYou wonder what that version of you would think now."
+    },
+    {
+      "id": 119002,
+      "question": 19,
+      "response": "Late nights. Missed calls. Friendships that slowly faded into the background noise of the grind. You can’t decide if it was worth it. \n\nMaybe that’s the point."
+    },
+    {
+      "id": 119003,
+      "question": 19,
+      "response": "The project that finally ran. The smile you got across the room. The one friend who said, “Hey, I believe in you.” \n\nYou hold onto those tighter than anything else."
+    },
+    {
+      "id": 119004,
+      "question": 19,
+      "response": "Quiet breakdowns. Arguments with your roommate. Growing pains living alone. Inbox rejections. Doomscrolling until sunrise. You survived every one of them. \n\nThat counts, doesn’t it?"
+    },
+    {
+      "id": 120101,
+      "question": 20,
+      "response": "We’re thrilled to offer you…"
+    },
+    {
+      "id": 120102,
+      "question": 20,
+      "response": "Thank you for your interest, but…",
+      "nextQuestion": 121000
+    },
+    {
+      "id": 121101,
+      "question": 21,
+      "response": "You message a friend of a friend. Their local tech office “might have something.” It’s unpaid at first. You say yes before they finish explaining. It’s not even in your field. You pretend not to care. It’s better than nothing. \n\nRight?"
+    },
+    {
+      "id": 121102,
+      "question": 21,
+      "response": "You send a desperate email to your old TA. She forwards it to a professor who doesn’t remember your name. He offers you a spot “to build experience.” There’s no funding. You accept instantly. You delete the email thread right after."
+    },
+    {
+      "id": 121103,
+      "question": 21,
+      "response": "You close the laptop. You sit there, staring at nothing. You tell yourself the market was tough. That you just started too late. That it's not your fault. \n\nYou don’t believe it."
+    },
+    {
+      "id": 121201,
+      "question": 21,
+      "response": "You message a friend of a friend. Their local tech office “might have something.” It’s unpaid at first. You say yes before they finish explaining. It’s not even in your field. You pretend not to care. It’s better than nothing. \n\nRight?"
+    },
+    {
+      "id": 121202,
+      "question": 21,
+      "response": "You close the laptop. You sit there, staring at nothing. You tell yourself the market was tough. That you just started too late. That it's not your fault. \n\nYou don’t believe it."
+    },
+    {
+      "id": 121301,
+      "question": 21,
+      "response": "You send a desperate email to your old TA. She forwards it to a professor who doesn’t remember your name. He offers you a spot “to build experience.” There’s no funding. You accept instantly. You delete the email thread right after."
+    },
+    {
+      "id": 121302,
+      "question": 21,
+      "response": "You close the laptop. You sit there, staring at nothing. You tell yourself the market was tough. That you just started too late. That it's not your fault. \n\nYou don’t believe it."
+    },
+    {
+      "id": 121401,
+      "question": 21,
+      "response": "You close the laptop. You sit there, staring at nothing. You tell yourself the market was tough. That you just started too late. That it's not your fault. \n\nYou don’t believe it."
+    },
+    {
+      "id": 117501,
+      "response": "'Yeah. Just tired.'\n\nThey don't push. They just send a heart emoji. You stare at it for a long time.\n\nYou're not okay. But saying it out loud would make it real.",
+      "nextQuestion": 118500
+    },
+
+    {
+      "id": 117502,
+      "response": "'No. I don't think I am.'\n\nThree dots. Then: 'I'm coming over.'\n\nThey show up with takeout and say nothing. Just sit next to you. Sometimes that's enough.",
+      "effects": {
+        "social": 1
+      },
+      "nextQuestion": 118500
+    },
+
+    {
+      "id": 117601,
+      "response": "You scroll. And scroll. And scroll.\n\n'Excited to announce...' 'Thrilled to share...' 'Grateful for this opportunity...'\n\nEvery post is a knife. You close the app. Open it again five minutes later.",
+      "nextQuestion": 118600
+    },
+    {
+      "id": 117602,
+      "response": "You close the laptop. The ceiling is white. Featureless. \n\nYou lie there until you forget what time it is. It doesn't help. But nothing would.",
+      "nextQuestion": 118600
+    },
+    {
+      "id": 118501,
+      "response": "'I think I'm gonna be okay.'\n\nThey squeeze your hand. 'I know you are.'\n\nYou're not sure if you believe it. But maybe believing it can come later.",
+      "nextQuestion": 121500
+    },
+
+    {
+      "id": 118502,
+      "response": "'I don't know what I'm doing anymore.'\n\n'That's okay.' They pull you closer. 'Nobody does. We're all just pretending.'\n\nIt doesn't fix anything. But it makes the weight a little lighter.",
+      "effects": {
+        "social": 1
+      },
+      "nextQuestion": 121500
+    },
+
+    {
+      "id": 118601,
+      "response": "You call home. Mom answers on the second ring.\n\n'How'd it go, honey?'\n\n'Fine. I'm fine.'\n\nShe knows you're lying. But she lets you have it.",
+      "nextQuestion": 121700
+    },
+    {
+      "id": 118602,
+      "response": "You walk. Past the library. Past the dorms. Past the edge of campus.\n\nThe cold air bites your face. Your feet hurt. You keep going.\n\nEventually, you turn around. Nothing's changed. But at least you moved.",
+      "nextQuestion": 121800
+    },
+    {
+      "id": 121501,
+      "response": "'Maybe I can still get something... anything. A local internship.'\n\nShe nods. 'Worth a shot.'\n\nYou spend the next week sending applications to places you've never heard of. One of them calls back. It's not glamorous. It's not what you dreamed of.\n\nBut it's something.",
+      "setEnding": 225,
+      "nextQuestion": "ending"
+    },
+    {
+      "id": 121502,
+      "response": "'Maybe I can do research. Something to keep my resume alive.'\n\nShe smiles. 'You'd be good at that.'\n\nYou email a professor who always liked your questions. He responds within an hour. 'Come by my office tomorrow.'\n\nIt's not what you planned. But plans were always just guesses anyway.",
+      "setEnding": 227,
+      "nextQuestion": "ending"
+    },
+    {
+      "id": 121503,
+      "response": "'I think I just need to stop. For a while.'\n\nShe doesn't argue. 'Then stop. Rest.'\n\nThe summer stretches out ahead of you. Empty. Uncertain. But for the first time in months, you're not running toward something.\n\nMaybe that's okay.",
+      "setEnding": 229,
+      "nextQuestion": "ending"
+    },
+    {
+      "id": 121601,
+      "response": "'Maybe I can still get something... anything. A local internship.'\n\nShe takes your hand. 'Let's look together.'\n\nYou spend the afternoon sending applications to places you've never heard of. She edits your cover letters. One of them calls back.\n\nIt's not what you dreamed of. But you're not alone in it.",
+      "setEnding": 225,
+      "nextQuestion": "ending"
+    },
+    {
+      "id": 121602,
+      "response": "'I think I just need to stop. For a while.'\n\nShe nods. 'Then I'm stopping with you.'\n\nThe summer stretches out ahead. She's there. That's something.\n\nMaybe that's enough.",
+      "setEnding": 229,
+      "nextQuestion": "ending"
+    },
+    {
+      "id": 121701,
+      "response": "'Maybe I can do research. Something to keep my resume alive.'\n\nYou email a professor who always liked your questions. He responds within the hour. 'Come by my office tomorrow.'\n\nIt's not what you planned. But maybe there's something here. A different path.",
+      "setEnding": 228,
+      "nextQuestion": "ending"
+    },
+    {
+      "id": 121702,
+      "response": "'I think I just need to stop. For a while.'\n\nThe laptop closes with a soft click. The silence is deafening.\n\nYou don't know what comes next. Maybe nothing. Maybe something.\n\nBut right now, you're done trying to figure it out.",
+      "setEnding": 18,
+      "nextQuestion": "ending"
+    },
+    {
+      "id": 121801,
+      "response": "'I think I just need to stop. For a while.'\n\nThe laptop closes. The room is quiet. You're alone.\n\nThe summer stretches out ahead of you. Empty. You don't know what comes next.\n\nMaybe that's okay. Maybe it has to be.",
+      "setEnding": 18,
+      "nextQuestion": "ending"
     }
   ]
 }
