@@ -937,6 +937,7 @@ function renderIRCMessages(s2Text) {
   const lines = s2Text.split('\n').filter(line => line.trim());
   
   // Generate random base time (23:XX)
+  let hours = 23;
   let minutes = Math.floor(Math.random() * 60);
   
   lines.forEach((line, index) => {
@@ -947,9 +948,15 @@ function renderIRCMessages(s2Text) {
     const speaker = match[1].trim();
     const message = match[2].trim();
     
-    // Generate timestamp (increment by 1-3 minutes per message)
-    const timestamp = `23:${String(minutes).padStart(2, '0')}`;
-    minutes = (minutes + Math.floor(Math.random() * 3) + 1) % 60;
+    // Generate timestamp with proper hour rollover
+    const timestamp = `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}`;
+    
+    // Increment by 1-3 minutes per message with hour/day rollover
+    minutes += Math.floor(Math.random() * 3) + 1;
+    if (minutes >= 60) {
+      minutes = minutes % 60;
+      hours = (hours + 1) % 24;
+    }
     
     // Determine nick class
     let nickClass = '';
