@@ -60,18 +60,18 @@
       "tier": "boutique",
       "title": "GAME OVER: YIELDING TO LOVE",
       "subtitle": "TSMC - Partner (Yes)",
-      "s1": "The cleanroom is your temple. You spend your days obsessing over yield optimization and 200-micron tolerances, making sure the silicon is perfect. But the lab is cold, and the suits are stifling. When you peel off the PPE, they’re there. You send them videos of failed prints and supply chain memes; they send you playlists that get you through the graveyard shift. It’s slow, meticulous work. \n\nBut the foundation is solid.",
-      "s2": "You: part passed flight cert today. i’m officially an engineer\nBest Friend: HUGE W. celebration tonight?\nYou: yeah, they’re taking me to that new arcade bar\nRoommate: don’t let them see your social skills or they’ll dump you\nYou: jokes on you, they’re into me."
-    },
-    {
+      "s1": "Taiwan's semiconductor fabs run 24/7, and so do you. The cleanroom is your second home—white suit, mask, the hum of precision machinery. You're optimizing yield on wafers that'll power the next generation of chips. The work is meticulous, almost meditative. When you finally decompress in the evening, they're waiting. You send them photos of the process (redacted), they send you care packages of your favorite snacks. It's slow, methodical work in a country that never sleeps. \n\nBut the foundation is solid.",
+      "s2": "You: wafer batch hit 94% yield today. personal record\nBest Friend: you're literally building the future\nYou: they're taking me to this night market place in Taipei tomorrow\nRoommate: living the dream in taiwan\nYou: honestly? yeah. they make it worth it."
+        },
+        {
       "code": 208,
       "number": 8,
       "tier": "boutique",
       "title": "GAME OVER: METICULOUS MILLIMETERS",
       "subtitle": "TSMC - Partner (No)",
-      "s1": "The lab smells like caffeine and melted resin. You run tests, fail prints, and iterate until the tolerances are perfect. The work is slow—but honest. You’re making something permanent, a physical artifact of your skill. You don’t have someone to celebrate with when the final design passes. You just pack your bag, turn off the lights, and walk out into the quiet Indiana night. \n\nYou’re proud. But you’re alone.",
-      "s2": "You: 28-hour print collapsed in the last 10 minutes. doing it again\nRoommate: industrial L. come get a beer\nYou: can’t. need to monitor the resin flow\nBest Friend: you’re gonna burn out, man\nYou: the part won’t. that’s what matters."
-    },
+      "s1": "The fab never stops. You're deep in process control, tweaking variables at the nanoscale, chasing yields that determine whether your batch makes it to market. The air is filtered. The stakes are real. You've mastered the metrics, but mastery feels hollow when you clock out alone. Taiwan's night markets pulse around you, but you walk past them in silence, thinking about defect rates. \n\nYou're building the chips that power the world. But the world doesn't know your name.",
+      "s2": "You: density test failed. starting from batch zero\nRoommate: when do you sleep?\nYou: sleep is for people with work-life balance\nBest Friend: you're in Taiwan. go live a little\nYou: maybe after the next quarterly review."
+        },
     {
       "code": 209,
       "number": 9,
@@ -150,8 +150,8 @@
       "tier": "weak",
       "title": "GAME OVER: SMALL VICTORIES",
       "subtitle": "TechFlow - Partner (Yes)",
-      "s1": "The office is small, the desk is cluttered, and your manager still uses Internet Explorer. But you show up, you learn, and you figure things out. Your partner texts you after your first week: 'Proud of you.' You’re not where you thought you’d be—no Apple badge, no Manhattan views. \n\nBut you’re somewhere. And that’s enough.",
-      "s2": "You: finished my first week. survived the boomer manager\nBest Friend: that’s huge actually\nYou: they brought me lunch on friday. keeper status\nRoommate: local legend. when’s the wedding?"
+      "s1": "You're building dashboards for local businesses and fixing legacy PHP codebases that smell like 2009. The office is cramped, the tech stack is dated, but you're writing actual code. Your partner texts you after your first deployment: 'Proud of you.' You're not at a FAANG, but you're engineering solutions that real people use. \n\nIt's not prestigious. But it's real.",
+      "s2": "You: just shipped a CRM for a plumbing company. they loved it\nBest Friend: that's actually awesome. real impact\nYou: they brought me lunch. said i 'saved their business'\nRoommate: local legend. when's the wedding?"
     },
     {
       "code": 218,
@@ -159,8 +159,8 @@
       "tier": "weak",
       "title": "GAME OVER: THE LOCAL LOOP",
       "subtitle": "TechFlow - Partner (No)",
-      "s1": "Coworkers call you 'the computer guy.' Your most exciting moment this week was deleting 700 rows of duplicated budget data. Nobody asks about your internship, and you don’t bring it up. The checks clear. You aren't unemployed, which is a wild benchmark in this market. But you're just... there. \n\nWaiting for something that might never come.",
-      "s2": "You: watched a guy print a 42-page doc to the wrong building\nRoommate: lol you gonna be okay man?\nBest Friend: you’re doing what you have to. respect\nYou: trying not to forget who i am."
+      "s1": "You're the 'React guy' at a 12-person consulting shop. Your week was spent migrating a jQuery site to Next.js for a client who won't notice the difference. Nobody asks about your projects, and you don't bring them up. The checks clear. You aren't unemployed, which is a wild benchmark in this market. But you're just... there. \n\nWaiting for something that might never come.",
+      "s2": "You: spent 8 hours fixing merge conflicts in someone else's spaghetti code\nRoommate: lol you gonna be okay man?\nBest Friend: you're doing what you have to. respect\nYou: trying not to forget who i am."
     },
     {
       "code": 219,
@@ -186,8 +186,8 @@
       "tier": "weak",
       "title": "GAME OVER: STEADY SHIP",
       "subtitle": "Pinnacle CU - Partner (Yes)",
-      "s1": "Fixing printer jams and setting up Zoom calls for 'Councilman Dickerson.' It’s a fluorescent-lit IT office two blocks from a courthouse. Your partner still brings you lunch and says they're proud of how far you’ve come. You believe them, even if no one else does. \n\nStability feels like a real win.",
-      "s2": "You: got thanked for resetting a password today\nRoommate: govtech legend\nBest Friend: i respect the grind. how’s the partner?\nYou: they’re the best. made the day bearable."
+      "s1": "Maintaining loan processing systems and patching legacy banking software that runs on COBOL. It's a credit union with 15 branches and a tech stack from 2007. But you're trusted with member data and financial systems that actually matter. Your partner brings you lunch and says they're proud of how far you've come. You believe them, even if no one else does. \n\nStability feels like a real win.",
+      "s2": "You: migrated 40k member accounts without data loss today\nRoommate: fintech legend\nBest Friend: i respect the grind. how's the partner?\nYou: they're the best. made the day bearable."
     },
     {
       "code": 222,
@@ -195,8 +195,8 @@
       "tier": "weak",
       "title": "GAME OVER: THE IT LEGEND",
       "subtitle": "Pinnacle CU - Partner (No)",
-      "s1": "You’re the backbone of bureaucracy. You spend your afternoon pretending to understand the city’s Wi-Fi contract. You feel like you're LARPing as an engineer. You're 'one of the sharper ones' here, but that’s not a high bar. You go home to an empty room and wonder if you peaked in high school. \n\nAt least you're on the board.",
-      "s2": "You: i just got thanked for resetting a password\nRoommate: my man is the backbone of bureaucracy\nBest Friend: honestly i respect the grind\nYou: lol thanks. i’m surviving."
+      "s1": "You're maintaining a lending platform built on FoxPro and writing SQL queries for compliance reports. The credit union treats you like a wizard because you understand REST APIs. You're 'one of the sharper ones' here, but that's not a high bar. You go home to an empty room and wonder if your degree was worth it. \n\nIndispensable in a world that's standing still.",
+      "s2": "You: explained what an API is to my manager three times today\nRoommate: ancient tech unlock. you're becoming a boomer\nBest Friend: still... sounds a bit lonely out there\nYou: at least the pension is real."
     },
     {
       "code": 223,
