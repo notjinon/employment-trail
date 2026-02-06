@@ -301,7 +301,8 @@ let gameState = {
   girlfriendId: 0,
   bestFriendId: 0,
   roommateId: 0,
-  leaning: 0
+  leaning: 0,
+  failstate: true
 };
 
 const slides = document.querySelectorAll(".slide");
