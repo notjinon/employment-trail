@@ -38,7 +38,6 @@ body {
 pre {
     padding: 10px;
     border: var(--border-primary);
-    border-radius: 5px;
     background-color: var(--color-bg);
     overflow: auto;
 }
