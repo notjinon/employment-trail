@@ -132,10 +132,7 @@ const BRANCH_RULES = {
   120000: (g) => {
     // Failstate skips offer email
     if (g.failstate) return 121000; // Skip to backup plans
-    // Burnout too high = they don't make offer / you bomb last round
-    if (g.burnout > 7) {
-      return 120102; // Auto-reject response
-    }
+    // Always show Q20 for interview path - handleFinalEvaluation handles pass/fail
     return 120100;
   },
   121000: (g) => {
@@ -565,12 +562,20 @@ function handleCompanySelection(optKey) {
 }
 
 function handleFinalEvaluation() {
-  const { social, academic, company, fondness } = gameState;
+  const { social, academic, company, fondness, burnout } = gameState;
   
   // Company tiers: 1-4 boutique, 5-8 midMajor, 9-12 weak
   const isBoutique = company >= 1 && company <= 4;
   const isMidMajor = company >= 5 && company <= 8;
   const isWeak = company >= 9 && company <= 12;
+  
+  // Auto-fail if burnout too high (bombed the final round)
+  if (burnout > 7) {
+    gameState.company = 0; // Set company to 0 for interview failure
+    currentResponseId = 120102; // Rejection response
+    console.log("=== GAMESTATE AFTER FINAL EVALUATION (BURNOUT FAIL) ===", gameState);
+    return;
+  }
   
   // Different thresholds by tier
   const passBoutique = social >= 10 && academic >= 10 && isBoutique;
@@ -581,10 +586,10 @@ function handleFinalEvaluation() {
     const base = ENDING_MAP[company];
     const hasGF = gameState.girlfriendId >= 1 && gameState.girlfriendId <= 8 && gameState.girlfriendId !== 9;
     gameState.ending = (fondness >= 10 && hasGF) ? ENDING_MAP.fondness[company] : base;
-    currentResponseId = 120101;
+    currentResponseId = 120101; // Success response
   } else {
     gameState.company = 0; // Set company to 0 for interview failure
-    currentResponseId = 120102;
+    currentResponseId = 120102; // Rejection response
   }
 
   // Log gamestate after final evaluation

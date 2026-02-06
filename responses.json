@@ -766,22 +766,26 @@
     {
       "id": 119001,
       "question": 19,
-      "response": "It feels like a lifetime ago. A hallway. A club meeting. Quiet promises to yourself you didn’t know you’d have to break. \n\nYou wonder what that version of you would think now."
+      "response": "It feels like a lifetime ago. A hallway. A club meeting. Quiet promises to yourself you didn't know you'd have to break. \n\nYou wonder what that version of you would think now.",
+      "nextQuestion": 120000
     },
     {
       "id": 119002,
       "question": 19,
-      "response": "Late nights. Missed calls. Friendships that slowly faded into the background noise of the grind. You can’t decide if it was worth it. \n\nMaybe that’s the point."
+      "response": "Late nights. Missed calls. Friendships that slowly faded into the background noise of the grind. You can't decide if it was worth it. \n\nMaybe that's the point.",
+      "nextQuestion": 120000
     },
     {
       "id": 119003,
       "question": 19,
-      "response": "The project that finally ran. The smile you got across the room. The one friend who said, “Hey, I believe in you.” \n\nYou hold onto those tighter than anything else."
+      "response": "The project that finally ran. The smile you got across the room. The one friend who said, "Hey, I believe in you." \n\nYou hold onto those tighter than anything else.",
+      "nextQuestion": 120000
     },
     {
       "id": 119004,
       "question": 19,
-      "response": "Quiet breakdowns. Arguments with your roommate. Growing pains living alone. Inbox rejections. Doomscrolling until sunrise. You survived every one of them. \n\nThat counts, doesn’t it?"
+      "response": "Quiet breakdowns. Arguments with your roommate. Growing pains living alone. Inbox rejections. Doomscrolling until sunrise. You survived every one of them. \n\nThat counts, doesn't it?",
+      "nextQuestion": 120000
     },
     {
       "id": 120101,
