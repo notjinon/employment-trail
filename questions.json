@@ -2,7 +2,7 @@
   "questions": [
     {
       "key": 101000,
-      "question": "Throwback. A sunny day in August 2019. Your first day of High School. Middle School was a tumultuous place, but transferring to a new district gives you the capital necessary to start on a clean slate. Time and time again, you’ve heard from your parents, older relatives, and teachers that this is the time to find out who you really are.\n\nWho are you?",
+      "question": "Throwback. A sunny day in August. Your first day of High School. Middle School was a tumultuous place, but transferring to a new district gives you the capital necessary to start on a clean slate. Time and time again, you’ve heard from your parents, older relatives, and teachers that this is the time to find out who you really are.\n\nWho are you?",
       "options": [
         {
           "option": "I’ve been an academic weapon all my life. It’s time to keep going.",
@@ -20,7 +20,7 @@
     },
     {
       "key": 102000,
-      "question": "Four years, a pandemic, 10 AP Courses, and a hell of a lot of stress later, it’s your last year as a student. With the phantom of your own persona haunting you, you know taking a gap year or going to a Community College isn’t an option. Thus, to broaden your horizons, you accept your parent’s offer to go on a set of campus visits.\n\nThe question is, where?",
+      "question": "Four years, 10 AP Courses, 2 SAT attempts, and a hell of a lot of stress later, it’s your last year as a student. With the phantom of your own persona haunting you, you know taking a gap year or going to a Community College isn’t an option. Thus, to broaden your horizons, you accept your parent’s offer to go on a set of campus visits.\n\nThe question is, where?",
       "options": [
         {
           "option": "Let’s hit the Midwest. There’s lots of knowledge at the original Land-Grant campuses, especially for working in an industrial firm there.",
