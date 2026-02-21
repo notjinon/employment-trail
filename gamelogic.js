@@ -476,6 +476,9 @@ function submitOption() {
   const question = questions[currentQuestionKey];
   const selectedOpt = question.options.find(opt => opt.key == selected.value);
 
+  // Track answer choice per question
+  sa_event(`q_${currentQuestionKey}`, { option: selectedOpt.key, option_text: selectedOpt.option });
+
   // Handle special question logic
   if (currentQuestionKey == 114100) {
     handleCompanySelection(selectedOpt.key);
