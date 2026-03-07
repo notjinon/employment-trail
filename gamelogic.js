@@ -299,6 +299,7 @@ let gameState = {
   company: 0,
   ending: 0,
   girlfriendId: 0,
+  previousGirlfriendId: 0,
   bestFriendId: 0,
   roommateId: 0,
   leaning: 0,
@@ -502,6 +503,10 @@ function submitOption() {
       if (gameState.hasOwnProperty(stat)) {
         // If the effect is an ID (bestFriendId, roommateId, girlfriendId, etc.), set it directly
         if (/Id$/.test(stat)) {
+          // Save previous girlfriendId before transitioning to rejection state
+          if (stat === 'girlfriendId' && response.effects[stat] === 9 && gameState.girlfriendId !== 9 && gameState.girlfriendId !== 0) {
+            gameState.previousGirlfriendId = gameState.girlfriendId;
+          }
           gameState[stat] = response.effects[stat];
           console.debug(`Set ${stat} = ${response.effects[stat]}`);
         } else {
@@ -534,6 +539,13 @@ function submitOption() {
 }
 
 function handleCompanySelection(optKey) {
+  // If failstate was pre-set (e.g. burnout > 7 auto-fail in BRANCH_RULES[114000]),
+  // use the tier fail response without assigning a company.
+  if (gameState.failstate) {
+    currentResponseId = optKey;
+    return;
+  }
+
   const tier = TIER_MAP[optKey];
   if (!tier) return;
 
@@ -717,6 +729,29 @@ function populateStatus() {
   DOM.barSocial.style.width = clampPercent(gameState.social, maxStat);
   DOM.barAcademics.style.width = clampPercent(gameState.academic, maxStat);
   DOM.barBurnout.style.width = clampPercent(maxStat - gameState.burnout, maxStat);
+
+  // Populate stat bar art placeholders
+  const artMap = {
+    "clout-left":  "assets/Loser.gif",
+    "clout-right": "assets/Social.gif",
+    "brains-left":  "assets/Stupid.gif",
+    "brains-right": "assets/Nerd.gif",
+    "mood-left":  "assets/Sad.gif",
+    "mood-right": "assets/Happy.gif"
+  };
+  document.querySelectorAll(".art-placeholder[data-asset]").forEach(el => {
+    const key = el.dataset.asset;
+    if (artMap[key] && el.childElementCount === 0 && el.textContent.trim() === "?") {
+      const img = document.createElement("img");
+      img.src = artMap[key];
+      img.alt = key;
+      img.style.width = "100%";
+      img.style.height = "100%";
+      img.style.objectFit = "contain";
+      el.textContent = "";
+      el.appendChild(img);
+    }
+  });
 }
 
 function populateSocial() {
@@ -725,17 +760,54 @@ function populateSocial() {
   // Always populate from data (0 = nobody, 1 = Tiffany, 9 = failure)
   if (girlfriend) {
     document.getElementById("girlfriend-name").textContent = girlfriend.name;
-    document.getElementById("girlfriend-subtitle").innerHTML = "<u>" + girlfriend.subtitle + "</u>";
     document.getElementById("girlfriend-bio").textContent = girlfriend.bio;
+
+    // Stat block — show for active girlfriends only
+    const statsBlock = document.getElementById("girlfriend-stats");
+    const isActive = gameState.girlfriendId >= 1 && gameState.girlfriendId <= 8;
+    if (statsBlock) statsBlock.style.display = isActive ? "flex" : "none";
+    if (isActive) {
+      document.getElementById("girlfriend-hometown").textContent = girlfriend.hometown || "—";
+      document.getElementById("girlfriend-occupation").textContent = girlfriend.occupation || "—";
+      document.getElementById("girlfriend-major").textContent = girlfriend.major || "—";
+      document.getElementById("girlfriend-interests").textContent = girlfriend.interests || "—";
+    }
+
+    // Quote — show for active girlfriends only
+    const quoteEl = document.getElementById("girlfriend-quote");
+    if (quoteEl) {
+      quoteEl.textContent = isActive && girlfriend.quote ? girlfriend.quote : "";
+      quoteEl.style.display = isActive && girlfriend.quote ? "block" : "none";
+    }
     
     // Load portrait from JSON if available
     const gfPortrait = document.getElementById("girlfriend-portrait");
-    if (girlfriend.portrait && gfPortrait) {
-      const img = document.createElement("img");
-      img.src = girlfriend.portrait;
-      img.alt = girlfriend.name;
-      gfPortrait.innerHTML = "";
-      gfPortrait.appendChild(img);
+    if (gfPortrait) {
+      if (gameState.girlfriendId === 0) {
+        gfPortrait.innerHTML = '<span class="portrait-symbol">?</span>';
+      } else if (gameState.girlfriendId === 9) {
+        // Show the rejected person's portrait with a big red X overlay
+        const prevGF = GIRLFRIEND_MAP[gameState.previousGirlfriendId];
+        if (prevGF && prevGF.portrait) {
+          const img = document.createElement("img");
+          img.src = prevGF.portrait;
+          img.alt = prevGF.name;
+          gfPortrait.innerHTML = "";
+          gfPortrait.appendChild(img);
+          const xOverlay = document.createElement("span");
+          xOverlay.className = "portrait-rejection-x";
+          xOverlay.textContent = "X";
+          gfPortrait.appendChild(xOverlay);
+        } else {
+          gfPortrait.innerHTML = '<span class="portrait-symbol" style="color:red">X</span>';
+        }
+      } else if (girlfriend.portrait) {
+        const img = document.createElement("img");
+        img.src = girlfriend.portrait;
+        img.alt = girlfriend.name;
+        gfPortrait.innerHTML = "";
+        gfPortrait.appendChild(img);
+      }
     }
     
     // Archetype and tooltip (hide if no archetype) — tooltip now anchored on name
@@ -936,7 +1008,6 @@ function computeGrade(ending, g) {
   const tier = (ending.tier || '').toLowerCase();
   const tierPoints = {
     'boutique': 85,
-    'midmajor': 75,
     'midmajor': 75,
     'weak': 65,
     'fail': 55,

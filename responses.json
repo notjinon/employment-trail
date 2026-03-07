@@ -481,72 +481,69 @@
       "question": 14,
       "response": "You stride up to the JPMorgan booth and launch into a pitch about monetary policy, embedded payments, and your fascination with institutional risk. The recruiter's eyes light up. She pulls you aside for a deeper conversation.\n\nYou walk away with a first-round interview locked in. The finance grind paid off.",
       "nextQuestion": 115000,
-      "burnout": 1
+      "effects": { "burnout": 1 }
     },
     {
       "id": 114121,
       "question": 14,
       "response": "You approach the Apple booth and preach about user privacy, design systems, and your distaste for Material UI. The recruiter listens intently, then asks if you'd relocate to Cupertino.\n\nYou nod so hard your phone almost drops. The interview invite comes before you've left the quad.",
       "nextQuestion": 115000,
-      "burnout": 1
+      "effects": { "burnout": 1 }
     },
     {
       "id": 114131,
       "question": 14,
       "response": "You find yourself at the Anduril booth, speaking with reverence about autonomous systems and defense innovation. The recruiterclearly ex-militarynods approvingly at your technical depth.\n\n'We'll be in touch,' he says. But the way he says it, you know he means it.",
       "nextQuestion": 115000,
-      "burnout": 1
+      "effects": { "burnout": 1 }
     },
     {
       "id": 114141,
       "question": 14,
       "response": "You approach the TSMC booth and dive into semiconductor fabrication, EUV lithography, and yield optimization. The recruiter's eyebrows rise. This isn't the usual CS student pitch.\n\nShe hands you her card directly. 'Skip the online app. Email me.'",
       "nextQuestion": 115000,
-      "burnout": 1
+      "effects": { "burnout": 1 }
     },
     {
       "id": 114100,
       "question": 14,
       "response": "You stride up to the most prestigious booths with confidencebut confidence isn't enough. The recruiters see right through you. Polite smiles, QR codes, 'apply online.'\n\nYou weren't ready. Not even close.",
       "nextQuestion": 115000,
-      "burnout": 3,
-      "setFailstate": true
+      "effects": { "burnout": 3 }
     },
     {
       "id": 114211,
       "question": 14,
       "response": "You approach Bank of America's booth and talk about financial technology and digital banking transformation. The recruiter seems genuinely interested in your perspective.\n\nA follow-up interview is scheduled before you leave. Solid start.",
       "nextQuestion": 115000,
-      "burnout": 1
+      "effects": { "burnout": 1 }
     },
     {
       "id": 114221,
       "question": 14,
       "response": "You find yourself at the IBM booth, dropping lines about hybrid cloud and AI ethics. A recruiter asks about Red Hat, and you rattle off something you remember from Hacker News.\n\nThey nod, impressed. You're moving forward.",
       "nextQuestion": 115000,
-      "burnout": 1
+      "effects": { "burnout": 1 }
     },
     {
       "id": 114231,
       "question": 14,
       "response": "You shamble up to RTX and ramble about avionics systems and defense tech. The recruiters are just university liaisonsbut your enthusiasm is enough.\n\nYou're invited to the next round.",
       "nextQuestion": 115000,
-      "burnout": 1
+      "effects": { "burnout": 1 }
     },
     {
       "id": 114241,
-      "question": 14,
       "response": "You approach Siemens and talk about industrial automation and manufacturing systems. The recruiter looks relieved to find someone who doesn't flinch at 'PLC programming.'\n\nYou're ushered into a follow-up almost immediately.",
       "nextQuestion": 115000,
-      "burnout": 1
+      "effects": { "burnout": 1 }
     },
     {
       "id": 114200,
       "question": 14,
       "response": "You target the mid-tier companies with what you thought was a solid pitch. But the recruiters aren't impressedtoo many candidates, not enough standout moments.\n\n'We'll let you know,' they all say. They won't.",
       "nextQuestion": 115000,
-      "burnout": 2,
-      "setFailstate": true
+      "effects": { "burnout": 2 }
     },
     {
       "id": 114311,
@@ -577,8 +574,7 @@
       "question": 14,
       "response": "You cast the widest net possible, but even the small companies aren't biting. Your resume is thin, your pitch is weak, and everyone can tell.\n\nYou walk away with nothing but a handful of flyers and a sinking feeling.",
       "nextQuestion": 115000,
-      "burnout": 3,
-      "setFailstate": true
+      "effects": { "burnout": 3 }
     },
     {
       "id": 115101,

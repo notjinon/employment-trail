@@ -138,11 +138,21 @@
           
           <!-- Romance state (data-driven) -->
           <div id="romance-active" class="character-card">
-            <div class="card-portrait" id="girlfriend-portrait" data-asset="girlfriend">?</div>
+            <!-- Top row: portrait + stat block -->
+            <div class="gf-card-top">
+              <div class="card-portrait" id="girlfriend-portrait" data-asset="girlfriend">?</div>
+              <div class="gf-stats" id="girlfriend-stats">
+                <p class="gf-stat-row"><span class="gf-stat-label">Hometown:</span><br><span id="girlfriend-hometown">Loading...</span></p>
+                <p class="gf-stat-row"><span class="gf-stat-label">Occupation:</span><br><span id="girlfriend-occupation">Loading...</span></p>
+                <p class="gf-stat-row"><span class="gf-stat-label">Major:</span><br><span id="girlfriend-major">Loading...</span></p>
+                <p class="gf-stat-row"><span class="gf-stat-label">Interests:</span><br><span id="girlfriend-interests">Loading...</span></p>
+              </div>
+            </div>
+            <!-- Bottom: name, quote, archetype, bio, fondness -->
             <div class="card-content">
               <h4 class="card-name"><span class="tooltip-wrapper"><span id="girlfriend-name">Loading...</span><span class="tooltip-text" id="girlfriend-tooltip">Loading...</span></span></h4>
-              <p class="card-role" id="girlfriend-subtitle"><u>Loading...</u></p>
-              <p class="card-archetype">
+              <p class="gf-quote" id="girlfriend-quote">Loading...</p>
+              <p class="card-archetype" id="girlfriend-archetype-row">
                 <u id="girlfriend-archetype">Loading...</u>
               </p>
               <p class="card-desc" id="girlfriend-bio">Loading...</p>
@@ -167,34 +177,26 @@
           <!-- Best Friend -->
           <div class="character-card compact">
             <div class="card-portrait" id="bestfriend-portrait" data-asset="bestfriend">?</div>
-            <div class="card-content split">
-              <div class="card-left">
-                <h4 class="card-name"><span class="tooltip-wrapper"><span id="bestfriend-name">Loading...</span><span class="tooltip-text" id="bestfriend-tooltip">Loading...</span></span></h4>
-                <p class="card-role">BEST FRIEND</p>
-              </div>
-              <div class="card-right">
-                <p class="card-archetype">
-                  <u id="bestfriend-archetype">Loading...</u>
-                </p>
-                <p class="card-desc" id="bestfriend-desc">Loading...</p>
-              </div>
+            <div class="card-content">
+              <h4 class="card-name"><span class="tooltip-wrapper"><span id="bestfriend-name">Loading...</span><span class="tooltip-text" id="bestfriend-tooltip">Loading...</span></span></h4>
+              <p class="card-role">BEST FRIEND</p>
+              <p class="card-archetype">
+                <u id="bestfriend-archetype">Loading...</u>
+              </p>
+              <p class="card-desc" id="bestfriend-desc">Loading...</p>
             </div>
           </div>
 
           <!-- Roommate -->
           <div class="character-card compact">
             <div class="card-portrait" id="roommate-portrait" data-asset="roommate">?</div>
-            <div class="card-content split">
-              <div class="card-left">
-                <h4 class="card-name"><span class="tooltip-wrapper"><span id="roommate-name">Loading...</span><span class="tooltip-text" id="roommate-tooltip">Loading...</span></span></h4>
-                <p class="card-role">ROOMMATE</p>
-              </div>
-              <div class="card-right">
-                <p class="card-archetype">
-                  <u id="roommate-archetype">Loading...</u>
-                </p>
-                <p class="card-desc" id="roommate-desc">Loading...</p>
-              </div>
+            <div class="card-content">
+              <h4 class="card-name"><span class="tooltip-wrapper"><span id="roommate-name">Loading...</span><span class="tooltip-text" id="roommate-tooltip">Loading...</span></span></h4>
+              <p class="card-role">ROOMMATE</p>
+              <p class="card-archetype">
+                <u id="roommate-archetype">Loading...</u>
+              </p>
+              <p class="card-desc" id="roommate-desc">Loading...</p>
             </div>
           </div>
 
@@ -308,7 +310,7 @@
   </main>
 
   <footer>
-    The Employment Trail -- V. 2.0 - "Social Cues" DevBranch <br>
+    The Employment Trail -- V. 2.0 - "Return Offer" <br>
     Designed, Written, and Built by <a href="https://notjinon.github.io" target="_blank">Jino Nicolas</a> · 2026
   </footer>
 

@@ -3,13 +3,18 @@
     "0": {
       "name": "NOBODY",
       "subtitle": "Imaginary Pursuits",
-      "bio": "You have no girlfriend. Nobody wants you. Try harder. Check back later."
+      "bio": "You have no chance. Nobody wants you. Try harder. Check back later."
     },
     "1": {
       "name": "TIFFANY C.",
       "subtitle": "Computer Science - Incoming @ Google",
       "archetype": "Academic Ace",
-      "portrait": "assets/tiffany.png",
+      "portrait": "assets/Tiffany.gif",
+      "quote": "\"The best way out is always through.\"",
+      "hometown": "Palo Alto, CA",
+      "occupation": "SWE Intern, Google",
+      "major": "Computer Science",
+      "interests": "Tech, Cooking",
       "bio": "From growing up in the Bay Area to publishing her research at 18, she's worked harder than anyone she knows to succeed.",
       "tooltip": "Tiffany is extremely intelligent. Flattery will only get you so far with her. You need to prove you're smart enough to be worth her time."
     },
@@ -17,22 +22,31 @@
       "name": "EZRA M.",
       "subtitle": "Philosophy & History - Double Major",
       "archetype": "Blissful Bohemian",
-      "portrait": "assets/ezra.png",
+      "portrait": "assets/Ezra.gif",
+      "quote": "\"Life is a journey, not a destination.\"",
+      "hometown": "Irving, TX",
+      "occupation": "Freelance Writer",
+      "major": "English, History",
+      "interests": "Music, Policy",
       "bio": "A fun-loving and whimsical free spirit, he won't let anything—or anyone—drag him and his vibe down.",
       "tooltip": "Ezra is turned off by the rat race. He sees things more holistically than you do, and isn't really swayed by how many hackathons you win."
     },
     "3": {
       "name": "JENNY T.",
-      "subtitle": "Economics - Treasurer, αΚΔΦ",
+      "subtitle": "Economics - Treasurer, Phi Omega Pi",
       "archetype": "Affable Aristo",
-      "portrait": "assets/jenny.png",
+      "portrait": "assets/Jenny.gif",
+      "quote": "\"Your network is your net worth.\"",
+      "hometown": "Flushing, NY",
+      "occupation": "Treasurer, ΦΩΠ",
+      "major": "Economics",
+      "interests": "Finance, Travel",
       "bio": "The youngest E-Board member in her chapter's history, she's well aware of the leverage her well-known status provides.",
       "tooltip": "Beneath Jenny's friendly demeanor is a cautious, calculating mind. You need to stick out from the other antisocial losers she meets."
     },
     "9": {
       "name": "NOBODY",
       "subtitle": "You and the Void",
-      "portrait": "assets/nobody.png",
       "bio": "You had your shot. You blew it. You pray they'll come back.\nThey won't."
     }
   },
@@ -41,7 +55,7 @@
       "name": "TARA",
       "role": "BEST FRIEND",
       "archetype": "Collaborative Confidant",
-      "portrait": "assets/tara.png",
+      "portrait": "assets/Tara.gif",
       "desc": "A steadfast and reserved friend from a time long gone.",
       "tooltip": "One of the only friends from high school you retain. She cares deeply about your personal image, and wants to see you talk to others."
     },
@@ -49,7 +63,7 @@
       "name": "NASH",
       "role": "BEST FRIEND",
       "archetype": "Competitive Cowboy",
-      "portrait": "assets/nash.png",
+      "portrait": "assets/Nash.gif",
       "desc": "The only thing bigger than his brain is his ego.",
       "tooltip": "You met Nash at a party in August. The only thing he has on his mind is getting rich. To his credit, he's been working like a dog."
     }
@@ -59,7 +73,7 @@
       "name": "CHEN",
       "role": "ROOMMATE",
       "archetype": "Studious Solitary",
-      "portrait": "assets/chen.png",
+      "portrait": "assets/Cheng.gif",
       "desc": "Quiet, reserved, whip-smart. Won't do you any favors socially.",
       "tooltip": "You met Chen online, and from day one you could tell his main priority would be studying. That's probably how you'll get close."
     },
@@ -67,7 +81,7 @@
       "name": "KEVIN",
       "role": "ROOMMATE",
       "archetype": "Senseless Stoner",
-      "portrait": "assets/kevin.png",
+      "portrait": "assets/Kevin.gif",
       "desc": "A narc's wet dream. Good luck trying to study.",
       "tooltip": "You met Kevin when he was begging for help on the first week of classes. Even then, he was high as a kite. Now you're stuck with him."
     }

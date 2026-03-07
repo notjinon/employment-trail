@@ -363,6 +363,9 @@ footer {
 }
 
 .character-card.compact {
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 1rem;
   padding-bottom: 1rem;
   border-bottom: var(--border-primary);
 }
@@ -372,11 +375,18 @@ footer {
   padding-bottom: 0;
 }
 
+.character-card.compact .card-portrait {
+  aspect-ratio: 1 / 1;
+  width: 120px;
+  flex-shrink: 0;
+}
+
 .character-card.hidden {
   display: none;
 }
 
 .card-portrait {
+  position: relative;
   width: 100%;
   aspect-ratio: 2.75 / 1;
   border: var(--border-primary);
@@ -391,6 +401,83 @@ footer {
 /* Romance portrait - larger with 1:1 aspect ratio */
 .social-section:first-child .card-portrait {
   aspect-ratio: 1 / 1;
+}
+
+/* GF card top row: portrait left, stats right */
+.gf-card-top {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: flex-start;
+  margin-bottom: 0.75rem;
+}
+
+.gf-card-top .card-portrait {
+  width: 170px;
+  height: 170px;
+  aspect-ratio: 1 / 1;
+  flex-shrink: 0;
+}
+
+.gf-stats {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.gf-stat-row {
+  margin: 0;
+  font-size: 13px;
+  color: var(--color-primary);
+  line-height: 1.4;
+}
+
+.gf-stat-label {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-muted);
+}
+
+.gf-quote {
+  font-size: 13px;
+  font-style: italic;
+  color: var(--color-primary);
+  margin: 0 0 0.25rem 0;
+  line-height: 1.4;
+}
+
+.card-portrait img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.portrait-symbol {
+  font-size: clamp(48px, 30%, 80px);
+  font-weight: 700;
+  line-height: 1;
+  color: var(--color-primary);
+  user-select: none;
+}
+
+.portrait-rejection-x {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: clamp(64px, 40%, 120px);
+  font-weight: 900;
+  color: red;
+  text-shadow: 0 0 8px rgba(0,0,0,0.8);
+  user-select: none;
+  pointer-events: none;
 }
 
 .card-content {
